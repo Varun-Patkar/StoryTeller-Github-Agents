@@ -31,31 +31,5 @@ server.tool(
   }
 );
 
-server.tool(
-  "fetch_page",
-  "Fetch and return the text content of a URL",
-  { url: z.string().url() },
-  async ({ url }) => {
-    const res = await fetch(url, {
-      signal: AbortSignal.timeout(20000),
-      headers: { "User-Agent": "MCP-SearXNG/1.0" },
-    });
-    if (!res.ok) {
-      return { content: [{ type: "text", text: `Fetch error: HTTP ${res.status}` }], isError: true };
-    }
-
-    let text = await res.text();
-    // Strip HTML tags for a rough plaintext extraction
-    text = text.replace(/<script[\s\S]*?<\/script>/gi, "");
-    text = text.replace(/<style[\s\S]*?<\/style>/gi, "");
-    text = text.replace(/<[^>]+>/g, " ");
-    text = text.replace(/\s+/g, " ").trim();
-    // Truncate to avoid blowing up context
-    if (text.length > 30000) text = text.slice(0, 30000) + "\n\n[truncated]";
-
-    return { content: [{ type: "text", text }] };
-  }
-);
-
 const transport = new StdioServerTransport();
 await server.connect(transport);

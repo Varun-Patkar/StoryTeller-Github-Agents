@@ -32,7 +32,24 @@ On the **first invocation only**, verify SearXNG is reachable. Skip this check o
    ```
    docker run -d --name searxng -p 8080:8080 searxng/searxng
    ```
-4. Run `sleep 5`, then re-check with the same curl command. If still failing, note that SearXNG is unavailable and instruct the sub-agents to rely exclusively on Playwright/browser tools for iterative and deep Google searching.
+4. Run `sleep 5`, then re-check with the same curl command. If still failing, note that SearXNG is unavailable and instruct the sub-agents to use **Playwright/browser tools** for all web research (Google searching + page reading).
+
+## Web Research Strategy
+
+There are two modes depending on SearXNG availability. Pass the active mode to sub-agents.
+
+### Mode A — SearXNG Available
+
+1. **Search** using the `searxng` MCP `search` tool to get a list of links.
+2. **Deep-dive** into those links using the `fetch_webpage` tool to read page content.
+3. Repeat: refine queries, follow promising links, fetch more pages until research is thorough.
+
+### Mode B — SearXNG Unavailable
+
+1. **Search Google** using Playwright/browser tools (`open_browser_page` → `https://www.google.com/search?q=...`).
+2. **Read search results** using `read_page` to extract links.
+3. **Deep-dive** into result links using Playwright (`open_browser_page` → target URL, then `read_page`).
+4. Repeat: refine queries, follow promising links, open more pages until research is thorough.
 
 ## Routing
 

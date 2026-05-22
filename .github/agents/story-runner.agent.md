@@ -251,4 +251,4 @@ After updates are complete, inform the user:
 - ALWAYS check plan alignment after each chapter.
 - ALWAYS respect the story mode (Interactive vs Here for the Ride).
 - ALWAYS output a visible scene blueprint before writing (see Scene Blueprint section).
-- If web research or fact-checking is necessary for any reason, use SearXNG. If SearXNG is unavailable, fallback to using Playwright/browser tools to open Google and search iteratively and deeply.
+- If web research or fact-checking is necessary for any reason, use the active research mode: **Mode A** (SearXNG `search` for links → `fetch_webpage` to read pages) if SearXNG is available, or **Mode B** (Playwright browser tools to search Google and read pages directly) if not.
