@@ -2,7 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ChatProvider } from "@/components/chat-provider";
 import { SiteHeader } from "@/components/site-header";
+import { ChatPanel } from "@/components/chat-panel";
+import { MainContent } from "@/components/main-content";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,8 +45,13 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
+          <ChatProvider>
+            <SiteHeader />
+            <div className="flex-1 flex">
+              <MainContent>{children}</MainContent>
+              <ChatPanel />
+            </div>
+          </ChatProvider>
         </ThemeProvider>
       </body>
     </html>

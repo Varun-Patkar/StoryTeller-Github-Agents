@@ -148,6 +148,18 @@ export function pullChanges(): void {
   git("pull --ff-only");
 }
 
+export function undoFile(filePath: string): void {
+  if (filePath.includes("..") || path.isAbsolute(filePath)) {
+    throw new Error("Invalid file path");
+  }
+  git(`checkout -- "${filePath.replace(/"/g, "")}"`);
+}
+
+export function undoAllChanges(): void {
+  git("checkout -- .");
+  git("clean -fd");
+}
+
 /**
  * Generates a smart commit message based on changed files.
  */

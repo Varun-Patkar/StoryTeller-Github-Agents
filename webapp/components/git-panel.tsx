@@ -16,6 +16,8 @@ import {
   FileX,
   FileEdit,
   Circle,
+  Undo2,
+  Sparkles,
 } from "lucide-react";
 
 interface GitFileChange {
@@ -91,6 +93,7 @@ export function GitPanel({
   const [acting, setActing] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [showLog, setShowLog] = useState(false);
+  const [generatingMsg, setGeneratingMsg] = useState(false);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -115,13 +118,13 @@ export function GitPanel({
     if (open) fetchData();
   }, [open, fetchData]);
 
-  const doAction = async (action: string, message?: string) => {
+  const doAction = async (action: string, message?: string, filePath?: string) => {
     setActing(true);
     try {
       const res = await fetch("/api/git", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action, message }),
+        body: JSON.stringify({ action, message, filePath }),
       });
       const json = await res.json();
       if (json.error) {
@@ -273,12 +276,24 @@ export function GitPanel({
                       {allChanges.map((f, i) => (
                         <div
                           key={`${f.file}-${i}`}
-                          className="flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs hover:bg-neutral-50 dark:hover:bg-neutral-800"
+                          className="flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs hover:bg-neutral-50 dark:hover:bg-neutral-800 group/file"
                         >
                           <FileIcon status={f.status} />
                           <span className="flex-1 truncate font-mono text-[11px]">
                             {f.file}
                           </span>
+                          {f.section !== "untracked" && (
+                            <button
+                              onClick={() =>
+                                doAction("undo-file", undefined, f.file)
+                              }
+                              disabled={acting}
+                              className="opacity-0 group-hover/file:opacity-100 p-0.5 rounded hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-all disabled:opacity-50"
+                              title="Revert file"
+                            >
+                              <Undo2 className="w-3 h-3" />
+                            </button>
+                          )}
                           <StatusLabel status={f.status} />
                         </div>
                       ))}
@@ -297,15 +312,37 @@ export function GitPanel({
                       rows={2}
                       className="w-full text-sm px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 resize-none focus:outline-none focus:ring-2 focus:ring-neutral-300 dark:focus:ring-neutral-600"
                     />
-                    {data.suggestedMessage && commitMsg !== data.suggestedMessage && (
+                    <div className="flex items-center gap-2 mt-1.5">
                       <button
-                        onClick={() => setCommitMsg(data.suggestedMessage)}
-                        className="text-[11px] text-blue-600 dark:text-blue-400 hover:underline mt-1"
+                        onClick={async () => {
+                          setGeneratingMsg(true);
+                          try {
+                            const res = await fetch("/api/git", {
+                              method: "POST",
+                              headers: { "Content-Type": "application/json" },
+                              body: JSON.stringify({ action: "generate-message" }),
+                            });
+                            const json = await res.json();
+                            if (json.message) setCommitMsg(json.message);
+                          } catch {}
+                          setGeneratingMsg(false);
+                        }}
+                        disabled={generatingMsg || acting}
+                        className="flex items-center gap-1 text-[11px] font-medium px-2 py-1 rounded-lg bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-colors disabled:opacity-50"
                       >
-                        Use suggested: &ldquo;{data.suggestedMessage.substring(0, 60)}
-                        {data.suggestedMessage.length > 60 ? "…" : ""}&rdquo;
+                        <Sparkles className={`w-3 h-3 ${generatingMsg ? "animate-pulse" : ""}`} />
+                        {generatingMsg ? "Generating..." : "AI Generate"}
                       </button>
-                    )}
+                      {data.suggestedMessage && commitMsg !== data.suggestedMessage && (
+                        <button
+                          onClick={() => setCommitMsg(data.suggestedMessage)}
+                          className="text-[11px] text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 hover:underline truncate"
+                        >
+                          Use quick: &ldquo;{data.suggestedMessage.substring(0, 40)}
+                          {data.suggestedMessage.length > 40 ? "…" : ""}&rdquo;
+                        </button>
+                      )}
+                    </div>
                     <div className="flex gap-2 mt-3">
                       <button
                         onClick={() => doAction("commit", commitMsg)}
@@ -331,19 +368,35 @@ export function GitPanel({
                 </>
               )}
 
-              {/* Log toggle */}
+              {/* Log toggle + Undo last commit */}
               <div className="border-t border-neutral-100 dark:border-neutral-800">
-                <button
-                  onClick={() => setShowLog(!showLog)}
-                  className="w-full flex items-center justify-between px-4 py-2.5 text-xs font-medium text-neutral-500 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800"
-                >
-                  <span>Commit History</span>
-                  {showLog ? (
-                    <ChevronUp className="w-3.5 h-3.5" />
-                  ) : (
-                    <ChevronDown className="w-3.5 h-3.5" />
+                <div className="flex items-center">
+                  <button
+                    onClick={() => setShowLog(!showLog)}
+                    className="flex-1 flex items-center justify-between px-4 py-2.5 text-xs font-medium text-neutral-500 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800"
+                  >
+                    <span>Commit History</span>
+                    {showLog ? (
+                      <ChevronUp className="w-3.5 h-3.5" />
+                    ) : (
+                      <ChevronDown className="w-3.5 h-3.5" />
+                    )}
+                  </button>
+                  {data.log.length > 0 && allChanges.length > 0 && (
+                    <button
+                      onClick={() => {
+                        if (confirm("Discard ALL local changes? This cannot be undone.")) {
+                          doAction("undo-all");
+                        }
+                      }}
+                      disabled={acting}
+                      className="px-3 py-2 text-[10px] font-medium text-neutral-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors disabled:opacity-50"
+                      title="Discard all local changes"
+                    >
+                      <Undo2 className="w-3 h-3" />
+                    </button>
                   )}
-                </button>
+                </div>
 
                 {showLog && (
                   <div className="px-3 pb-3 max-h-[300px] overflow-y-auto">

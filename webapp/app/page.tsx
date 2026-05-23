@@ -1,6 +1,7 @@
 import { getBooks } from "@/lib/books";
 import { BookCard } from "@/components/book-card";
-import { Library, Plus } from "lucide-react";
+import { NewStoryButton } from "@/components/new-story-button";
+import { Library } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -22,13 +23,7 @@ export default async function Home() {
           </p>
         </div>
 
-        <button
-          className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2.5 rounded-xl bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:opacity-90 transition-opacity self-start sm:self-auto"
-          title="Coming soon: GitHub Copilot Chat integration"
-        >
-          <Plus className="w-4 h-4" />
-          New Story
-        </button>
+        <NewStoryButton />
       </div>
 
       {/* Grid */}

@@ -2,6 +2,11 @@ import { getBook, getChapters } from "@/lib/books";
 import { CopyButton } from "@/components/copy-button";
 import { CoverUpload } from "@/components/cover-upload";
 import { ContinueReading } from "@/components/continue-reading";
+import {
+  DeleteChapterButton,
+  GenerateNextChapterButton,
+  DeleteBookButton,
+} from "@/components/book-actions";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
@@ -142,11 +147,25 @@ export default async function BookPage({
         </section>
       )}
 
+      {/* Manage — delete book */}
+      <section className="mb-10 flex items-center justify-between">
+        <h2 className="text-sm font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+          Manage
+        </h2>
+        <DeleteBookButton slug={slug} />
+      </section>
+
       {/* Chapters */}
       <section>
-        <h2 className="text-sm font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-4">
-          Chapters — {chapters.length} / {totalChapters} written
-        </h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-sm font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+            Chapters — {chapters.length} / {totalChapters} written
+          </h2>
+          <GenerateNextChapterButton
+            slug={slug}
+            bookTitle={config.title || slug}
+          />
+        </div>
 
         {chapters.length === 0 ? (
           <p className="text-neutral-400 text-sm">No chapters written yet.</p>
@@ -157,18 +176,23 @@ export default async function BookPage({
             </div>
 
             {chapters.map((ch) => (
-              <Link
+              <div
                 key={ch.number}
-                href={`/book/${slug}/chapter/${ch.number}`}
                 className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors group"
               >
-                <span className="text-xs font-mono text-neutral-400 w-8">
-                  {String(ch.number).padStart(2, "0")}
-                </span>
-                <span className="text-sm font-medium group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">
-                  {ch.title}
-                </span>
-              </Link>
+                <Link
+                  href={`/book/${slug}/chapter/${ch.number}`}
+                  className="flex items-center gap-3 flex-1 min-w-0"
+                >
+                  <span className="text-xs font-mono text-neutral-400 w-8">
+                    {String(ch.number).padStart(2, "0")}
+                  </span>
+                  <span className="text-sm font-medium group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">
+                    {ch.title}
+                  </span>
+                </Link>
+                <DeleteChapterButton slug={slug} chapterNum={ch.number} />
+              </div>
             ))}
           </div>
         )}

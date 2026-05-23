@@ -6,8 +6,11 @@ import {
   commitChanges,
   pushChanges,
   pullChanges,
+  undoFile,
+  undoAllChanges,
   suggestCommitMessage,
 } from "@/lib/git";
+import { generateCommitMessage } from "@/lib/commit-message";
 
 export const dynamic = "force-dynamic";
 
@@ -15,6 +18,7 @@ export async function GET() {
   try {
     const status = getGitStatus();
     const log = getGitLog(30);
+    // Use simple heuristic for initial load (fast), LLM is called separately
     const suggestedMessage = status.hasChanges ? suggestCommitMessage(status) : "";
 
     return NextResponse.json({ status, log, suggestedMessage });
@@ -27,7 +31,7 @@ export async function GET() {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { action, message } = body as { action: string; message?: string };
+    const { action, message, filePath } = body as { action: string; message?: string; filePath?: string };
 
     switch (action) {
       case "stage-all": {
@@ -49,6 +53,21 @@ export async function POST(request: Request) {
       case "pull": {
         pullChanges();
         return NextResponse.json({ ok: true });
+      }
+      case "undo-file": {
+        if (!filePath || typeof filePath !== "string") {
+          return NextResponse.json({ error: "filePath required" }, { status: 400 });
+        }
+        undoFile(filePath);
+        return NextResponse.json({ ok: true });
+      }
+      case "undo-all": {
+        undoAllChanges();
+        return NextResponse.json({ ok: true });
+      }
+      case "generate-message": {
+        const message = await generateCommitMessage();
+        return NextResponse.json({ ok: true, message });
       }
       default:
         return NextResponse.json({ error: "Unknown action" }, { status: 400 });

@@ -4,12 +4,14 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { GitPanel } from "@/components/git-panel";
-import { BookOpen, GitBranch } from "lucide-react";
+import { useChatState } from "@/components/chat-provider";
+import { BookOpen, GitBranch, MessageSquare } from "lucide-react";
 import Link from "next/link";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [gitOpen, setGitOpen] = useState(false);
+  const { isOpen: chatOpen, setIsOpen: setChatOpen } = useChatState();
 
   // Hide header on chapter reader pages — they have their own top bar
   if (/^\/book\/[^/]+\/chapter\/\d+/.test(pathname)) {
@@ -28,6 +30,15 @@ export function SiteHeader() {
             StoryTeller
           </Link>
           <div className="flex items-center gap-1">
+            <button
+              onClick={() => setChatOpen(!chatOpen)}
+              className={`p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors ${
+                chatOpen ? "bg-neutral-100 dark:bg-neutral-800" : ""
+              }`}
+              title="StoryTeller Agent"
+            >
+              <MessageSquare className="w-5 h-5" />
+            </button>
             <button
               onClick={() => setGitOpen(!gitOpen)}
               className={`p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors ${
