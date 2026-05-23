@@ -63,16 +63,16 @@ Determine which sub-agent to invoke based on user intent:
 ## Workflow
 
 1. **Ambiguous intent?** Ask: "Would you like to create a new story or continue an existing one?"
-2. **Continuing?** Search the workspace root for existing story folders (each has a `config.md`). List them and let the user pick.
+2. **Continuing?** Search the `books/` folder for existing story folders (each has a `config.md`). List them and let the user pick.
 3. **Delegate** to the appropriate sub-agent, forwarding the full user message and any relevant context (story folder path, etc.).
 4. After the sub-agent finishes, relay its output to the user.
 
 ## Story Folder Convention
 
-Every story lives in its own folder at the **workspace root**:
+Every story lives in its own folder inside the **`books/`** directory at the workspace root:
 
 ```
-<story-name>/
+books/<story-name>/
 ├── config.md            # Story settings (genre, mode, pacing, fandom, etc.)
 ├── plan.md              # Arc-wise storyline outline (start → end)
 ├── summary.md           # Running condensed summary of the story so far

@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #fafafa;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Reader prose styles */
+.reader-prose p {
+  margin-bottom: 1.2em;
+}
+
+.reader-prose hr {
+  border: none;
+  text-align: center;
+  margin: 2em 0;
+}
+
+.reader-prose hr::after {
+  content: "• • •";
+  letter-spacing: 0.5em;
+  opacity: 0.4;
+}
+
+.reader-prose h1,
+.reader-prose h2,
+.reader-prose h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-weight: 700;
+}
+
+.reader-prose strong {
+  font-weight: 600;
+}
+
+.reader-prose em {
+  font-style: italic;
+}
+
+/* Smooth transitions for theme toggle */
+body,
+header,
+main,
+a,
+button {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}

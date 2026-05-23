@@ -21,7 +21,7 @@ if (!storyFolder) {
   process.exit(1);
 }
 
-const storyDir = resolve(WORKSPACE_ROOT, storyFolder);
+const storyDir = resolve(WORKSPACE_ROOT, "books", storyFolder);
 const chaptersDir = resolve(storyDir, "chapters");
 
 if (!existsSync(chaptersDir)) {

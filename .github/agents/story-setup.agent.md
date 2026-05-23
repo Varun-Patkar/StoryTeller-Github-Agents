@@ -301,17 +301,21 @@ How the story concludes.
 node .github/scripts/create-story-structure.mjs "<Story Name>" --type "<Type>" --fandom "<Fandom>" --genre "<Genres>" --themes "<Themes>" --mode "<Mode>" --pacing "<Pacing>" --pov "<POV>" --tone "<Tone>"
 ```
 
-This script creates the entire folder structure deterministically:
-- `<story-slug>/config.md` — pre-filled with all settings
-- `<story-slug>/summary.md` — empty template
-- `<story-slug>/plan.md` — empty template (you fill in the plan content)
-- `<story-slug>/chapters/` — empty directory
-- `<story-slug>/research/` and `research/characters/` — empty directories
+This script creates the entire folder structure deterministically inside `books/`:
+- `books/<story-slug>/config.md` — pre-filled with all settings (including Title, Synopsis, Cover Prompt, Cover Image, Status, Total Chapters fields)
+- `books/<story-slug>/summary.md` — empty template
+- `books/<story-slug>/plan.md` — empty template (you fill in the plan content)
+- `books/<story-slug>/chapters/` — empty directory
+- `books/<story-slug>/research/` and `research/characters/` — empty directories
 
 After the script runs:
 1. **Edit `plan.md`** with the full story plan content from Phase 5.
-2. **Create research files** in the `research/` folder as needed.
-3. Confirm to the user that setup is complete and they can start a session with the story runner.
+2. **Edit `config.md`** to fill in the remaining fields:
+   - **Synopsis**: Write a 2-3 sentence compelling book synopsis based on the story plan.
+   - **Cover Prompt**: Write a detailed AI image generation prompt for the book cover. Include style (cinematic, painted, etc.), composition, key visual elements from the story, color palette, and mood. The prompt MUST instruct that the book title text appears at the top of the cover and the author name appears at the bottom. Use the `Author` field from config.md for the author name (if blank, look up the GitHub username of the repo owner via `git config user.name` or `gh api user --jq .login`). Example phrasing: `The title "BOOK TITLE" in bold [style] font at the top. The author name "AUTHOR NAME" in smaller [style] font at the bottom.`
+   - **Total Chapters**: Set to the total number of planned chapters.
+3. **Create research files** in the `research/` folder as needed.
+4. Confirm to the user that setup is complete and they can start a session with the story runner.
 
 **DO NOT manually create config.md, summary.md, or the folder structure. Always use the script.**
 
@@ -324,5 +328,5 @@ After the script runs:
 - DO NOT rely on your own knowledge for fandom/genre details — always verify via web research (Mode A: SearXNG + fetch_webpage, or Mode B: Playwright/Google). Your training data may be outdated or inaccurate.
 - DO NOT write vague research files. Every file must contain specific names, terms, and details — not generic summaries.
 - ALWAYS stop and wait for user input after asking questions if `vscode_askQuestions` is unavailable.
-- ALWAYS create files at workspace root: `<workspace-root>/<story-name>/...`. Use the confirmed story name from Phase 3, lowercased with spaces replaced by hyphens and special characters removed (e.g., "The Last Sunrise" → `the-last-sunrise`).
+- ALWAYS create files in the `books/` directory: `<workspace-root>/books/<story-name>/...`. Use the confirmed story name from Phase 3, lowercased with spaces replaced by hyphens and special characters removed (e.g., "The Last Sunrise" → `books/the-last-sunrise`).
 - ALWAYS do multiple search rounds — a single query per topic is insufficient.

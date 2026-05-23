@@ -43,7 +43,8 @@ if (!args.name) {
 }
 
 const slug = slugify(args.name);
-const storyDir = resolve(WORKSPACE_ROOT, slug);
+const BOOKS_DIR = resolve(WORKSPACE_ROOT, "books");
+const storyDir = resolve(BOOKS_DIR, slug);
 
 if (existsSync(storyDir)) {
   console.error(`Story folder already exists: ${storyDir}`);
@@ -72,6 +73,13 @@ const configContent = `# Story Configuration
 | Pacing  | ${args.pacing || "Medium (1500-3000 characters)"} |
 | POV     | ${args.pov || "Third Person Limited"} |
 | Tone    | ${args.tone || "Balanced"} |
+| Title   | ${args.name} |
+| Author  | ${args.author || ""} |
+| Synopsis | |
+| Cover Prompt | |
+| Cover Image | |
+| Status  | In Progress |
+| Total Chapters | |
 `;
 writeFileSync(resolve(storyDir, "config.md"), configContent, "utf-8");
 
