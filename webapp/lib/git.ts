@@ -141,11 +141,72 @@ export function commitChanges(message: string): string {
 }
 
 export function pushChanges(): void {
-  git("push");
+  // Push current branch, set upstream if needed
+  const branch = git("rev-parse --abbrev-ref HEAD");
+  try {
+    git("push");
+  } catch {
+    git(`push -u origin ${branch}`);
+  }
 }
 
 export function pullChanges(): void {
   git("pull --ff-only");
+}
+
+export function listBranches(): { current: string; local: string[]; remote: string[] } {
+  const current = git("rev-parse --abbrev-ref HEAD");
+  const localOutput = git("branch --format=%(refname:short)");
+  const local = localOutput.split("\n").filter(Boolean);
+  
+  let remote: string[] = [];
+  try {
+    git("fetch --prune");
+    const remoteOutput = git("branch -r --format=%(refname:short)");
+    remote = remoteOutput
+      .split("\n")
+      .filter(Boolean)
+      .filter((b) => !b.includes("HEAD"))
+      .map((b) => b.replace(/^origin\//, ""))
+      .filter((b) => !local.includes(b)); // Only show remote branches not already local
+  } catch {}
+  
+  return { current, local, remote };
+}
+
+export function createBranch(name: string): void {
+  // Sanitize branch name
+  const safe = name.replace(/[^a-zA-Z0-9/_-]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+  if (!safe) throw new Error("Invalid branch name");
+  git(`checkout -b "${safe}"`);
+}
+
+export function switchBranch(name: string, isRemote = false): void {
+  const safe = name.replace(/[^a-zA-Z0-9/_-]/g, "");
+  if (!safe) throw new Error("Invalid branch name");
+  if (isRemote) {
+    // Checkout remote branch as a new local tracking branch
+    try {
+      git(`checkout -b "${safe}" "origin/${safe}"`);
+    } catch {
+      // Branch might already exist locally, just switch
+      git(`checkout "${safe}"`);
+    }
+  } else {
+    git(`checkout "${safe}"`);
+  }
+}
+
+export function mergeBranch(name: string): string {
+  const safe = name.replace(/[^a-zA-Z0-9/_-]/g, "");
+  if (!safe) throw new Error("Invalid branch name");
+  return git(`merge "${safe}"`);
+}
+
+export function deleteBranch(name: string): void {
+  const safe = name.replace(/[^a-zA-Z0-9/_-]/g, "");
+  if (!safe) throw new Error("Invalid branch name");
+  git(`branch -d "${safe}"`);
 }
 
 export function undoFile(filePath: string): void {

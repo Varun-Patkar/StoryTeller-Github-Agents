@@ -8,6 +8,11 @@ import {
   pullChanges,
   undoFile,
   undoAllChanges,
+  listBranches,
+  createBranch,
+  switchBranch,
+  mergeBranch,
+  deleteBranch,
   suggestCommitMessage,
 } from "@/lib/git";
 import { generateCommitMessage } from "@/lib/commit-message";
@@ -18,10 +23,10 @@ export async function GET() {
   try {
     const status = getGitStatus();
     const log = getGitLog(30);
-    // Use simple heuristic for initial load (fast), LLM is called separately
+    const branches = status.isRepo ? listBranches() : { current: "", branches: [] };
     const suggestedMessage = status.hasChanges ? suggestCommitMessage(status) : "";
 
-    return NextResponse.json({ status, log, suggestedMessage });
+    return NextResponse.json({ status, log, branches, suggestedMessage });
   } catch (e: unknown) {
     const err = e as Error;
     return NextResponse.json({ error: err.message }, { status: 500 });
@@ -68,6 +73,31 @@ export async function POST(request: Request) {
       case "generate-message": {
         const message = await generateCommitMessage();
         return NextResponse.json({ ok: true, message });
+      }
+      case "create-branch": {
+        const name = (body as { branchName?: string }).branchName;
+        if (!name) return NextResponse.json({ error: "branchName required" }, { status: 400 });
+        createBranch(name);
+        return NextResponse.json({ ok: true, branch: name });
+      }
+      case "switch-branch": {
+        const name = (body as { branchName?: string }).branchName;
+        const isRemote = (body as { isRemote?: boolean }).isRemote || false;
+        if (!name) return NextResponse.json({ error: "branchName required" }, { status: 400 });
+        switchBranch(name, isRemote);
+        return NextResponse.json({ ok: true, branch: name });
+      }
+      case "merge-branch": {
+        const name = (body as { branchName?: string }).branchName;
+        if (!name) return NextResponse.json({ error: "branchName required" }, { status: 400 });
+        const result = mergeBranch(name);
+        return NextResponse.json({ ok: true, result });
+      }
+      case "delete-branch": {
+        const name = (body as { branchName?: string }).branchName;
+        if (!name) return NextResponse.json({ error: "branchName required" }, { status: 400 });
+        deleteBranch(name);
+        return NextResponse.json({ ok: true });
       }
       default:
         return NextResponse.json({ error: "Unknown action" }, { status: 400 });

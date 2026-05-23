@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import {
   GitBranch,
   GitCommit,
+  GitMerge,
   ChevronDown,
   ChevronUp,
   Check,
@@ -48,6 +49,7 @@ interface GitStatus {
 interface GitData {
   status: GitStatus;
   log: GitLogEntry[];
+  branches: { current: string; local: string[]; remote: string[] };
   suggestedMessage: string;
   error?: string;
 }
@@ -94,6 +96,9 @@ export function GitPanel({
   const [toast, setToast] = useState<string | null>(null);
   const [showLog, setShowLog] = useState(false);
   const [generatingMsg, setGeneratingMsg] = useState(false);
+  const [showBranches, setShowBranches] = useState(false);
+  const [newBranchName, setNewBranchName] = useState("");
+  const [showNewBranch, setShowNewBranch] = useState(false);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -101,7 +106,7 @@ export function GitPanel({
       const res = await fetch("/api/git");
       const json = await res.json();
       if (json.error) {
-        setData({ status: { isRepo: false, branch: "", ahead: 0, behind: 0, staged: [], unstaged: [], untracked: [], hasChanges: false }, log: [], suggestedMessage: "", error: json.error });
+        setData({ status: { isRepo: false, branch: "", ahead: 0, behind: 0, staged: [], unstaged: [], untracked: [], hasChanges: false }, log: [], branches: { current: "", local: [], remote: [] }, suggestedMessage: "", error: json.error });
       } else {
         setData(json);
         if (json.suggestedMessage && !commitMsg) {
@@ -118,28 +123,32 @@ export function GitPanel({
     if (open) fetchData();
   }, [open, fetchData]);
 
-  const doAction = async (action: string, message?: string, filePath?: string) => {
+  const doAction = async (action: string, message?: string, filePath?: string, branchName?: string, isRemote?: boolean) => {
     setActing(true);
     try {
       const res = await fetch("/api/git", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action, message, filePath }),
+        body: JSON.stringify({ action, message, filePath, branchName, isRemote }),
       });
       const json = await res.json();
       if (json.error) {
         setToast(`Error: ${json.error}`);
       } else {
-        setToast(
-          action === "commit"
-            ? `Committed: ${json.hash}`
-            : action === "push"
-            ? "Pushed successfully"
-            : action === "pull"
-            ? "Pulled successfully"
-            : "Done"
-        );
-        setCommitMsg("");
+        const msgs: Record<string, string> = {
+          commit: `Committed: ${json.hash}`,
+          push: "Pushed successfully",
+          pull: "Pulled successfully",
+          "create-branch": `Branch created: ${branchName}`,
+          "switch-branch": `Switched to: ${branchName}`,
+          "merge-branch": "Merged successfully",
+          "delete-branch": `Deleted: ${branchName}`,
+          "undo-all": "All changes discarded",
+          "undo-file": `Reverted: ${filePath}`,
+        };
+        setToast(msgs[action] || "Done");
+        if (action === "commit") setCommitMsg("");
+        if (action === "create-branch") { setShowNewBranch(false); setNewBranchName(""); }
         await fetchData();
       }
     } catch {
@@ -175,9 +184,13 @@ export function GitPanel({
             <GitBranch className="w-4 h-4 text-neutral-500" />
             <h2 className="font-semibold text-sm">Git Manager</h2>
             {data?.status.branch && (
-              <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400">
+              <button
+                onClick={() => setShowBranches(!showBranches)}
+                className="flex items-center gap-1 text-xs font-mono px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+              >
                 {data.status.branch}
-              </span>
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${showBranches ? "rotate-180" : ""}`} />
+              </button>
             )}
           </div>
           <div className="flex items-center gap-1">
@@ -199,6 +212,121 @@ export function GitPanel({
             </button>
           </div>
         </div>
+
+        {/* Branch management dropdown */}
+        {showBranches && data?.status.isRepo && (
+          <div className="border-b border-neutral-200 dark:border-neutral-800 px-3 py-2 space-y-2">
+            {/* Branch list */}
+            <div className="space-y-0.5 max-h-[200px] overflow-y-auto">
+              {/* Local branches */}
+              {data.branches?.local.map((b) => (
+                <div key={b} className="flex items-center gap-2 text-xs">
+                  <button
+                    onClick={() => doAction("switch-branch", undefined, undefined, b)}
+                    disabled={acting || b === data.status.branch}
+                    className={`flex-1 text-left px-2 py-1.5 rounded-lg transition-colors ${
+                      b === data.status.branch
+                        ? "bg-neutral-100 dark:bg-neutral-800 font-medium"
+                        : "hover:bg-neutral-50 dark:hover:bg-neutral-800"
+                    }`}
+                  >
+                    <span className="font-mono">{b}</span>
+                    {b === data.status.branch && (
+                      <span className="ml-1 text-[10px] text-emerald-500">current</span>
+                    )}
+                  </button>
+                  {b !== data.status.branch && b !== "main" && (
+                    <div className="flex gap-0.5">
+                      <button
+                        onClick={() => doAction("merge-branch", undefined, undefined, b)}
+                        disabled={acting}
+                        className="p-1 rounded hover:bg-blue-50 dark:hover:bg-blue-900/20 text-neutral-400 hover:text-blue-500 transition-colors"
+                        title={`Merge ${b} into ${data.status.branch}`}
+                      >
+                        <GitMerge className="w-3 h-3" />
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (confirm(`Delete branch "${b}"?`)) {
+                            doAction("delete-branch", undefined, undefined, b);
+                          }
+                        }}
+                        disabled={acting}
+                        className="p-1 rounded hover:bg-red-50 dark:hover:bg-red-900/20 text-neutral-400 hover:text-red-500 transition-colors"
+                        title={`Delete ${b}`}
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ))}
+
+              {/* Remote branches */}
+              {data.branches?.remote.length > 0 && (
+                <>
+                  <div className="text-[10px] font-medium text-neutral-400 uppercase tracking-wider px-2 pt-2 pb-1">
+                    Remote
+                  </div>
+                  {data.branches.remote.map((b) => (
+                    <div key={`remote-${b}`} className="flex items-center gap-2 text-xs">
+                      <button
+                        onClick={() => doAction("switch-branch", undefined, undefined, b, true)}
+                        disabled={acting}
+                        className="flex-1 text-left px-2 py-1.5 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
+                      >
+                        <span className="font-mono text-neutral-500 dark:text-neutral-400">{b}</span>
+                        <span className="ml-1 text-[10px] text-neutral-400">origin</span>
+                      </button>
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
+
+            {/* New branch */}
+            {showNewBranch ? (
+              <div className="flex items-center gap-1.5">
+                <input
+                  autoFocus
+                  value={newBranchName}
+                  onChange={(e) => setNewBranchName(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && newBranchName.trim()) {
+                      doAction("create-branch", undefined, undefined, newBranchName.trim());
+                    }
+                    if (e.key === "Escape") { setShowNewBranch(false); setNewBranchName(""); }
+                  }}
+                  placeholder="book/my-new-story"
+                  className="flex-1 text-xs px-2 py-1 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 focus:outline-none focus:ring-1 focus:ring-neutral-300 dark:focus:ring-neutral-600 font-mono"
+                />
+                <button
+                  onClick={() => {
+                    if (newBranchName.trim()) doAction("create-branch", undefined, undefined, newBranchName.trim());
+                  }}
+                  disabled={acting || !newBranchName.trim()}
+                  className="text-[11px] font-medium px-2 py-1 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 disabled:opacity-40"
+                >
+                  Create
+                </button>
+                <button
+                  onClick={() => { setShowNewBranch(false); setNewBranchName(""); }}
+                  className="p-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => setShowNewBranch(true)}
+                className="flex items-center gap-1 text-[11px] font-medium text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                <GitBranch className="w-3 h-3" />
+                New Branch
+              </button>
+            )}
+          </div>
+        )}
 
         {/* Content */}
         <div className="flex-1 overflow-y-auto">
