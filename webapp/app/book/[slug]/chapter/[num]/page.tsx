@@ -32,6 +32,7 @@ export default async function ChapterPage({
         meta: chapter.meta,
         content: chapter.content,
         totalChapters,
+        writtenChapters: chapters.length,
         bookTitle: book.config.title || slug,
         slug,
       }}

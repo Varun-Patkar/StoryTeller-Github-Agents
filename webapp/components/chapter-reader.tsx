@@ -18,6 +18,7 @@ interface ChapterData {
   meta: { number: number; title: string };
   content: string;
   totalChapters: number;
+  writtenChapters: number;
   bookTitle: string;
   slug: string;
 }
@@ -169,6 +170,8 @@ export default function ChapterReader({ data }: { data: ChapterData }) {
           slug={data.slug}
           currentChapter={data.meta.number}
           totalChapters={data.totalChapters}
+          writtenChapters={data.writtenChapters}
+          bookTitle={data.bookTitle}
         />
       </div>
     </div>

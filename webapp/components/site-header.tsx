@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { GitPanel } from "@/components/git-panel";
 import { useChatState } from "@/components/chat-provider";
-import { BookOpen, GitBranch, MessageSquare } from "lucide-react";
+import { GitBranch, MessageSquare } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -26,7 +27,7 @@ export function SiteHeader() {
             href="/"
             className="flex items-center gap-2 font-semibold text-lg tracking-tight hover:opacity-80 transition-opacity"
           >
-            <BookOpen className="w-5 h-5" />
+            <Image src="/logo-orange.png" alt="StoryTeller" width={24} height={24} className="w-6 h-6" />
             StoryTeller
           </Link>
           <div className="flex items-center gap-1">
