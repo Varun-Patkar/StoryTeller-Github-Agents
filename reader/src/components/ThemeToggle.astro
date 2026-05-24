@@ -30,12 +30,10 @@ const { id = 'theme-toggle' } = Astro.props;
 </button>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
-    const btn = document.getElementById('theme-toggle');
-    btn?.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      const isDark = document.documentElement.classList.contains('dark');
-      localStorage.setItem('st-theme', isDark ? 'dark' : 'light');
-    });
+  const btn = document.getElementById('theme-toggle');
+  btn?.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+    localStorage.setItem('st-theme', isDark ? 'dark' : 'light');
   });
 </script>
