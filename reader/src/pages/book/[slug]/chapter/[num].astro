@@ -1,6 +1,6 @@
 ---
 import Base from '../../../../layouts/Base.astro';
-import ThemeToggle from '../../../../components/ThemeToggle.astro';
+import ReaderSettings from '../../../../components/ReaderSettings.astro';
 import { getBooks, getBook, getChapters, getChapterContent } from '../../../../lib/books';
 import { marked } from 'marked';
 
@@ -63,19 +63,32 @@ const hasNext = currentNum < totalWritten;
         {currentNum} / {totalWritten}
       </span>
 
-      <ThemeToggle />
+      <!-- Settings button only — panel rendered outside backdrop-filter container -->
+      <button
+        id="settings-toggle"
+        class="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
+        aria-label="Reading settings"
+      >
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
     </div>
   </div>
 
+  <!-- Settings panel and backdrop — OUTSIDE the top bar to avoid backdrop-filter containing block issue -->
+  <ReaderSettings />
+
   <!-- Reader content -->
-  <main class="max-w-3xl mx-auto px-5 sm:px-8 py-8 sm:py-12">
+  <main id="reader-content" class="mx-auto px-5 sm:px-8 py-8 sm:py-12" style="max-width: 80vw; font-family: 'Georgia', 'Times New Roman', serif; font-size: 18px; line-height: 1.8;">
     <!-- Chapter title -->
-    <h1 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center leading-tight">
+    <h1 class="font-bold mb-8 sm:mb-12 text-center leading-tight" style="font-size: 1.5em;">
       Chapter {currentNum}: {chapterTitle}
     </h1>
 
     <!-- Prose -->
-    <div class="reader-prose text-lg leading-[1.8] font-serif" set:html={html} />
+    <div class="reader-prose" set:html={html} />
 
     <!-- Bottom navigation -->
     <nav class="flex items-center justify-between py-8 mt-8 border-t border-neutral-200 dark:border-neutral-800">

@@ -1,0 +1,201 @@
+---
+// Reading settings panel — vanilla JS, no framework needed
+// The toggle button (#settings-toggle) must be rendered separately in the page
+// to avoid being inside a backdrop-filter container (which breaks fixed positioning).
+---
+
+<!-- Settings panel backdrop -->
+<div id="settings-backdrop" class="fixed inset-0 bg-black/30 z-40 hidden"></div>
+
+<!-- Settings panel -->
+<div id="settings-panel" class="fixed bottom-0 left-0 right-0 md:bottom-auto md:top-14 md:right-4 md:left-auto md:w-80 z-50 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-t-2xl md:rounded-2xl shadow-2xl p-6 space-y-5 max-h-[70vh] overflow-y-auto hidden">
+  <div class="flex items-center justify-between">
+    <h3 class="font-semibold text-sm">Reading Settings</h3>
+    <button id="settings-close" class="p-1 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Font Family -->
+  <div>
+    <label class="text-xs font-medium text-neutral-500 dark:text-neutral-400 mb-2 block">Font</label>
+    <div class="grid grid-cols-3 gap-2" id="font-buttons">
+      <button data-font="serif" style="font-family: Georgia, serif" class="setting-btn text-xs py-2 rounded-lg border transition-colors">Serif</button>
+      <button data-font="sans" style="font-family: system-ui, sans-serif" class="setting-btn text-xs py-2 rounded-lg border transition-colors">Sans</button>
+      <button data-font="mono" style="font-family: 'Courier New', monospace" class="setting-btn text-xs py-2 rounded-lg border transition-colors">Mono</button>
+    </div>
+  </div>
+
+  <!-- Font Size -->
+  <div>
+    <label class="text-xs font-medium text-neutral-500 dark:text-neutral-400 mb-2 block">Size — <span id="size-label">18</span>px</label>
+    <div class="flex items-center gap-3">
+      <button id="size-minus" class="p-1.5 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+        <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <input id="size-range" type="range" min="14" max="28" value="18" class="flex-1 accent-neutral-900 dark:accent-white" />
+      <button id="size-plus" class="p-1.5 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+        <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Line Height -->
+  <div>
+    <label class="text-xs font-medium text-neutral-500 dark:text-neutral-400 mb-2 block">Line Spacing — <span id="lh-label">1.8</span></label>
+    <input id="lh-range" type="range" min="1.2" max="2.5" step="0.1" value="1.8" class="w-full accent-neutral-900 dark:accent-white" />
+  </div>
+
+  <!-- Column Width -->
+  <div>
+    <label class="text-xs font-medium text-neutral-500 dark:text-neutral-400 mb-2 block">Column Width</label>
+    <div class="grid grid-cols-3 gap-2" id="width-buttons">
+      <button data-width="narrow" class="setting-btn text-xs py-2 rounded-lg border transition-colors capitalize">Narrow</button>
+      <button data-width="medium" class="setting-btn text-xs py-2 rounded-lg border transition-colors capitalize">Medium</button>
+      <button data-width="wide" class="setting-btn text-xs py-2 rounded-lg border transition-colors capitalize">Wide</button>
+    </div>
+  </div>
+
+  <!-- Reader Theme -->
+  <div>
+    <label class="text-xs font-medium text-neutral-500 dark:text-neutral-400 mb-2 block">Reader Theme</label>
+    <div class="flex gap-2" id="theme-buttons">
+      <button data-theme="white" title="White" class="theme-dot w-8 h-8 rounded-full border-2 transition-all" style="background-color: #ffffff"></button>
+      <button data-theme="cream" title="Cream" class="theme-dot w-8 h-8 rounded-full border-2 transition-all" style="background-color: #faf8f1"></button>
+      <button data-theme="sepia" title="Sepia" class="theme-dot w-8 h-8 rounded-full border-2 transition-all" style="background-color: #f4ecd8"></button>
+      <button data-theme="dark" title="Dark" class="theme-dot w-8 h-8 rounded-full border-2 transition-all" style="background-color: #1a1a1a"></button>
+      <button data-theme="black" title="Black" class="theme-dot w-8 h-8 rounded-full border-2 transition-all" style="background-color: #000000"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const STORAGE_KEY = 'st-reader-settings';
+  const FONTS: Record<string, string> = {
+    serif: "'Georgia', 'Times New Roman', serif",
+    sans: "'Inter', system-ui, -apple-system, sans-serif",
+    mono: "'JetBrains Mono', 'Fira Code', monospace",
+  };
+  const WIDTHS: Record<string, string> = { narrow: '42rem', medium: '56rem', wide: '80vw' };
+  const THEMES: Record<string, { bg: string; text: string }> = {
+    white: { bg: '#ffffff', text: '#1a1a1a' },
+    cream: { bg: '#faf8f1', text: '#1a1a1a' },
+    sepia: { bg: '#f4ecd8', text: '#5b4636' },
+    dark: { bg: '#1a1a1a', text: '#d4d4d4' },
+    black: { bg: '#000000', text: '#e5e5e5' },
+  };
+
+  interface Settings {
+    fontFamily: string;
+    fontSize: number;
+    lineHeight: number;
+    maxWidth: string;
+    readerTheme: string;
+  }
+
+  const defaults: Settings = { fontFamily: 'serif', fontSize: 18, lineHeight: 1.8, maxWidth: 'wide', readerTheme: 'white' };
+
+  function load(): Settings {
+    try {
+      const s = localStorage.getItem(STORAGE_KEY);
+      return s ? { ...defaults, ...JSON.parse(s) } : { ...defaults };
+    } catch { return { ...defaults }; }
+  }
+
+  function save(s: Settings) { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
+
+  const settings = load();
+  const reader = document.getElementById('reader-content')!;
+  const body = document.body;
+  const panel = document.getElementById('settings-panel')!;
+  const backdrop = document.getElementById('settings-backdrop')!;
+
+  function apply() {
+    // Reader content styles
+    reader.style.fontFamily = FONTS[settings.fontFamily];
+    reader.style.fontSize = `${settings.fontSize}px`;
+    reader.style.lineHeight = String(settings.lineHeight);
+    reader.style.maxWidth = WIDTHS[settings.maxWidth];
+
+    // Page theme
+    const theme = THEMES[settings.readerTheme];
+    body.style.backgroundColor = theme.bg;
+    body.style.color = theme.text;
+
+    // Update dark class for chrome elements (top bar, nav)
+    const isDark = ['dark', 'black'].includes(settings.readerTheme);
+    document.documentElement.classList.toggle('dark', isDark);
+
+    // Update UI controls
+    document.getElementById('size-label')!.textContent = String(settings.fontSize);
+    document.getElementById('lh-label')!.textContent = settings.lineHeight.toFixed(1);
+    (document.getElementById('size-range') as HTMLInputElement).value = String(settings.fontSize);
+    (document.getElementById('lh-range') as HTMLInputElement).value = String(settings.lineHeight);
+
+    // Active states for buttons
+    document.querySelectorAll('#font-buttons button').forEach(b => {
+      const el = b as HTMLElement;
+      const active = el.dataset.font === settings.fontFamily;
+      el.className = `setting-btn text-xs py-2 rounded-lg border transition-colors ${active ? 'border-neutral-900 dark:border-white bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800'}`;
+    });
+    document.querySelectorAll('#width-buttons button').forEach(b => {
+      const el = b as HTMLElement;
+      const active = el.dataset.width === settings.maxWidth;
+      el.className = `setting-btn text-xs py-2 rounded-lg border transition-colors capitalize ${active ? 'border-neutral-900 dark:border-white bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800'}`;
+    });
+    document.querySelectorAll('#theme-buttons button').forEach(b => {
+      const el = b as HTMLElement;
+      const active = el.dataset.theme === settings.readerTheme;
+      el.className = `theme-dot w-8 h-8 rounded-full border-2 transition-all ${active ? 'border-neutral-900 dark:border-white scale-110' : 'border-neutral-300 dark:border-neutral-600'}`;
+    });
+  }
+
+  function update(partial: Partial<Settings>) {
+    Object.assign(settings, partial);
+    save(settings);
+    apply();
+  }
+
+  // Toggle panel
+  document.getElementById('settings-toggle')!.addEventListener('click', () => {
+    const open = panel.classList.toggle('hidden');
+    backdrop.classList.toggle('hidden', open);
+  });
+  document.getElementById('settings-close')!.addEventListener('click', () => {
+    panel.classList.add('hidden');
+    backdrop.classList.add('hidden');
+  });
+  backdrop.addEventListener('click', () => {
+    panel.classList.add('hidden');
+    backdrop.classList.add('hidden');
+  });
+
+  // Font buttons
+  document.querySelectorAll('#font-buttons button').forEach(b => {
+    b.addEventListener('click', () => update({ fontFamily: (b as HTMLElement).dataset.font! }));
+  });
+
+  // Size controls
+  document.getElementById('size-minus')!.addEventListener('click', () => update({ fontSize: Math.max(14, settings.fontSize - 1) }));
+  document.getElementById('size-plus')!.addEventListener('click', () => update({ fontSize: Math.min(28, settings.fontSize + 1) }));
+  document.getElementById('size-range')!.addEventListener('input', (e) => update({ fontSize: parseInt((e.target as HTMLInputElement).value) }));
+
+  // Line height
+  document.getElementById('lh-range')!.addEventListener('input', (e) => update({ lineHeight: parseFloat((e.target as HTMLInputElement).value) }));
+
+  // Width buttons
+  document.querySelectorAll('#width-buttons button').forEach(b => {
+    b.addEventListener('click', () => update({ maxWidth: (b as HTMLElement).dataset.width! }));
+  });
+
+  // Theme buttons
+  document.querySelectorAll('#theme-buttons button').forEach(b => {
+    b.addEventListener('click', () => update({ readerTheme: (b as HTMLElement).dataset.theme! }));
+  });
+
+  // Apply on load
+  apply();
+</script>
