@@ -1,0 +1,84 @@
+---
+import type { Book } from '../lib/books';
+
+interface Props {
+  book: Book;
+}
+
+const { book } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const genres = book.config.genre.split(',').map(g => g.trim()).filter(Boolean);
+const totalChapters = parseInt(book.config.totalChapters) || 0;
+---
+
+<a
+  href={`${base}book/${book.slug}/`}
+  class="group flex flex-col rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+>
+  <!-- Cover -->
+  <div class="relative aspect-[2/3] overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 dark:from-neutral-800 dark:via-neutral-800 dark:to-neutral-700"></div>
+
+    {book.hasCover ? (
+      <img
+        src={`${base}covers/${book.slug}/cover.${book.coverExt}`}
+        alt={book.config.title || book.slug}
+        class="relative w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+      />
+    ) : (
+      <div class="relative flex flex-col items-center justify-center h-full p-6 text-center">
+        <span class="text-5xl mb-3">📖</span>
+        <p class="text-sm font-semibold text-neutral-700 dark:text-neutral-400 leading-tight">
+          {book.config.title || book.slug}
+        </p>
+      </div>
+    )}
+
+    {book.config.status && (
+      <span
+        class:list={[
+          'absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full backdrop-blur-sm',
+          book.config.status === 'Complete'
+            ? 'bg-emerald-500/90 text-white'
+            : 'bg-amber-500/90 text-white',
+        ]}
+      >
+        {book.config.status}
+      </span>
+    )}
+  </div>
+
+  <!-- Info -->
+  <div class="p-4 flex flex-col gap-2 flex-1">
+    <h3 class="font-semibold text-base leading-tight line-clamp-2">
+      {book.config.title || book.slug}
+    </h3>
+
+    {book.config.author && (
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        by {book.config.author}
+      </p>
+    )}
+
+    {book.config.fandom && book.config.fandom !== 'N/A' && (
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        {book.config.fandom}
+      </p>
+    )}
+
+    {genres.length > 0 && (
+      <div class="flex flex-wrap gap-1.5 mt-1">
+        {genres.map((genre) => (
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-400">
+            {genre}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <p class="text-xs text-neutral-400 dark:text-neutral-500 mt-auto pt-2">
+      {book.chapterCount}{totalChapters > 0 ? ` / ${totalChapters}` : ''} chapter{book.chapterCount !== 1 ? 's' : ''}
+    </p>
+  </div>
+</a>

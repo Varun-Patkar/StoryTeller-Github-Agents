@@ -1,0 +1,154 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ThemeToggle from '../../../components/ThemeToggle.astro';
+import { getBooks, getBook, getChapters } from '../../../lib/books';
+
+export function getStaticPaths() {
+  const books = getBooks();
+  return books.map(b => ({ params: { slug: b.slug } }));
+}
+
+const { slug } = Astro.params;
+const book = getBook(slug!);
+
+if (!book) {
+  return Astro.redirect(import.meta.env.BASE_URL);
+}
+
+const chapters = getChapters(slug!);
+const base = import.meta.env.BASE_URL;
+const genres = book.config.genre.split(',').map(g => g.trim()).filter(Boolean);
+const themes = book.config.themes.split(',').map(t => t.trim()).filter(Boolean);
+const totalChapters = parseInt(book.config.totalChapters) || 0;
+---
+
+<Base title={book.config.title || book.slug} description={book.config.synopsis}>
+  <!-- Header -->
+  <header class="border-b border-neutral-200 dark:border-neutral-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href={base} class="flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Library</span>
+      </a>
+      <ThemeToggle />
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <!-- Book hero -->
+    <div class="flex flex-col sm:flex-row gap-6 sm:gap-8 mb-10">
+      <!-- Cover -->
+      <div class="w-48 sm:w-56 shrink-0 mx-auto sm:mx-0">
+        <div class="aspect-[2/3] rounded-xl overflow-hidden shadow-lg">
+          {book.hasCover ? (
+            <img
+              src={`${base}covers/${book.slug}/cover.${book.coverExt}`}
+              alt={book.config.title}
+              class="w-full h-full object-cover"
+            />
+          ) : (
+            <div class="w-full h-full bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 dark:from-neutral-800 dark:to-neutral-700 flex flex-col items-center justify-center p-4">
+              <span class="text-5xl mb-2">📖</span>
+              <p class="text-sm font-semibold text-neutral-700 dark:text-neutral-400 text-center leading-tight">
+                {book.config.title || book.slug}
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="flex flex-col gap-3 text-center sm:text-left">
+        <h1 class="text-2xl sm:text-3xl font-bold leading-tight">
+          {book.config.title || book.slug}
+        </h1>
+
+        {book.config.author && (
+          <p class="text-neutral-500 dark:text-neutral-400">
+            by {book.config.author}
+          </p>
+        )}
+
+        {book.config.fandom && book.config.fandom !== 'N/A' && (
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            Fandom: {book.config.fandom}
+          </p>
+        )}
+
+        {book.config.synopsis && (
+          <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 mt-2">
+            {book.config.synopsis}
+          </p>
+        )}
+
+        <!-- Metadata pills -->
+        <div class="flex flex-wrap gap-2 mt-2 justify-center sm:justify-start">
+          {genres.map(g => (
+            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">
+              {g}
+            </span>
+          ))}
+          {themes.map(t => (
+            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400">
+              {t}
+            </span>
+          ))}
+        </div>
+
+        <!-- Stats -->
+        <div class="flex items-center gap-4 mt-2 text-sm text-neutral-500 dark:text-neutral-400 justify-center sm:justify-start">
+          <span>{chapters.length}{totalChapters > 0 ? ` / ${totalChapters}` : ''} chapters</span>
+          {book.config.status && (
+            <span class:list={[
+              'font-medium',
+              book.config.status === 'Complete' ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400',
+            ]}>
+              {book.config.status}
+            </span>
+          )}
+        </div>
+
+        <!-- Start reading button -->
+        {chapters.length > 0 && (
+          <div class="mt-4">
+            <a
+              href={`${base}book/${book.slug}/chapter/1/`}
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-medium hover:opacity-90 transition-opacity"
+            >
+              Start Reading
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- Chapter list -->
+    {chapters.length > 0 && (
+      <section>
+        <h2 class="text-lg font-semibold mb-4">Chapters</h2>
+        <div class="border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden divide-y divide-neutral-200 dark:divide-neutral-800">
+          {chapters.map(ch => (
+            <a
+              href={`${base}book/${book.slug}/chapter/${ch.number}/`}
+              class="flex items-center gap-4 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800/50 transition-colors"
+            >
+              <span class="text-sm font-mono text-neutral-400 dark:text-neutral-500 w-8 text-right shrink-0">
+                {ch.number}
+              </span>
+              <span class="text-sm font-medium truncate">
+                {ch.title}
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </main>
+</Base>

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Reader prose styles */
+.reader-prose p {
+  margin-bottom: 1.2em;
+}
+
+.reader-prose hr {
+  border: none;
+  text-align: center;
+  margin: 2em 0;
+}
+
+.reader-prose hr::after {
+  content: "• • •";
+  letter-spacing: 0.5em;
+  opacity: 0.4;
+}
+
+.reader-prose h1,
+.reader-prose h2,
+.reader-prose h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-weight: 700;
+}
+
+.reader-prose strong {
+  font-weight: 600;
+}
+
+.reader-prose em {
+  font-style: italic;
+}
+
+.reader-prose blockquote {
+  border-left: 3px solid currentColor;
+  padding-left: 1em;
+  margin: 1em 0;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.reader-prose ul,
+.reader-prose ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.reader-prose li {
+  margin-bottom: 0.3em;
+}
+
+/* Smooth transitions for theme toggle */
+body,
+header,
+main,
+a,
+button {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}

@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {},
+  serverExternalPackages: [
+    "@github/copilot",
+    "@github/copilot-sdk",
+    "@github/copilot-win32-x64",
+  ],
 };
 
 export default nextConfig;

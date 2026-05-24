@@ -1,0 +1,132 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import ThemeToggle from '../../../../components/ThemeToggle.astro';
+import { getBooks, getBook, getChapters, getChapterContent } from '../../../../lib/books';
+import { marked } from 'marked';
+
+export function getStaticPaths() {
+  const books = getBooks();
+  const paths: { params: { slug: string; num: string }; props: { bookTitle: string; chapterTitle: string; totalWritten: number } }[] = [];
+
+  for (const book of books) {
+    const chapters = getChapters(book.slug);
+    for (const ch of chapters) {
+      paths.push({
+        params: { slug: book.slug, num: String(ch.number) },
+        props: {
+          bookTitle: book.config.title || book.slug,
+          chapterTitle: ch.title,
+          totalWritten: chapters.length,
+        },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { slug, num } = Astro.params;
+const { bookTitle, chapterTitle, totalWritten } = Astro.props;
+const currentNum = parseInt(num!);
+const base = import.meta.env.BASE_URL;
+
+const content = getChapterContent(slug!, currentNum);
+if (!content) {
+  return Astro.redirect(`${base}book/${slug}/`);
+}
+
+// Strip the chapter heading since we render it separately
+const contentWithoutTitle = content.replace(/^#\s*Chapter\s*\d+:.*\n*/, '');
+const html = marked.parse(contentWithoutTitle) as string;
+
+const hasPrev = currentNum > 1;
+const hasNext = currentNum < totalWritten;
+---
+
+<Base title={`Ch. ${currentNum}: ${chapterTitle} — ${bookTitle}`}>
+  <!-- Top bar -->
+  <div class="sticky top-0 z-20 border-b border-neutral-200/60 dark:border-neutral-800/60 backdrop-blur-md bg-neutral-50/80 dark:bg-neutral-950/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-12 flex items-center justify-between">
+      <a
+        href={`${base}book/${slug}/`}
+        class="flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+      >
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span class="hidden sm:inline truncate max-w-[200px]">{bookTitle}</span>
+        <span class="sm:hidden">Back</span>
+      </a>
+
+      <span class="text-xs text-neutral-400 dark:text-neutral-500">
+        {currentNum} / {totalWritten}
+      </span>
+
+      <ThemeToggle />
+    </div>
+  </div>
+
+  <!-- Reader content -->
+  <main class="max-w-3xl mx-auto px-5 sm:px-8 py-8 sm:py-12">
+    <!-- Chapter title -->
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center leading-tight">
+      Chapter {currentNum}: {chapterTitle}
+    </h1>
+
+    <!-- Prose -->
+    <div class="reader-prose text-lg leading-[1.8] font-serif" set:html={html} />
+
+    <!-- Bottom navigation -->
+    <nav class="flex items-center justify-between py-8 mt-8 border-t border-neutral-200 dark:border-neutral-800">
+      {hasPrev ? (
+        <a
+          href={`${base}book/${slug}/chapter/${currentNum - 1}/`}
+          class="inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        >
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span class="hidden sm:inline">Previous</span>
+          <span class="sm:hidden">Prev</span>
+        </a>
+      ) : (
+        <div></div>
+      )}
+
+      <span class="text-xs text-neutral-400">{currentNum} / {totalWritten}</span>
+
+      {hasNext ? (
+        <a
+          href={`${base}book/${slug}/chapter/${currentNum + 1}/`}
+          class="inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        >
+          <span class="hidden sm:inline">Next</span>
+          <span class="sm:hidden">Next</span>
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      ) : (
+        <a
+          href={`${base}book/${slug}/`}
+          class="inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        >
+          Back to Book
+        </a>
+      )}
+    </nav>
+  </main>
+
+  <!-- Keyboard navigation -->
+  <script define:vars={{ base, slug, currentNum, hasPrev, hasNext }}>
+    document.addEventListener('keydown', (e) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      if (e.key === 'ArrowLeft' && hasPrev) {
+        window.location.href = `${base}book/${slug}/chapter/${currentNum - 1}/`;
+      } else if (e.key === 'ArrowRight' && hasNext) {
+        window.location.href = `${base}book/${slug}/chapter/${currentNum + 1}/`;
+      }
+    });
+  </script>
+</Base>
