@@ -21,12 +21,15 @@ A modern-day fan of The Last of Us is transmigrated into the game's world on Out
 ## Arc 1: Outbreak Day (Chapters 1–8)
 
 ### Synopsis
+
 The MC wakes up in Austin, Texas on September 27, 2013 — the night the Cordyceps outbreak begins. Disoriented but armed with meta-knowledge and a newly-activated Gamer System, they navigate the chaos of Outbreak Night. After Joel and Tommy flee with Sarah's "body," the MC discovers Sarah is still alive (barely) and saves her.
 
 ### Setting
+
 Austin, Texas. Suburban neighborhoods descending into chaos. Fires, military convoys, infected runners, panicked civilians. The MC's modern knowledge clashes with a world that's literally ending.
 
 ### Chapters
+
 - **Chapter 1**: MC wakes in a stranger's body near the Miller house. System activates with a tutorial notification. The outbreak is already underway — screaming, fires, distant gunshots. MC realizes where and WHEN they are.
 - **Chapter 2**: MC navigates the chaos of Austin, killing their first Runner. System awards points. MC desperately searches for the Millers, knowing the timeline.
 - **Chapter 3**: MC finds the aftermath of the FEDRA shooting — Joel and Tommy are gone, Sarah is on the ground, bleeding but alive. The soldier is dead (Tommy shot him). MC stabilizes Sarah using system-purchased medical supplies.
@@ -37,6 +40,7 @@ Austin, Texas. Suburban neighborhoods descending into chaos. Fires, military con
 - **Chapter 8**: MC clears a small group of Runners that find the ranch. Earns enough points for proper weapons and a first aid kit upgrade. Sarah sees the MC fight and is both terrified and grateful. They leave the ranch heading southwest. End of Outbreak Day arc — they're alive, but alone.
 
 ### Key Events
+
 - System activation and first kill
 - Saving Sarah Miller (THE pivotal divergence from canon)
 - First purchases from the Mall (medical supplies, food)
@@ -45,6 +49,7 @@ Austin, Texas. Suburban neighborhoods descending into chaos. Fires, military con
 - Sarah begins to notice the MC's impossible knowledge
 
 ### Character Development
+
 - MC: From terrified modern person to someone who can actually act under pressure
 - Sarah: Trauma of being shot, believing her dad abandoned her (he didn't — he thought she was dead); starts adapting faster than any 12-year-old should
 
@@ -53,45 +58,57 @@ Austin, Texas. Suburban neighborhoods descending into chaos. Fires, military con
 ## Arc 2: Learning to Survive (Chapters 9–18)
 
 ### Synopsis
-The weeks and months after Outbreak Day. MC and Sarah flee Austin and head west/north, surviving day by day. MC farms infected for points, buys supplies from the Mall, and starts to understand the system's economy. Sarah heals physically but grapples with the new world. They develop a bond forged in survival.
+
+The weeks and months after Outbreak Day. The full group — Marcus, Joel, Tommy, and Sarah — flee Austin and head northwest toward Colorado, surviving day by day. MC farms infected for points, buys supplies from the Mall, and starts to understand the system's economy. Sarah heals physically but grapples with the new world. Joel and Tommy bring combat skills and survival instincts while Marcus provides resources and direction. The group develops into a tight unit forged in shared survival.
 
 ### Setting
-Rural Texas, then moving through the American Southwest. Abandoned towns, highways, suburbs. Early-stage apocalypse: military checkpoints collapsing, QZs forming, infected spreading.
+
+Rural Texas Hill Country, then West Texas, then New Mexico, then into the Colorado Rockies. Abandoned towns, highways, ranch land. Early-stage apocalypse: military checkpoints collapsing, QZs forming, infected spreading.
 
 ### Chapters
-- **Chapter 9**: MC and Sarah's first week on the road. Establishing routines — scavenging, moving at night, avoiding both infected and panicking humans. MC discovers point farming is dangerous but rewarding.
-- **Chapter 10**: First encounter with human hostiles — a group of looters. MC's moral code is tested. They fight and win, but it's ugly. Sarah sees violence for the first time (beyond the soldier).
-- **Chapter 11**: MC discovers the Mall's full catalog. Has enough points for a generator and basic weapons. Strategic planning begins — where to settle?
-- **Chapter 12**: Sarah's recovery. She can walk now but the doctor (system-purchased medical textbook) confirms she can't have children. A quiet, heavy chapter. MC comforts her; their bond deepens.
-- **Chapter 13**: MC clears a Runner-infested warehouse and earns a significant point haul. First encounter with a Clicker — terrifying, nearly fatal, but the kill reward is massive.
-- **Chapter 14**: MC and Sarah encounter a small group of survivors — a family with two kids and an elderly couple. They travel together for a few days. MC sees the pattern forming: people need leaders, and nobody else is stepping up.
-- **Chapter 15**: The group is ambushed by a FEDRA patrol that's gone rogue — soldiers taking what they want. MC fights them off but the elderly man is killed. Sarah helps the widow. MC starts to see the real danger: people, not infected.
-- **Chapter 16**: MC and Sarah part ways with the family group, directing them toward a rumored QZ. Alone again, MC opens up to Sarah — not about the meta-knowledge, but about fear, about responsibility. Sarah says: "You're weird, but you're the only person I trust."
-- **Chapter 17**: MC encounters a Stalker nest in a collapsed school. The ambush mechanics are terrifying. MC barely survives, learns to respect every infected type. Major point gain — enough for serious gear.
-- **Chapter 18**: MC identifies a dam location (heading toward Colorado). They decide: this is where they'll build. The chapter ends with them standing on a ridge overlooking the dam. "Home," Sarah says. First time either of them has used that word.
+
+- **Chapter 9**: ✅ The group's first week on the road. Tommy takes point with military instincts. Establishing routines — formation, scouting, camping in abandoned structures. Marcus and Joel clear a farmhouse (including a child Runner — the emotional cost of point farming). The group encounters refugees heading to Houston. Joel catches Marcus materializing supplies from thin air but doesn't confront him. Sarah walks without a limp by Day 8. (647 points, 93 miles covered.)
+- **Chapter 10**: ✅ First encounter with human hostiles — a group of looters. Joel sets an ambush at a crossroads, with Tommy on overwatch. Marcus's moral code is tested — he insists on treating the wounded and the system awards no points for human kills. Sarah witnesses real human violence through a store window, seeing her father shoot a man. She processes it with quiet composure but something changes behind her eyes.
+- **Chapter 11**: ✅ Marcus discovers the Mall's full catalog as points accumulate. Has enough for a generator and basic weapons. Strategic planning begins — where exactly to settle in Colorado? Tommy's knowledge of dam operations becomes relevant. Marcus ends at 635 points after buying a regional atlas.
+- **Chapter 12**: ✅ Sarah's recovery milestone. She can walk and run now but a system-purchased trauma medicine textbook confirms she likely can't have children from the bullet wound damage. A quiet, heavy chapter. Marcus tells Joel at dawn; Joel tells Sarah that evening. Sarah handles it with composure beyond her years, then tells Marcus to stop feeling guilty. The Marcus-Sarah bond deepens. Sarah asks for a room with an east-facing window at the dam. Marcus at 610 points.
+- **Chapter 13**: Marcus clears a Runner-infested warehouse with Joel as backup, earning a significant point haul. First encounter with a Clicker — terrifying, nearly fatal, but the kill reward is massive. Tommy provides overwatch.
+- **Chapter 14**: The group encounters a small band of survivors — a family with two kids and an elderly couple. They travel together for a few days. Marcus and Joel see the pattern forming: people need leaders, and nobody else is stepping up. Tommy recognizes the dynamic from his military days.
+- **Chapter 15**: ✅ The core four encounter a rogue FEDRA deserter checkpoint at a rest stop, where three armed men are robbing travelers. An elderly couple (Gerald and Dorothy) and their pregnant daughter Claire are hostages. Joel, Tommy, and Marcus ambush the deserters and win, but Gerald dies from a skull fracture inflicted before they arrived. Sarah comforts Dorothy. Marcus realizes the real danger isn't infected — it's people. The settlement needs to account for human threats, not just walls against Runners. Marcus at 721 points.
+- **Chapter 16**: The group parts ways with the family, directing them toward a rumored QZ. Back to four, Marcus opens up — not about the meta-knowledge, but about fear and responsibility. Sarah says: "You're weird, but you're the only person I trust." Joel hears this and says nothing.
+- **Chapter 17**: Marcus encounters a Stalker nest in a collapsed school. The ambush mechanics are terrifying. Joel and Marcus barely survive together. Major point gain — enough for serious gear. Joel's trust in Marcus grows through shared combat.
+- **Chapter 18**: The group reaches their dam location in Colorado. They stand on a ridge overlooking it together. Tommy assesses the infrastructure with a professional eye. "Home," Sarah says. First time any of them has used that word since Austin.
 
 ### Key Events
-- First human combat encounter
+
+- First human combat encounter (Joel and Tommy's experience proves vital)
 - Sarah's medical diagnosis (infertility)
 - First Clicker kill; first Stalker encounter
 - Encounter with other survivors — seeds of leadership
 - Decision to settle and build rather than keep running
+- Joel and Marcus developing a combat partnership
+- Tommy's dam/infrastructure expertise becoming central to the plan
 
 ### Character Development
-- MC: Growing confidence; starting to think like a leader, not just a survivor
+
+- MC: Growing confidence; starting to think like a leader, not just a survivor; emotional toll of point farming
 - Sarah: Grieving her old life; adapting faster than expected; showing Joel's toughness
+- Joel: Slowly accepting Marcus's impossible abilities without understanding them; protective instincts extending beyond Sarah to the group; rediscovering purpose
+- Tommy: Natural military leader; the practical glue holding the group together; his dam knowledge makes him essential to the Colorado plan
 
 ---
 
 ## Arc 3: Building Home (Chapters 19–35)
 
 ### Synopsis
+
 The MC and Sarah establish a settlement near their chosen dam. Using the Gamer System's Mall, the MC bootstraps infrastructure at impossible speed — clean water, electricity, fortifications. Other survivors trickle in, drawn by the lights and the safety. The community grows from 2 people to 50, then 100, then 200+. MC becomes the de facto leader through competence, generosity, and strength.
 
 ### Setting
+
 A dam location in Colorado. The settlement evolves from a campsite to a fortified town over the course of this arc (covering roughly 3 years, 2013–2016).
 
 ### Chapters
+
 - **Chapter 19**: Arriving at the dam. MC uses system points to buy tools and building materials. The dam is intact but needs work. First night with a roof and a generator.
 - **Chapter 20**: MC goes on dedicated infected-clearing runs around the area. Point-farming montage with character moments — MC reflects on the games, on Joel, on what's coming in 20 years.
 - **Chapter 21**: First outsiders arrive — a family fleeing a collapsed QZ. MC and Sarah debate: let them in? They do. Community of 5.
@@ -111,6 +128,7 @@ A dam location in Colorado. The settlement evolves from a campsite to a fortifie
 - **Chapter 35**: Year 3 (2016). The community is 200+ strong. MC and Sarah's relationship has evolved from friendship to something deeper. First confession of feelings. Sarah's response: "I've known for a year, idiot. I was waiting for you to figure it out."
 
 ### Key Events
+
 - Dam secured and operational
 - Community grows from 2 to 200+
 - Democratic governance established
@@ -119,6 +137,7 @@ A dam location in Colorado. The settlement evolves from a campsite to a fortifie
 - MC and Sarah's romance begins
 
 ### Character Development
+
 - MC: Transitions from survivor to leader; grapples with power and responsibility
 - Sarah: Becomes the community's heart; finds purpose beyond survival; opens up to romance
 - Community: Develops its own identity, culture, and internal politics
@@ -128,12 +147,15 @@ A dam location in Colorado. The settlement evolves from a campsite to a fortifie
 ## Arc 4: The Growing Power (Chapters 36–50)
 
 ### Synopsis
+
 Years 4–10 (2017–2023). The community becomes a regional power. They absorb smaller settlements, clear infected zones, establish trade routes, and develop military capability. The MC becomes genuinely superhuman. FEDRA and the Fireflies both take notice. MC begins narrowly intersecting with Joel and Tommy's movements but keeps missing them.
 
 ### Setting
+
 The settlement (now a proper town) and surrounding territory. Expansion outward — scout teams, clearing operations, encounters with other factions.
 
 ### Chapters
+
 - **Chapter 36**: Year 4. The community controls a large territory. MC leads clearing operations that earn massive points. Begins purchasing Tier 4 enhancements — enhanced senses, accelerated healing.
 - **Chapter 37**: First contact with FEDRA remnants. A nearby QZ has heard about the settlement. FEDRA sends envoys — half diplomatic, half threatening. MC handles it firmly but without violence.
 - **Chapter 38**: MC and Sarah's wedding. A community ceremony under string lights at the dam. Everyone attends. MC's vows reference their first night running from Austin. Sarah's are shorter: "You carried me when I couldn't walk. I'll carry everything else."
@@ -151,6 +173,7 @@ The settlement (now a proper town) and surrounding territory. Expansion outward 
 - **Chapter 50**: Year 10 (2023). MC purchases their first Tier 5 enhancement — a superhuman package. The transformation is dramatic. MC can now outrun vehicles, lift impossible weights, and heal from gunshots in minutes. The system displays a new quest: [Prepare for the Reunion].
 
 ### Key Events
+
 - Community becomes 500+ people; regional power status
 - MC and Sarah marry; adopt orphans
 - FEDRA and Firefly encounters
@@ -160,6 +183,7 @@ The settlement (now a proper town) and surrounding territory. Expansion outward 
 - Tier 5 unlocked — MC becomes truly superhuman
 
 ### Character Development
+
 - MC: Now a superhuman community leader; struggles with the weight of meta-knowledge and loss
 - Sarah: Fully grown leader; the political brain of the community; married to MC; grounds the MC emotionally
 - Tommy: Surprised and hopeful at another thriving settlement; cautious alliance
@@ -169,12 +193,15 @@ The settlement (now a proper town) and surrounding territory. Expansion outward 
 ## Arc 5: The Reunion (Chapters 51–65)
 
 ### Synopsis
+
 The year is 2033–2034. The MC knows Joel's canon timeline is about to begin — Marlene will ask Joel to smuggle Ellie. The MC must decide: intervene directly, or let events play out and catch Joel at the end? The MC chooses to position themselves to intercept Joel and Ellie during their cross-country journey. But first: the reunion between Joel and Sarah.
 
 ### Setting
+
 Jackson, the MC's settlement, and the cross-country route from Boston to Salt Lake City. Canon locations intersected by the MC's influence.
 
 ### Chapters
+
 - **Chapter 51**: 2033. MC monitors the situation through intelligence networks and Tommy. Joel is in Boston. Marlene has found Ellie. The clock is ticking.
 - **Chapter 52**: MC debates the plan with Sarah and Tommy. Three options: go to Boston and grab Joel now, wait for him to arrive at Jackson naturally, or intercept him on the road. They choose to wait — Joel needs to bond with Ellie on the journey. It's what makes them family.
 - **Chapter 53**: Interlude chapter — Joel's POV in Boston. He's doing a job for Marlene. A teenage girl won't shut up. He hates this. (Mirrors canon's opening but the reader knows what's coming.)
@@ -192,6 +219,7 @@ Jackson, the MC's settlement, and the cross-country route from Boston to Salt La
 - **Chapter 65**: Joel begins to heal emotionally. He builds things — literally, using his contractor skills. He teaches Ellie guitar. He watches Sarah with the MC and, for the first time in 20 years, smiles without pain. Family restored.
 
 ### Key Events
+
 - Joel and Sarah's reunion (THE emotional climax of the story)
 - Ellie joins the community
 - MC and Joel's first meeting
@@ -200,6 +228,7 @@ Jackson, the MC's settlement, and the cross-country route from Boston to Salt La
 - Henry and Sam — a tragedy the MC couldn't prevent
 
 ### Character Development
+
 - Joel: Shatters and rebuilds. The hardened shell cracks completely. He's a father again — to Sarah, to Ellie, and now a grandfather
 - Sarah: Reuniting with Joel is her deepest wish fulfilled. She's now an adult, a leader, a wife, a mother — and Joel's little girl
 - Ellie: Finds the family she always wanted. Her greatest fear (ending up alone) is answered
@@ -210,12 +239,15 @@ Jackson, the MC's settlement, and the cross-country route from Boston to Salt La
 ## Arc 6: The Threat of Abby (Chapters 66–82)
 
 ### Synopsis
+
 Years 2034–2038. The community is now the dominant power in the region, but the MC knows that Abby Anderson is out there, consumed by grief for her father. The MC must prevent Joel's death without becoming a monster themselves. Meanwhile, the community faces external threats from Firefly remnants, bandit armies, and the question of Ellie's immunity.
 
 ### Setting
+
 The MC's settlement (now a proper city-state), Jackson, and Seattle/WLF territory.
 
 ### Chapters
+
 - **Chapter 66**: 2035. The community is thriving. But MC can't relax — they know the Abby timeline. Late nights studying maps, running scenarios. Sarah notices the worry. "You're planning for something you won't tell me about."
 - **Chapter 67**: MC reveals the full truth to Sarah and Joel (separately): Abby Anderson, daughter of the surgeon Joel killed in Salt Lake City, is training to murder Joel. Joel's reaction is quiet. "I'd do it again. Every time."
 - **Chapter 68**: Joel's POV — processing the knowledge that someone wants him dead for saving Ellie. He doesn't regret it. But he looks at Sarah, at Ellie, at his grandchildren, and thinks: "I have too much to lose now."
@@ -235,6 +267,7 @@ The MC's settlement (now a proper city-state), Jackson, and Seattle/WLF territor
 - **Chapter 82**: Resolution. Abby stays in the community, at least for now. She and Ellie have an awkward, electric encounter. Two people who should be enemies, both trying to figure out what comes after revenge. The MC's ultimate fix-it mission is complete.
 
 ### Key Events
+
 - Full truth revealed to Joel and Sarah
 - Confrontation with Abby — dialogue, not violence
 - Joel's death is prevented — the core promise fulfilled
@@ -244,6 +277,7 @@ The MC's settlement (now a proper city-state), Jackson, and Seattle/WLF territor
 - WLF-Seraphite war witnessed
 
 ### Character Development
+
 - MC: Faces the hardest moral challenge — could easily kill Abby preemptively, but chooses diplomacy
 - Abby: Gets the closure she couldn't get through violence; offered an alternative to revenge
 - Joel: Doesn't hide from what he did; faces Abby with honesty, not weapons
@@ -254,12 +288,15 @@ The MC's settlement (now a proper city-state), Jackson, and Seattle/WLF territor
 ## Arc 7: Endure and Build (Chapters 83–100)
 
 ### Synopsis
+
 The final arc. The community is a city-state. The immediate threats are handled. Now comes the harder work: building a future, not just surviving the present. Slice of life mixed with the long game — establishing democracy, researching Ellie's immunity, connecting with other settlements, and preparing the next generation.
 
 ### Setting
+
 The MC's community — now a genuine city. Farms, schools, hospitals, electricity, running water. A democracy with the MC as its protector, not its ruler.
 
 ### Chapters
+
 - **Chapter 83**: A day in the life. MC wakes up next to Sarah. Kids are loud. Joel is teaching Ellie guitar on the porch. Tommy and Maria are visiting from Jackson. It's... normal. Beautifully, painfully normal.
 - **Chapter 84**: The community holds its first formal election for council leadership. MC doesn't run — they serve as protector, not politician. Democracy works. Sarah runs and wins a council seat.
 - **Chapter 85**: MC takes the kids (and Ellie) on a "field trip" outside the walls — showing them the beauty of the world alongside the danger. Ellie sees giraffes (a callback to the canon's most beautiful scene). She stops. She stares. She whispers: "They're real."
@@ -277,9 +314,10 @@ The MC's community — now a genuine city. Farms, schools, hospitals, electricit
 - **Chapter 97**: A chapter told through letters and journal entries — Sarah's journal, Joel's notes, Ellie's doodles, the MC's system log. A mosaic of a family and a community, seen from every angle.
 - **Chapter 98**: The community celebrates its 25th anniversary. 2038. A thousand people. Schools, hospitals, farms, workshops, a library. Children who have never known the old world play in streets that would look normal if not for the walls and the watchtowers.
 - **Chapter 99**: MC sits on a hillside overlooking the community at sunset. System notification: [Quest Complete: New Game Plus]. The notification hovers for a moment, then dissolves into golden light. The system doesn't shut down — it just... stops having quests. There's nothing left to fix. Only things to maintain, to love, to protect.
-- **Chapter 100**: Final chapter. Morning. MC wakes up next to Sarah. Joel's guitar drifts through the window. Ellie is arguing with one of the kids about whose turn it is to feed the sheep. Tommy is telling a bad joke. Abby is hauling lumber. The infected are still out there. The world is still dangerous. But here, behind these walls, built by points and sweat and love, something new is growing. The MC's last thought: *"I didn't just get a new game plus. I got a new life. And this time, nobody dies for nothing."*
+- **Chapter 100**: Final chapter. Morning. MC wakes up next to Sarah. Joel's guitar drifts through the window. Ellie is arguing with one of the kids about whose turn it is to feed the sheep. Tommy is telling a bad joke. Abby is hauling lumber. The infected are still out there. The world is still dangerous. But here, behind these walls, built by points and sweat and love, something new is growing. The MC's last thought: _"I didn't just get a new game plus. I got a new life. And this time, nobody dies for nothing."_
 
 ### Key Events
+
 - Democratic governance fully established
 - Giraffe scene callback with Ellie and the kids
 - Joel and MC's final heart-to-heart
@@ -291,6 +329,7 @@ The MC's community — now a genuine city. Farms, schools, hospitals, electricit
 - Next generation trained to carry on
 
 ### Character Development
+
 - MC: At peace. The fixer has fixed what they could. The rest is living.
 - Sarah: Fulfilled. Mother, leader, wife, daughter — all roles harmonized.
 - Joel: Happy. For the first time since September 27, 2013, genuinely happy.
@@ -304,4 +343,4 @@ The MC's community — now a genuine city. Farms, schools, hospitals, electricit
 The story ends not with a bang but with a sunrise. The MC — who once cried watching Sarah die on a screen — now watches her laugh in the morning light, surrounded by family. Joel strums a guitar. Ellie argues with one of the kids about whose turn it is to feed the sheep. Tommy is telling a bad joke. The infected are still out there. The world is still dangerous. But here, behind these walls, built by points and sweat and love, something new is growing.
 
 The last line is the MC's internal thought:
-*"I didn't just get a new game plus. I got a new life. And this time, nobody dies for nothing."*
+_"I didn't just get a new game plus. I got a new life. And this time, nobody dies for nothing."_
