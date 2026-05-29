@@ -32,14 +32,11 @@ body {
 
 .reader-prose hr {
   border: none;
-  text-align: center;
-  margin: 2em 0;
-}
-
-.reader-prose hr::after {
-  content: "• • •";
-  letter-spacing: 0.5em;
-  opacity: 0.4;
+  margin: 2em auto;
+  width: 40%;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.25;
 }
 
 .reader-prose h1,
