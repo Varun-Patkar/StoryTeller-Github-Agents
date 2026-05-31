@@ -126,7 +126,7 @@ He pulled the knife out of the Runner's neck. The blade was nicked, a small V-sh
 "Status," he said quietly.
 
 **[Name: Marcus Webb]**
-**[Age: 24]**
+**[Age: 14]**
 **[Points: 13]**
 **[Health: 94%]**
 **[Attributes: Strength 6, Agility 5, Constitution 6, Perception 5, Intelligence 7, Willpower 6]**
@@ -238,7 +238,7 @@ And then a man screaming. Not in fear. Not in pain. In something worse than eith
 
 Marcus ran.
 
-He ran harder than the sprint from the apartment, harder than the sprint from the Miller house, harder than anything Marcus Webb's body was designed to do. His vision narrowed. The underpass opened up ahead of him, dark concrete and sodium light and shadows. He was through it in seconds, boots echoing off the walls, and on the other side he could see the road opening up.
+He ran harder than the sprint from the house, harder than the sprint from the Miller house, harder than anything Marcus Webb's body was designed to do. His vision narrowed. The underpass opened up ahead of him, dark concrete and sodium light and shadows. He was through it in seconds, boots echoing off the walls, and on the other side he could see the road opening up.
 
 Figures on the ground. A big man kneeling, hunched over, holding something. Holding someone small. Another man standing a few feet away, a handgun at his side, staring down at a soldier who wasn't moving.
 

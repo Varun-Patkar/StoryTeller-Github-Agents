@@ -197,7 +197,7 @@ He stood up and his knees popped. His back ached where the fridge handle had dug
 "Status," he thought.
 
 **[Name: Marcus Webb]**
-**[Age: 24]**
+**[Age: 14]**
 **[Points: 487]**
 **[Health: 86%]**
 **[Attributes: Strength 6, Agility 5, Constitution 6, Perception 5, Intelligence 7, Willpower 11]**

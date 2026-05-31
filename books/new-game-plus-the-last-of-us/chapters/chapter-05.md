@@ -420,7 +420,7 @@ The night was quiet. Actually quiet, not the fake quiet of Austin where the sile
 "Status," he thought.
 
 **[Name: Marcus Webb]**
-**[Age: 24]**
+**[Age: 14]**
 **[Points: 488]**
 **[Health: 82%]**
 **[Attributes: Strength 6, Agility 5, Constitution 6, Perception 5, Intelligence 7, Willpower 11]**

@@ -1,7 +1,7 @@
 # Character: The MC (Self-Insert Protagonist)
 
 ## Overview
-A modern-day person who was an avid fan of The Last of Us. After crying once again at Sarah's death scene, they're transmigrated into the TLOU world on Outbreak Day (September 27, 2013) with a Gamer System. Their mission: fix the tragedies they wept over — save Sarah, save Joel from Abby, and build something worth living for.
+A modern-day person (adult mind) who was an avid fan of The Last of Us. After crying once again at Sarah's death scene, they're transmigrated into the body of a 14-year-old boy in the TLOU world on Outbreak Day (September 27, 2013) with a Gamer System. The body belongs to Marcus Webb, an eighth-grader at Travis Heights Middle School in Austin, Texas, whose parents were killed by infected on Outbreak Night. The MC's adult mind in a teenager's body gives them maturity and knowledge that doesn't match their appearance. Their mission: fix the tragedies they wept over — save Sarah, save Joel from Abby, and build something worth living for.
 
 ## Personality
 - **Initially**: Excited but terrified. They know the source material but being IN the apocalypse is vastly different from playing it on a screen

@@ -104,7 +104,7 @@ Item one: the backpack. Things came out of it that hadn't gone in. She'd watched
 
 Item two: the staring. He stared at empty air the way people stared at phones. Eyes tracking left to right and then down, reading, scrolling through something nobody else could see. Every time he came out of one of those episodes, he had information. How many infected were nearby. What direction they were coming from. How far away they were. Information he shouldn't have unless he could see something the rest of them couldn't.
 
-Item three: the knowledge. He knew first aid. He knew where to find them on Outbreak Night. He knew which direction to run, which roads to avoid, where the military would be. He knew the infection was airborne in enclosed spaces before anyone had told him. He knew things a tech support guy from "somewhere up north" had no business knowing.
+Item three: the knowledge. He knew first aid. He knew where to find them on Outbreak Night. He knew which direction to run, which roads to avoid, where the military would be. He knew the infection was airborne in enclosed spaces before anyone had told him. He knew things a fourteen-year-old kid from Austin had no business knowing.
 
 Item four, and this was the one that kept her up at night: he wasn't scared.
 
@@ -379,7 +379,7 @@ Not because he needed to. Because he wanted a few minutes alone with the system 
 
 **[Status]**
 **[Name: Marcus Webb]**
-**[Age: 24]**
+**[Age: 14]**
 **[Points: 687]**
 **[Health: 92%]**
 **[Attributes: Strength 6, Agility 5, Constitution 6, Perception 5, Intelligence 7, Willpower 11]**
