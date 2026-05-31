@@ -13,7 +13,7 @@ His back ached. His neck was stiff. The cut on his calf itched, which probably m
 "Status," he thought.
 
 **[Name: Marcus Webb]**
-**[Age: 24]**
+**[Age: 14]**
 **[Points: 488]**
 **[Health: 85%]**
 **[Attributes: Strength 6, Agility 5, Constitution 6, Perception 5, Intelligence 7, Willpower 11]**
@@ -134,7 +134,7 @@ Marcus showed up around nine. He stood at the edge of the barn and watched for a
 
 "Need help?"
 
-Joel looked at him. The kid was wearing the same grey hoodie from Outbreak Night, still spotted with blood that had dried to a rust color. He had the hunting knife on his belt and the backpack over one shoulder. He looked like a college student who'd wandered into the wrong camping trip.
+Joel looked at him. The kid was wearing the same grey hoodie from Outbreak Night, still spotted with blood that had dried to a rust color. He had the hunting knife on his belt and the backpack over one shoulder. He looked like a kid who'd wandered into the wrong camping trip.
 
 "You know how to swing a hammer?" Joel asked.
 
@@ -222,23 +222,21 @@ He looked at her. The others looked too. Tommy paused with his spoon halfway to 
 
 A normal question. A getting-to-know-you question. The kind of thing you'd ask anyone at a table. Marcus's expression didn't change, but she saw his eyes flick sideways, just for a second, to that empty spot in the air.
 
-"Nothing interesting," he said. "Worked in an office."
-
-"What kind of office?"
-
-"The boring kind. Desk, computer, bad coffee."
+"Nothing interesting," he said. "Went to school."
 
 "Where?"
 
-"Does it matter?"
+"Here. Austin."
 
-"I'm making conversation. You're making it weird."
+"Where are your parents?"
 
-Tommy snorted. Joel didn't react, but Sarah could feel his attention sharpen. He was listening without looking like he was listening.
+Marcus went still. Not a flinch. Something quieter. Like a door closing behind his eyes.
 
-Marcus took a breath. "Fair enough. I worked in tech support. Answered phones, fixed people's computers when they forgot their passwords. It wasn't exciting."
+"Gone," he said. "First night."
 
-"And you just happened to be in Austin when the world ended."
+Tommy set his spoon down. Joel was very still. Sarah felt the weight of the word settle over the table.
+
+"I'm sorry," she said. And she meant it.
 
 "Yeah."
 
@@ -264,7 +262,7 @@ Marcus looked at her. Really looked, not the careful, friendly look he usually g
 
 Sarah took another bite of chili. She chewed slowly. Let the silence sit.
 
-"My dad's a contractor," she said. "He can build a house from scratch. Tommy was in the military. He can shoot and he knows tactics. You're a tech support guy who reads prepper forums, and you ran toward gunshots with medical supplies in your pockets."
+"My dad's a contractor," she said. "He can build a house from scratch. Tommy was in the military. He can shoot and he knows tactics. You're a fourteen-year-old kid who reads prepper forums, and you ran toward gunshots with medical supplies in your pockets."
 
 She paused.
 
@@ -340,7 +338,7 @@ Night fell the way it falls in the country, slow and full of sound. The sky went
 
 Marcus sat on the back porch with a bottle of water and an MRE he hadn't opened yet. Turkey and stuffing. He wasn't hungry. His stomach was too busy being a knot.
 
-Sarah's questions had rattled him. Not because they were hard. Because they were exactly the right questions, asked in exactly the right order, by a twelve-year-old who was too smart for any cover story he could come up with. She'd cornered him in five moves. A tech support guy from up north who reads prepper forums and happens to have hemostatic gauze and a SIG Sauer and an infinite backpack. Even a kid could see the gaps.
+Sarah's questions had rattled him. Not because they were hard. Because they were exactly the right questions, asked in exactly the right order, by a twelve-year-old who was too smart for any cover story he could come up with. She'd cornered him in five moves. A kid from Austin who reads prepper forums and happens to have hemostatic gauze and a SIG Sauer and an infinite backpack. Even a kid could see the gaps.
 
 He needed a better story. Or he needed to tell the truth. And the truth was, "I'm from another world where your life is a video game and I know everything that's going to happen for the next twenty years and I have a magic shopping menu in my head that gives me things for points I earn by killing zombies."
 

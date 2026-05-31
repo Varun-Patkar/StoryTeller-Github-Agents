@@ -320,7 +320,7 @@ He didn't say anything about it. There was nothing to say. You couldn't grieve f
 
 ## — Marcus —
 
-They walked north. The sun climbed. The smoke on the southern horizon grew taller and wider, a column that leaned east in the upper winds and spread out like a bruise on the sky. Neither of them talked about it. Joel walked with his jaw set and his eyes forward and his hand near the gun. Marcus walked beside him and tried not to think about what was under that smoke. Neighborhoods. Schools. The coffee shop on South Congress where Marcus Webb had apparently gotten his morning coffee before Marcus the transmigrant had taken over his body and his life.
+They walked north. The sun climbed. The smoke on the southern horizon grew taller and wider, a column that leaned east in the upper winds and spread out like a bruise on the sky. Neither of them talked about it. Joel walked with his jaw set and his eyes forward and his hand near the gun. Marcus walked beside him and tried not to think about what was under that smoke. Neighborhoods. Schools. The house on Rundberg Lane where Marcus Webb had apparently lived before Marcus the transmigrant had taken over his body and his life.
 
 People. Under that smoke were people who hadn't gotten out.
 
@@ -336,7 +336,7 @@ Marcus dismissed the map and glanced at Joel. The man was walking with the same 
 
 "You fight pretty well for a contractor," Marcus said.
 
-Joel didn't look at him. "You fight pretty well for a tech support guy."
+Joel didn't look at him. "You fight pretty well for a kid."
 
 "Touché."
 
@@ -388,7 +388,7 @@ Tommy stayed on the porch. He looked at Marcus with an expression that Marcus wa
 
 "How'd he do?" Tommy asked.
 
-"Joel?" Marcus sat down on the porch steps. His legs were tired. Four miles out, four miles back, plus the fight. Not much by objective standards, but his body was a 24-year-old office worker's body with only three days of apocalypse conditioning. "He did great. Took two of them down while I was still dealing with one. He's scary with a knife."
+"Joel?" Marcus sat down on the porch steps. His legs were tired. Four miles out, four miles back, plus the fight. Not much by objective standards, but his body was a fourteen-year-old's body with only three days of apocalypse conditioning. "He did great. Took two of them down while I was still dealing with one. He's scary with a knife."
 
 Tommy almost smiled. "He's been scary with a knife since we were kids. Used to whittle these little animals out of scrap wood on the porch. Horses, dogs, birds. Hands like a surgeon. Then you put somethin' dangerous in those hands and..." He trailed off. Shrugged. "He's Joel."
 

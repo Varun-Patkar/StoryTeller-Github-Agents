@@ -8,7 +8,7 @@ He didn't own a ceiling fan.
 
 He sat up too fast and the world tilted. The room smelled like stale cigarettes and old carpet. A TV stand with no TV. A couch he was lying on, brown corduroy, lumpy in the middle. Beer cans on a coffee table. A window with bent blinds letting in the orange glow of a streetlight.
 
-This was not his apartment.
+This was not his house.
 
 "What the..." He swung his legs off the couch and his feet hit carpet that was slightly damp. His hands were wrong. Too rough, too tan. He turned them over and stared at knuckles that weren't his. Short nails, a scar across the left thumb, calluses on the palms.
 
@@ -20,7 +20,7 @@ He found one down a short hallway, past a bedroom with an unmade bed and clothes
 
 A stranger looked back at him.
 
-Mid-twenties, maybe. Brown hair, a little long, pushed to one side. Stubble. A face that was average in every way. No scars except a small one near the right eyebrow. Brown eyes. Decent shape, not athletic but not out of shape either. He was wearing a grey t-shirt and jeans that weren't his.
+A teenager. Fourteen, maybe fifteen. Brown hair, a little long, pushed to one side. A face that was average in every way. No scars except a small one near the right eyebrow. Brown eyes. Skinny in the way kids are before they finish growing. He was wearing a grey t-shirt and jeans that weren't his.
 
 He gripped the edge of the sink and leaned in close. The reflection's mouth moved when his did. The reflection's eyes blinked when his blinked.
 
@@ -50,7 +50,7 @@ He reached out and touched the notification. His fingers passed through it, but 
 
 The system didn't respond to that.
 
-He walked back to the living room on shaky legs. The apartment was a one-bedroom, clearly lived in by whoever this body belonged to. He found a wallet on the kitchen counter. Texas driver's license. The name said Marcus Webb. Address in Austin, Texas. Date of birth: March 15, 1989.
+He walked back to the living room on shaky legs. The house was small, clearly lived in by whoever this body belonged to. A family's house, except it felt empty. He found a school ID on the kitchen counter next to a set of keys. Travis Heights Middle School. The name said Marcus Webb. Eighth grade. Date of birth: March 15, 1999.
 
 Austin, Texas.
 
@@ -60,7 +60,7 @@ On the kitchen counter next to it was a newspaper. He almost missed it because w
 
 September 27, 2013.
 
-The apartment went very quiet. Or maybe it had been quiet the whole time and he just now noticed it. The hum of the refrigerator. A clock ticking somewhere. And underneath it, far away, something that might have been a siren.
+The house went very quiet. Or maybe it had been quiet the whole time and he just now noticed it. The hum of the refrigerator. A clock ticking somewhere. And underneath it, far away, something that might have been a siren.
 
 September 27, 2013. Austin, Texas.
 
@@ -94,7 +94,7 @@ The system did not elaborate.
 A new panel appeared:
 
 **[Name: Marcus Webb]**
-**[Age: 24]**
+**[Age: 14]**
 **[Points: 0]**
 **[Health: 100%]**
 **[Attributes: Strength 6, Agility 5, Constitution 6, Perception 5, Intelligence 7, Willpower 6]**
@@ -127,7 +127,7 @@ September 27, 2013. Outbreak Night. The infection would have been spreading thro
 
 And somewhere in this city, in a house maybe a few blocks or a few miles from here, a girl named Sarah Miller was about to die.
 
-He turned away from the window and started moving through the apartment. He needed shoes. He found a pair of work boots by the front door, worn in but solid. They fit. He grabbed a hoodie from the bedroom closet and pulled it on. It was still warm outside but the hoodie had pockets and pockets meant you could carry things.
+He turned away from the window and started moving through the house. He needed shoes. He found a pair of work boots by the front door, worn in but solid. They fit. He grabbed a hoodie from the bedroom closet and pulled it on. It was still warm outside but the hoodie had pockets and pockets meant you could carry things.
 
 In the kitchen he found a flashlight in a junk drawer, half-charged. A folding knife, the cheap gas station kind. He shoved both in his pockets.
 
@@ -137,7 +137,7 @@ He stood up and went back to the window. More cars now, moving fast. A house acr
 
 The question that mattered was simple: where was the Miller house from here?
 
-He didn't know Austin. He'd never been to Texas. But the game started in a suburban neighborhood on the north side of the city, and this apartment was in a suburb, and the newspaper on the counter had a little weather box that said "North Austin, TX" at the top.
+He didn't know Austin. He'd never been to Texas. But the game started in a suburban neighborhood on the north side of the city, and this house was in a suburb, and the newspaper on the counter had a little weather box that said "North Austin, TX" at the top.
 
 He needed a phone. Or a map. Or a phone book, because this was 2013 and people still had those.
 
@@ -153,7 +153,7 @@ Four minutes ago. It was starting.
 
 His hands were shaking. Not a little tremble, but a visible shake, the phone screen wobbling in his grip. He set it down on the counter and pressed both palms flat on the surface and breathed.
 
-He could stay here. Lock the door, push the couch against it, fill the bathtub with water, and wait. Marcus Webb's apartment was on the second floor with one entrance. He could survive the night. Farm some Runners tomorrow when things calmed down. Build up points slowly and carefully.
+He could stay here. Lock the doors, push the couch against the front one, fill the bathtub with water, and wait. Marcus Webb's house was small but solid. He could survive the night. Farm some Runners tomorrow when things calmed down. Build up points slowly and carefully.
 
 Sarah Miller would die.
 
@@ -175,9 +175,9 @@ He shoved the phone in his pocket and grabbed the folding knife. It felt patheti
 
 ____
 
-The hallway of the apartment building was empty. Fluorescent lights humming, that particular ugly shade of institutional yellow. Carpet with a stain pattern that was either artistic or neglected. He took the stairs down to the ground floor, moving fast, his new boots too loud on the metal steps.
+The street outside was chaos. He locked the front door behind him and moved fast, cutting across the yard toward the sidewalk.
 
-The lobby was glass-fronted and he could see the street clearly. More cars now, a steady stream heading north. A fire truck went past with its sirens screaming. Across the street, the family he'd seen through their window was now on their porch, the father shielding his eyes against a distant orange glow.
+He could see the road clearly. More cars now, a steady stream heading north. A fire truck went past with its sirens screaming. Across the street, the family he'd seen through their window was now on their porch, the father shielding his eyes against a distant orange glow.
 
 Something was burning. South of here, toward downtown, the sky had an ugly smudge of light against the clouds. Not a house fire. Bigger than that.
 

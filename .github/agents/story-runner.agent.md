@@ -37,7 +37,7 @@ For each scene or beat in this chapter, decide its **weight**:
 | ---------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
 | **Heavy**  | A pivotal moment. A reveal, a first encounter, a fight that matters, an emotional turning point. | Slow down. Use dialogue, description, internal reaction. Multiple paragraphs. Let it breathe. |
 | **Medium** | Moves the plot forward. Setup, travel, training, conversation with purpose.                      | Normal prose. A few paragraphs. Don't rush, don't linger.                                     |
-| **Light**  | Transition, routine, getting from A to B, minor interactions.                                    | 1-3 sentences. Summarize. Skip ahead. "The next two hours passed in..." is fine.              |
+| **Light**  | Transition, routine, getting from A to B, minor interactions.                                    | 1-3 sentences MAX. Summarize brutally. "He crossed the lot and kept moving." Don't describe the lot. |
 | **Skip**   | Nothing interesting happens. The reader doesn't need to see it.                                  | Don't write it at all. Jump to the next scene.                                                |
 
 **The ratio matters.** A typical chapter should be roughly:
@@ -99,6 +99,12 @@ Write in a **clean, polished webnovel style**. Not literary fiction. Not overly 
 - **NO fancy dialogue tags.** No "exclaimed", "declared", "retorted", "growled", "breathed", "murmured". Use "said", "asked", "replied", "continued", "added". Or skip tags when it's clear who's talking.
 - **NO uniform emotional intensity.** Not every moment is meaningful. Not every glance is loaded. Not every silence is heavy. Most moments in life are just... moments. Write them that way.
 - **NO recycled scene structure.** If the last chapter opened with the MC waking up, don't open this one with the MC waking up. If the last chapter ended with a cliffhanger question, end this one differently. Vary your patterns.
+- **NO negative-list descriptions.** Never define something by listing what it is NOT. "He didn't feel fear. Not anger. Not sadness." is banned. Just say what he DID feel. State the positive, skip the negatives.
+- **NO padding descriptions of irrelevant locations.** If the MC passes through a strip mall, a hallway, or a temporary shelter that has zero plot relevance, do NOT inventory its contents. One sentence max for transitional spaces. Describe only what matters to the scene: threats, characters, or plot-relevant objects. A looted store the MC walks past gets zero sentences unless something happens there.
+- **NO suspense-by-overexplanation.** Real suspense comes from what the reader doesn't know, not from stretching a moment across extra paragraphs. If a thing happens, say it happened. Don't pad the lead-up with atmospheric filler to make it feel bigger. Quick and sharp beats slow and bloated every time.
+- **NO repetition of information.** If a fact, emotion, or observation has been stated once, do not restate it in different words. Trust the reader to remember what they read two paragraphs ago. One clear statement beats three reworded versions.
+- **NO scenic padding.** Background noise, ambient sounds, distant sirens, car horns, screaming crowds... if it's not directly relevant to what the MC is doing or a threat they're reacting to, cut it. The reader does not need an audio landscape of every location.
+- **NO detailed inventories of unimportant spaces.** "A dumpster, a chain-link fence, a stretch of trees" when the MC is just passing through is wasted words. Mention the space only if the MC interacts with it or it creates a problem. "He cut through the back lot" is enough.
 
 #### Dialogue
 
@@ -164,6 +170,7 @@ A chapter is NOT one continuous tone. It shifts. A tense scene is followed by so
 - Characters have normal human reactions. They get annoyed, confused, tired, hungry.
 - Not every paragraph needs to be meaningful. Some just move the story forward.
 - Pacing should feel natural. Action is quick, quiet moments can breathe, exposition is delivered efficiently.
+- **Economy of words.** Every sentence should earn its place. If a paragraph can be cut and the reader loses nothing, cut it. Describe dangers, characters, and plot-relevant details. Skip ambient scenery, background noise, and inventories of rooms the MC walks through.
 - **Throwaway lines that don't advance the plot.** A character comments on the weather. The MC notices a crack in the wall. Someone coughs. These micro-details are what AI never adds and humans always do.
 - **Imperfect information.** The MC doesn't always understand what's happening. He misreads situations. He focuses on the wrong thing. He forgets something he should remember. Perfect protagonists feel fake.
 - **Let scenes end without resolution sometimes.** A conversation trails off. A question goes unanswered. Not everything wraps up neatly within the scene it started in.

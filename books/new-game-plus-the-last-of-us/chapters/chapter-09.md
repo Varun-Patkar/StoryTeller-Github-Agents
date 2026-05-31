@@ -6,7 +6,7 @@ FM Road 1431, or what was left of it.
 
 Tommy kept point because nobody asked him to and everybody needed him to. Military habit. The guy at the front of the column sets the pace, picks the route, spots the problems before they become problems. Joel could do it, and did when it mattered, but Joel kept drifting back to walk beside Sarah. Which meant the front was empty. Which meant Tommy filled it.
 
-Day three on the road. Forty-something miles behind them, seven hundred and change ahead. Not bad for a group that included a twelve-year-old with a bullet wound and a twenty-four-year-old who stopped every few hours to stare at nothing.
+Day three on the road. Forty-something miles behind them, seven hundred and change ahead. Not bad for a group that included a twelve-year-old with a bullet wound and a fourteen-year-old who stopped every few hours to stare at nothing.
 
 The Hill Country was kind to them. Rolling limestone ridges covered in live oak and cedar, dry creek beds they could follow without being visible from the road, abandoned ranch properties every few miles. They hadn't slept outside yet. Every evening Tommy would find another house with the doors standing open and nobody home, and they'd set up in the kitchen or the living room and eat whatever Marcus pulled from the bottomless backpack and sleep in shifts.
 
@@ -308,7 +308,7 @@ Marcus waved. The boy didn't wave back. They walked south and got smaller and di
 
 Night watch was the only time Joel was honest with himself.
 
-During the day there was walking and talking and decisions and the constant work of being Joel Miller, the man who handles things, who doesn't flinch, who kept his daughter alive and his brother standing and somehow ended up following a twenty-four-year-old stranger across Texas because the stranger happened to be right about everything and that was either the best reason or the worst reason to trust somebody.
+During the day there was walking and talking and decisions and the constant work of being Joel Miller, the man who handles things, who doesn't flinch, who kept his daughter alive and his brother standing and somehow ended up following a fourteen-year-old stranger across Texas because the stranger happened to be right about everything and that was either the best reason or the worst reason to trust somebody.
 
 At night, with Sarah sleeping and Tommy sleeping and the fire burned down to orange coals, Joel could sit with the rifle across his knees and let his guard down enough to think.
 

@@ -272,7 +272,7 @@ The quest was complete. The notification had said so. Five hundred points and a 
 "Status," he thought.
 
 **[Name: Marcus Webb]**
-**[Age: 24]**
+**[Age: 14]**
 **[Points: 502]**
 **[Health: 89%]**
 **[Attributes: Strength 6, Agility 5, Constitution 6, Perception 5, Intelligence 7, Willpower 11]**
