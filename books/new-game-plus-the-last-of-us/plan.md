@@ -148,108 +148,115 @@ A dam location in Colorado. The settlement evolves from a campsite to a fortifie
 
 ### Synopsis
 
-Years 4–10 (2017–2023). The community becomes a regional power. They absorb smaller settlements, clear infected zones, establish trade routes, and develop military capability. The MC becomes genuinely superhuman. FEDRA and the Fireflies both take notice. MC begins narrowly intersecting with Joel and Tommy's movements but keeps missing them.
+Years 4–10 (2017–2030). The community becomes a regional power. They absorb smaller settlements, clear infected zones, establish trade routes, and develop military capability. The MC becomes genuinely superhuman. FEDRA and the Fireflies both take notice. A coalition of allied settlements forms across western Colorado. MC begins planning the long game — retrieving Ellie from Boston before the Fireflies can sacrifice her.
 
 ### Setting
 
-The settlement (now a proper town) and surrounding territory. Expansion outward — scout teams, clearing operations, encounters with other factions.
+The settlement (now a proper town) and surrounding territory. Expansion outward — scout teams, clearing operations, encounters with other factions. Coalition network across the western Colorado corridor.
 
 ### Chapters
 
-- **Chapter 36**: Year 4. The community controls a large territory. MC leads clearing operations that earn massive points. Begins purchasing Tier 4 enhancements — enhanced senses, accelerated healing.
-- **Chapter 37**: First contact with FEDRA remnants. A nearby QZ has heard about the settlement. FEDRA sends envoys — half diplomatic, half threatening. MC handles it firmly but without violence.
-- **Chapter 38**: MC and Sarah's wedding. A community ceremony under string lights at the dam. Everyone attends. MC's vows reference their first night running from Austin. Sarah's are shorter: "You carried me when I couldn't walk. I'll carry everything else."
-- **Chapter 39**: The MC and Sarah adopt their first orphan — a child found during a clearing operation. This becomes a recurring pattern: the community takes in war orphans.
-- **Chapter 40**: Firefly scouts reach the settlement. They're looking for recruits and resources. MC knows their endgame (Ellie, the vaccine, Marlene's willingness to sacrifice a child) and distrusts them, but keeps it diplomatic.
-- **Chapter 41**: MC hears rumors of a pair of brothers — one in Boston, one who left a militia group and headed west. Joel and Tommy, separated. MC's heart races but they can't leave the community to search.
-- **Chapter 42**: A chapter exploring the system's deeper mechanics. MC discovers hidden achievements, combo bonuses for clearing nests, and a mysterious locked Tier 5 category. The system is more complex than it first appeared.
-- **Chapter 43**: A major infected horde threatens the settlement. MC leads the defense — hundreds of Runners, dozens of Stalkers, several Clickers, and two Bloaters. The community fights together. MC's superhuman abilities are on full display. Massive point haul.
-- **Chapter 44**: Year 7 (2020). MC and Sarah have 3 adopted children. The settlement is 350+ people. MC purchases enhanced durability — bullets can't easily pierce their skin now. A quiet chapter focused on family life: MC helping kids with homework, Sarah reading bedtime stories. **Fireplace scene**: After the kids are in bed, the whole group — MC, Sarah, Joel, Tommy, and Ellie — gather around the fireplace in the main lodge. Joel hands the MC his guitar. The MC plays the iconic Last of Us theme (Gustavo Santaolalla's fingerpicked melody) — a song that exists in this world, something haunting and beautiful that Joel recognizes but can't place. The room goes still. The fire crackles. For a few minutes, nobody speaks — just the guitar and the warmth and the improbable peace of being alive together. Joel nods slowly when it ends. Ellie whispers, "Play it again." The MC does. It's the calmest moment any of them have had since Outbreak Day — music in a world that forgot how to listen.
-- **Chapter 45**: Scouts discover Tommy's community in Jackson, Wyoming. MC realizes they've been building parallel settlements with similar values. Plans for contact begin.
-- **Chapter 46**: MC sends a delegation to Jackson. Tommy is suspicious but impressed. The two communities begin formal relations. MC learns Joel is in Boston — still smuggling, still broken.
-- **Chapter 47**: A rogue FEDRA colonel leads an attack on the settlement with armored vehicles and 200 soldiers. The biggest battle yet. MC's Tier 4 abilities are pushed to their limit. The community wins, but there are casualties. First major losses.
+- **Chapter 36**: ✅ March 2017 (Year 4). Marcus leads a militia clearing sweep through the Redstone corridor, unlocking Tier 4: Personal Enhancement. Purchases Enhanced Senses (400 points) and Accelerated Healing (500 points). Two settlements south of Carbondale request Crystal Falls' help clearing infected — first formal requests for territorial protection. New quest: Expand Influence. Marcus at 1,801 points.
+- **Chapter 37**: ✅ April 2017. FEDRA envoys (Captain Whitcomb and Administrator Calloway) arrive from the Grand Junction QZ, demanding Crystal Falls register and pay tribute under the "Federal Emergency Continuity Act." Marcus declines firmly and counter-offers fair trade between equals. The council drafts Crystal Falls' first formal foreign policy: trade fairly, clear infected when asked, accept no outside authority. Quest updated: Expand Influence (1/3 factions contacted). Marcus at 1,801 points.
+- **Chapter 38**: ✅ June 2020 (Year 7). Marcus and Sarah's wedding at Crystal Falls. Joel walks Sarah down the aisle. Tommy officiates. Marcus's vows reference finding Sarah bleeding on the highway. Sarah's vows: "You carried me when I couldn't walk. I'll carry everything else." Joel plays guitar at the reception. Marcus at 2,412 points.
+- **Chapter 39**: ✅ September 2020. Marcus finds a boy (~5 years old) hiding in a crawl space during a clearing run. The boy's mother died of starvation beside him. Marcus and Sarah adopt him — he's later named Noah. Joel calls Marcus "son" for the third time and builds a bed frame. Settlement: 339 people. Marcus at 2,563 points.
+- **Chapter 40**: ✅ December 2020. Two Firefly scouts (Lt. Navarro and Cpl. Kim) arrive from Marlene, pitching trade, recruits, and formal alliance. Council decides: trade yes, recruits as individual choice, alliance no. Marcus privately reflects on Ellie — a baby in Boston — and the thirteen years he has to prevent Marlene's endgame. Noah settles in, calling Marcus and Sarah his family. Settlement: 342 people. Marcus at 2,563 points.
+- **Chapter 41**: ✅ March 2021. Marcus discovers hidden achievement chains with passive multipliers that have been silently stacking for seven years. During a 17-infected clearing run, the system reveals Tier 5: "Personal Transcendence" at 62% progress. Requirements: 8/8 enemy classes (6/8 done), 500+ population (347/500), third requirement redacted. First Firefly intelligence packet arrives — Boston QZ fracturing, Salt Lake City is Firefly HQ. Sarah pushes for a self-organized coalition. Noah calls Marcus "Dad." Marcus at 3,493 points.
+- **Chapter 42**: ✅ April 2021. Sarah negotiates a coalition agreement with Basalt Station's Kate Schultz (clearing Snowmass resort as condition). Marcus discovers a Beacon — a Stage 5 stationary infected that attracts and coordinates nearby infected like a relay node. Kills the Beacon and 19 coordinated Runners, earning 7th of 8 enemy classes. Tier 5 progress: 68%. The fungus is building a network. Marcus at 4,275 points.
+- **Chapter 43**: ✅ Late April 2021. Marcus clears the Snowmass resort (second Beacon with 63 infected) and triggers a cascade: 260+ infected in transit toward Crystal Falls. Joel commands the militia defense at the valley bottleneck while Marcus fights at the vanguard — 100+ Runners, 6 Clickers, 2 Bloaters. No fatalities. Validates the Beacon threat as existential. Marcus earns 4,317 points in one day. Marcus at 8,592 points.
+- **Chapter 44**: ✅ Mid-May 2021 (Year 8). Two weeks after the horde. Crystal Falls recovers — zero infected contacts within 25 miles for the first time since Outbreak Day. Marcus purchases Enhanced Durability (1,200 points), gaining bullet-resistant skin. A quiet domestic morning with Sarah and Noah (their one adopted son, age 6). At the council meeting, Sarah reports Basalt's formal coalition agreement and pushes to accelerate outreach to Glenwood Springs and Willow Creek for a Beacon detection network. Joel agrees to train a long-range scout unit. Tommy will contact Willow Creek. **Fireplace scene**: Marcus, Sarah, Joel, and Tommy gather by the fire in the main lodge. Marcus plays the Last of Us theme on Joel's guitar — a melody from his previous life that nobody in this world has heard. Joel is deeply moved, asks Marcus to play it again, and delivers the closing line: "That's the part I forgot to build for." The quietest, most peaceful night Crystal Falls has had. Marcus at 7,392 points. Settlement: 349 people.
+- **Chapter 45**: Sarah leads a diplomatic mission to Glenwood Springs (population ~120, led by a former FEDRA administrator who broke with the QZ). Negotiations for joining the coalition are complicated by Glenwood's distrust of any centralized power. Meanwhile, Marcus and Joel take the new long-range scout unit on their first deep patrol — fifty miles north toward Aspen and beyond — hunting for Beacon signatures. They discover a third Beacon, older and more entrenched than the previous two, in a resort town. Marcus earns his 8th of 8 enemy classes (or discovers a new formation pattern), pushing Tier 5 progress forward.
+- **Chapter 46**: Tommy's mission to Willow Creek. The settlement is smaller (~40 people), struggling, and grateful for contact. Tommy negotiates a mutual defense pact and messenger route. Back at Crystal Falls, Marcus processes the Tier 5 requirements — 8/8 enemy classes (nearly complete), 500+ population (currently 349, gap of 151), and the redacted third requirement. The coalition network begins functioning: shared patrols, Beacon early warning, trade routes. Crystal Falls' influence extends across the western Colorado corridor.
+- **Chapter 47**: ✅ Late July 2021. Colonel Briggs from the Grand Junction FEDRA QZ leads an attack on Crystal Falls with three armored Humvees and ~200 soldiers, demanding the coalition's dissolution. Marcus attempts diplomacy but Briggs refuses. The battle is fought at the valley bottleneck: Joel commands flankers from the eastern slope, Keiko holds the barricade, and Marcus disables two armored Humvees by hand while taking heavy damage (health drops to 61%). Kate Schultz arrives from Basalt with fifteen fighters to block FEDRA's retreat. Briggs surrenders. Crystal Falls suffers its first major losses: Dale Briggs and Hector Molina killed, three wounded. FEDRA loses twelve dead, fifty-one wounded. Marcus offers Briggs the same coalition deal; Briggs walks home with his disarmed soldiers. Population: 347.
 - **Chapter 48**: Aftermath of the battle. Funerals. MC questions whether the system makes them a protector or a weapon. Sarah talks them through it: "You're not a weapon. Weapons don't cry at funerals."
-- **Chapter 49**: Year 9 (2022). Community is 500+ people. MC and Sarah have a conversation about the future — not just their community's future, but what happens when the canon timeline catches up. MC reveals (partially) that they know things they shouldn't. Sarah takes it remarkably well. "You saved my life because you knew I was going to die. I don't care how you knew."
-- **Chapter 50**: Year 10 (2023). MC purchases their first Tier 5 enhancement — a superhuman package. The transformation is dramatic. MC can now outrun vehicles, lift impossible weights, and heal from gunshots in minutes. The system displays a new quest: [Prepare for the Reunion].
+- **Chapter 49**: Time skip to ~2025–2026. Community surpasses 500 people (meeting Tier 5's second requirement). The coalition has grown into a regional federation. MC and Sarah have a conversation about the future — MC reveals (partially) that they know things they shouldn't, including events that haven't happened yet. Sarah takes it remarkably well. "You saved my life because you knew I was going to die. I don't care how you knew." MC begins planning for Ellie — a girl who will be born (or was recently born) in Boston, who is immune to the infection, and whom the Fireflies will eventually try to sacrifice for a vaccine.
+- **Chapter 50**: ~2028–2030. MC completes Tier 5 requirements and purchases the first Tier 5 enhancement — a superhuman package. The transformation is dramatic. MC can now outrun vehicles, lift impossible weights, and heal from gunshots in minutes. The system displays a new quest: [Prepare for the Retrieval].
 
 ### Key Events
 
 - Community becomes 500+ people; regional power status
 - MC and Sarah marry; adopt orphans
-- FEDRA and Firefly encounters
-- Major battle with rogue FEDRA — first real casualties
-- Discovery of Jackson; alliance with Tommy
+- FEDRA and Firefly encounters; FEDRA battle with real casualties
+- Coalition expands across western Colorado (Basalt, Glenwood Springs, Willow Creek)
+- Beacon threat mapped and hunted across the region
 - MC reveals some meta-knowledge to Sarah
 - Tier 5 unlocked — MC becomes truly superhuman
+- MC begins planning for Ellie's eventual retrieval from Boston
 
 ### Character Development
 
-- MC: Now a superhuman community leader; struggles with the weight of meta-knowledge and loss
-- Sarah: Fully grown leader; the political brain of the community; married to MC; grounds the MC emotionally
-- Tommy: Surprised and hopeful at another thriving settlement; cautious alliance
+- MC: Now a superhuman community leader; struggles with the weight of meta-knowledge and the long game of saving Ellie
+- Sarah: Fully grown leader; the political brain of the community and coalition; married to MC; grounds the MC emotionally
+- Joel: Combat leader and militia trainer; deepening trust with Marcus; unaware of the Ellie plan yet
+- Tommy: Infrastructure chief and coalition diplomat; connects the settlements through shared engineering expertise
 
 ---
 
-## Arc 5: The Reunion (Chapters 51–65)
+## Arc 5: The Retrieval (Chapters 51–65)
+
+> **CONTINUITY NOTE**: In the original plan, this arc was "The Reunion" — Joel and Sarah reuniting after 20 years apart. However, in the actual story, Joel, Tommy, Sarah, and Marcus have been together since Outbreak Day (Chapter 3). Joel never went to Boston, never became a smuggler, never met Tess. Tommy never built Jackson. The emotional climax of this arc is now **retrieving Ellie from Boston** before the Fireflies can sacrifice her, and **Ellie joining the Miller family**. Joel meeting Ellie for the first time — knowing she's the girl Marcus has been planning to save for over a decade — replaces the Joel/Sarah reunion as the arc's emotional core.
 
 ### Synopsis
 
-The year is 2033–2034. The MC knows Joel's canon timeline is about to begin — Marlene will ask Joel to smuggle Ellie. The MC must decide: intervene directly, or let events play out and catch Joel at the end? The MC chooses to position themselves to intercept Joel and Ellie during their cross-country journey. But first: the reunion between Joel and Sarah.
+The year is 2033–2034. Ellie Williams is ~14, living in the Boston QZ under Marlene's protection. Marcus knows from his meta-knowledge that Ellie is immune and that Marlene will eventually try to sacrifice her for a vaccine. Marcus has been planning this retrieval for years. The mission: get to Boston, extract Ellie before Marlene's endgame, and bring her home to Crystal Falls. Joel insists on going — this is the girl Marcus has told him about, the one who matters. The cross-country journey east is dangerous, and the return trip with Ellie forces Joel and the teenage girl to bond. Ellie finds the family she never had.
 
 ### Setting
 
-Jackson, the MC's settlement, and the cross-country route from Boston to Salt Lake City. Canon locations intersected by the MC's influence.
+Crystal Falls, the cross-country route to Boston, the Boston QZ, and the return journey west. Canon-adjacent locations encountered along the way.
 
 ### Chapters
 
-- **Chapter 51**: 2033. MC monitors the situation through intelligence networks and Tommy. Joel is in Boston. Marlene has found Ellie. The clock is ticking.
-- **Chapter 52**: MC debates the plan with Sarah and Tommy. Three options: go to Boston and grab Joel now, wait for him to arrive at Jackson naturally, or intercept him on the road. They choose to wait — Joel needs to bond with Ellie on the journey. It's what makes them family.
-- **Chapter 53**: Interlude chapter — Joel's POV in Boston. He's doing a job for Marlene. A teenage girl won't shut up. He hates this. (Mirrors canon's opening but the reader knows what's coming.)
-- **Chapter 54**: MC uses the waiting months to prepare the community. A guest wing is built. Sarah prepares a room for Joel. She puts his old watch on the bedside table — she's kept it all these years.
-- **Chapter 55**: Joel and Ellie's journey — told through radio intercepts and scout reports reaching the MC. Pittsburgh. Henry and Sam. The MC knows Sam will die and Henry will follow. MC sends scouts, but they arrive too late. MC grieves for people they could have saved.
-- **Chapter 56**: MC reaches out to Bill — a surviving contact on Joel's route. Bill confirms Joel and Ellie passed through. They're alive and heading west.
-- **Chapter 57**: Joel arrives at Jackson with Ellie (canon: Fall 2033). Tommy introduces Joel to the MC. Joel is wary, gruff, protective of Ellie. Standard Joel. MC's heart is pounding — they're meeting their hero.
-- **Chapter 58**: Tommy tells Joel there's someone he needs to see. Joel is taken to a room. Sarah walks in. Joel collapses. The most emotional chapter in the story. Twenty years of grief, shattered in a moment. Sarah runs to him. "Daddy?"
-- **Chapter 59**: The aftermath of the reunion. Joel can't stop crying. Sarah fills in the gaps — how the MC saved her, the community, the life they've built. Joel meets his adopted grandchildren. Ellie watches, confused and moved.
-- **Chapter 60**: Joel's POV chapter. His inner monologue as he processes twenty years of grief dissolving. He touches Sarah's face. He checks the bullet scar. He apologizes a hundred times. Sarah tells him to shut up and eat his dinner.
-- **Chapter 61**: Joel and the MC talk alone. Joel is grateful but also suspicious. "How'd you know she was alive? How'd you find her?" MC navigates this carefully. Joel doesn't fully trust the MC yet, but he can't deny the result.
-- **Chapter 62**: Ellie's immunity is revealed to the MC (who already knows). MC, Joel, Sarah, and Tommy discuss what to do. MC firmly opposes Marlene's plan to kill Ellie for a vaccine. The community's scientists begin exploring non-lethal alternatives.
-- **Chapter 63**: Ellie adjusts to the community. She bonds with Sarah (mother/sister dynamic). She bonds with the adopted kids. For the first time, she has something approaching a normal life. She still cracks jokes and is stubbornly independent.
-- **Chapter 64**: Ellie's POV chapter. She's never had a family. Now she has too much of one. She doesn't know how to handle it. She picks a fight with one of the older adopted kids just to feel normal. Then Sarah sits with her and says: "It's okay to be scared of being happy."
-- **Chapter 65**: Joel begins to heal emotionally. He builds things — literally, using his contractor skills. He teaches Ellie guitar. He watches Sarah with the MC and, for the first time in 20 years, smiles without pain. Family restored.
+- **Chapter 51**: 2033. Marcus's intelligence network (Firefly trade contacts, scout reports, settlement radio) confirms Ellie Williams is in the Boston QZ, ~14 years old, and Marlene is accelerating her plans. Marcus tells Joel and Sarah the full truth about Ellie — her immunity, Marlene's willingness to kill her for a cure, and why Marcus has known about her since before she was born. Joel's reaction: "Then we go get her."
+- **Chapter 52**: MC, Joel, Sarah, and Tommy debate the plan. Who goes, who stays. Sarah must stay — Crystal Falls and the coalition need her. Tommy stays to run infrastructure. Marcus and Joel go east together. The road trip that canon never gave them — not smuggler and cargo, but father and friend, heading toward a girl they've never met to save her from people who think they're saving the world.
+- **Chapter 53**: The journey east. Marcus and Joel on the road for the first time since the early days. They pass through the ruins of cities, encounter hunter territories, and see what twenty years of collapse has done to America. Joel is harder than Marcus remembers — not broken like canon Joel, but weathered. He misses Sarah. He talks about her more than he ever does at home.
+- **Chapter 54**: They reach the outskirts of Boston. The QZ is fracturing — Fireflies and FEDRA in open conflict. Marcus uses his Tier 5 abilities and meta-knowledge to navigate the chaos. They make contact with a Firefly defector who confirms Ellie's location and Marlene's timeline.
+- **Chapter 55**: Marcus and Joel infiltrate the Boston QZ. They find Ellie — fierce, foul-mouthed, terrified, and completely unaware of what Marlene plans for her. Ellie doesn't trust them. Joel doesn't know how to talk to teenagers. Marcus does the talking. Ellie's first impression of Joel: "He looks like someone's angry grandpa."
+- **Chapter 56**: The extraction. Marlene confronts Marcus and Joel. Marcus tells Marlene the truth: there are non-lethal alternatives, Crystal Falls has doctors and resources, and killing a child is not the answer. Marlene is torn — she genuinely cares about Ellie but believes the sacrifice is necessary. Marcus offers to prove the non-lethal research works. Marlene lets them go, but warns: "If you're wrong, I'll come for her."
+- **Chapter 57**: The journey west with Ellie. Joel and Ellie's bonding arc — compressed but genuine. Joel is awkward, protective, gruff. Ellie is mouthy, curious, and slowly realizing these people actually care about her. Canon moments echoed but different — Joel teaching Ellie to check corners, Ellie making terrible puns, quiet moments by campfires.
+- **Chapter 58**: Midway through the return journey. A dangerous encounter — hunters, infected, or both. Joel and Marcus fight together to protect Ellie. Ellie sees Joel in full combat mode for the first time and is both terrified and awed. She asks Marcus afterward: "Is he always like that?" Marcus: "Only when someone he cares about is in danger." Ellie: "He doesn't even know me." Marcus: "He knows enough."
+- **Chapter 59**: They reach Crystal Falls. Sarah is waiting at the gate. Ellie sees the settlement — lights, walls, gardens, children playing — and stops walking. She's never seen anything like it. Sarah greets Ellie with warmth and zero pressure: "You hungry? We have actual eggs." Ellie cries for the first time in years and pretends she isn't.
+- **Chapter 60**: Ellie's first days at Crystal Falls. She's suspicious, defensive, waiting for the catch. She bonds with Noah and the other kids despite herself. Joel builds her a bed frame without being asked. Sarah gives her space but leaves the door open — literally and figuratively. Ellie picks a fight with one of the older adopted kids just to feel normal.
+- **Chapter 61**: Ellie's POV chapter. She's never had a family. Now she has too much of one. She doesn't know how to handle it. Sarah sits with her and says: "It's okay to be scared of being happy." Ellie begins to trust.
+- **Chapter 62**: Ellie's immunity is formally studied by Dr. Reyes and the medical team using non-lethal methods. Blood work, tissue samples, careful analysis. Early results are promising. Marcus, Joel, Sarah, and Tommy discuss the implications — if this works, Ellie lives AND the world gets hope.
+- **Chapter 63**: Joel teaches Ellie guitar. Their relationship deepens from awkward strangers to something approaching father-daughter. Joel sees echoes of Sarah's stubbornness in Ellie. Ellie sees in Joel the father she never had. Joel plays the lullaby from Sarah's childhood. Ellie asks him to teach it to her.
+- **Chapter 64**: Joel's POV chapter. He thinks about the man he might have become without Marcus — twenty years in Boston, hardened, hollow, smuggling to survive. He looks at Ellie and understands what Marcus saved him from: not death, but becoming someone who could only protect through violence. Here, he protects through building. Through teaching. Through staying.
+- **Chapter 65**: Family portrait. Joel, Sarah, Marcus, Ellie, Noah, Tommy — gathered around the table. Ellie cracks a joke. Joel laughs. Sarah rolls her eyes. Noah draws a picture of the whole family, including Ellie with comically large hair. Ellie pins it to her wall. For the first time, she has a wall to pin things to. The retrieval is complete. Ellie is home.
 
 ### Key Events
 
-- Joel and Sarah's reunion (THE emotional climax of the story)
-- Ellie joins the community
-- MC and Joel's first meeting
-- Decision to protect Ellie from the Fireflies without sacrificing her
-- Joel and Ellie POV chapters — interiority for both
-- Henry and Sam — a tragedy the MC couldn't prevent
+- Full truth about Ellie revealed to Joel and Sarah
+- Cross-country journey to Boston (Marcus and Joel)
+- Ellie extracted from Marlene's custody
+- Joel and Ellie's bonding arc on the return journey
+- Ellie joins Crystal Falls and the Miller family
+- Confrontation with Marlene — diplomacy, not violence (for now)
+- Ellie and Joel POV chapters — interiority for both
 
 ### Character Development
 
-- Joel: Shatters and rebuilds. The hardened shell cracks completely. He's a father again — to Sarah, to Ellie, and now a grandfather
-- Sarah: Reuniting with Joel is her deepest wish fulfilled. She's now an adult, a leader, a wife, a mother — and Joel's little girl
-- Ellie: Finds the family she always wanted. Her greatest fear (ending up alone) is answered
-- MC: Accomplishes the primary mission — Joel's family is restored. But threats remain
+- Joel: Becomes a father again — this time to a girl who's never had one. His protective instincts, tempered by years of community building, make him the father Ellie deserves rather than the broken man canon produced
+- Ellie: Finds the family she always wanted. Her greatest fear (ending up alone) is answered. Adjusts from QZ survival mode to actual childhood
+- MC: Accomplishes the long-planned retrieval — the girl he's been preparing to save since Chapter 1. But Marlene's warning lingers
+- Sarah: Becomes a mother figure to Ellie — patient, warm, and firm. The sister/mother dynamic with Ellie is immediate and genuine
 
 ---
 
 ## Arc 6: The Threat of Abby (Chapters 66–82)
 
+> **CONTINUITY NOTE**: In the original plan, Joel killed Dr. Anderson in the Salt Lake City hospital (canon events). In the actual story, Joel never went to Salt Lake City — Marcus extracted Ellie diplomatically from Boston. The Abby conflict must now arise from a different event: after Ellie's extraction, Marlene eventually sends a Firefly team (including Dr. Anderson) to Crystal Falls to take Ellie back by force. In the confrontation, Joel kills Dr. Anderson to protect Ellie. Abby's revenge motivation remains the same — her father died because Joel chose to protect a child over a potential cure — but the setting and circumstances differ. References to "Salt Lake City" below should be read as "Crystal Falls" or adjusted accordingly.
+
 ### Synopsis
 
-Years 2034–2038. The community is now the dominant power in the region, but the MC knows that Abby Anderson is out there, consumed by grief for her father. The MC must prevent Joel's death without becoming a monster themselves. Meanwhile, the community faces external threats from Firefly remnants, bandit armies, and the question of Ellie's immunity.
+Years 2034–2038. The community is now the dominant power in the region. After Ellie's extraction from Boston, Marlene's Fireflies eventually come for her — Dr. Anderson leads a team to Crystal Falls, and Joel kills him defending Ellie. The MC knows from meta-knowledge that Abby Anderson will seek revenge. The MC must prevent Joel's death without becoming a monster themselves. Meanwhile, the community faces external threats from Firefly remnants, bandit armies, and the question of Ellie's immunity.
 
 ### Setting
 
-The MC's settlement (now a proper city-state), Jackson, and Seattle/WLF territory.
+The MC's settlement (now a proper city-state) and Seattle/WLF territory.
 
 ### Chapters
 
-- **Chapter 66**: 2035. The community is thriving. But MC can't relax — they know the Abby timeline. Late nights studying maps, running scenarios. Sarah notices the worry. "You're planning for something you won't tell me about."
-- **Chapter 67**: MC reveals the full truth to Sarah and Joel (separately): Abby Anderson, daughter of the surgeon Joel killed in Salt Lake City, is training to murder Joel. Joel's reaction is quiet. "I'd do it again. Every time."
+- **Chapter 66**: 2035. Marlene's warning comes true — a Firefly team arrives at Crystal Falls demanding Ellie's return, led by Dr. Jerry Anderson. The confrontation turns violent when the Fireflies try to take Ellie by force. Joel kills Dr. Anderson to protect Ellie. The Fireflies retreat. The community is shaken. MC knows what comes next — Abby.
+- **Chapter 67**: MC reveals the Abby threat to Sarah and Joel. Abby Anderson, Dr. Anderson's daughter, is with the WLF in Seattle and will seek revenge for her father's death. Joel's reaction is quiet. "I'd do it again. Every time."
 - **Chapter 68**: Joel's POV — processing the knowledge that someone wants him dead for saving Ellie. He doesn't regret it. But he looks at Sarah, at Ellie, at his grandchildren, and thinks: "I have too much to lose now."
 - **Chapter 69**: MC uses intelligence networks to track Abby Anderson. She's joined the WLF in Seattle. She's been training obsessively. MC knows her target is Joel. Decision: preemptive action or wait?
 - **Chapter 70**: The community council debates the Abby situation. Some want a preemptive strike. Joel says no — "We don't kill people for things they haven't done yet." MC agrees. The plan: reach out, offer truth.
@@ -258,7 +265,7 @@ The MC's settlement (now a proper city-state), Jackson, and Seattle/WLF territor
 - **Chapter 73**: MC assembles a diplomatic team for Seattle. Includes a doctor (to show the non-lethal immunity research), a former WLF defector (for credibility), and the MC themselves.
 - **Chapter 74**: The journey to Seattle. MC encounters the aftermath of the WLF-Seraphite war along the way. Bodies, burned villages, senseless destruction. A reminder of what cycles of revenge produce.
 - **Chapter 75**: The delegation reaches Seattle. Encounters with the WLF perimeter forces. MC demonstrates superhuman ability to establish credibility without violence — catches a bullet, bends a rifle barrel, then asks politely to speak with leadership.
-- **Chapter 76**: Abby is found. She's angry, muscular, driven. The MC explains: Joel killed your father, yes. But your father was going to kill a child — a child who is alive and living a good life. MC shows photos of Ellie, happy and safe.
+- **Chapter 76**: Abby is found. She's angry, muscular, driven. The MC explains: Joel killed your father, yes. But your father tried to take a child by force — a child who is alive and living a good life. MC shows photos of Ellie, happy and safe.
 - **Chapter 77**: Abby's POV chapter. She's lived for revenge for years. Now someone is telling her it was all based on a lie — not that her father died, but that her father's death was senseless murder. Her father was going to kill a kid. She doesn't believe it. Then she does. Then she doesn't know what to believe.
 - **Chapter 78**: Owen supports a non-violent resolution. Lev, who Abby has been protecting, asks her: "Is killing this man going to bring your father back?" Abby breaks down.
 - **Chapter 79**: MC offers Abby and her crew sanctuary in the community. Not forgiveness — nobody's asking for that. Just an alternative. A place where the cycle stops.
@@ -297,7 +304,7 @@ The MC's community — now a genuine city. Farms, schools, hospitals, electricit
 
 ### Chapters
 
-- **Chapter 83**: A day in the life. MC wakes up next to Sarah. Kids are loud. Joel is teaching Ellie guitar on the porch. Tommy and Maria are visiting from Jackson. It's... normal. Beautifully, painfully normal.
+- **Chapter 83**: A day in the life. MC wakes up next to Sarah. Kids are loud. Joel is teaching Ellie guitar on the porch. Tommy is making coffee in the kitchen. It's... normal. Beautifully, painfully normal.
 - **Chapter 84**: The community holds its first formal election for council leadership. MC doesn't run — they serve as protector, not politician. Democracy works. Sarah runs and wins a council seat.
 - **Chapter 85**: MC takes the kids (and Ellie) on a "field trip" outside the walls — showing them the beauty of the world alongside the danger. Ellie sees giraffes (a callback to the canon's most beautiful scene). She stops. She stares. She whispers: "They're real."
 - **Chapter 86**: Abby's integration into the community. She works construction — it's physical, it's productive, it's not killing. She and Ellie have a conversation. It's not friendly. It's not hostile. It's honest. "We could have been enemies in another life," Ellie says. "We were," Abby replies. "But not this one."
