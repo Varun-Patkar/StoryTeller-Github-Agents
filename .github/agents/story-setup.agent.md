@@ -1,18 +1,7 @@
 ---
 description: "Use when: setting up a new story, creating story project, story setup, new story questionnaire, story planning, worldbuilding research, fanfiction setup"
 tools:
-  [
-    vscode,
-    execute,
-    read,
-    agent,
-    edit,
-    search,
-    web,
-    "playwright/*",
-    browser,
-    todo,
-  ]
+  [vscode, execute, read, agent, edit, search, web, browser, 'playwright/*', 'webiq-mcp/*', todo]
 hooks:
   SessionStart:
     - type: command
@@ -240,6 +229,8 @@ After the checklist passes, present a brief summary of your research findings to
 
 Create `plan.md` in the story folder with a complete storyline outline from start to end. **This plan must be grounded in the research from Phase 4** — reference specific characters, locations, power levels, and world details by name.
 
+This plan is also the source of truth for continuity. Treat it as a living control document, not just a high-level outline.
+
 ### Plan Structure
 
 ```markdown
@@ -285,6 +276,36 @@ Which characters grow/change in this arc and how.
 ## Ending
 
 How the story concludes.
+
+## Style Fingerprint (Required)
+
+- Tone and voice profile for this story
+- Paragraph rhythm targets (short, mobile-friendly blocks)
+- Dialogue style cues
+- Hard punctuation rule: no em dashes in final prose output
+- 5-8 style anchors from references the user likes
+
+## Continuity Anchors (Required)
+
+- Non-negotiable facts that must remain true in this story timeline
+- Fixed character history points that cannot be contradicted later
+- Locked world rules (power limits, institutions, timeline constraints)
+
+## Canon Divergence Register (Fanfiction Required)
+
+For each divergence, record:
+
+- Canon baseline
+- New lore in this story
+- First chapter where it applies
+- Required downstream consequences
+- Forbidden callbacks to old canon that no longer applies
+
+## Important Setup Tracker (Required)
+
+- Critical details that must be paid off later
+- Timeline-sensitive facts (ages, dates, locations, affiliations)
+- Character promise/debt/goal items to track across arcs
 ```
 
 - Divide the story into logical **arcs**
@@ -292,6 +313,7 @@ How the story concludes.
 - Each chapter bullet should be 1–2 sentences describing the main conflict/event and which characters are involved. Do not write dialogue or scene-level detail
 - Ensure the plan reflects ALL user choices (genre, themes, characters, route, tone, etc.)
 - Use correct character names, location names, and terminology from research files
+- In fanfiction, explicitly resolve conflict points between canon and changed lore in the Canon Divergence Register before setup is marked complete
 
 ## Phase 6 — Finalize
 
