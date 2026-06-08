@@ -7,7 +7,7 @@
 | Genre   | Action, Slice of Life |
 | Themes  | OP Gamer System, Fix-It, Kingdom Building, Saving Sarah, Saving Joel |
 | Mode    | Here for the Ride |
-| Pacing  | Long (3000-5000 characters) |
+| Pacing  | Long (3000-5000 words) |
 | POV     | Multiple (labeled POV switches) |
 | Tone    | Lighthearted with dark undertones |
 | Title   | New Game Plus: The Last of Us |

@@ -206,16 +206,16 @@ Crystal Falls, the cross-country route to Boston, the Boston QZ, and the return 
 
 ### Chapters
 
-- **Chapter 51**: 2033. Marcus's intelligence network (Firefly trade contacts, scout reports, settlement radio) confirms Ellie Williams is in the Boston QZ, ~14 years old, and Marlene is accelerating her plans. Marcus tells Joel and Sarah the full truth about Ellie — her immunity, Marlene's willingness to kill her for a cure, and why Marcus has known about her since before she was born. Joel's reaction: "Then we go get her."
-- **Chapter 52**: MC, Joel, Sarah, and Tommy debate the plan. Who goes, who stays. Sarah must stay — Crystal Falls and the coalition need her. Tommy stays to run infrastructure. Marcus and Joel go east together. The road trip that canon never gave them — not smuggler and cargo, but father and friend, heading toward a girl they've never met to save her from people who think they're saving the world.
-- **Chapter 53**: The journey east. Marcus and Joel on the road for the first time since the early days. They pass through the ruins of cities, encounter hunter territories, and see what twenty years of collapse has done to America. Joel is harder than Marcus remembers — not broken like canon Joel, but weathered. He misses Sarah. He talks about her more than he ever does at home.
-- **Chapter 54**: They reach the outskirts of Boston. The QZ is fracturing — Fireflies and FEDRA in open conflict. Marcus uses his Tier 5 abilities and meta-knowledge to navigate the chaos. They make contact with a Firefly defector who confirms Ellie's location and Marlene's timeline.
-- **Chapter 55**: Marcus and Joel infiltrate the Boston QZ. They find Ellie — fierce, foul-mouthed, terrified, and completely unaware of what Marlene plans for her. Ellie doesn't trust them. Joel doesn't know how to talk to teenagers. Marcus does the talking. Ellie's first impression of Joel: "He looks like someone's angry grandpa."
-- **Chapter 56**: The extraction. Marlene confronts Marcus and Joel. Marcus tells Marlene the truth: there are non-lethal alternatives, Crystal Falls has doctors and resources, and killing a child is not the answer. Marlene is torn — she genuinely cares about Ellie but believes the sacrifice is necessary. Marcus offers to prove the non-lethal research works. Marlene lets them go, but warns: "If you're wrong, I'll come for her."
-- **Chapter 57**: The journey west with Ellie. Joel and Ellie's bonding arc — compressed but genuine. Joel is awkward, protective, gruff. Ellie is mouthy, curious, and slowly realizing these people actually care about her. Canon moments echoed but different — Joel teaching Ellie to check corners, Ellie making terrible puns, quiet moments by campfires.
-- **Chapter 58**: Midway through the return journey. A dangerous encounter — hunters, infected, or both. Joel and Marcus fight together to protect Ellie. Ellie sees Joel in full combat mode for the first time and is both terrified and awed. She asks Marcus afterward: "Is he always like that?" Marcus: "Only when someone he cares about is in danger." Ellie: "He doesn't even know me." Marcus: "He knows enough."
-- **Chapter 59**: They reach Crystal Falls. Sarah is waiting at the gate. Ellie sees the settlement — lights, walls, gardens, children playing — and stops walking. She's never seen anything like it. Sarah greets Ellie with warmth and zero pressure: "You hungry? We have actual eggs." Ellie cries for the first time in years and pretends she isn't.
-- **Chapter 60**: Ellie's first days at Crystal Falls. She's suspicious, defensive, waiting for the catch. She bonds with Noah and the other kids despite herself. Joel builds her a bed frame without being asked. Sarah gives her space but leaves the door open — literally and figuratively. Ellie picks a fight with one of the older adopted kids just to feel normal.
+- **Chapter 51**: ✅ June 2033 (Year 20). Marcus's eastern intelligence network confirms Ellie Williams (14) is in the Boston QZ and immune. Marlene is moving fast and references Salt Lake City as her medical destination. Marcus briefs Sarah and Joel, reveals the urgency, and triggers departure planning. Quest state: retrieval prep complete except final team deployment.
+- **Chapter 52**: ✅ June 2033 (Year 20). Final retrieval council. Sarah and Tommy stay to run Crystal Falls and the federation. Marcus and Joel depart east in the armored truck. Keiko takes militia command, Helen handles security logistics, and full continuity handoff is completed before departure.
+- **Chapter 53**: ✅ June 2033 (Year 20). Eastbound journey phase one. Marcus and Joel cross former federation edge, pass through Kansas corridor risk zones, and move dark after the Mississippi crossing. Joel opens up about Sarah and Claire, deepening pre-Ellie emotional setup.
+- **Chapter 54**: ✅ June/July 2033 (Year 20). Boston approach. Marcus and Joel contact Rivera, a Firefly defector, and confirm Ellie's location (FEDRA prep school quarantine room) plus Marlene's wounded but active status and compressed timeline.
+- **Chapter 55**: ✅ July 2033 (Year 20). Boston infiltration and Ellie contact. Marcus and Joel extract Ellie from Room 204 during a QZ firefight collapse window. Ellie resists at first, then chooses to leave after hearing the Firefly sacrifice plan and seeing proof of a viable alternative destination.
+- **Chapter 56**: ✅ July 2033 (Year 20). Marlene intercepts on exfil route. Marcus offers non-lethal immunity research path at Crystal Falls, accountability terms, and future data transparency. Marlene permits departure under warning terms, preserving a fragile political line rather than open war.
+- **Chapter 57**: ✅ July 2033 (Year 20). Westbound bonding phase. Joel begins practical training with Ellie (room-clearing, movement discipline), and rapport shifts from guarded to protective. Ellie starts testing boundaries with humor and direct questions.
+- **Chapter 58**: ✅ July 2033 (Year 20). Mid-route hunter conflict at river crossing. Coordinated human threat plus awakened infected pressure. Joel and Marcus execute split-response defense while Ellie holds position under instruction. Ellie witnesses Joel's full combat profile and reframes him from stranger to protector.
+- **Chapter 59**: ✅ July 2033 (Year 20). Arrival at Crystal Falls. Ellie sees a functioning post-collapse town and emotionally destabilizes on entry (shock, disbelief, relief). Sarah anchors first contact with low-pressure care and immediate belonging cues (food, space, no interrogation).
+- **Chapter 60**: ✅ July 2033 (Year 20). Ellie's first week at Crystal Falls is defensive and volatile. She maps exits, stress-tests social boundaries, and starts a fight with Bryce (older adopted teen) to force familiar conflict. Sarah applies clear consequences without rejection, Noah becomes Ellie's first low-pressure peer anchor, and Joel quietly rebuilds Ellie's bed frame overnight to suit her sleep patterns. Ellie does not fully trust the settlement yet, but she chooses an initial belonging routine.
 - **Chapter 61**: Ellie's POV chapter. She's never had a family. Now she has too much of one. She doesn't know how to handle it. Sarah sits with her and says: "It's okay to be scared of being happy." Ellie begins to trust.
 - **Chapter 62**: Ellie's immunity is formally studied by Dr. Reyes and the medical team using non-lethal methods. Blood work, tissue samples, careful analysis. Early results are promising. Marcus, Joel, Sarah, and Tommy discuss the implications — if this works, Ellie lives AND the world gets hope.
 - **Chapter 63**: Joel teaches Ellie guitar. Their relationship deepens from awkward strangers to something approaching father-daughter. Joel sees echoes of Sarah's stubbornness in Ellie. Ellie sees in Joel the father she never had. Joel plays the lullaby from Sarah's childhood. Ellie asks him to teach it to her.
@@ -351,3 +351,92 @@ The story ends not with a bang but with a sunrise. The MC — who once cried wat
 
 The last line is the MC's internal thought:
 _"I didn't just get a new game plus. I got a new life. And this time, nobody dies for nothing."_
+
+---
+
+## Continuity Anchors (Required)
+
+- Sarah survives Outbreak Day and remains continuously present with Joel, Tommy, and Marcus from Chapter 3 onward.
+- Crystal Falls is the primary settlement power center; federation governance grows outward from it.
+- Marcus's system progression is persistent and cumulative (Tiers, achievements, threat classes, quest states).
+- Joel's arc is builder-protector, not broken-smuggler; he stays embedded in family/community leadership.
+- Ellie's extraction is completed in Chapter 55 and arrival at Crystal Falls is completed in Chapter 59.
+
+## Canon Divergence Register (Fanfiction Required)
+
+- Canon baseline: Sarah dies on Outbreak Day.
+	New lore: Sarah lives (saved in Chapter 3).
+	First chapter active: 3.
+	Downstream consequences: Joel never enters the 20-year grief collapse trajectory.
+	Forbidden callbacks: Any claim that Sarah died in 2013.
+
+- Canon baseline: Joel spends 20 years in/around Boston QZ as smuggler and partner to Tess.
+	New lore: Joel remains with Sarah, Tommy, and Marcus from 2013 onward and builds Crystal Falls.
+	First chapter active: 3.
+	Downstream consequences: No Joel-Tess partnership history; no Boston smuggler backstory.
+	Forbidden callbacks: "Joel and Tess back in Boston" or equivalent relationship history.
+
+- Canon baseline: Tommy splits from Joel and later runs Jackson.
+	New lore: Tommy remains core Crystal Falls/federation infrastructure leader.
+	First chapter active: 3.
+	Downstream consequences: Jackson leadership beats are replaced by Crystal Falls/federation work.
+	Forbidden callbacks: Tommy-as-Jackson-founder continuity.
+
+- Canon baseline: Ellie and Joel road arc begins via Tess/Firefly handoff in Boston.
+	New lore: Marcus and Joel extract Ellie directly in Chapter 55 after independent infiltration.
+	First chapter active: 55.
+	Downstream consequences: Joel-Ellie bond starts on the westbound return route.
+	Forbidden callbacks: Tess handoff sequence, museum-capitol sequence as original-canon copy.
+
+- Canon baseline: Dr. Anderson dies in Salt Lake hospital during Joel's rescue.
+	New lore target: Dr. Anderson conflict is relocated to Crystal Falls confrontation arc (planned Arc 6).
+	First chapter active: 66 (planned).
+	Downstream consequences: Abby motivation preserved, originating incident changed by location/context.
+	Forbidden callbacks: Joel killing Dr. Anderson in Salt Lake hospital in this timeline.
+
+## Important Setup Tracker (Required)
+
+- Marlene warning track: She let Ellie go under conditions in Chapter 56. This must pay off politically.
+- Ellie trust track: Entry shock in Chapter 59 must evolve through safety, agency, and belonging beats.
+- Joel-Ellie bond track: Training and protection beats from Chapters 57-58 are foundation, not instant parenthood.
+- Joel-Ellie music track: Guitar and lullaby scenes are now part of Ellie’s belonging routine, so future bonding should keep using music as a calm, repeatable family ritual.
+- Federation governance track: Sarah/Tommy leadership continuity while Marcus/Joel are away must remain visible.
+- Threat evolution track: Beacon-network logic and advanced infected evolution remain active strategic pressure.
+
+## Current Continuity Status (Through Chapter 60)
+
+- Completed chapters present on disk: 1-60.
+- Summary coverage aligned through Chapter 60.
+- Retrieval arc status: 51-60 complete, 61-65 pending.
+- Canon drift risk hotspots for next chapters:
+	- Avoid Boston/Tess memory callbacks for Joel.
+	- Avoid Salt Lake references as if they already happened.
+	- Keep Ellie integration paced and behaviorally consistent with Chapters 59-60 trust trajectory (guarded, testing, incremental buy-in).
+
+### Continuity Ledger Update (Chapter 60)
+
+- New canon divergence introduced: **None**.
+- Downstream consequences logged:
+	- Ellie integration is now in a "structured friction" phase: boundary-testing and conflict-seeking behavior are explicit, and resolution must remain consequence-based rather than punitive exile.
+	- Joel-Ellie bond track adds a practical caregiving beat (Joel custom-builds Ellie's bed frame overnight), reinforcing protector-to-parent progression through actions, not speeches.
+	- Sarah-Ellie dynamic now has a codified tone: firm rules plus non-transactional belonging; future scenes should preserve this balance.
+	- Noah is established as Ellie's first stable peer bridge into community life; future trust milestones should continue leveraging this route.
+
+### Continuity Ledger Update (Chapter 61)
+
+- New canon divergence introduced: **None**.
+- Downstream consequences logged:
+	- Ellie trust track advances from "structured friction" to "structured participation": she accepts repeatable routines while retaining defensive habits, so trust progression remains incremental.
+	- Joel-Ellie bond track gains a regulation-through-action beat (tripwire alarm response and perimeter reset), preserving the care-through-practicality pattern.
+	- Sarah-Ellie dynamic now includes explicit emotional framing ("It's okay to be scared of being happy") paired with unchanged accountability expectations.
+	- Bryce conflict state moves into functional cooperation, not friendship; future scenes should avoid abrupt social resolution.
+	- Canon guardrails for immediate chapters are reaffirmed: no Joel-Tess Boston nostalgia callbacks, no Salt Lake already-happened framing, and no sudden full-trust jump from Ellie.
+
+### Continuity Ledger Update (Chapter 63)
+
+- New canon divergence introduced: **None**.
+- Downstream consequences logged:
+	- Ellie trust track moves into a "shared ritual" phase: she is now willing to seek out Joel for a repeatable, non-survival activity, so trust should keep compounding through routine rather than declarations.
+	- Joel-Ellie bond track now includes inherited family music, with the lullaby functioning as a memory bridge from Sarah to Ellie instead of a standalone emotional beat.
+	- Joel's steady-care role is reinforced through teaching rather than protection alone, so future father-daughter adjacency should keep showing up in ordinary maintenance, not dramatic speeches.
+	- Sarah remains part of the emotional frame even when off-page, because the song request ties Ellie into the Miller household rather than just Joel's attention.
