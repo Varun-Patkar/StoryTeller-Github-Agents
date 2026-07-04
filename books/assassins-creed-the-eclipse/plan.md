@@ -261,6 +261,7 @@ The surviving First Civilization is gone. Humanity inherits a future that is fin
   6. Tragedies that must stand (Abel, Khemu, Haytham) are never undone; that restraint gives the rescues weight.
   7. Cain is selfish, greedy, and unsentimental, and honest with himself about it. He is likable through candor and competence, not virtue. Do NOT write him grieving Abel or moralizing; his motives are self-interested even when his actions save lives.
   8. No meaningless deaths. Every death on the page must serve the story: a real consequence, a character turn, a cost that lands, or a stake that matters. Do not kill named or unnamed people for shock, atmosphere, or body count. If a death does not change something for the characters or the plot, cut it or leave it off the page.
+  9. No reflexive distrust at first meeting. People are not default-suspicious of one another. Characters who share a side, a camp, or a cause start from trust and solidarity and extend newcomers the benefit of the doubt, because they are all humans (or allies) against a common threat. Distrust must be earned and specifically motivated: a character needs a concrete reason (like Eve reading Cain accurately, or a past betrayal) before they turn wary. Do not write every introduction as tension, suspicion, or a standoff. Reserve distrust for the few characters who have a real reason for it.
 
 ## Continuity Anchors (Required)
 
