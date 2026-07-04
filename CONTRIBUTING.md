@@ -16,18 +16,17 @@ The easiest way to contribute is by writing and submitting your own stories.
 4. Say **"next chapter"** to write chapters one at a time.
 5. When you're happy with your story, open a **Pull Request** to merge it into the main repo.
 
-### Option 2: Use the Local Webapp
+### Option 2: Preview in the Reader
 
 1. Fork and clone the repo.
-2. Start the webapp:
+2. Build the static reader site:
    ```bash
-   cd webapp
+   cd reader
    npm install
    npm run dev
    ```
-3. Open `http://localhost:3000` and use the chat interface to create and write stories.
-4. Stories are saved to the `books/` directory automatically.
-5. Commit your changes and open a PR.
+3. Open the local dev URL to browse your stories.
+4. Commit your changes and open a PR.
 
 ### Option 3: Write Manually
 
@@ -80,20 +79,20 @@ Each story lives in `books/<slug>/` with this structure:
 
 ## Code Contributions
 
-If you want to improve the reader, webapp, or agents:
+If you want to improve the reader, the graph scripts, or the agents:
 
 1. Fork and clone the repo.
 2. Create a feature branch: `git checkout -b feature/my-improvement`
 3. Make your changes.
 4. Test locally:
    - **Reader**: `cd reader && npm install && npm run dev`
-   - **Webapp**: `cd webapp && npm install && npm run dev`
+   - **Graph scripts**: `cd .github/scripts && npm install` then `node graph.mjs schema`
 5. Open a PR describing what you changed and why.
 
 ## Guidelines
 
 - **Stories**: Any genre, any fandom, any length. Keep content appropriate (no explicit/NSFW).
-- **Code**: Follow the existing conventions. TypeScript for webapp, Astro for reader.
+- **Code**: Follow the existing conventions. Astro/TypeScript for the reader, Node ESM for the graph scripts.
 - **Commits**: Use clear, descriptive commit messages.
 - **PRs**: One story or one feature per PR. Include a brief description.
 

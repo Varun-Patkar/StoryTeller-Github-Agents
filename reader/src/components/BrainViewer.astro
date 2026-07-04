@@ -1,0 +1,472 @@
+---
+/**
+ * BrainViewer.astro — Interactive knowledge-graph ("brain") viewer for one story.
+ *
+ * Loads a build-time snapshot (public/graph/<slug>.json), renders a force-directed graph
+ * on a canvas, colour-codes nodes by type and edges by type, and shows a node's markdown
+ * details + connections in a side panel when clicked. Fully self-contained: no external
+ * graph library, no runtime database or git access.
+ *
+ * Props:
+ *  - slug: story slug used to fetch the snapshot JSON.
+ */
+interface Props {
+  slug: string;
+}
+const { slug } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<div
+  id="brain"
+  data-slug={slug}
+  data-base={base}
+  class="relative w-full h-[calc(100vh-3.5rem)] overflow-hidden bg-neutral-100 dark:bg-neutral-900 select-none"
+>
+  <canvas id="brain-canvas" class="absolute inset-0 w-full h-full block"></canvas>
+
+  <!-- Toolbar -->
+  <div class="absolute top-3 left-3 flex flex-col gap-2 z-10">
+    <input
+      id="brain-search"
+      type="text"
+      placeholder="Search nodes…"
+      class="w-52 px-3 py-1.5 text-sm rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white/90 dark:bg-neutral-800/90 backdrop-blur focus:outline-none focus:ring-2 focus:ring-amber-400"
+    />
+    <div class="flex gap-2">
+      <button id="brain-reset" class="px-3 py-1.5 text-xs font-medium rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white/90 dark:bg-neutral-800/90 backdrop-blur hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">Reset view</button>
+      <button id="brain-legend-toggle" class="px-3 py-1.5 text-xs font-medium rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white/90 dark:bg-neutral-800/90 backdrop-blur hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">Legend</button>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div id="brain-legend" class="absolute top-3 right-3 z-10 w-56 max-h-[70vh] overflow-y-auto rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white/95 dark:bg-neutral-800/95 backdrop-blur p-3 text-xs">
+    <p class="font-semibold mb-1.5 text-neutral-700 dark:text-neutral-300">Node types</p>
+    <div id="brain-legend-nodes" class="grid grid-cols-2 gap-1 mb-3"></div>
+    <p class="font-semibold mb-1.5 text-neutral-700 dark:text-neutral-300">Edge types</p>
+    <div id="brain-legend-edges" class="grid grid-cols-1 gap-1"></div>
+    <p class="mt-3 text-[10px] text-neutral-400" id="brain-stamp"></p>
+  </div>
+
+  <!-- Detail panel -->
+  <aside
+    id="brain-panel"
+    class="absolute top-0 right-0 h-full w-full sm:w-96 translate-x-full transition-transform duration-200 z-20 bg-white dark:bg-neutral-900 border-l border-neutral-200 dark:border-neutral-800 shadow-2xl flex flex-col"
+  >
+    <div class="flex items-start justify-between gap-3 p-4 border-b border-neutral-200 dark:border-neutral-800">
+      <div>
+        <span id="brain-panel-type" class="inline-block text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full text-white"></span>
+        <h2 id="brain-panel-name" class="text-lg font-bold mt-1.5 leading-tight"></h2>
+        <p id="brain-panel-meta" class="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5"></p>
+      </div>
+      <button id="brain-panel-close" class="shrink-0 p-1.5 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-500" aria-label="Close">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+      <div id="brain-panel-connections"></div>
+      <article id="brain-panel-body" class="prose-brain text-sm leading-relaxed"></article>
+    </div>
+  </aside>
+
+  <div id="brain-empty" class="hidden absolute inset-0 flex items-center justify-center text-sm text-neutral-400">
+    No graph data for this story yet.
+  </div>
+</div>
+
+<style is:global>
+  /* Minimal markdown styling for the node detail body (Tailwind typography not installed). */
+  .prose-brain h1 { font-size: 1.1rem; font-weight: 700; margin: 0.6rem 0 0.3rem; }
+  .prose-brain h2 { font-size: 0.95rem; font-weight: 600; margin: 0.7rem 0 0.25rem; }
+  .prose-brain h3 { font-size: 0.85rem; font-weight: 600; margin: 0.5rem 0 0.2rem; }
+  .prose-brain p { margin: 0.35rem 0; }
+  .prose-brain ul { list-style: disc; padding-left: 1.1rem; margin: 0.35rem 0; }
+  .prose-brain ol { list-style: decimal; padding-left: 1.1rem; margin: 0.35rem 0; }
+  .prose-brain blockquote { border-left: 3px solid currentColor; opacity: 0.7; padding-left: 0.6rem; margin: 0.4rem 0; }
+  .prose-brain code { font-family: ui-monospace, monospace; font-size: 0.8em; background: rgba(120,120,120,0.15); padding: 0.05rem 0.3rem; border-radius: 0.25rem; }
+  .prose-brain strong { font-weight: 600; }
+</style>
+
+<script>
+  // ── Colour maps (kept in sync with .github/scripts/graph/db.mjs enums) ──────────────
+  const NODE_COLORS: Record<string, string> = {
+    character: '#ef4444', location: '#22c55e', faction: '#a855f7', item: '#eab308',
+    event: '#f97316', ability: '#06b6d4', concept: '#3b82f6', arc: '#ec4899', thread: '#14b8a6',
+  };
+  const EDGE_COLORS: Record<string, string> = {
+    family_of: '#ef4444', ally_of: '#22c55e', enemy_of: '#dc2626', knows: '#94a3b8',
+    member_of: '#a855f7', located_in: '#16a34a', owns: '#eab308', has_ability: '#06b6d4',
+    occurs_in: '#f97316', involves: '#f59e0b', causes: '#e11d48', precedes: '#8b5cf6',
+    part_of: '#6366f1', related_to: '#64748b', diverges_from: '#ec4899',
+  };
+  const nodeColor = (t: string) => NODE_COLORS[t] || '#64748b';
+  const edgeColor = (t: string) => EDGE_COLORS[t] || '#94a3b8';
+
+  interface SnapNode {
+    id: string; type: string; name: string; canonicity: string;
+    aliases: string[]; summary: string; tags: string[]; bodyHtml: string;
+  }
+  interface SnapEdge {
+    id: string; source: string; target: string; type: string; canonicity: string; label: string;
+  }
+  interface SimNode extends SnapNode { x: number; y: number; vx: number; vy: number; r: number; deg: number; }
+
+  const root = document.getElementById('brain')!;
+  const slug = root.dataset.slug!;
+  const base = root.dataset.base || '/';
+  const canvas = document.getElementById('brain-canvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d')!;
+
+  // View transform (world → screen): screen = world * scale + translate.
+  let scale = 1, tx = 0, ty = 0;
+  let nodes: SimNode[] = [];
+  let edges: SnapEdge[] = [];
+  const byId = new Map<string, SimNode>();
+  let selected: SimNode | null = null;
+  let hovered: SimNode | null = null;
+  let alpha = 1; // simulation "temperature"; cools over time.
+
+  /** Load the build-time snapshot for this story and start the simulation. */
+  async function load() {
+    let data: { nodes: SnapNode[]; edges: SnapEdge[]; generatedAt?: string };
+    try {
+      const res = await fetch(`${base}graph/${slug}.json`);
+      if (!res.ok) throw new Error(String(res.status));
+      data = await res.json();
+    } catch {
+      document.getElementById('brain-empty')!.classList.remove('hidden');
+      return;
+    }
+    if (!data.nodes.length) {
+      document.getElementById('brain-empty')!.classList.remove('hidden');
+      return;
+    }
+
+    edges = data.edges;
+    const deg = new Map<string, number>();
+    for (const e of edges) {
+      deg.set(e.source, (deg.get(e.source) || 0) + 1);
+      deg.set(e.target, (deg.get(e.target) || 0) + 1);
+    }
+    // Seed positions on a circle so the layout unfolds deterministically.
+    const R = Math.min(canvas.clientWidth, canvas.clientHeight) * 0.35 || 300;
+    nodes = data.nodes.map((n, i) => {
+      const a = (i / data.nodes.length) * Math.PI * 2;
+      const d = deg.get(n.id) || 0;
+      return {
+        ...n, x: Math.cos(a) * R, y: Math.sin(a) * R, vx: 0, vy: 0,
+        deg: d, r: Math.min(6 + d * 1.4, 22),
+      };
+    });
+    for (const n of nodes) byId.set(n.id, n);
+
+    buildLegend(data.generatedAt);
+    resetView();
+    requestAnimationFrame(tick);
+  }
+
+  /** One physics + render frame. */
+  function tick() {
+    step();
+    render();
+    requestAnimationFrame(tick);
+  }
+
+  /** Advance the force simulation one step (repulsion, springs, centering, cooling). */
+  function step() {
+    if (alpha < 0.02) alpha = 0.02; // keep a little life so dragging stays smooth
+    const REPULSE = 5200, SPRING = 0.02, LEN = 90, CENTER = 0.008;
+    for (let i = 0; i < nodes.length; i++) {
+      const a = nodes[i];
+      for (let j = i + 1; j < nodes.length; j++) {
+        const b = nodes[j];
+        let dx = a.x - b.x, dy = a.y - b.y;
+        let d2 = dx * dx + dy * dy || 0.01;
+        const f = (REPULSE / d2) * alpha;
+        const d = Math.sqrt(d2);
+        const fx = (dx / d) * f, fy = (dy / d) * f;
+        a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
+      }
+    }
+    for (const e of edges) {
+      const s = byId.get(e.source), t = byId.get(e.target);
+      if (!s || !t) continue;
+      const dx = t.x - s.x, dy = t.y - s.y;
+      const d = Math.sqrt(dx * dx + dy * dy) || 0.01;
+      const f = (d - LEN) * SPRING * alpha;
+      const fx = (dx / d) * f, fy = (dy / d) * f;
+      s.vx += fx; s.vy += fy; t.vx -= fx; t.vy -= fy;
+    }
+    for (const n of nodes) {
+      n.vx -= n.x * CENTER * alpha; n.vy -= n.y * CENTER * alpha;
+      if (n === dragging) continue;
+      n.x += n.vx; n.y += n.vy;
+      n.vx *= 0.82; n.vy *= 0.82;
+    }
+    alpha *= 0.995;
+  }
+
+  /** Draw the current graph state. */
+  function render() {
+    const w = canvas.width, h = canvas.height, dpr = window.devicePixelRatio || 1;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.save();
+    ctx.translate(tx, ty);
+    ctx.scale(scale, scale);
+
+    const active = selected || hovered;
+    const connected = new Set<string>();
+    if (active) {
+      connected.add(active.id);
+      for (const e of edges) {
+        if (e.source === active.id) connected.add(e.target);
+        if (e.target === active.id) connected.add(e.source);
+      }
+    }
+
+    // Edges
+    for (const e of edges) {
+      const s = byId.get(e.source), t = byId.get(e.target);
+      if (!s || !t) continue;
+      const dim = active && !(connected.has(s.id) && connected.has(t.id));
+      ctx.globalAlpha = dim ? 0.08 : 0.55;
+      ctx.strokeStyle = edgeColor(e.type);
+      ctx.lineWidth = (e.canonicity === 'au' ? 2.2 : 1.4) / scale;
+      if (e.canonicity === 'au') ctx.setLineDash([5 / scale, 4 / scale]); else ctx.setLineDash([]);
+      ctx.beginPath(); ctx.moveTo(s.x, s.y); ctx.lineTo(t.x, t.y); ctx.stroke();
+    }
+    ctx.setLineDash([]);
+
+    // Nodes
+    for (const n of nodes) {
+      const dim = active ? !connected.has(n.id) : false;
+      ctx.globalAlpha = dim ? 0.15 : 1;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = nodeColor(n.type);
+      ctx.fill();
+      // Canonicity ring: au = dashed, original = dotted, canon = solid subtle.
+      ctx.lineWidth = 2 / scale;
+      ctx.strokeStyle = n === selected ? '#111827' : 'rgba(255,255,255,0.85)';
+      if (n.canonicity === 'au') ctx.setLineDash([3 / scale, 3 / scale]);
+      else if (n.canonicity === 'original') ctx.setLineDash([1 / scale, 3 / scale]);
+      else ctx.setLineDash([]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // Labels (only when zoomed in enough, or for active/selected)
+    ctx.globalAlpha = 1;
+    for (const n of nodes) {
+      const show = scale > 0.8 || n === active || (active && connected.has(n.id));
+      if (!show) continue;
+      ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#e5e7eb' : '#111827';
+      ctx.font = `${12 / scale}px ui-sans-serif, system-ui, sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.fillText(n.name, n.x, n.y - n.r - 4 / scale);
+    }
+    ctx.restore();
+  }
+
+  // ── Interaction ─────────────────────────────────────────────────────────────────────
+  let dragging: SimNode | null = null;
+  let panning = false;
+  let last = { x: 0, y: 0 };
+  let moved = false;
+
+  /** Convert a screen point to world coordinates. */
+  function toWorld(px: number, py: number) {
+    return { x: (px - tx) / scale, y: (py - ty) / scale };
+  }
+
+  /** Find the topmost node under a screen point, if any. */
+  function nodeAt(px: number, py: number): SimNode | null {
+    const p = toWorld(px, py);
+    for (let i = nodes.length - 1; i >= 0; i--) {
+      const n = nodes[i];
+      const dx = n.x - p.x, dy = n.y - p.y;
+      if (dx * dx + dy * dy <= (n.r + 3) * (n.r + 3)) return n;
+    }
+    return null;
+  }
+
+  function pointerPos(ev: PointerEvent) {
+    const rect = canvas.getBoundingClientRect();
+    return { x: ev.clientX - rect.left, y: ev.clientY - rect.top };
+  }
+
+  canvas.addEventListener('pointerdown', (ev) => {
+    const { x, y } = pointerPos(ev);
+    moved = false;
+    const hit = nodeAt(x, y);
+    if (hit) { dragging = hit; alpha = Math.max(alpha, 0.4); }
+    else { panning = true; }
+    last = { x: ev.clientX, y: ev.clientY };
+    canvas.setPointerCapture(ev.pointerId);
+  });
+
+  canvas.addEventListener('pointermove', (ev) => {
+    const dx = ev.clientX - last.x, dy = ev.clientY - last.y;
+    if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
+    const pos = pointerPos(ev);
+    if (dragging) {
+      const p = toWorld(pos.x, pos.y);
+      dragging.x = p.x; dragging.y = p.y; dragging.vx = 0; dragging.vy = 0;
+    } else if (panning) {
+      tx += dx; ty += dy;
+    } else {
+      hovered = nodeAt(pos.x, pos.y);
+      canvas.style.cursor = hovered ? 'pointer' : 'grab';
+    }
+    last = { x: ev.clientX, y: ev.clientY };
+  });
+
+  canvas.addEventListener('pointerup', (ev) => {
+    const { x, y } = pointerPos(ev);
+    if (!moved) {
+      const hit = nodeAt(x, y);
+      if (hit) selectNode(hit); else closePanel();
+    }
+    dragging = null; panning = false;
+  });
+
+  canvas.addEventListener('wheel', (ev) => {
+    ev.preventDefault();
+    const { x, y } = pointerPos(ev);
+    const before = toWorld(x, y);
+    scale *= ev.deltaY < 0 ? 1.1 : 0.9;
+    scale = Math.max(0.15, Math.min(4, scale));
+    // Zoom toward the cursor.
+    tx = x - before.x * scale; ty = y - before.y * scale;
+  }, { passive: false });
+
+  // ── Detail panel ─────────────────────────────────────────────────────────────────────
+  const panel = document.getElementById('brain-panel')!;
+
+  /** Select a node: highlight it and populate the detail panel. */
+  function selectNode(n: SimNode) {
+    selected = n;
+    document.getElementById('brain-search') && ((document.getElementById('brain-search') as HTMLInputElement).blur());
+    const typeEl = document.getElementById('brain-panel-type')!;
+    typeEl.textContent = n.type;
+    typeEl.style.backgroundColor = nodeColor(n.type);
+    document.getElementById('brain-panel-name')!.textContent = n.name;
+    const metaBits = [n.canonicity];
+    if (n.aliases.length) metaBits.push('aka ' + n.aliases.join(', '));
+    if (n.tags.length) metaBits.push('#' + n.tags.join(' #'));
+    document.getElementById('brain-panel-meta')!.textContent = metaBits.join(' · ');
+
+    // Connections list
+    const conns: string[] = [];
+    for (const e of edges) {
+      if (e.source === n.id) {
+        const t = byId.get(e.target);
+        if (t) conns.push(connRow(e.type, e.label, t, '→'));
+      } else if (e.target === n.id) {
+        const s = byId.get(e.source);
+        if (s) conns.push(connRow(e.type, e.label, s, '←'));
+      }
+    }
+    const cEl = document.getElementById('brain-panel-connections')!;
+    cEl.innerHTML = conns.length
+      ? `<p class="text-xs font-semibold text-neutral-500 mb-1.5">Connections (${conns.length})</p><div class="flex flex-col gap-1">${conns.join('')}</div>`
+      : '<p class="text-xs text-neutral-400">No connections recorded.</p>';
+
+    document.getElementById('brain-panel-body')!.innerHTML =
+      n.bodyHtml || '<p class="text-neutral-400 text-sm">No details recorded.</p>';
+    panel.classList.remove('translate-x-full');
+  }
+
+  /** Build one connection row (clickable to jump to the connected node). */
+  function connRow(type: string, label: string, other: SimNode, arrow: string): string {
+    const c = edgeColor(type);
+    const lbl = label ? ` <span class="text-neutral-400">(${escapeHtml(label)})</span>` : '';
+    return `<button data-goto="${other.id}" class="brain-conn text-left text-xs flex items-center gap-2 px-2 py-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800">
+      <span class="inline-block w-2 h-2 rounded-full shrink-0" style="background:${c}"></span>
+      <span class="text-neutral-400">${arrow} ${type}</span>
+      <span class="font-medium truncate">${escapeHtml(other.name)}</span>${lbl}
+    </button>`;
+  }
+
+  function escapeHtml(s: string) {
+    return s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+  }
+
+  /** Jump-to on connection click. */
+  panel.addEventListener('click', (ev) => {
+    const btn = (ev.target as HTMLElement).closest('.brain-conn') as HTMLElement | null;
+    if (!btn) return;
+    const n = byId.get(btn.dataset.goto!);
+    if (n) { selectNode(n); focusNode(n); }
+  });
+
+  function closePanel() { selected = null; panel.classList.add('translate-x-full'); }
+  document.getElementById('brain-panel-close')!.addEventListener('click', closePanel);
+
+  /** Pan/zoom the view to center a node. */
+  function focusNode(n: SimNode) {
+    scale = Math.max(scale, 1);
+    tx = canvas.clientWidth / 2 - n.x * scale;
+    ty = canvas.clientHeight / 2 - n.y * scale;
+    alpha = Math.max(alpha, 0.2);
+  }
+
+  // ── Search ────────────────────────────────────────────────────────────────────────────
+  document.getElementById('brain-search')!.addEventListener('keydown', (ev) => {
+    if ((ev as KeyboardEvent).key !== 'Enter') return;
+    const q = (ev.target as HTMLInputElement).value.trim().toLowerCase();
+    if (!q) return;
+    const hit = nodes.find((n) =>
+      n.name.toLowerCase().includes(q) || n.aliases.some((a) => a.toLowerCase().includes(q)));
+    if (hit) { selectNode(hit); focusNode(hit); }
+  });
+
+  // ── Legend + toolbar ──────────────────────────────────────────────────────────────────
+  function buildLegend(generatedAt?: string) {
+    const present = new Set(nodes.map((n) => n.type));
+    const nEl = document.getElementById('brain-legend-nodes')!;
+    nEl.innerHTML = [...present].sort().map((t) =>
+      `<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full" style="background:${nodeColor(t)}"></span>${t}</span>`).join('');
+    const eTypes = new Set(edges.map((e) => e.type));
+    const eEl = document.getElementById('brain-legend-edges')!;
+    eEl.innerHTML = [...eTypes].sort().map((t) =>
+      `<span class="flex items-center gap-1.5"><span class="w-4 h-0.5 rounded" style="background:${edgeColor(t)}"></span>${t}</span>`).join('') || '<span class="text-neutral-400">no edges</span>';
+    if (generatedAt) {
+      document.getElementById('brain-stamp')!.textContent =
+        'Snapshot: ' + new Date(generatedAt).toLocaleString();
+    }
+  }
+
+  document.getElementById('brain-legend-toggle')!.addEventListener('click', () => {
+    document.getElementById('brain-legend')!.classList.toggle('hidden');
+  });
+  document.getElementById('brain-reset')!.addEventListener('click', resetView);
+
+  /** Fit the whole graph into view. */
+  function resetView() {
+    if (!nodes.length) return;
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    for (const n of nodes) {
+      minX = Math.min(minX, n.x); minY = Math.min(minY, n.y);
+      maxX = Math.max(maxX, n.x); maxY = Math.max(maxY, n.y);
+    }
+    const gw = maxX - minX || 1, gh = maxY - minY || 1;
+    const pad = 80;
+    scale = Math.min((canvas.clientWidth - pad) / gw, (canvas.clientHeight - pad) / gh, 2);
+    scale = Math.max(0.2, scale);
+    tx = canvas.clientWidth / 2 - ((minX + maxX) / 2) * scale;
+    ty = canvas.clientHeight / 2 - ((minY + maxY) / 2) * scale;
+  }
+
+  // ── Canvas sizing (HiDPI) ─────────────────────────────────────────────────────────────
+  function resize() {
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = canvas.clientWidth * dpr;
+    canvas.height = canvas.clientHeight * dpr;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+  load();
+</script>
