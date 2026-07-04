@@ -96,3 +96,4 @@ books/<story-name>/
 - DO NOT run setup yourself — delegate to `story-setup`.
 - ONLY orchestrate, route, and relay.
 - ALWAYS require sub-agents to maintain a continuity ledger in `plan.md` for fanfiction canon divergences and downstream consequences.
+- ALWAYS require sub-agents to keep the knowledge graph DENSE: one node per distinct entity (never lumped), an `arc` node per arc, and edges connecting everything (no orphan nodes).
