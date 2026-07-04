@@ -251,12 +251,12 @@ After the chapter is written (and after any user decisions in Interactive mode):
 
 The graph is the story's memory. Keep it current so future chapters stay grounded and consistent. Use `.github/scripts/graph.mjs` (never edit the `.db` or node markdown by hand):
 
-- **New entities introduced this chapter** (a new character, location, faction, item, ability, concept, or a tracked setup/thread): add a node.
+- **New entities introduced this chapter** (a new character, location, faction, item, ability, concept, or a tracked setup/thread): add a node. Give every named entity its OWN node — one node per character/place/group. Never lump several new characters into a single node, and never dump new detail into an unrelated node.
   ```bash
   node .github/scripts/graph.mjs add-node --story <slug> --type <type> --name "<Name>" \
     --canonicity <canon|au|original> --summary "<one-line>" --body-file <temp.md>
   ```
-- **New relationships** revealed this chapter: add edges (`family_of`, `ally_of`, `member_of`, `located_in`, etc.). If the chapter creates a fresh AU divergence from canon, add a `diverges_from` edge (canonicity `au`) and note it in the node's **AU Divergence** section.
+- **New relationships** revealed this chapter: add edges (`family_of`, `ally_of`, `member_of`, `located_in`, etc.) connecting the new node to existing ones — a new node should not be left orphaned. If the chapter creates a fresh AU divergence from canon, add a `diverges_from` edge (canonicity `au`) and note it in the node's **AU Divergence** section.
 - **Changed facts** about an existing entity: `update-node --id <id> --body-file <temp.md>` (and `--summary`/`--canonicity` if those changed).
 - **Payoffs**: when a `thread` node is resolved, update its body to record the payoff.
 - **Consolidation pass** (prevents duplicates): after adding nodes, run

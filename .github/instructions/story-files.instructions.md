@@ -22,6 +22,11 @@ so ids stay deterministic and duplicates are impossible. Run
 `node .github/scripts/graph.mjs schema` for the allowed node types, edge types, and
 canonicity values (`canon`/`au`/`original`).
 
+**Keep the graph dense.** One node per distinct entity — a separate node for each character,
+location, faction, item, ability, concept, and arc. Never lump entities into a shared node
+(no "supporting cast" or "world building" bundle). Wire up edges for every relationship so no
+node is orphaned; a dense web of connections is the whole point.
+
 ## Config Format
 
 Config uses pipe-delimited markdown tables:

@@ -226,10 +226,25 @@ Each node's markdown file has an **Overview**, a **Canon** section (source-mater
 an **AU Divergence** section (how our story changes it). Character nodes also get a
 **Voice & Mannerisms** section. Fill all relevant sections.
 
+**Graph Density (REQUIRED — the graph must be dense, not a handful of lumps):**
+
+- **One node per distinct entity.** Every named character gets its OWN character node. Every
+  named place gets its own location node. Every group/organization gets its own faction node.
+  **Never lump** multiple entities into a single bundle node (no "Supporting Cast" node, no
+  single "World Building" node). If you researched 15 characters, create 15 character nodes.
+- **Split reference material into typed nodes.** A wiki "world" page becomes many `location`,
+  `faction`, and `concept` nodes. A "power system" page becomes `ability`/`concept` nodes
+  (e.g. one node per rank, technique, or creature type). A timeline becomes `event` nodes.
+- **Model the story's spine as nodes too.** Create an `arc` node per planned arc (mirroring
+  `plan.md`), and `thread` nodes for setups/promises to pay off.
+- **Connect everything.** Aim for a graph where every node has at least one edge and major
+  entities have several. A sparse graph (many nodes, few edges) is a failure — the value is in
+  the connections. As a rough target, expect at least as many edges as nodes.
+
 **Populate the graph:**
 
-1. **Add one node per major entity.** For each lead, important canon character, key location,
-   faction, power system, and core concept:
+1. **Add one node per entity — split, never lump.** For each individual lead, canon character,
+   location, faction, item, ability, concept, event, and arc:
 
    ```bash
    node .github/scripts/graph.mjs add-node --story <slug> --type character \
@@ -240,7 +255,8 @@ an **AU Divergence** section (how our story changes it). Character nodes also ge
 
    Write the full details (Overview / Canon / AU Divergence / Voice & Mannerisms) into a temp
    markdown file and pass it with `--body-file`, or omit `--body` to get a scaffold you then
-   fill with `update-node --body-file`.
+   fill with `update-node --body-file`. Minor characters still get their OWN node (a short body
+   is fine) — do not merge them into a shared file.
 
 2. **The Voice & Mannerisms section is critical.** Include 5-10 example quotes from the source
    material for each main character. This is how the story-runner writes in-character dialogue.
@@ -278,6 +294,7 @@ Before moving to Phase 5, output this checklist with PASS or FAIL for each item.
 - [ ] Do you have enough detail on character relationships to write believable interactions — including HOW they interact, not just THAT they interact?
 - [ ] For fanfiction: do you know canon plot well enough to diverge from it intentionally, and could a reader of the source material read your node markdown without finding factual errors?
 - [ ] Is every node tagged with the correct canonicity (`canon`/`au`/`original`), and does every AU change have a `diverges_from` edge to its canon baseline?
+- [ ] Is the graph DENSE — one node per distinct entity (no lumped "supporting cast" or "world building" nodes), an `arc` node per planned arc, and at least as many edges as nodes, with no orphan (edge-less) nodes?
 - [ ] Did `consolidate` surface no unresolved duplicates and `validate` return `"ok": true`?
 
 After the checklist passes, present a brief summary of your research findings to the user and ask them to confirm before proceeding to Phase 5.
@@ -395,7 +412,7 @@ After the script runs:
    - **Synopsis**: Write a 2-3 sentence compelling book synopsis based on the story plan.
    - **Cover Prompt**: Write a detailed AI image generation prompt for the book cover. Include style (cinematic, painted, etc.), composition, key visual elements from the story, color palette, and mood. The prompt MUST instruct that the book title text appears at the top of the cover and the author name appears at the bottom. Use the `Author` field from config.md for the author name (if blank, look up the GitHub username of the repo owner via `git config user.name` or `gh api user --jq .login`). Example phrasing: `The title "BOOK TITLE" in bold [style] font at the top. The author name "AUTHOR NAME" in smaller [style] font at the bottom.`
    - **Total Chapters**: Set to the total number of planned chapters.
-3. **Ensure the knowledge graph is populated** (Phase 4 Step 5): nodes for every major character/location/faction/concept, edges for relationships, correct canonicity, and a passing `validate`. Add any arc nodes matching `plan.md`.
+3. **Ensure the knowledge graph is populated and DENSE** (Phase 4 Step 5): a separate node for every individual character/location/faction/item/ability/concept (never lumped), an `arc` node per planned arc, edges for every relationship, correct canonicity, and a passing `validate`. Confirm there are no orphan nodes and roughly as many edges as nodes.
 4. Confirm to the user that setup is complete and they can start a session with the story runner.
 
 **DO NOT manually create config.md, summary.md, the graph database, or the folder structure. Always use the scripts (`create-story-structure.mjs` and `graph.mjs`).**
@@ -408,6 +425,7 @@ After the script runs:
 - DO NOT move from Phase 4 to Phase 5 until the self-verification checklist passes completely.
 - DO NOT rely on your own knowledge for fandom/genre details — always verify via web research (Mode A: webiq; Mode B: SearXNG + fetch_webpage; Mode C: Playwright/Google). Your training data may be outdated or inaccurate.
 - DO NOT write vague node bodies. Every node markdown must contain specific names, terms, and details — not generic summaries.
+- DO NOT lump multiple entities into one node. One node per distinct character/location/faction/etc. — never a shared "supporting cast" or "world building" node. Keep the graph dense and connected.
 - ALWAYS stop and wait for user input after asking questions if `vscode_askQuestions` is unavailable.
 - ALWAYS create files in the `books/` directory: `<workspace-root>/books/<story-name>/...`. Use the confirmed story name from Phase 3, lowercased with spaces replaced by hyphens and special characters removed (e.g., "The Last Sunrise" → `books/the-last-sunrise`).
 - ALWAYS do multiple search rounds — a single query per topic is insufficient.
