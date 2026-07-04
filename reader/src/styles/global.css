@@ -60,3 +60,16 @@ button {
   transition-duration: 200ms;
   transition-timing-function: ease;
 }
+
+/* Mobile: the reader content should span ~95vw (about 2.5vw margin each side),
+   regardless of the Column Width setting whose caps (e.g. wide = 80vw) are tuned
+   for desktop and leave large side gaps on phones. !important overrides the inline
+   max-width applied by the reader-settings script. */
+@media (max-width: 640px) {
+  #reader-content {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
