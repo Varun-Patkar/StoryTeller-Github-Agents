@@ -2,13 +2,13 @@
 
 ## Overview
 
-A modern Assassin's Creed superfan reincarnates as Cain, the first murderer, and awakens the instant after he kills Abel. Across roughly seventy-five thousand years, he becomes the hidden architect of human survival: founding The Eclipse (the order whispered of as "The Owls"), loving the immortal Kassandra across two millennia, and waging a silent war against the surviving First Civilization while the visible Assassin-Templar conflict plays out exactly as history records. This is a fix-it story in disguise, where canon remains intact on the surface and the hidden truth is kinder underneath.
+A modern Assassin's Creed superfan reincarnates as Cain, the first murderer, and awakens the instant after he kills Abel, his modern mind braided together with the original Cain's ruthless, hungry temperament. He is selfish, greedy, and ambitious, and across roughly seventy-five thousand years he becomes the hidden architect of human survival, not out of virtue but out of enlightened self-interest: he founds The Eclipse (the order whispered of as "The Owls"), takes the immortal Kassandra as the one person he truly keeps, and wages a silent war against the surviving First Civilization, all because a dead or enslaved world is worth nothing to a man who intends to own a piece of everything. This is a fix-it story in disguise, where canon remains intact on the surface and the hidden truth is stranger underneath: humanity's greatest protector was in it for himself the whole time.
 
 **Length target: 150 chapters.** The chapter beats listed under each arc below are the load-bearing story spine, not a one-to-one chapter map. Each beat expands into multiple chapters at the story's Long pacing (3000-5000 characters) so the eight arcs fill roughly 150 chapters. Indicative distribution: Arc I ~12, Arc II ~20, Arc III ~16, Arc IV ~18, Arc V ~34, Arc VI ~18, Arc VII ~16, Arc VIII ~16.
 
 ## Cast
 
-- **Cain** (protagonist): reincarnated superfan; founder of The Eclipse; digital consciousness in the Core, acting through Echoes.
+- **Cain** (protagonist): reincarnated superfan merged with the original Cain's ruthlessness; selfish, greedy, and calculating; founder of The Eclipse; digital consciousness in the Core, acting through Echoes. Saves humanity out of self-interest, not sainthood.
 - **Kassandra** (deuteragonist, love interest): Isu-blooded immortal misthios, kept alive by the Staff of Hermes; his equal and conscience.
 - **Juno** (primary antagonist): Isu extremist who despises humanity, surviving in the Grey.
 - **Basim / Loki** (primary antagonist, Arc VI): reincarnated Isu; Cain's intellectual equal.
@@ -24,7 +24,7 @@ A modern Assassin's Creed superfan reincarnates as Cain, the first murderer, and
 
 ### Synopsis
 
-Cain kills Abel under Isu mental enslavement, then the modern mind seizes control. Horrified, he defects to Adam and Eve's Human Rebellion. Knowing the First Catastrophe cannot be stopped, he infiltrates an Isu city, uploads his consciousness into the Core, hides his body in stasis, and erases all evidence of his survival before the solar flare strikes.
+Cain kills Abel under Isu mental enslavement, then the modern mind seizes control and merges with the original Cain's. The body's reflexive horror burns off fast; he never knew Abel and is not built to mourn him. Coldly practical, he defects to Adam and Eve's Human Rebellion because they are his best bet to survive and because his foreknowledge makes him their most valuable asset. Knowing the First Catastrophe cannot be stopped, he infiltrates an Isu city, uploads his consciousness into the Core, hides his body in stasis, and erases all evidence of his survival before the solar flare strikes, already playing a longer, more selfish game than anyone around him suspects.
 
 ### Setting
 
@@ -46,7 +46,7 @@ The twilight of the Isu (c. 75,000 BCE): the cities of Eden and Feyan, the battl
 
 ### Character Development
 
-Cain moves from paralyzing guilt to grim purpose. His anonymity begins here as both armor and self-imposed penance.
+Cain moves from the body's momentary shock to cold, appetite-driven purpose. His anonymity begins here as pure strategy: a name is a target, and a legend as small as "the first murderer" is the best disguise there is. He decides to survive the coming catastrophe and to profit from everything between now and then.
 
 ## Arc II: Greece
 
@@ -174,7 +174,7 @@ The Norse world and its long aftermath; the Grey/Yggdrasil where Loki is impriso
 
 - **Chapter 29**: Cain learns Eivor imprisoned Loki in the Grey and studies how the seal has held for centuries.
 - **Chapter 30**: The first move: Loki, even imprisoned, reaches into history through a Sage; Cain counters.
-- **Chapter 31**: A rare parley in the Grey; Loki's grief for his children mirrors Cain's grief for Abel.
+- **Chapter 31**: A rare parley in the Grey; Loki's willingness to burn the world for his children forces Cain to see how close his own appetite runs to Loki's, with Kassandra the one line he will not cross.
 - **Chapter 32**: Juno's Instruments surface; Cain and Loki are briefly forced to work the same problem from opposite ends.
 - **Chapter 33**: Cain realizes Loki's freedom is inevitable and begins preparing for the day the seal fails.
 
@@ -228,7 +228,7 @@ The modern world and the Grey: Gramatica's Australian lab, Santorini, and the di
 
 - **Chapter 39**: Layla frees Basim; the Game of Gods detonates into the open (as much as it ever can).
 - **Chapter 40**: The Eclipse destroys Juno's clone and corners her consciousness in the Grey.
-- **Chapter 41**: Cain and Loki's final reckoning; grief answered with grief, not just a blade.
+- **Chapter 41**: Cain and Loki's final reckoning; two selfish immortals who each burned centuries for what they wanted, settled with more than a blade.
 - **Chapter 42**: The last surviving digital Isu are erased; the Core's oldest mission is fulfilled.
 - **Chapter 43**: Kassandra dies at Santorini in 2018; Cain says goodbye to the only person who knew him.
 - **Chapter 44**: Cain preserves humanity's readiness for any future catastrophe, then lets the Eclipse fade back into myth.
@@ -240,7 +240,7 @@ The modern world and the Grey: Gramatica's Australian lab, Santorini, and the di
 
 ### Character Development
 
-Cain completes his seventy-five-thousand-year penance and, having outlived even his love, chooses to keep watch rather than rest.
+Cain finishes the longest, most selfish game ever played, a man who saved the world because he wanted to keep it, and, having outlived even Kassandra, chooses to keep watch rather than rest, because a secured world is still worth owning.
 
 ## Ending
 
@@ -250,15 +250,16 @@ The surviving First Civilization is gone. Humanity inherits a future that is fin
 
 - **Tone and voice**: The measured gravity of an official Assassin's Creed novel: philosophical dialogue, political intrigue, historical authenticity, moral ambiguity, and conspiracies spanning millennia.
 - **Paragraph rhythm**: Varied, webnovel-friendly blocks; short punchy lines for action and revelation, longer reflective passages for the weight of memory. Avoid walls of text.
-- **Dialogue style**: Characters carry distinct voices (see Voice & Mannerisms in graph nodes). Cain is patient and self-deprecating; Kassandra blunt and wry; Loki charming and wounded. Philosophy is argued, not lectured.
+- **Dialogue style**: Characters carry distinct voices (see Voice & Mannerisms in graph nodes). Cain is dry, sardonic, and calculating, openly self-interested; Kassandra blunt and wry; Loki charming and wounded. Philosophy is argued, not lectured.
 - **Hard punctuation rule**: No em dashes in final prose output. Use commas, periods, ellipses, or sentence breaks.
 - **Style anchors**:
   1. Power comes from knowledge, patience, and accumulated Echo lifetimes, never invincibility. Every victory is earned.
   2. Canon stays intact on the surface; the fix-it is always hidden underneath.
   3. The heroes of each era remain the heroes of their own stories; Cain works in their margins.
   4. Foreshadowing is subtle and long-range; setups planted arcs before payoff.
-  5. The romance with Kassandra is the human anchor, never a subplot.
+  5. The romance with Kassandra is the human anchor, never a subplot, and the one exception to Cain's transactional view of people.
   6. Tragedies that must stand (Abel, Khemu, Haytham) are never undone; that restraint gives the rescues weight.
+  7. Cain is selfish, greedy, and unsentimental, and honest with himself about it. He is likable through candor and competence, not virtue. Do NOT write him grieving Abel or moralizing; his motives are self-interested even when his actions save lives.
 
 ## Continuity Anchors (Required)
 
@@ -307,6 +308,6 @@ The surviving First Civilization is gone. Humanity inherits a future that is fin
 - **The Owls Myth**: seeded in Arc IV, pays off in the reader's final realization that the Eclipse was always present.
 - **Loki's inevitable freedom**: foreshadowed in Arc VI (the seal will fail), pays off when Layla frees Basim in Arc VIII.
 - **Desmond's foreseen sacrifice**: the Eclipse knows it is coming for millennia; the dilemma pays off in Arc VII.
-- **Cain's anonymity as penance**: established Arc I, resolved in Arc VIII when he keeps watch rather than claim any recognition.
+- **Cain's anonymity as strategy**: established Arc I as cold self-protection (a name is a target), paid off in Arc VIII when he stays hidden by choice because a secured world is still his to quietly own.
 - **Isu Longevity biotech**: introduced Arc IV, enables the multi-era Kenway operatives in Arc V.
 - **The Second Catastrophe**: the north star of every arc; the concrete preparations must be tracked so Arc VIII's resolution feels earned.
