@@ -360,6 +360,7 @@ How the story concludes.
 - Dialogue style cues
 - Hard punctuation rule: no em dashes in final prose output
 - 5-8 style anchors from references the user likes
+- **Baseline craft reference:** the human-written chapters in `.github/agents/writing-samples/` (`chapter-01-new-game.md`, `chapter-02-gearing-up.md`) are the gold standard for prose rhythm, dialogue cadence, and how system/LitRPG beats are woven in. Read them and derive the style anchors from that craft (never copy their words/plot). Note in the fingerprint that the story-runner must re-read them when drafting.
 
 ## Continuity Anchors (Required)
 
