@@ -1,22 +1,21 @@
 # Character: Nara
 
 ## Overview
-A human hunter of the rebellion era, older, lean, sharp-eyed. She was the first thrall Cain deliberately cut free from Isu control (at the stream, Chapter 2). Offered her freedom, she chose to stay with him, not out of love or belief but as cold arithmetic: he is the one thing the masters cannot leash, and everyone near him lives longer. She becomes his aide and blunt witness through the rebellion.
+A human hunter of the rebellion era, older, lean, sharp-eyed. She was the first thrall Cain deliberately cut free from Isu control (at the stream, Chapter 2). Offered her freedom, she chose to stay with him, not out of love or belief but as cold arithmetic: he is the one thing the masters cannot leash, and everyone near him lives longer. She became his aide and blunt witness through the rebellion.
 
 ## Canon
 INVENTED for this story. No canon counterpart.
 
 ## Voice & Mannerisms
-Dry, flat, practical. States the obvious without drama ("You're bleeding." "You keep almost dying."). Unsentimental, which is exactly why Cain trusts her. Names his coldness out loud without judging it.
+Dry, flat, practical. States the obvious without drama. Unsentimental, which is exactly why Cain trusts her. Names his coldness out loud without judging it.
 - "Where would I go. You're the thing they can't hold. Everyone near you lives longer. That's the whole world now. You, or the leash. I pick you."
-- "You don't care about their cousins."
 - "That's ugly." (said without heat)
-- "We robbed them. We walked into the masters' own house and robbed them."
+- "Idiot. You could have just said that a year ago."
 
 ## AU Divergence
-Original character. Serves as Cain's first human tool and a mirror for his selfishness: her loyalty-as-arithmetic is the only kind of loyalty he knows how to trust, in contrast to the belief and love the rest of the rebellion runs on. She accompanied him on the Chapter 4 infiltration of the Isu city and proved steady under fire, which he values.
+Original character. Cain's first human tool and the one loyalty he never had to buy with anything but staying alive. She is the single exception on his cold "seed list," the one entry he keeps for no reason he can make balance ("I keep you because I keep you").
 
-**She does NOT die needlessly (Rule #8, user-locked).** By the end of Chapter 4 Cain has quietly decided she is worth keeping through the coming Catastrophe. He will NOT upload her (the vessel is his alone), but he intends to save her physically, shelter her body, get her to deep safety, whatever it takes, for a reason he can't fully make "add up" on his cold ledger. She is the exception on his seed list that is closer to feeling than calculation. Track her survival; she is not a death-flagged character.
+**SURVIVED the First Catastrophe (Chapter 5, Rule #8 + user lock).** Cain did not upload her (the vessel is his alone) and did not let her die. He made her go with Adam and Eve's remnant into the deep western-hill caves by telling her the one true thing he'd never spent a lie on: that she was the one person who was never on a list. She parted from him with a hand to his face ("Idiot..."). She believes the Knife died in the cataclysm. She lives on as a normal human among the survivors; she and Cain are now separated by his fake death.
 
 ## Notes
-Introduced Chapter 3. Present in Chapter 4. Do not kill her for shock or drama. If the plot ever pushes her toward death, Cain saves her body instead.
+Introduced Ch3, present Ch4, saved and parted from Cain in Ch5. She is a mortal of the Arc I era; she will age and die a natural human lifespan in the deep past unless later chapters revisit her. Do NOT kill her for drama. Possible future emotional callback: Cain outliving the memory of the one person who was never on a list.
