@@ -12,3 +12,7 @@ Imperious, seductive, contemptuous of humans as beasts. 'You are cattle who lear
 ## AU Divergence
 Cain's oldest and most dangerous foe. Their conflict spans from the First Rebellion to the modern day. The Eclipse works for millennia to ensure her freedom, if it comes, is short-lived.
 
+First seen in Chapter 4: while raiding the Isu city's consciousness archive, Cain witnesses the Capitoline Triad's doomed effort against the Catastrophe and marks Juno as the cold one who argued to *let the sky burn the human herd* and rebuild with a deeper leash. He does not yet know her name; she does not yet know she has an enemy. This one-way glimpse plants their millennia-long war. He filed her face "near the front," in the place he keeps for problems that outlive everyone else's.
+
+## Notes
+In the Arc I era Juno is a living, physical Isu working with the Triad; she becomes a digital consciousness later. Keep the Chapter 4 sighting one-way (Cain sees her; she only half-notices an anomaly in the archive).
