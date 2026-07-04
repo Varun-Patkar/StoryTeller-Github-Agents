@@ -34,7 +34,7 @@ The twilight of the Isu (c. 75,000 BCE): the cities of Eden and Feyan, the battl
 
 - **Chapter 1**: Cain wakes mid-atrocity, the Apple still in his hand and Abel's blood on it; the modern mind arrives too late to stop the first murder.
 - **Chapter 2**: Cain flees his Isu masters and reaches Adam and Eve; he proves his defection is real by turning the stolen Apple against a controller.
-- **Chapter 3**: The rebellion surges; Cain steers it with foreknowledge while privately mourning what he knows is coming.
+- **Chapter 3**: The rebellion surges as the Isu fracture (secretly distracted by their own doomsday calculations); Cain steers the war coldly with foreknowledge, making himself indispensable while quietly bending the campaign toward an Isu city he needs for his own survival plan.
 - **Chapter 4**: Cain infiltrates a doomed Isu city to steal upload technology as Jupiter and the Triad race their own losing calculation.
 - **Chapter 5**: The upload; Cain seals his body in the Core and fakes his death as the First Catastrophe burns the sky.
 
@@ -260,6 +260,7 @@ The surviving First Civilization is gone. Humanity inherits a future that is fin
   5. The romance with Kassandra is the human anchor, never a subplot, and the one exception to Cain's transactional view of people.
   6. Tragedies that must stand (Abel, Khemu, Haytham) are never undone; that restraint gives the rescues weight.
   7. Cain is selfish, greedy, and unsentimental, and honest with himself about it. He is likable through candor and competence, not virtue. Do NOT write him grieving Abel or moralizing; his motives are self-interested even when his actions save lives.
+  8. No meaningless deaths. Every death on the page must serve the story: a real consequence, a character turn, a cost that lands, or a stake that matters. Do not kill named or unnamed people for shock, atmosphere, or body count. If a death does not change something for the characters or the plot, cut it or leave it off the page.
 
 ## Continuity Anchors (Required)
 

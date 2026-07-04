@@ -42,7 +42,7 @@ He crawled to the body. He turned it. He had already known the face before he sa
 
 Abel. His brother. The name sat in his mouth like it had always been there, because for this body it always had.
 
-Abel's eyes were open and there was nothing behind them. He looked surprised. That was the part Cain would carry, later, through every century he had no way of imagining yet. Not the blood, not the wound. The surprise. Abel had not understood that his own brother was going to do this, right up until his brother did.
+Abel's eyes were open and there was nothing behind them. He looked surprised. That was the detail that lodged, right then, before anything else. Not the blood, not the wound. The surprise. Abel had not understood that his own brother was going to do this, right up until his brother did.
 
 Cain pressed his hand to the ruined skull as if he could hold the pieces of it in place, as if that was a thing that worked, and it was not, and he knew it was not, and he did it anyway.
 
@@ -52,7 +52,7 @@ But it had been these hands.
 
 ____
 
-The knowing kept coming, and it did not care that he was busy grieving.
+The knowing kept coming, and it did not care that his hands were still shaking.
 
 It told him where he was on the long line of everything. It told him the pale towers belonged to the ones who had made him, the ones who called themselves the first and everyone else second. It told him what he was to them. Not a son. Not even a servant, really. A tool that walked and talked and could be pointed.
 
@@ -78,7 +78,7 @@ History remembered him. He knew that too. That was the joke of it, the part that
 
 They had not kept his brother's kindness. They had not kept whatever Abel had been going to do with his one short life. They had kept the killing, because the killing was useful, because it was a thing you could build a warning around.
 
-"I'm sorry," Cain said to the body. It was not enough. There was no amount of it that would be enough, and he understood, kneeling there, that he was going to spend the rest of his life failing to make it enough, and that the rest of his life might be very long.
+"I'm sorry," Cain said to the body. The words came out on their own, some reflex the body still had loaded. He listened to himself say them and felt how little they weighed. The man who should have meant them, the brother who had stood here a minute ago, had died before Cain ever woke up. What was left was a stranger apologizing to a corpse he'd been handed, and even the stranger could tell it changed nothing.
 
 ____
 
