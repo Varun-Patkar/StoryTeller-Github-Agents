@@ -4,6 +4,8 @@
 
 A modern Assassin's Creed superfan reincarnates as Cain, the first murderer, and awakens the instant after he kills Abel. Across roughly seventy-five thousand years, he becomes the hidden architect of human survival: founding The Eclipse (the order whispered of as "The Owls"), loving the immortal Kassandra across two millennia, and waging a silent war against the surviving First Civilization while the visible Assassin-Templar conflict plays out exactly as history records. This is a fix-it story in disguise, where canon remains intact on the surface and the hidden truth is kinder underneath.
 
+**Length target: 150 chapters.** The chapter beats listed under each arc below are the load-bearing story spine, not a one-to-one chapter map. Each beat expands into multiple chapters at the story's Long pacing (3000-5000 characters) so the eight arcs fill roughly 150 chapters. Indicative distribution: Arc I ~12, Arc II ~20, Arc III ~16, Arc IV ~18, Arc V ~34, Arc VI ~18, Arc VII ~16, Arc VIII ~16.
+
 ## Cast
 
 - **Cain** (protagonist): reincarnated superfan; founder of The Eclipse; digital consciousness in the Core, acting through Echoes.
