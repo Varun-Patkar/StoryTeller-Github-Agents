@@ -13,11 +13,11 @@ Enforce these targets whenever delegating to sub-agents:
 
 - **Style target**: Natural, conversational webnovel prose with clear rhythm, grounded details, and varied paragraph length.
 - **Punctuation target**: No em dashes in generated story text. Use commas, periods, ellipses (`...`), or sentence breaks.
-- **Continuity target**: Canon details and changed lore must remain internally consistent across `plan.md`, `summary.md`, and chapters.
+- **Continuity target**: Canon details and changed lore must remain internally consistent across `plan.md`, `summary.md`, chapters, and the per-story knowledge graph (`graph/graph.db` + `graph/nodes/`). Research and story state live in the graph, edited only via `.github/scripts/graph.mjs`.
 
-## SearXNG Check (once per session)
+## SearXNG Check (once per session, only if webiq is unavailable)
 
-On the **first invocation only**, verify SearXNG is reachable. Skip this check on subsequent turns.
+Web research prefers **webiq** (the `webiq-mcp` search tools). If webiq is available, skip this check entirely. Only if webiq tools are not available, on the **first invocation** verify SearXNG is reachable as a fallback:
 
 1. Run in terminal: `curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/`
 2. If the response is `200`, SearXNG is running — proceed normally.
@@ -33,15 +33,21 @@ On the **first invocation only**, verify SearXNG is reachable. Skip this check o
 
 ## Web Research Strategy
 
-There are two modes depending on SearXNG availability. Pass the active mode to sub-agents.
+There are three modes, in order of preference. **webiq is primary** — pass the active mode to sub-agents.
 
-### Mode A — SearXNG Available
+### Mode A — webiq (PRIMARY)
+
+1. **Search** using the `webiq-mcp` web search tools (`mcp_web_iq_mcp_se_web`, `mcp_web_iq_mcp_se_news`, `mcp_web_iq_mcp_se_images`) to get a list of links.
+2. **Deep-dive** into those links using `mcp_web_iq_mcp_se_browse` to read page content.
+3. Repeat: refine queries, follow promising links, read more pages until research is thorough.
+
+### Mode B — SearXNG (fallback)
 
 1. **Search** using the `searxng` MCP `search` tool to get a list of links.
 2. **Deep-dive** into those links using the `fetch_webpage` tool to read page content.
 3. Repeat: refine queries, follow promising links, fetch more pages until research is thorough.
 
-### Mode B — SearXNG Unavailable
+### Mode C — Playwright (last resort)
 
 1. **Search Google** using Playwright/browser tools (`open_browser_page` → `https://www.google.com/search?q=...`).
 2. **Read search results** using `read_page` to extract links.
@@ -72,17 +78,16 @@ Every story lives in its own folder inside the **`books/`** directory at the wor
 ```
 books/<story-name>/
 ├── config.md            # Story settings (genre, mode, pacing, fandom, etc.)
-├── plan.md              # Arc-wise storyline outline (start → end)
+├── plan.md              # Arc-wise storyline outline (start → end); references graph node ids
 ├── summary.md           # Running condensed summary of the story so far
 ├── chapters/            # Written chapters
 │   ├── chapter-01.md
 │   └── ...
-└── research/            # Fandom/genre research (when applicable)
-    ├── fandom.md
-    ├── world-building.md
-    └── characters/
-        ├── main-characters.md
-        └── supporting-characters.md
+└── graph/               # Knowledge graph: research + story state
+    ├── graph.db         # SQLite nodes + edges (via .github/scripts/graph.mjs)
+    └── nodes/           # One markdown body per node, named <id>.md
+        ├── character-joel-miller.md
+        └── ...
 ```
 
 ## Constraints

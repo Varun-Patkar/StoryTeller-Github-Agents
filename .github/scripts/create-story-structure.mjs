@@ -12,6 +12,7 @@
 import { mkdirSync, writeFileSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+import { openDb } from "./graph/db.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const WORKSPACE_ROOT = resolve(__dirname, "..", "..");
@@ -51,14 +52,19 @@ if (existsSync(storyDir)) {
   process.exit(1);
 }
 
-// Create directories
+// Create directories. The knowledge graph replaces the old research/ folder: story
+// research now lives in a per-story SQLite graph (nodes + edges) plus markdown node
+// bodies under graph/nodes/. See .github/scripts/graph/ for the schema and CLI.
 const dirs = [
   storyDir,
   resolve(storyDir, "chapters"),
-  resolve(storyDir, "research"),
-  resolve(storyDir, "research", "characters"),
+  resolve(storyDir, "graph"),
+  resolve(storyDir, "graph", "nodes"),
 ];
 dirs.forEach((d) => mkdirSync(d, { recursive: true }));
+
+// Initialise the empty knowledge-graph database (creates schema + FTS index).
+openDb(slug).close();
 
 // Create config.md
 const configContent = `# Story Configuration
@@ -96,5 +102,5 @@ writeFileSync(resolve(storyDir, "plan.md"), `# Story Plan: ${args.name}\n`, "utf
 console.log(JSON.stringify({
   story_folder: storyDir,
   slug,
-  created: ["config.md", "summary.md", "plan.md", "chapters/", "research/", "research/characters/"],
+  created: ["config.md", "summary.md", "plan.md", "chapters/", "graph/graph.db", "graph/nodes/"],
 }, null, 2));

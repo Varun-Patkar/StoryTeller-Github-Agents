@@ -1,1 +1,9 @@
 node_modules/
+
+# SQLite write-ahead-log sidecar files (transient; graph.db itself is committed)
+*.db-wal
+*.db-shm
+
+# Local tool artifacts (not part of the repo)
+.codegraph/
+.playwright-mcp/

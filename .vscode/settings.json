@@ -3,13 +3,13 @@
     "**/reader/node_modules/**": true,
     "**/reader/dist/**": true,
     "**/reader/.astro/**": true,
-    "**/webapp/node_modules/**": true,
-    "**/webapp/.next/**": true
+    "**/.github/scripts/node_modules/**": true,
+    "**/books/**/graph/graph.db": true
   },
   "search.exclude": {
     "**/reader/node_modules/**": true,
     "**/reader/dist/**": true,
-    "**/webapp/node_modules/**": true,
-    "**/webapp/.next/**": true
+    "**/.github/scripts/node_modules/**": true,
+    "**/books/**/graph/graph.db": true
   }
 }

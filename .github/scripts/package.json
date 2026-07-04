@@ -1,0 +1,13 @@
+{
+  "name": "storyteller-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic Node scripts for story scaffolding and the per-story knowledge graph (SQLite nodes/edges + markdown node bodies).",
+  "bin": {
+    "story-graph": "./graph.mjs"
+  },
+  "dependencies": {
+    "better-sqlite3": "*"
+  }
+}

@@ -2,24 +2,29 @@
 
 ## Project Overview
 
-Two-part project: VS Code/Copilot **agents** that write webnovel-style fiction, and a **Next.js webapp** for reading/managing the stories.
+Two-part project: VS Code/Copilot **agents** that write webnovel-style fiction, and a static **reader** site for browsing the published stories.
 
 - Agents: `.github/agents/` — three-agent system (storyteller, story-setup, story-runner)
-- Webapp: `webapp/` — Next.js 16, React 19, Tailwind 4, Copilot SDK
-- Stories: `books/<slug>/` — file-system-based story storage (no database)
+- Reader: `reader/` — Astro static site that reads `books/` at build time
+- Stories: `books/<slug>/` — file-system story storage; research/state in a per-story knowledge graph
 
 See [README.md](../README.md) for architecture, agent roles, and story modes.
 
 ## Commands
 
 ```bash
-# Webapp
-cd webapp
-npm run dev      # Dev server on localhost:3000
-npm run build    # Production build
-npm run lint     # ESLint
+# Reader (static site)
+cd reader
+npm install
+npm run dev      # Dev server
+npm run build    # Static build
 
-# SearXNG (required for agent web research)
+# Graph / scaffolding scripts (run once to install deps)
+cd .github/scripts
+npm install      # installs better-sqlite3
+
+# Web research for agents prefers webiq (webiq-mcp tools).
+# SearXNG is only a fallback if webiq is unavailable:
 docker run -d --name searxng -p 8080:8080 searxng/searxng
 ```
 
@@ -29,48 +34,65 @@ Each story lives at `books/<slug>/` with this layout:
 
 ```
 books/<slug>/
-├── config.md          # Markdown table of settings (parsed by config-parser.ts)
-├── plan.md            # Arc-by-arc chapter outline
+├── config.md          # Markdown table of settings (parsed by reader/src/lib/books.ts)
+├── plan.md            # Arc-by-arc chapter outline (references graph node ids)
 ├── summary.md         # Running chapter summaries
 ├── chapters/chapter-01.md ...
-└── research/          # Fandom wiki research + character voice files
+└── graph/             # Per-story knowledge graph (research + story state)
+    ├── graph.db       # SQLite: nodes + edges
+    └── nodes/<id>.md  # One markdown body per node
 ```
 
-## Webapp Conventions
+## Knowledge Graph
 
-- **Framework**: Next.js 16 (breaking changes from prior versions — check `node_modules/next/dist/docs/`)
-- **Path alias**: `@/*` maps to `webapp/*`
-- **No database**: All data is file-system reads from `books/` directory
-- **Chat**: SSE streaming via `/api/chat` with Copilot SDK; React Context for state
-- **Security**: Path traversal protection via `safePath()` / `safeBookPath()` in `lib/books.ts`
-- **Validation**: Zod schemas for all tool inputs and API payloads
-- **Components**: `"use client"` directives; PascalCase filenames; kebab-case for slugs
-- **API routes**: `GET`/`POST`/`DELETE` handlers; `NextResponse.json()`; status codes 400/404/500
+Story research and evolving state live in a per-story SQLite graph, never in loose files.
+
+- **Access only via** `.github/scripts/graph.mjs` (a CLI; agents cannot run raw SQL). Run `node .github/scripts/graph.mjs schema` for the allowed types.
+- **Nodes** hold small metadata (id, type, name, canonicity, aliases, summary, tags); full details live in `graph/nodes/<id>.md`.
+- **Node types**: character, location, faction, item, event, ability, concept, arc, thread.
+- **Edge types**: family_of, ally_of, enemy_of, knows, member_of, located_in, owns, has_ability, occurs_in, involves, causes, precedes, part_of, related_to, diverges_from.
+- **Canonicity** (`canon` | `au` | `original`) tags every node/edge so fanfics track both source-fandom truth and our alternate-universe divergences. Each node body has Canon and AU Divergence sections.
+- Deterministic ids (`<type>-<slug>`) + UNIQUE constraints make duplicates impossible; `consolidate` catches near-duplicates and `validate` checks integrity.
+- Engine modules live in `.github/scripts/graph/` (db, nodes, edges, search, consolidate, migrate).
+
+## Reader Conventions
+
+- **Framework**: Astro static site (`reader/`), builds from `books/` at compile time.
+- **No database, no server**: `reader/src/lib/books.ts` reads config/chapters/covers from the file system.
+- **Slugs**: kebab-case story folder names are used as URL segments.
+- The reader displays chapters and config, plus a **Brain Viewer** of the knowledge graph.
+
+## Brain Viewer (graph snapshot)
+
+The reader includes an interactive graph viewer at `/brain/<slug>/` ([BrainViewer.astro](../reader/src/components/BrainViewer.astro)).
+
+- Because the reader is a static frontend (no live DB/git access), the build takes a **snapshot** of each story graph. `reader/scripts/build-graph-snapshots.mjs` (a prebuild step) reads each `graph/graph.db` + node markdown, pre-renders bodies with `marked`, and writes `reader/public/graph/<slug>.json`.
+- The viewer is self-contained (canvas force-directed graph, no external library): nodes colour-coded by type, edges by type (AU edges dashed), click a node for its markdown details + connections.
+- Reader depends on `better-sqlite3` (build-time) to read the graph snapshots.
 
 ## Agent Conventions
 
-- Agents are defined in `.github/agents/*.agent.md`
-- The webapp merges all three agent prompts into a single system prompt (`lib/storyteller-prompt.ts`)
-- Tools are defined in `lib/storyteller-tools.ts` (20+ tools, all Zod-validated, all auto-approved)
-- Web research uses SearXNG MCP tools (`searxng/search`, `searxng/fetch_page`) on `localhost:8080`
-- Git operations wrapped in `lib/git.ts` with input sanitization
+- Agents are defined in `.github/agents/*.agent.md` (storyteller orchestrator + story-setup + story-runner).
+- Web research prefers **webiq** (`webiq-mcp` tools); SearXNG then Playwright are fallbacks.
+- Story scaffolding is deterministic via `.github/scripts/create-story-structure.mjs`.
+- The graph is read/written by both story-setup (research) and story-runner (per-chapter state) via `graph.mjs`.
 
 ## Writing Rules (for agent prompt editing)
 
 The agents enforce strict anti-AI-slop rules. When editing agent prompts:
 - Maintain the banned words/phrases lists
 - Preserve the scene weight system (Heavy/Medium/Light/Skip)
-- Keep character voice file requirements (quotes + speech patterns)
+- Keep character voice requirements (quotes + speech patterns) in character node bodies
 - Don't weaken tonal variation rules
 
 ## Key Files
 
 | File | Purpose |
 |------|---------|
-| `webapp/lib/storyteller-prompt.ts` | Merged 3-agent system prompt |
-| `webapp/lib/storyteller-tools.ts` | All Copilot-accessible tools |
-| `webapp/lib/books.ts` | Story CRUD (file-system) |
-| `webapp/lib/copilot.ts` | Copilot SDK singleton lifecycle |
-| `webapp/lib/git.ts` | Git operations wrapper |
-| `webapp/lib/config-parser.ts` | Markdown table → key-value parser |
-| `webapp/components/chat-provider.tsx` | Global chat state (Context + localStorage) |
+| `.github/agents/storyteller.agent.md` | Orchestrator agent prompt |
+| `.github/agents/story-setup.agent.md` | Research + planning agent prompt |
+| `.github/agents/story-runner.agent.md` | Chapter-writing agent prompt |
+| `.github/scripts/graph.mjs` | Knowledge-graph CLI (nodes/edges/search/consolidate/migrate) |
+| `.github/scripts/graph/db.mjs` | Schema + allowed node/edge/canonicity enums (source of truth) |
+| `.github/scripts/create-story-structure.mjs` | Deterministic story scaffolding |
+| `reader/src/lib/books.ts` | Reader story/chapter/config reads (file-system) |
