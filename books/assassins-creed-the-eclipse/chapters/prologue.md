@@ -144,16 +144,18 @@ ____
 
 ### 75,000 years earlier.
 
-A man stood over a corpse.
+A man stood over his brother with a blade of knapped stone in his fist.
 
-The ground under him was red dirt and dry scrub, and the sky was a color no camera would ever get right, and the air smelled of copper and dust and something burning far off. At his feet lay another man, younger, his skull caved in on one side, a shepherd's blood soaking into soil that had never in its short history known what a murder was.
+The ground under him was red dirt and dry scrub, and the sky was a color no camera would ever get right, and the air smelled of dust and blood and something burning far off. The younger one lay sprawled at his feet, breathing, out cold, a split swelling above his temple where the first blow had put him down. Knocking him senseless had been the easy part. He had already dragged the smaller man's head back by the hair and set the edge of the stone under his jaw, and all that was left of the whole business was to lean on it.
 
-The man doing the standing held something in his hand. Not an apple, whatever the stories would later decide to call it. A sphere, smooth and pale, sitting in his palm like it had been made to. A moment ago it had been dark and quiet. Then his blood touched it, and it woke. The smear on its surface pulled the light in and gave it back brighter, gold threads turning under the skin of the thing, sorting themselves into lines and symbols that no tongue on Earth had been invented yet to read. It had tasted him. Now it was awake, and it was listening.
+The blade touched skin. And stopped.
 
-And under the copper smell and the far-off burning, in a place that was neither the plain nor the inside of his skull, the last thing he'd heard came back to him one more time, patient and old and already going quiet.
+Something in his other hand was glowing. A sphere, smooth and pale, that he had torn out of the younger man's grip a breath ago, and it had begun to shine, gold threads turning under the skin of the thing, sorting themselves into lines and symbols that no tongue on Earth had been invented yet to read. It had been dark when he grabbed it. Now it was awake, and it was listening.
+
+Under the burning smell and the far-off nothing, in a place that was neither the plain nor the inside of his skull, the last thing he'd heard came back to him one more time, patient and old and already going quiet.
 
 _So be it._
 
-He looked down at the body. He looked at his own hands, at the blood drying in the lines of a palm he'd never once seen before and had somehow just used to kill.
+He looked down at the man breathing under his blade. He looked at his own two hands, one wrapped around the stone and one around a sphere he had never seen before, holding an edge to the throat of a brother he had never once met.
 
 "Huh," said Cain.

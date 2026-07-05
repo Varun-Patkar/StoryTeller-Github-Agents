@@ -24,6 +24,6 @@ TV Reporter: "Billionnaire and philanthropist Cain Mercer was found dead in his 
 
 ### 75000 BCE
 
-A man stood over the corpse of another man with a glowing device that looks nothing like a apple and more like a ball in his hand.
+A man stood over another man he had just knocked unconscious, a crude stone blade set at the throat and ready to push, and in the unconscious man's slack hand was a glowing device that looks nothing like a apple and more like a ball.
 
-The man said "Huh?"
+The man's hand stopped. He said "Huh?"

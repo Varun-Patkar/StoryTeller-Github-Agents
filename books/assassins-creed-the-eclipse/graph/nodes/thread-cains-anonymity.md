@@ -7,7 +7,7 @@ Cain deliberately keeps himself out of history. His only recorded act is the fir
 INVENTED (uses the canon Cain-as-first-murderer legend as its cover).
 
 ## AU Divergence
-Reframed as cold self-interest, not penance. Cain does not stay hidden to punish himself; he stays hidden because a name is a target and an unknown man is free. He is perfectly happy to let history remember him as nothing but a killer, because a reputation that small is the best disguise there is. The emotional through-line is power without recognition, by choice, because recognition is a liability.
+Reframed as cold self-interest, not penance, AND as active propaganda Cain plants himself later in the story. The legend he spreads (which is NOT what really happened) is: Cain murdered his brother Abel, was made immortal as a curse for it, and Adam and Eve died in the Great Catastrophe. It is a deliberately unbelievable, small, ugly story, and that is the point. The truth it hides is the opposite: Abel LIVED, and the whole family was preserved in stasis beneath the Grand Temple. By carving "Cain the lone immortal murderer" into the root of every faith ("Children of Cain"), he ensures no one ever looks for a surviving family or the base that shelters them. A name is a target; an unknown man is free; and a famous lie is the best hiding place of all.
 
 ## Notes
-Track how each era's factions do or don't suspect him. Payoff: the reader ends realizing the Eclipse, and the man behind it, were always there, unseen because he engineered it that way.
+Track how each era's factions do or don't suspect him. The legend is a tool he maintains on purpose across millennia. Payoff: the reader ends realizing the Eclipse, and the family behind it, were always there, hidden inside a myth Cain wrote to be ignored.

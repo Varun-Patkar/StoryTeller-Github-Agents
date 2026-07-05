@@ -13,6 +13,7 @@ import {
   openDb,
   graphPaths,
   nodeId,
+  edgeId,
   now,
   assertEnum,
   NODE_TYPES,
@@ -193,6 +194,10 @@ export function updateNode(slug, input) {
     if (!existing) throw new Error(`Node "${id}" not found.`);
 
     const next = { ...existing };
+    if (input.name !== undefined) {
+      if (!String(input.name).trim()) throw new Error("Node name cannot be empty.");
+      next.name = input.name;
+    }
     if (input.canonicity !== undefined) {
       assertEnum(input.canonicity, CANONICITY, "canonicity");
       next.canonicity = input.canonicity;
@@ -203,7 +208,7 @@ export function updateNode(slug, input) {
     next.updated_at = now();
 
     db.prepare(
-      `UPDATE nodes SET canonicity=@canonicity, aliases=@aliases, summary=@summary,
+      `UPDATE nodes SET name=@name, canonicity=@canonicity, aliases=@aliases, summary=@summary,
         tags=@tags, updated_at=@updated_at WHERE id=@id`
     ).run(next);
 
@@ -307,6 +312,111 @@ export function removeNode(slug, id) {
     return { removed: id };
   } finally {
     db.close();
+  }
+}
+
+/**
+ * Rename a node's id, keeping the whole graph consistent. This re-points every edge that
+ * touches the node (edge ids embed the endpoint ids, so they are regenerated too), moves
+ * the markdown file, rewrites references to the old id inside the body, and refreshes the
+ * FTS index. The node's other fields (type, name, canonicity, etc.) are unchanged.
+ *
+ * The id is updated in place with foreign-key enforcement briefly disabled. An in-place
+ * update (rather than clone-then-delete) avoids the UNIQUE(type, name) collision two rows
+ * would cause, and lets the child edges be re-pointed without the foreign key blocking the
+ * parent key change. The mutation runs inside a single transaction.
+ *
+ * @param {string} slug Story slug.
+ * @param {string} oldId Current node id.
+ * @param {string} newId Desired node id (lowercase, hyphen-separated token).
+ * @returns {{ renamed: { from: string, to: string }, edgesUpdated: number, markdownMoved: boolean }}
+ */
+export function renameNode(slug, oldId, newId) {
+  if (!oldId) throw new Error("rename-node requires --id (the current id).");
+  if (!newId) throw new Error("rename-node requires --new-id (the new id).");
+  if (oldId === newId) throw new Error("New id must differ from the current id.");
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(newId)) {
+    throw new Error(
+      `Invalid new id "${newId}". Use lowercase letters, numbers, and single hyphens ` +
+        `(e.g. "event-abels-sparing").`
+    );
+  }
+
+  const db = openDb(slug, { create: false });
+  try {
+    const existing = db.prepare("SELECT * FROM nodes WHERE id = ?").get(oldId);
+    if (!existing) throw new Error(`Node "${oldId}" not found.`);
+    const clash = db.prepare("SELECT id FROM nodes WHERE id = ?").get(newId);
+    if (clash) throw new Error(`Node "${newId}" already exists; cannot rename onto it.`);
+
+    const ts = now();
+
+    // Pre-compute the new (id, source, target) for every touched edge and detect any
+    // collision with an existing edge id BEFORE mutating anything.
+    const affectedEdges = db
+      .prepare("SELECT * FROM edges WHERE source_id = ? OR target_id = ?")
+      .all(oldId, oldId);
+    const rewrites = affectedEdges.map((e) => {
+      const source_id = e.source_id === oldId ? newId : e.source_id;
+      const target_id = e.target_id === oldId ? newId : e.target_id;
+      return { oldEdgeId: e.id, id: edgeId(source_id, e.type, target_id), source_id, target_id };
+    });
+    for (const r of rewrites) {
+      if (r.id !== r.oldEdgeId) {
+        const collide = db.prepare("SELECT id FROM edges WHERE id = ?").get(r.id);
+        if (collide) {
+          throw new Error(`Rename would collide with existing edge "${r.id}".`);
+        }
+      }
+    }
+
+    // Foreign-key enforcement must be toggled outside the transaction (SQLite ignores the
+    // pragma while a transaction is open). It is always restored in the finally block.
+    db.pragma("foreign_keys = OFF");
+    try {
+      const tx = db.transaction(() => {
+        // 1. Move the node's primary key in place.
+        db.prepare("UPDATE nodes SET id=@newId, updated_at=@ts WHERE id=@oldId").run({
+          newId,
+          oldId,
+          ts,
+        });
+        // 2. Re-point every edge and refresh its deterministic id.
+        for (const r of rewrites) {
+          db.prepare(
+            "UPDATE edges SET id=@id, source_id=@source_id, target_id=@target_id, updated_at=@ts WHERE id=@oldEdgeId"
+          ).run({ ...r, ts });
+        }
+        // 3. Drop the stale FTS row (the fresh one is rebuilt after the markdown moves).
+        db.prepare("DELETE FROM nodes_fts WHERE id = ?").run(oldId);
+      });
+      tx();
+    } finally {
+      db.pragma("foreign_keys = ON");
+    }
+
+    // 4. Move the markdown file and rewrite any inline references to the old id.
+    const oldPath = nodeMarkdownPath(slug, oldId);
+    const newPath = nodeMarkdownPath(slug, newId);
+    let markdownMoved = false;
+    if (existsSync(oldPath)) {
+      const body = readFileSync(oldPath, "utf-8").split(oldId).join(newId);
+      writeFileSync(newPath, body, "utf-8");
+      rmSync(oldPath);
+      markdownMoved = true;
+    }
+
+    // 5. Rebuild the FTS row for the new id from its (possibly moved) markdown body.
+    const movedNode = db.prepare("SELECT * FROM nodes WHERE id = ?").get(newId);
+    syncFts(db, slug, movedNode);
+
+    return {
+      renamed: { from: oldId, to: newId },
+      edgesUpdated: rewrites.length,
+      markdownMoved,
+    };
+  } finally {
+    if (db.open) db.close();
   }
 }
 

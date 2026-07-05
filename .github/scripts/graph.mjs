@@ -13,7 +13,8 @@
  *   init          Create the graph.db + nodes/ folder for a story.
  *   add-node      Create a node (+ markdown file). --type --name [--canonicity --aliases
  *                 --summary --tags --body|--body-file --update]
- *   update-node   Update a node. --id [--canonicity --aliases --summary --tags --body|--body-file]
+ *   update-node   Update a node. --id [--name --canonicity --aliases --summary --tags --body|--body-file]
+ *   rename-node   Rename a node's id (re-points edges, moves markdown). --id --new-id
  *   get-node      Print a node with body + connected edges. --id [--no-body]
  *   list-nodes    List node metadata. [--type --canonicity]
  *   remove-node   Delete a node (cascades edges + markdown). --id
@@ -37,6 +38,7 @@ import {
   getNode,
   listNodes,
   removeNode,
+  renameNode,
 } from "./graph/nodes.mjs";
 import { addEdge, listEdges, removeEdge } from "./graph/edges.mjs";
 import { search, neighbors, validate } from "./graph/search.mjs";
@@ -105,7 +107,7 @@ const slug = flags.story;
 
 /** Commands that require a --story slug. */
 const NEEDS_STORY = new Set([
-  "init", "add-node", "update-node", "get-node", "list-nodes", "remove-node",
+  "init", "add-node", "update-node", "rename-node", "get-node", "list-nodes", "remove-node",
   "add-edge", "list-edges", "remove-edge", "neighbors", "search",
   "consolidate", "migrate", "validate", "export",
 ]);
@@ -148,6 +150,7 @@ try {
       ok(
         updateNode(slug, {
           id: flags.id,
+          name: typeof flags.name === "string" ? flags.name : undefined,
           canonicity: flags.canonicity,
           aliases: flags.aliases !== undefined ? toList(flags.aliases) : undefined,
           summary: flags.summary,
@@ -155,6 +158,9 @@ try {
           body: resolveBody(flags),
         })
       );
+      break;
+    case "rename-node":
+      ok(renameNode(slug, flags.id, flags["new-id"]));
       break;
     case "get-node": {
       const node = getNode(slug, flags.id, { includeBody: !flags["no-body"] });
