@@ -6,7 +6,7 @@
 | Fandom  | Assassin's Creed |
 | Genre   | Adventure, Action, Drama, Mystery |
 | Themes  | Balance vs extremism, free will vs order, the weight of immortality, hidden history, found family across ages, redemption, sacrifice |
-| Mode    | Here for the Ride |
+| Mode    | Companion Writer |
 | Pacing  | Long (3000-5000 characters) |
 | POV     | Third Person Limited |
 | Tone    | Balanced |

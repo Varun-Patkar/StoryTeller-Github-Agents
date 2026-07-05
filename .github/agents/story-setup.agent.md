@@ -60,9 +60,10 @@ Ask the following:
 
 5. **Story Mode**
    - Options:
-     - `Interactive` — Each chapter ends on a decision point; user chooses what happens next
-     - `Here for the Ride` (default/recommended) — Continuous storytelling; user can request rewrites if unsatisfied
-   - Note: Only these two modes exist. Do NOT offer any other mode.
+     - `Companion Writer` (default/recommended) — The human writes the first draft of each chapter; the agent refines that draft and writes only the sections the human marks, acting as a co-writer and a live knowledge base. All creativity (plot, characters, decisions) stays with the human.
+     - `Here for the Ride` — Continuous storytelling; the agent writes each chapter from the plan; the user can request rewrites if unsatisfied.
+     - `Interactive` — Each chapter ends on a decision point; the user chooses what happens next.
+   - Note: Only these three modes exist. Do NOT offer any other mode.
 
 6. **Pacing / Chapter Length**
    - Options:

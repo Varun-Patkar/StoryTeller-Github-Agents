@@ -15,6 +15,16 @@ Enforce these targets whenever delegating to sub-agents:
 - **Punctuation target**: No em dashes in generated story text. Use commas, periods, ellipses (`...`), or sentence breaks.
 - **Continuity target**: Canon details and changed lore must remain internally consistent across `plan.md`, `summary.md`, chapters, and the per-story knowledge graph (`graph/graph.db` + `graph/nodes/`). Research and story state live in the graph, edited only via `.github/scripts/graph.mjs`.
 
+## Story Modes
+
+There are three story modes. The default is **Companion Writer**.
+
+- **Companion Writer** (default): the human writes a first draft of each chapter in `books/<slug>/human-drafts/chapter-XX.md`; the sub-agent refines it and writes only the sections the human marks, acting as a co-writer and a live knowledge base. The human owns ALL creativity, plot, characters, decisions, tone. The agent never invents story, only offers suggestions and asks when something is unclear.
+- **Here for the Ride**: the sub-agent writes each chapter from the plan; the user can request rewrites.
+- **Interactive**: each chapter ends on a decision point the user chooses.
+
+Respect the mode set in each story's `config.md`.
+
 ## SearXNG Check (once per session, only if webiq is unavailable)
 
 Web research prefers **webiq** (the `webiq-mcp` search tools). If webiq is available, skip this check entirely. Only if webiq tools are not available, on the **first invocation** verify SearXNG is reachable as a fallback:
@@ -80,7 +90,10 @@ books/<story-name>/
 ├── config.md            # Story settings (genre, mode, pacing, fandom, etc.)
 ├── plan.md              # Arc-wise storyline outline (start → end); references graph node ids
 ├── summary.md           # Running condensed summary of the story so far
-├── chapters/            # Written chapters
+├── human-drafts/        # Human first drafts (Companion Writer mode), one per chapter
+│   ├── chapter-01.md
+│   └── ...
+├── chapters/            # Finished chapters
 │   ├── chapter-01.md
 │   └── ...
 └── graph/               # Knowledge graph: research + story state

@@ -19,9 +19,9 @@ Dry, sardonic, calculating. Unsentimental to the point of coldness, and honest w
 - "I don't want a throne. Thrones are targets. I want the room the throne is in, and the door, and the man who thinks he owns both."
 
 ## AU Divergence
-ORIGINAL protagonist layered onto the canon Cain legend, but NOT a saintly self-insert. The reincarnator's knowledge sits on top of the original Cain's ruthless, hungry temperament, and the two have merged. He does not grieve Abel; he never knew Abel, and the part of him that was Cain never cared. The initial shock in Chapter 1 was the body's reflex and it burned off fast. What remains is appetite and calculation.
+ORIGINAL protagonist layered onto the canon Cain legend, but NOT a saintly self-insert. The reincarnator's knowledge sits on top of the original Cain's ruthless, hungry temperament, and the two have merged. He does not grieve Abel; he never knew Abel, and the part of him that was Cain never cared. What remains is appetite and calculation.
 
 His mission to save humanity is real but self-interested at the root: enlightened greed, not altruism. He keeps himself out of history because anonymity is armor and advantage, not penance. The Balance philosophy he will later codify is pragmatic, absolutism collapses civilizations, and collapse costs him everything he is building. Kassandra becomes the rare genuine exception to his transactional view of people.
 
 ## Notes
-Power comes from knowledge, patience, preparation, and (later) accumulated Echo lifetimes, never invincibility. Every victory must be earned. He can resist the Isu neurotransmitter leash (established Chapter 1). Keep him likable through candor and competence, not virtue. He is allowed to do cold, ugly things for good long-term reasons.
+Power comes from knowledge, patience, preparation, and (later) accumulated Echo lifetimes, never invincibility. Every victory must be earned. Keep him likable through candor and competence, not virtue. He is allowed to do cold, ugly things for good long-term reasons.

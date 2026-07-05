@@ -10,4 +10,4 @@ The first murder in human history; Cain kills Abel for the Apple.
 The inciting event, but NOT a lifelong wound. The awakened Cain did not choose the killing (the leash did), and he feels the body's reflexive horror in the first moments, but he did not know Abel, and the original Cain in him never cared. The grief burns off fast. What Abel's murder actually gives him is cover: a legend so small and so ugly that no one will ever look past it to find what he really becomes. He uses it, he does not mourn it.
 
 ## Notes
-Depicted in Chapter 1 ("The Weight of the Apple"). Hard rule reaffirmed on-page: the Apple commands only the living and cannot revive or undo Abel's death. Do NOT write Cain dwelling on grief in later chapters; his interest in the murder is strategic (anonymity) and occasionally darkly practical, not sentimental.
+Do NOT write Cain grieving Abel; his interest in the murder is strategic (anonymity) and occasionally darkly practical, not sentimental. Hard rule: the Apple commands only the living and cannot revive or undo Abel's death.
