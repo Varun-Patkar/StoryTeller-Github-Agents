@@ -1,23 +1,19 @@
 ---
 import Base from '../../../../layouts/Base.astro';
 import ReaderSettings from '../../../../components/ReaderSettings.astro';
-import { getBooks, getBook, getChapters, getChapterContent } from '../../../../lib/books';
+import { getBooks, getBook, getSections, getSectionContent } from '../../../../lib/books';
 import { marked } from 'marked';
 
 export function getStaticPaths() {
   const books = getBooks();
-  const paths: { params: { slug: string; num: string }; props: { bookTitle: string; chapterTitle: string; totalWritten: number } }[] = [];
+  const paths: { params: { slug: string; num: string }; props: { bookTitle: string } }[] = [];
 
   for (const book of books) {
-    const chapters = getChapters(book.slug);
-    for (const ch of chapters) {
+    const sections = getSections(book.slug);
+    for (const sec of sections) {
       paths.push({
-        params: { slug: book.slug, num: String(ch.number) },
-        props: {
-          bookTitle: book.config.title || book.slug,
-          chapterTitle: ch.title,
-          totalWritten: chapters.length,
-        },
+        params: { slug: book.slug, num: sec.key },
+        props: { bookTitle: book.config.title || book.slug },
       });
     }
   }
@@ -26,24 +22,29 @@ export function getStaticPaths() {
 }
 
 const { slug, num } = Astro.params;
-const { bookTitle, chapterTitle, totalWritten } = Astro.props;
-const currentNum = parseInt(num!);
+const { bookTitle } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
-const content = getChapterContent(slug!, currentNum);
-if (!content) {
+const sections = getSections(slug!);
+const index = sections.findIndex(s => s.key === num);
+const current = index >= 0 ? sections[index] : null;
+const content = current ? getSectionContent(slug!, num!) : null;
+
+if (!content || !current) {
   return Astro.redirect(`${base}book/${slug}/`);
 }
 
-// Strip the chapter heading since we render it separately
-const contentWithoutTitle = content.replace(/^#\s*Chapter\s*\d+:.*\n*/, '');
+// Strip the leading markdown heading; we render the title separately.
+const contentWithoutTitle = content.replace(/^\uFEFF/, '').replace(/^#[^\n]*\r?\n+/, '');
 const html = marked.parse(contentWithoutTitle) as string;
 
-const hasPrev = currentNum > 1;
-const hasNext = currentNum < totalWritten;
+const prev = index > 0 ? sections[index - 1] : null;
+const next = index < sections.length - 1 ? sections[index + 1] : null;
+const total = sections.length;
+const position = index + 1;
 ---
 
-<Base title={`Ch. ${currentNum}: ${chapterTitle} — ${bookTitle}`}>
+<Base title={`${current.heading} — ${bookTitle}`}>
   <!-- Top bar -->
   <div class="sticky top-0 z-20 border-b border-neutral-200/60 dark:border-neutral-800/60 backdrop-blur-md bg-neutral-50/80 dark:bg-neutral-950/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 h-12 flex items-center justify-between">
@@ -60,7 +61,7 @@ const hasNext = currentNum < totalWritten;
       </a>
 
       <span class="text-xs text-neutral-400 dark:text-neutral-500">
-        {currentNum} / {totalWritten}
+        {position} / {total}
       </span>
 
       <!-- Settings button only — panel rendered outside backdrop-filter container -->
@@ -82,9 +83,9 @@ const hasNext = currentNum < totalWritten;
 
   <!-- Reader content -->
   <main id="reader-content" class="mx-auto px-5 sm:px-8 py-8 sm:py-12" style="max-width: 80vw; font-family: 'Georgia', 'Times New Roman', serif; font-size: 18px; line-height: 1.8;">
-    <!-- Chapter title -->
+    <!-- Section title -->
     <h1 class="font-bold mb-8 sm:mb-12 text-center leading-tight" style="font-size: 1.5em;">
-      Chapter {currentNum}: {chapterTitle}
+      {current.heading}
     </h1>
 
     <!-- Prose -->
@@ -92,9 +93,9 @@ const hasNext = currentNum < totalWritten;
 
     <!-- Bottom navigation -->
     <nav class="flex items-center justify-between py-8 mt-8 border-t border-neutral-200 dark:border-neutral-800">
-      {hasPrev ? (
+      {prev ? (
         <a
-          href={`${base}book/${slug}/chapter/${currentNum - 1}/`}
+          href={`${base}book/${slug}/chapter/${prev.key}/`}
           class="inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
         >
           <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -107,11 +108,11 @@ const hasNext = currentNum < totalWritten;
         <div></div>
       )}
 
-      <span class="text-xs text-neutral-400">{currentNum} / {totalWritten}</span>
+      <span class="text-xs text-neutral-400">{position} / {total}</span>
 
-      {hasNext ? (
+      {next ? (
         <a
-          href={`${base}book/${slug}/chapter/${currentNum + 1}/`}
+          href={`${base}book/${slug}/chapter/${next.key}/`}
           class="inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
         >
           <span class="hidden sm:inline">Next</span>
@@ -132,13 +133,13 @@ const hasNext = currentNum < totalWritten;
   </main>
 
   <!-- Keyboard navigation -->
-  <script define:vars={{ base, slug, currentNum, hasPrev, hasNext }}>
+  <script define:vars={{ base, slug, prevKey: prev?.key ?? null, nextKey: next?.key ?? null }}>
     document.addEventListener('keydown', (e) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
-      if (e.key === 'ArrowLeft' && hasPrev) {
-        window.location.href = `${base}book/${slug}/chapter/${currentNum - 1}/`;
-      } else if (e.key === 'ArrowRight' && hasNext) {
-        window.location.href = `${base}book/${slug}/chapter/${currentNum + 1}/`;
+      if (e.key === 'ArrowLeft' && prevKey) {
+        window.location.href = `${base}book/${slug}/chapter/${prevKey}/`;
+      } else if (e.key === 'ArrowRight' && nextKey) {
+        window.location.href = `${base}book/${slug}/chapter/${nextKey}/`;
       }
     });
   </script>

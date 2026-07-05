@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import ThemeToggle from '../../../components/ThemeToggle.astro';
-import { getBooks, getBook, getChapters } from '../../../lib/books';
+import { getBooks, getBook, getChapters, getSections } from '../../../lib/books';
 import { hasGraph } from '../../../lib/graph';
 
 export function getStaticPaths() {
@@ -17,6 +17,8 @@ if (!book) {
 }
 
 const chapters = getChapters(slug!);
+const sections = getSections(slug!);
+const hasExtras = sections.some(s => s.kind !== 'chapter');
 const base = import.meta.env.BASE_URL;
 const showBrain = hasGraph(slug!);
 const genres = book.config.genre.split(',').map(g => g.trim()).filter(Boolean);
@@ -114,10 +116,10 @@ const totalChapters = parseInt(book.config.totalChapters) || 0;
         </div>
 
         <!-- Start reading button -->
-        {chapters.length > 0 && (
+        {sections.length > 0 && (
           <div class="mt-4">
             <a
-              href={`${base}book/${book.slug}/chapter/1/`}
+              href={`${base}book/${book.slug}/chapter/${sections[0].key}/`}
               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-medium hover:opacity-90 transition-opacity"
             >
               Start Reading
@@ -152,21 +154,28 @@ const totalChapters = parseInt(book.config.totalChapters) || 0;
     </div>
 
     <!-- Chapter list -->
-    {chapters.length > 0 && (
+    {sections.length > 0 && (
       <section>
-        <h2 class="text-lg font-semibold mb-4">Chapters</h2>
+        <h2 class="text-lg font-semibold mb-4">{hasExtras ? 'Contents' : 'Chapters'}</h2>
         <div class="border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden divide-y divide-neutral-200 dark:divide-neutral-800">
-          {chapters.map(ch => (
+          {sections.map(sec => (
             <a
-              href={`${base}book/${book.slug}/chapter/${ch.number}/`}
+              href={`${base}book/${book.slug}/chapter/${sec.key}/`}
               class="flex items-center gap-4 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800/50 transition-colors"
             >
               <span class="text-sm font-mono text-neutral-400 dark:text-neutral-500 w-8 text-right shrink-0">
-                {ch.number}
+                {sec.kind === 'chapter' ? sec.number : ''}
               </span>
-              <span class="text-sm font-medium truncate">
-                {ch.title}
-              </span>
+              {sec.kind !== 'chapter' && (
+                <span class="text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 shrink-0">
+                  {sec.kind}
+                </span>
+              )}
+              {sec.label && (
+                <span class="text-sm font-medium truncate">
+                  {sec.label}
+                </span>
+              )}
             </a>
           ))}
         </div>

@@ -171,3 +171,79 @@ export function getChapterContent(slug: string, num: number): string | null {
   if (!existsSync(filePath)) return null;
   return readFileSync(filePath, 'utf-8');
 }
+
+// --- Optional prologue / epilogue support -------------------------------------------------
+// A story may include an optional `chapters/prologue.md` (rendered before chapter 1) and/or
+// `chapters/epilogue.md` (rendered after the last chapter). Both are optional; when present
+// they slot into the ordered reading flow: prologue -> chapters -> epilogue.
+
+export type SectionKind = 'prologue' | 'chapter' | 'epilogue';
+
+export interface Section {
+  /** URL key for the section route: 'prologue' | '1' | '2' | ... | 'epilogue'. */
+  key: string;
+  kind: SectionKind;
+  /** Chapter number, or null for prologue/epilogue. */
+  number: number | null;
+  /** Full heading shown as the reader H1 (e.g. 'Chapter 1: X', 'Prologue', 'Epilogue: Y'). */
+  heading: string;
+  /** Short label for the contents list (chapter title, or the prologue/epilogue heading). */
+  label: string;
+}
+
+/**
+ * Read an optional prologue/epilogue file and return its heading text, or null if absent.
+ * @param slug Sanitized story slug.
+ * @param kind 'prologue' | 'epilogue'.
+ */
+function readExtra(slug: string, kind: 'prologue' | 'epilogue'): { heading: string } | null {
+  const filePath = join(BOOKS_DIR, slug, 'chapters', `${kind}.md`);
+  if (!existsSync(filePath)) return null;
+  const content = readFileSync(filePath, 'utf-8').replace(/^\uFEFF/, '');
+  const firstLine = content.split('\n')[0]?.trim() || '';
+  const m = firstLine.match(/^#\s*(.+)$/);
+  const fallback = kind === 'prologue' ? 'Prologue' : 'Epilogue';
+  return { heading: m ? m[1].trim() : fallback };
+}
+
+/**
+ * Ordered list of all readable sections for a story: optional prologue, then numbered
+ * chapters in order, then optional epilogue.
+ */
+export function getSections(slug: string): Section[] {
+  const safeSlug = slug.replace(/[^a-z0-9-]/g, '');
+  const sections: Section[] = [];
+
+  const prologue = readExtra(safeSlug, 'prologue');
+  if (prologue) {
+    const label = prologue.heading.replace(/^prologue\b\s*[:\-–—]?\s*/i, '').trim();
+    sections.push({ key: 'prologue', kind: 'prologue', number: null, heading: prologue.heading, label });
+  }
+
+  for (const ch of getChapters(safeSlug)) {
+    sections.push({ key: String(ch.number), kind: 'chapter', number: ch.number, heading: `Chapter ${ch.number}: ${ch.title}`, label: ch.title });
+  }
+
+  const epilogue = readExtra(safeSlug, 'epilogue');
+  if (epilogue) {
+    const label = epilogue.heading.replace(/^epilogue\b\s*[:\-–—]?\s*/i, '').trim();
+    sections.push({ key: 'epilogue', kind: 'epilogue', number: null, heading: epilogue.heading, label });
+  }
+
+  return sections;
+}
+
+/**
+ * Raw markdown for a section by its key ('prologue' | number-as-string | 'epilogue').
+ */
+export function getSectionContent(slug: string, key: string): string | null {
+  const safeSlug = slug.replace(/[^a-z0-9-]/g, '');
+  if (key === 'prologue' || key === 'epilogue') {
+    const filePath = join(BOOKS_DIR, safeSlug, 'chapters', `${key}.md`);
+    if (!existsSync(filePath)) return null;
+    return readFileSync(filePath, 'utf-8');
+  }
+  const n = parseInt(key, 10);
+  if (Number.isNaN(n)) return null;
+  return getChapterContent(safeSlug, n);
+}
