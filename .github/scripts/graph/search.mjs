@@ -113,6 +113,90 @@ export function neighbors(slug, id, opts = {}) {
 }
 
 /**
+ * Assemble a compact "chapter briefing" for the story-runner: the few nodes relevant to
+ * the next chapter, how they connect, and the story spine (open threads + arcs). This is
+ * a token-light bundle (metadata only, no markdown bodies) so the runner can ground a
+ * chapter in one call instead of many search/get-node/neighbors round-trips. Fetch full
+ * bodies with `get-node` only for the handful of nodes that actually need deep detail.
+ *
+ * @param {string} slug Story slug.
+ * @param {{ query?: string, ids?: string[], limit?: number }} [opts]
+ *   query — free-text of the people/places/terms in this chapter (drives FTS search).
+ *   ids   — explicit node ids to force into the focus set (e.g. this chapter's leads).
+ *   limit — max search hits to fold into the focus set (default 8).
+ * @returns {{ focus: object[], connections: object[], neighbors: object[], threads: object[], arcs: object[] }}
+ *   focus       — nodes central to this chapter (id/type/name/canonicity/summary).
+ *   connections — edges touching any focus node (source/type/target/canonicity/label).
+ *   neighbors   — one-hop nodes connected to the focus set (compact metadata).
+ *   threads     — every `thread` node (setups/payoffs to honor or resolve).
+ *   arcs        — every `arc` node (the planned spine) for pacing context.
+ */
+export function recap(slug, opts = {}) {
+  const { query = "", ids = [], limit = 8 } = opts;
+  const db = openDb(slug, { create: false });
+  try {
+    const meta = (id) =>
+      db
+        .prepare(
+          "SELECT id, type, name, canonicity, summary FROM nodes WHERE id = ?"
+        )
+        .get(id);
+
+    // 1. Build the focus set: explicit ids first, then top full-text search hits.
+    const focusIds = new Set();
+    for (const id of ids) {
+      if (meta(id)) focusIds.add(id);
+    }
+    if (query && String(query).trim()) {
+      for (const hit of search(slug, query, { limit })) focusIds.add(hit.id);
+    }
+
+    const focus = [...focusIds].map(meta).filter(Boolean);
+
+    // 2. Every edge touching a focus node, plus the one-hop neighbours they reach.
+    const connections = [];
+    const edgeSeen = new Set();
+    const neighborIds = new Set();
+    for (const id of focusIds) {
+      const rows = db
+        .prepare("SELECT * FROM edges WHERE source_id = ? OR target_id = ?")
+        .all(id, id);
+      for (const e of rows) {
+        if (edgeSeen.has(e.id)) continue;
+        edgeSeen.add(e.id);
+        connections.push({
+          source: e.source_id,
+          type: e.type,
+          target: e.target_id,
+          canonicity: e.canonicity,
+          label: e.label,
+        });
+        for (const other of [e.source_id, e.target_id]) {
+          if (!focusIds.has(other)) neighborIds.add(other);
+        }
+      }
+    }
+    const neighbors = [...neighborIds].map(meta).filter(Boolean);
+
+    // 3. The story spine: all open threads (setups/payoffs) and arcs for pacing context.
+    const threads = db
+      .prepare(
+        "SELECT id, name, canonicity, summary FROM nodes WHERE type = 'thread' ORDER BY name"
+      )
+      .all();
+    const arcs = db
+      .prepare(
+        "SELECT id, name, canonicity, summary FROM nodes WHERE type = 'arc' ORDER BY name"
+      )
+      .all();
+
+    return { focus, connections, neighbors, threads, arcs };
+  } finally {
+    db.close();
+  }
+}
+
+/**
  * Validate structural integrity: dangling edges (endpoint missing), nodes without a
  * markdown file, and orphan markdown files without a node row.
  * @param {string} slug Story slug.

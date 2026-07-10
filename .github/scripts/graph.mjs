@@ -23,6 +23,8 @@
  *   remove-edge   Delete an edge. --id
  *   neighbors     Print the subgraph around a node. --id [--depth]
  *   search        Full-text search over nodes + bodies. --query [--limit]
+ *   recap         Compact chapter briefing: relevant nodes + connections + open threads +
+ *                 arcs (metadata only, no bodies). --query and/or --ids [--limit]
  *   consolidate   Report likely duplicate node pairs. [--threshold]
  *                 With --merge <keepId> <dropId>: merge two nodes.
  *   migrate       Import a legacy research/ folder into the graph. --story
@@ -41,7 +43,7 @@ import {
   renameNode,
 } from "./graph/nodes.mjs";
 import { addEdge, listEdges, removeEdge } from "./graph/edges.mjs";
-import { search, neighbors, validate } from "./graph/search.mjs";
+import { search, neighbors, recap, validate } from "./graph/search.mjs";
 import { findDuplicates, merge } from "./graph/consolidate.mjs";
 import { migrate } from "./graph/migrate.mjs";
 
@@ -108,7 +110,7 @@ const slug = flags.story;
 /** Commands that require a --story slug. */
 const NEEDS_STORY = new Set([
   "init", "add-node", "update-node", "rename-node", "get-node", "list-nodes", "remove-node",
-  "add-edge", "list-edges", "remove-edge", "neighbors", "search",
+  "add-edge", "list-edges", "remove-edge", "neighbors", "search", "recap",
   "consolidate", "migrate", "validate", "export",
 ]);
 
@@ -208,6 +210,15 @@ try {
       break;
     case "search":
       ok(search(slug, flags.query, { limit: Number(flags.limit) || 10 }));
+      break;
+    case "recap":
+      ok(
+        recap(slug, {
+          query: typeof flags.query === "string" ? flags.query : "",
+          ids: toList(flags.ids),
+          limit: Number(flags.limit) || 8,
+        })
+      );
       break;
     case "consolidate": {
       if (flags.merge) {

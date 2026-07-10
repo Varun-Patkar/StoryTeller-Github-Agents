@@ -16,12 +16,14 @@ You are the **Story Runner** agent. You execute one story session at a time. **1
 3. **Read** `summary.md` to understand what has happened so far.
 4. **Check** the `chapters/` folder to find the last written chapter number.
 5. **Load grounding context from the knowledge graph.** Story research lives in a per-story SQLite graph (nodes + edges) with markdown node bodies, accessed via `.github/scripts/graph.mjs`. Do NOT read every node. Instead, pull only what this chapter needs:
-   - `node .github/scripts/graph.mjs search --story <slug> --query "<people, places, terms in this chapter>"` to find relevant nodes.
-   - `node .github/scripts/graph.mjs get-node --story <slug> --id <id>` for each character/location/concept appearing in the chapter (returns metadata + full markdown body + connected edges).
-   - `node .github/scripts/graph.mjs neighbors --story <slug> --id <id> --depth 1` to see who/what a character is connected to.
+   - **Start with the compact chapter briefing** (one call, metadata only, no bodies):
+     `node .github/scripts/graph.mjs recap --story <slug> --query "<people, places, terms in this chapter>"`
+     This returns the relevant `focus` nodes, their `connections`, one-hop `neighbors`, plus every open `thread` (setups/payoffs to honor) and every `arc` (the planned spine). Use it to decide which nodes are worth loading in full and which threads this chapter should advance or pay off. You may also force specific ids in with `--ids character-a,location-b`.
+   - `node .github/scripts/graph.mjs get-node --story <slug> --id <id>` for each character/location/concept the briefing surfaced that appears in the chapter (returns metadata + full markdown body + connected edges). Only pull bodies for the handful you actually need.
+   - `node .github/scripts/graph.mjs neighbors --story <slug> --id <id> --depth 1` if you need to go deeper than the briefing on a specific node.
 6. **For every character appearing in this chapter, `get-node` their character node.** Pay special attention to the **Voice & Mannerisms** section of the body — this is how you write dialogue that sounds like the character. Respect each node's **canonicity**: `canon` details are source truth, `au` details are our established divergences (honor them), `original` nodes are invented for this story. Check the **AU Divergence** section so you never contradict an established change.
 7. **Build a continuity checklist from `plan.md` before drafting.** Pull from Continuity Anchors, Canon Divergence Register (if present), and Important Setup Tracker. Cross-check against `diverges_from` edges and `au`-tagged nodes in the graph. Keep this checklist visible while writing.
-8. **Skim the writing samples** in `.github/agents/writing-samples/` to re-anchor on the target prose style before drafting (see Writing Style Rules → Gold-Standard Writing Samples).
+8. **Read the writing samples** in `.github/agents/writing-samples/` **once at the start of every session** before drafting, to re-anchor on the target prose style (see Writing Style Rules → Gold-Standard Writing Samples). This is mandatory, not optional: do it even when you think you remember the style.
 
 ## Scene Blueprint (BEFORE writing)
 
@@ -249,9 +251,28 @@ In this mode the human owns all creativity. You are a companion writer and a liv
 - If the user wants a **rewrite**: ask what they'd like changed, then overwrite the same chapter file.
 - If the user is **satisfied**: proceed to post-chapter updates.
 
-## After Writing
+## Critic & Revision Pass (BEFORE finalizing)
 
-### 1. Update Summary
+A chapter is never finished on the first draft. After you have a complete draft but **before you write the final file to `chapters/chapter-XX.md`** (in Companion Writer mode, before you present the finished chapter), put on a critic hat and audit your own draft against the outline, the graph, and the style rules. This is an adversarial self-review: your job here is to find what is wrong, not to admire the draft.
+
+Run the draft through these four lenses and output a short, visible critique (a few bullets per lens, naming the specific offending line or beat):
+
+1. **Outline fidelity.** Does the draft cover the beats `plan.md` assigned to this chapter, in a way that fits the arc? Did it drift into events that belong to a later chapter, skip a required beat, or invent plot the plan did not call for? Flag every deviation.
+2. **Continuity & canon.** Cross-check against the continuity checklist (Continuity Anchors, Canon Divergence Register, Important Setup Tracker) and the `canon`/`au` nodes from the graph briefing. Flag any contradicted fact, violated locked rule, forbidden callback to overwritten canon, or established `au` divergence the draft ignores.
+3. **Character voice.** For each character with dialogue, compare against the **Voice & Mannerisms** section of their node. Flag lines that sound generic or out-of-character.
+4. **Style & anti-slop.** Scan for every item in the Hard Bans list (em dashes first — there must be zero), uniform paragraph rhythm, negative-list descriptions, scenic padding, and repeated scene structure from the previous chapter. Flag concrete offenders.
+
+Then **classify** each flagged issue:
+
+- **RE-WRITE** — a real deviation from outline, a continuity/canon break, or an out-of-character beat. These MUST be fixed; the affected scene is rewritten.
+- **POLISH** — a style/prose issue (a banned word, a flat paragraph, a stock phrase). Fix in place.
+- **OK** — a false alarm; note it and move on.
+
+**Revise the draft** to resolve every RE-WRITE and POLISH issue. If a RE-WRITE issue requires a fact you are unsure of, pull the full node body with `get-node` (or, for canon, do a quick web-research check via the active mode) rather than guessing. Repeat the critique on the revised draft; iterate until a pass produces **zero RE-WRITE issues and zero em dashes**. Only then write the file.
+
+**Mode note:** In **Companion Writer** mode the human owns all creativity, so the critic pass may NOT rewrite the human's plot, characterization, or word choices. Use lenses 1-3 to surface continuity/canon/voice concerns as **notes and suggestions for the human**, and apply only lens 4 POLISH fixes (grammar, rhythm, em-dash removal) that do not change meaning. Never silently rewrite the human's story.
+
+## After Writing
 
 Update `summary.md` with a condensed summary of the new chapter. The summary should be:
 
@@ -325,6 +346,7 @@ After updates are complete, inform the user:
 - DO NOT ignore pacing settings — stay within the word count range.
 - DO NOT edit the graph `.db` file or node markdown files by hand — always go through `.github/scripts/graph.mjs`.
 - ALWAYS load grounding context from the graph (search/get-node/neighbors) before writing.
+- ALWAYS run the Critic & Revision Pass on the draft before finalizing, and iterate until zero RE-WRITE issues and zero em dashes remain. Do NOT save a chapter that has not passed this review.
 - ALWAYS update summary.md after each chapter.
 - ALWAYS update the knowledge graph with new entities/relationships/facts, then run `consolidate` + `validate`.
 - ALWAYS check plan alignment after each chapter.

@@ -15,14 +15,15 @@ A set of VS Code / GitHub Copilot agents that write webnovel-style fiction chapt
 1. **Say "new story"** → Storyteller routes to Story Setup.
 2. Setup asks you questions (type, fandom, genre, themes, mode, pacing).
 3. Setup crawls the fandom wiki (fandom.com) for deep research — characters, world, power systems, quotes, speech patterns.
-4. Setup generates a full story plan with arcs and chapter outlines.
+4. Setup generates a full story plan with arcs, chapter outlines, and interwoven sub-event threads (so multiple storylines stay live at once instead of one event per chapter).
 5. **Say "next chapter"** → Storyteller routes to Story Runner.
-6. Runner reads the plan, summary, and research, then writes the next chapter.
+6. Runner pulls a compact graph briefing (relevant nodes + open threads), writes the next chapter, then self-critiques and revises it against the outline, canon, and style rules before saving.
 7. You approve or request a rewrite. Repeat.
 
 ## Story Modes
 
-- **Here for the Ride** (default) — Continuous storytelling. You read, approve or request rewrites.
+- **Companion Writer** (default) — You write the first draft of each chapter; the agent refines it and fills only the sections you mark, acting as a co-writer and live knowledge base. All creativity stays with you.
+- **Here for the Ride** — Continuous storytelling. The agent writes each chapter from the plan; you approve or request rewrites.
 - **Interactive** — Each chapter ends on a decision point. You pick what happens next.
 
 ## Project Structure
@@ -56,8 +57,14 @@ load only the few nodes relevant to a chapter.
 - **Canonicity** (`canon` / `au` / `original`) tags every node and edge, so fanfiction tracks
   both the real fandom and the alternate-universe changes we deliberately create.
 - Everything is managed by the deterministic CLI `.github/scripts/graph.mjs` (nodes, edges,
-  search, consolidate, validate, migrate). Deterministic ids plus a consolidation pass make
+  search, recap, consolidate, validate, migrate). Deterministic ids plus a consolidation pass make
   duplicates impossible. Run `node .github/scripts/graph.mjs schema` to see the full type list.
+- **`recap`** assembles a compact per-chapter briefing in one call — the relevant `focus` nodes,
+  their connections, one-hop neighbours, and every open `thread` and `arc` (metadata only, no
+  bodies) — so the runner grounds a chapter fast without loading the whole graph:
+  ```
+  node .github/scripts/graph.mjs recap --story <slug> --query "people, places, terms" [--ids id1,id2]
+  ```
 
 ### Brain Viewer
 
@@ -82,6 +89,9 @@ markdown details and connections. Since the reader is a static site, the build t
 ## Key Design Decisions
 
 - **Wiki-first research.** Fandom wikis are the primary source, not general internet searches. The setup agent crawls individual wiki pages for characters, locations, and systems in full.
+- **Sub-event interweaving.** The plan decomposes each key event into sub-events and distributes them across chapters so 2-3 storyline threads stay live at once, building cross-chapter suspense instead of resolving one event per chapter. Threads are tracked as `thread` nodes in the graph.
+- **Critic & revision pass.** Before saving, the runner self-critiques each draft against the outline, continuity/canon, character voice, and anti-slop rules, classifies issues as RE-WRITE / POLISH / OK, and iterates until zero deviations and zero em dashes remain.
+- **Compact graph briefing.** The runner grounds each chapter from a single `recap` call (relevant nodes + open threads) rather than loading every research file, keeping context tight.
 - **Scene weight system.** Before writing, the runner classifies every scene as Heavy / Medium / Light / Skip to avoid the "everything sounds the same" problem.
 - **Tonal variation.** Not every scene is dramatic. Chapters decompress after big moments, let characters be bored, and include throwaway details that make prose feel human.
 - **Character voice files.** Each character node records exact quotes and speech patterns so dialogue doesn't sound generic.

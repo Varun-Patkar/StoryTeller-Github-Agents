@@ -53,6 +53,7 @@ Story research and evolving state live in a per-story SQLite graph, never in loo
 - **Edge types**: family_of, ally_of, enemy_of, knows, member_of, located_in, owns, has_ability, occurs_in, involves, causes, precedes, part_of, related_to, diverges_from.
 - **Canonicity** (`canon` | `au` | `original`) tags every node/edge so fanfics track both source-fandom truth and our alternate-universe divergences. Each node body has Canon and AU Divergence sections.
 - Deterministic ids (`<type>-<slug>`) + UNIQUE constraints make duplicates impossible; `consolidate` catches near-duplicates and `validate` checks integrity.
+- `recap --story <slug> --query "..." [--ids ...]` returns a compact per-chapter briefing (focus nodes + connections + open threads + arcs, metadata only) — the story-runner's primary grounding call.
 - Engine modules live in `.github/scripts/graph/` (db, nodes, edges, search, consolidate, migrate).
 
 ## Reader Conventions

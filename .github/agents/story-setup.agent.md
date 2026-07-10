@@ -333,14 +333,20 @@ Key locations and world context for this arc.
 
 ### Chapters
 
-- **Chapter 1**: <brief description>
-- **Chapter 2**: <brief description>
+- **Chapter 1**: <brief description; name the sub-events/threads it advances or pays off>
+- **Chapter 2**: <brief description; name the sub-events/threads it advances or pays off>
 - ...
 
 ### Key Events
 
 - Event 1
 - Event 2
+
+### Thread Map
+
+- **Thread A (<name>)**: setup Ch1 → complication Ch3 → payoff Ch5
+- **Thread B (<name>)**: setup Ch2 → payoff Ch4
+- ...
 
 ### Character Development
 
@@ -388,10 +394,22 @@ For each divergence, record:
 
 - Divide the story into logical **arcs**
 - Each arc has a synopsis, setting, chapter list, key events, and character development notes
-- Each chapter bullet should be 1–2 sentences describing the main conflict/event and which characters are involved. Do not write dialogue or scene-level detail
+- Each chapter bullet should be 1–2 sentences describing the main conflict/event, which characters are involved, and which sub-events/threads it advances or pays off. Do not write dialogue or scene-level detail
 - Ensure the plan reflects ALL user choices (genre, themes, characters, route, tone, etc.)
 - Use correct character names, location names, and terminology from the graph node markdown
 - In fanfiction, explicitly resolve conflict points between canon and changed lore in the Canon Divergence Register before setup is marked complete
+
+### Sub-Event Interweaving (Required)
+
+A plan where chapter 1 covers event 1, chapter 2 covers event 2, and so on reads flat and predictable. Strong long stories **interleave** several storylines so tension from one thread carries the reader across the quiet parts of another. Before finalizing the chapter list, run this decomposition-and-distribution pass (it mirrors how the plan's key events become the story's actual pacing):
+
+1. **Decompose.** Break each arc's major key events into 2-4 smaller **sub-events** (a setup beat, a complication, a turn, a payoff). List them per event, e.g. `Event A → A1 setup, A2 complication, A3 payoff`.
+2. **Distribute, don't stack.** Spread those sub-events across the arc's chapters instead of resolving one event fully before starting the next. A given chapter may advance one sub-event of A, plant a sub-event of B, and pay off a sub-event of C. Some chapters can still focus on a single heavy event, but the arc as a whole should keep **2-3 threads live at once**.
+3. **Respect causality.** Interleaving must never break logic: a sub-event that depends on another (A2 needs A1) must come after it. Weave for suspense, but keep the cause-and-effect order intact.
+4. **Build suspense across chapters.** Prefer ending chapters on an unresolved sub-event of one thread while the next chapter picks up a different thread, so open questions stack and pull the reader forward. Pay threads off on a deliberate schedule, not all at once.
+5. **Model threads in the graph.** For each interwoven storyline or planted setup, create a `thread` node (Phase 4 Step 5) and note in the chapter bullets which threads each chapter advances or resolves. The story-runner reads these open threads from the graph briefing to keep the weave consistent.
+
+Reflect the result directly in the plan: each **Chapter** bullet should name the sub-events/threads it advances (e.g. "advances A2 and B1, pays off C3"), not just a single linear event. Add a short **Thread Map** under each arc listing every thread and the chapters where it is set up, complicated, and resolved.
 
 ## Phase 6 — Finalize
 
