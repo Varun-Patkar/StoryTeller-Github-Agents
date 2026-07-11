@@ -1,10 +1,10 @@
 # Character: The Cyclops
 
 ## Overview
-A wealthy Kephallonian strongman who controls debt collection, hired muscle, and local officials through fear and money.
+A wealthy Kephallonian strongman who controlled debt collection, hired muscle, and local officials through fear and money.
 
 ## Canon
 Kassandra humiliates and kills him during Odyssey's Kephallonia opening, freeing Barnabas in the process.
 
 ## AU Divergence
-In Chapter 4, Theron and Kassandra first dismantle his collection network, expose its records, and take his obsidian eye intact. He enters the Chapter 5 confrontation isolated and provoked.
+Theron and Kassandra dismantle his collection network and recover his obsidian eye intact before the direct confrontation. In Chapter 5, they attack his isolated camp at Kleptous Bay, free Barnabas and the Adrestia's crew, and Kassandra kills him. His records remain distributed across Kephallonia to protect the people he exploited.
