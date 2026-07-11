@@ -153,6 +153,7 @@ System messages and stat screens should be **cleanly formatted**, each element o
 **[Evaluation: Weak!!!]**
 ```
 
+- **Backtick-style system lines: each `` `line` `` MUST be separated by a blank line.** Markdown collapses consecutive lines into a single paragraph — without blank lines between them, the entire stat screen renders as one wall of inline code. One blank line between every backtick line, always.
 - The MC reacts to System messages with practical interest or mild humor. Not dramatic awe.
 - Don't over-explain mechanics. Present the System info, let the MC react briefly, and move on.
 - Quest prompts can appear mid-scene naturally.

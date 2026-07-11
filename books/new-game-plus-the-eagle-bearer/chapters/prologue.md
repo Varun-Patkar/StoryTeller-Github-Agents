@@ -17,10 +17,15 @@ Text opened in the air in front of him. Not a vision. Not a voice from a god. A 
 He read it because reading was easier than panicking.
 
 `[ STATUS ]`
+
 `Age 9. Human (Isu Blood 1%)`
+
 `STR 5   AGI 6   END 5`
+
 `INT 13  PER 8   CHA 6`
+
 `WIL 7   MEM 16`
+
 `Trait, Enhanced Talent: every attribute gains a growth bonus that compounds as you age. Potential, not power. You still have to earn it.`
 
 He understood it at a glance. A whole person reduced to eight numbers, weak where a small boy is weak and high in the one place that mattered right now. Memory. It was already working on him. He could see the exact ring the coffee mug had left on his unopened mail, hear the cutscene word for word, and pull the name of this coast up out of nothing.
@@ -34,16 +39,23 @@ A second panel took the first one's place.
 He thought it open and a list unrolled, cheapest first.
 
 `Bread, one loaf ........ 1 obol`
+
 `Waterskin, full ........ 2 obols`
+
 `Rope, ten cubits ....... 3 obols`
+
 `Numbing salve, pot ..... 8 obols`
+
 `Iron knife ............. 4 drachmae`
+
 `(six obols to a drachma)`
 
 He scrolled, and the numbers climbed. Past bandages and boots and bronze. Past a single permanent point of Strength, priced at a quarter of a million. And then past anything a market had a right to sell.
 
 `Concentrated Isu Blood, 5% ...... 4,320,000 drachmae`
+
 `Fragment of Eden, minor ......... 71,000,000 drachmae`
+
 `Isu Blueprint ................... LOCKED`
 
 He closed it. The balance said zero. A loaf of bread cost one obol and he did not have one obol. The blood that would sharpen a man's reflexes past human limits, the knowledge that had built the world, all of it sat behind walls of digits with nothing in his purse to press against them.

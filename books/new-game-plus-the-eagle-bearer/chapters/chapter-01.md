@@ -7,10 +7,15 @@ Theron had been sleeping in the storeroom for five months. He had figured out by
 He sat in the yard with a pile of sea-stiffened rope and worked it loose by hand, the way Markos had shown him the first week. The morning sun came over the wall at a low angle and the harbor smells came with it, brine and old fish and woodsmoke from the cookfires down the hill. He looked at nothing in particular and opened his STATUS.
 
 `[ STATUS — Theron, Age 9 ]`
+
 `STR 6    AGI 7    END 5`
+
 `INT 13   PER 9    CHA 6`
+
 `WIL 7    MEM 16`
+
 `Trait, Enhanced Talent: active.`
+
 `Balance: 3 drachmae, 5 obols.`
 
 The physical stats had moved. Not by much, but Strength and Agility had each picked up a point from five months of carrying, running, and climbing around the hillside town. Perception had gone up from the discipline of paying close attention to a port full of people he needed to understand as fast as possible. MEM 16 meant everything he learned stuck without effort, which was the only reason a nine-year-old who had arrived speaking no Greek could have been functional within a month of landing. He had listened to the harbor, to Markos, to every conversation within earshot, and the memory stat had built the language around him like a scaffold going up overnight.
