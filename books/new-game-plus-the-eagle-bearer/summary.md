@@ -19,3 +19,4 @@ A bored 31-year-old office worker dies in a trivial fall at home while replaying
 ## Arc 3: The Cult Unveiled
 
 - **Chapter 8, The False Oracle:** Theron and Kassandra expose Elpenor as a Cult of Kosmos agent, kill him, recover his mask, invitation, and unpaid contract balance, then free the Pythia long enough to confirm Cult control of Sparta's oracle and Myrrine's survival. Herodotos identifies the Spear and Forge Key as related pre-Greek technology and joins them at the threshold of the Cult sanctuary; Theron's balance ends at 1,536 dr 2 ob.
+- **Chapter 9, Beneath Delphi:** Kassandra enters the Cult sanctuary in Elpenor's mask while Theron uses an Isu maintenance route to map its six branches and capture three raw Pyramid architecture fragments. Alexios is revealed as Deimos, the Pyramid exposes memory-feedback behavior that may support a future cure, and the pair escape for Andros with Theron's balance at 1,506 dr 2 ob.
