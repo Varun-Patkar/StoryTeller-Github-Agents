@@ -23,6 +23,12 @@ const { title, description = 'Read stories created with StoryTeller Agents' } = 
         if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
           document.documentElement.classList.add('dark');
         }
+        // Detect Kindle / Silk / basic e-ink browsers and flag for simplified styling.
+        // These browsers have poor CSS support: no backdrop-filter, slow transitions, broken SVG sizing.
+        var ua = navigator.userAgent || '';
+        if (/Kindle|Silk|KFTT|KFOT|KFJWI|KFJWA|KFTHWI|KFTHWA|KFAPWI|KFAPWA|KFARWI|KFASWI|KFASWI|KFSOWI|KFDOWI/i.test(ua)) {
+          document.documentElement.setAttribute('data-kindle', 'true');
+        }
       })();
     </script>
   </head>

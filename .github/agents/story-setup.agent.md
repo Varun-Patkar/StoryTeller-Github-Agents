@@ -67,10 +67,10 @@ Ask the following:
 
 6. **Pacing / Chapter Length**
    - Options:
-     - `Short (1000–1500 characters)`
-     - `Medium (1500–3000 characters)` (default/recommended)
-     - `Long (3000–5000 characters)`
-     - `Epic (5000+ characters)`
+     - `Short (1000–1500 words)`
+     - `Medium (1500–3000 words)` (default/recommended)
+     - `Long (3000–5000 words)`
+     - `Epic (5000+ words)`
    - Allow custom input
 
 ## Phase 2 — Follow-up Questions

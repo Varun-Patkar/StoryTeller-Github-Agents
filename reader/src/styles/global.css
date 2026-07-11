@@ -72,3 +72,58 @@ button {
     padding-right: 0 !important;
   }
 }
+
+/* ============================================================
+   Kindle / Silk / low-end browser simplifications
+   Activated when Base.astro detects a Kindle UA and sets
+   data-kindle="true" on <html>.
+
+   Goals:
+   1. Kill all CSS transitions & animations (major perf win)
+   2. Remove backdrop-filter blur (renders as black on Kindle)
+   3. Force opaque backgrounds where Tailwind uses alpha variants
+   4. Cap SVG sizes (Tailwind w-4/w-5 classes may not apply)
+   ============================================================ */
+html[data-kindle] *,
+html[data-kindle] *::before,
+html[data-kindle] *::after {
+  transition: none !important;
+  animation: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Sticky top bar: Tailwind uses backdrop-blur + semi-transparent bg.
+   On Kindle the blur is ignored and the /80 alpha makes it see-through.
+   Force a solid readable background. */
+html[data-kindle] [class*="backdrop-blur"] {
+  background-color: #f2f2f2 !important;
+}
+
+/* Semi-transparent neutral backgrounds → opaque */
+html[data-kindle] [class*="bg-neutral-50/"],
+html[data-kindle] [class*="bg-neutral-950/"] {
+  opacity: 1 !important;
+}
+
+/* SVG icons: Tailwind w-4/w-5 classes may not apply on Kindle,
+   causing icons to render at full viewBox size (24×24 or larger).
+   Cap at a sensible maximum. */
+html[data-kindle] svg {
+  max-width: 24px !important;
+  max-height: 24px !important;
+  width: 20px;
+  height: 20px;
+}
+
+/* Remove box-shadow — slow to render on e-ink */
+html[data-kindle] * {
+  box-shadow: none !important;
+}
+
+/* Simplify border-radius — rounded-2xl etc. are fine but shadow-2xl is gone */
+html[data-kindle] .shadow-2xl,
+html[data-kindle] .shadow-lg,
+html[data-kindle] .shadow-md {
+  box-shadow: none !important;
+}
