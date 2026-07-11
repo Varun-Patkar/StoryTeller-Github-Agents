@@ -1,4 +1,4 @@
-# Arc: Arc 9 — Reuniting the Family
+# Arc: Arc 9 ΓÇö Reuniting the Family
 
 > id: (auto) | type: arc | canonicity: canon
 
@@ -6,7 +6,7 @@
 Battle of Amphipolis (saving Brasidas); confrontation and deprogramming of Alexios; the Ghost of Kosmos (Aspasia) reveal; Mount Taygetos catharsis; the In-Laws Dinner.
 
 ## Chapter span
-ch 59-64
+ch 29-33
 
 ## Notes
 See plan.md for the beat-by-beat breakdown.

@@ -12,4 +12,4 @@ Kassandra becomes immortal via the Staff; she is alone.
 Theron becomes immortal too, and they face eternity together.
 
 ## Notes
-Bridge from power-fantasy Act One to slice-of-life Act Two (ch 71+).
+Bridge from power-fantasy Act One to slice-of-life Act Two (ch 41+).

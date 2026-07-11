@@ -1,4 +1,4 @@
-# Arc: Arc 7 — Sparta & the Kings
+# Arc: Arc 7 ΓÇö Sparta & the Kings
 
 > id: (auto) | type: arc | canonicity: canon
 
@@ -6,7 +6,7 @@
 Return to Sparta; the trial; exposing the Cult's Peloponnesian Sage; reclaiming citizenship and home; the family begins to knit back together.
 
 ## Chapter span
-ch 46-52
+ch 22-25
 
 ## Notes
 See plan.md for the beat-by-beat breakdown.

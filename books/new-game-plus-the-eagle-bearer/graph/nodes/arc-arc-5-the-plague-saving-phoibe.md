@@ -1,4 +1,4 @@
-# Arc: Arc 5 — The Plague & Saving Phoibe
+# Arc: Arc 5 ΓÇö The Plague & Saving Phoibe
 
 > id: (auto) | type: arc | canonicity: canon
 
@@ -6,7 +6,7 @@
 The Plague of Athens; Theron engineers Phoibe's survival; Perikles's fall; the flight from Athens.
 
 ## Chapter span
-ch 32-38
+ch 14-16
 
 ## Notes
 See plan.md for the beat-by-beat breakdown.

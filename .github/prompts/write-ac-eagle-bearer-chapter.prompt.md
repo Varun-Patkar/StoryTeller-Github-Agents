@@ -8,6 +8,7 @@ agent: storyteller
 Write **chapter $input** of the story *New Game Plus: The Eagle Bearer*.
 
 ## Hard Rules — Follow in This Exact Order
+0. Don't delegate. do it yourself. Also feel free to use the graph to understand what is to be written in thorough before writing.
 
 1. **READ THE WRITING SAMPLES IN FULL BEFORE WRITING A SINGLE WORD.**
    Read both files completely:

@@ -1,4 +1,4 @@
-# Arc: Arc 0 — The Player (Prologue)
+# Arc: Arc 0 ΓÇö The Player (Prologue)
 
 > id: (auto) | type: arc | canonicity: canon
 
@@ -6,7 +6,7 @@
 Modern death mid-Valhalla-ending; reincarnation on Kephallonia; the System and its beginner gift pack.
 
 ## Chapter span
-ch 1
+prologue
 
 ## Notes
 See plan.md for the beat-by-beat breakdown.

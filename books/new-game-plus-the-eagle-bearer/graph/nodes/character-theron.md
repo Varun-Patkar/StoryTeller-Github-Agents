@@ -14,9 +14,9 @@ _Original character; no source-material counterpart._
 Theron is invented for this story. His presence is the single largest divergence from Assassin's Creed Odyssey: he grows up beside Kassandra, becomes the person she loves, and steers the Cult conflict, the fate of Alexios, and the Atlantis storyline onto a kinder path than canon.
 
 ## Arc & Growth
-- **Early (power fantasy, ch 1-70):** Relies on the System, physical talent boosts, and cheap shop items. Wins by preparation and foreknowledge. Learns Greek fighting from Markos's contacts and, later, from Kassandra.
+- **Early (power fantasy, ch 1-40):** Relies on the System, physical talent boosts, and cheap shop items. Wins by preparation and foreknowledge. Learns Greek fighting from Markos's contacts and, later, from Kassandra.
 - **Pivot:** Grows fascinated by Isu artifacts as *technology*, not magic. Starts spending everything on Isu knowledge in the shop and reverse-engineering Pieces of Eden.
-- **Late (slice of life, ch 71+):** The brains of an immortal pair. Kassandra is the scalpel; Theron is the mind. He beats the Isu because they are frozen in their old brilliance and he brings modern, undisciplined human imagination.
+- **Late (slice of life, ch 41+):** The brains of an immortal pair. Kassandra is the scalpel; Theron is the mind. He beats the Isu because they are frozen in their old brilliance and he brings modern, undisciplined human imagination.
 
 ## Rules of the character (author constraints)
 - OP but not infallible: he can be tricked or physically beaten, but he ALWAYS has a backup plan and ALWAYS recovers. He NEVER loses on information: he has played every game and his memory is perfect.

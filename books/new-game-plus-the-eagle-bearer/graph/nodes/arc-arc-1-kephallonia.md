@@ -1,4 +1,4 @@
-# Arc: Arc 1 — Kephallonia
+# Arc: Arc 1 ΓÇö Kephallonia
 
 > id: (auto) | type: arc | canonicity: canon
 
@@ -6,7 +6,7 @@
 Growing up an orphan with Kassandra under Markos; the Cyclops; Elpenor's contract; leaving on the Adrestia. Power-fantasy tutorial.
 
 ## Chapter span
-ch 2-9
+ch 1-5
 
 ## Notes
 See plan.md for the beat-by-beat breakdown.
