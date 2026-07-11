@@ -7,7 +7,7 @@
 | Genre   | Adventure, Action, Romance, Sci-Fi, Slice of Life |
 | Themes  | Found family, immortality, love across ages, science versus mysticism, saving everyone, fate versus free will, the burden of foreknowledge, healing the wound of betrayal |
 | Mode    | Here for the Ride |
-| Pacing  | Long (3000-5000 characters) |
+| Pacing  | Long (3000-5000 words per chapter) |
 | POV     | Third Person Limited |
 | Tone    | Balanced |
 | Title   | New Game Plus: The Eagle Bearer |

@@ -1,65 +1,69 @@
 # Prologue: Continue?
 
-The apartment smelled like instant noodles and the inside of a laptop that never got to sleep.
+The man died reaching for cold coffee, which was about the most fitting end his life could have arranged.
 
-It was 1:40 in the morning, and the man on the floor in front of the television had stopped being able to name the day of the week sometime around his second promotion. Not because the job was hard. Because it wasn't. It was a chair and a screen and a slow gray river of spreadsheets, and every night he came home, peeled off the tie he was pretty sure was strangling something in him that wasn't his neck, and picked up a controller so his hands would have something to do that wasn't nothing.
+He was thirty-one. He worked in a logistics office, moving numbers from one column to another, and he came home each night to a rented flat and a games console, because a game at least let him finish something. That night it was the ending of Assassin's Creed Valhalla, which he had already beaten twice. He knew the lines well enough to say them along with the screen. He reached for his mug without looking, set his heel on the power strip instead of the floor, and went over sideways.
 
-Tonight it was the end of a game he had already finished twice. The credits weren't rolling yet. The old Viking was standing in a field, talking about fate and choices and the long weight of a life, and the man on the floor mouthed the lines along with her because he knew them. He knew all of it. He had played every one of these games, every entry, every anticlimactic modern-day cutscene, back when he still believed that finishing things meant something.
+The corner of the table caught his temple. A white flash, no pain, and one last irritated thought that he had not saved in an hour.
 
-"Humanity's fate," he said under his breath, along with the screen, and snorted. "Sure. Let me get right on that after standup tomorrow."
+He woke face down on wet stone with the sea pulling at his legs.
 
-He reached for the mug on the low table. Cold coffee, third refill, the ceramic sweating a ring into a stack of unopened mail. His sock caught the edge of the power strip. Later, if there had been a later, he might have told the story as a joke: died reaching for bad coffee, what a way to go. The strip skidded. The lamp went with it. He grabbed for the lamp on pure reflex, the way you grab for anything falling, and his weight went sideways off the folded futon and his temple met the corner of the table with a sound he felt more than heard.
+His hands were wrong. Small. A child's hands, grey grit under the nails. He was a boy, nine or ten, soaked and shaking under a cliff he had never seen and knew anyway. Below him a bay curved away toward a fishing town, red sails on the water, whitewashed roofs climbing the hill. He knew the shape of it. He had walked every path on this island with a controller in his hand. Kephallonia.
 
-There wasn't any pain. That was the part nobody warned you about. Just a white flare, and the ceiling very far away, and the tinny voice from the television still going on about choices while the room dimmed at the edges like a screen powering down.
+Text opened in the air in front of him. Not a vision. Not a voice from a god. A menu, black letters on a pale panel, the kind he had read ten thousand times.
 
-His last, stupid, wholly characteristic thought was: I didn't even save.
+`[ Host registered. Distributing Beginner's Gift Pack. ]`
 
-Then salt.
+He read it because reading was easier than panicking.
 
-Salt in his mouth, salt up his nose, salt burning the back of his throat as he coughed it out onto wet sand. The light was wrong. It was gold and enormous and everywhere, sky the color of a struck coin, and the sound was wrong too, big and rhythmic, water dragging stones. He got his hands under himself and they were small. That was the thing that stopped his heart, or would have, if his heart had been in any shape to do more than hammer. Small hands. A child's hands, scarred already, gripping cold gray shingle.
+`[ STATUS ]`
+`Age 9. Human (Isu Blood 1%)`
+`STR 5   AGI 6   END 5`
+`INT 13  PER 8   CHA 6`
+`WIL 7   MEM 16`
+`Trait, Enhanced Talent: every attribute gains a growth bonus that compounds as you age. Potential, not power. You still have to earn it.`
 
-He was a boy. He was maybe nine, maybe ten. He was soaked through and freezing and alive, on a beach that curved away under cliffs he had walked a hundred times with a controller in his hands.
+He understood it at a glance. A whole person reduced to eight numbers, weak where a small boy is weak and high in the one place that mattered right now. Memory. It was already working on him. He could see the exact ring the coffee mug had left on his unopened mail, hear the cutscene word for word, and pull the name of this coast up out of nothing.
 
-And then, politely, as if it had been waiting for him to finish panicking, a pane of soft light unfolded across the middle of his vision.
+The trait was the part that made him go still. A bonus that compounded with age meant the numbers on the screen were not a verdict. They were a starting position. Years of training, the right purchases, and the boy shivering on the stones would grow into something no ordinary man could stand against. He filed that away with the flat focus of a person who had just been handed a very long game and meant to play it properly.
 
-**WELCOME.**
+A second panel took the first one's place.
 
-He stared at it. It was patient. It had the calm confidence of every tutorial popup that had ever ruined a dramatic moment, and he wanted, absurdly, to laugh.
+`[ SHOP. Balance: 0 drachmae ]`
 
-**Reincarnation confirmed. Registering host. Distributing Beginner's Gift Pack...**
+He thought it open and a list unrolled, cheapest first.
 
-Text scrolled, and he read it the way a drowning man reads a rope.
+`Bread, one loaf ........ 1 obol`
+`Waterskin, full ........ 2 obols`
+`Rope, ten cubits ....... 3 obols`
+`Numbing salve, pot ..... 8 obols`
+`Iron knife ............. 4 drachmae`
+`(six obols to a drachma)`
 
-**1. Enhanced Talent (All Attributes).** A boost to every quality he had, and some he had never thought of as qualities. Strength, speed, endurance. Intelligence. Charisma. Perception. Memory. That last word pulsed once, and something behind his eyes clicked open like a shutter, and suddenly he could remember the mug ring on the mail, the exact line the Viking had been speaking, the map of this island down to the goat paths, every quest, every name, every death.
+He scrolled, and the numbers climbed. Past bandages and boots and bronze. Past a single permanent point of Strength, priced at a quarter of a million. And then past anything a market had a right to sell.
 
-Every death.
+`Concentrated Isu Blood, 5% ...... 4,320,000 drachmae`
+`Fragment of Eden, minor ......... 71,000,000 drachmae`
+`Isu Blueprint ................... LOCKED`
 
-**Note: Talent grows with age. Potential, not gift. You will still have to earn it.**
+He closed it. The balance said zero. A loaf of bread cost one obol and he did not have one obol. The blood that would sharpen a man's reflexes past human limits, the knowledge that had built the world, all of it sat behind walls of digits with nothing in his purse to press against them.
 
-"Of course I will," he whispered, and his new voice cracked, a child's voice, and that was so strange that he almost missed the second line.
+That was fine. Zero was a place to start. He had built more from less, in an office, for a wage, and none of that had been worth keeping.
 
-**2. Isu Blood: 1%.** Enough, the System noted, to touch what most men could not. Enough to matter later. Not enough to save him from a knife tonight.
+He got his breathing flat and took stock, because taking stock was the only useful thing to do when the world restarted without asking. He knew the place. He knew the century, near enough, from the ruin on the headland and the shape of the boats. And he knew, in plain detail, which people on these islands the history he had played was going to kill, and how, and when.
 
-**Shop: online.** He thought the word and a catalogue bloomed, endless, glittering, absurd. Bread, three obols. A clean waterskin. And then, far down where the numbers turned into rows of zeroes he had no words for, the real things. Blood of the ones who came before. Fragments of Eden. Knowledge. The prices sat there like mountains he could see from the beach and would spend a lifetime learning to climb.
+Footsteps came down the shingle. A bearded man, already talking, hurried toward the half-drowned child on his beach with both hands out.
 
-He closed it. He sat in the cold gold light and breathed, and he did the only thing a person can do when the world resets without asking. He took stock.
+"By the gods, look at you. Where did the sea find you, eh? Blue right through. Up you come. Markos has you."
 
-He knew where he was. He knew when he was. He knew, with the flat awful clarity of a man who has read the ending, exactly who was going to suffer here, and in what order, and how it went for each of them. A little girl with an eagle. A brother on a mountain. Every doomed, decent person in a story he had watched from a couch and been unable to touch.
+Markos. The name dropped into a slot the boy already had waiting. The merchant. The one who took in strays.
 
-He wasn't on the couch anymore.
+He let the man haul him up out of the cold. Up the hill the town sat exactly where he remembered it, and somewhere in it was a girl a few years older than him, sharp and angry and a long way from being anyone's legend.
 
-Footsteps crunched down the shingle. A man's shape, bearded, talking already, always talking, hurrying toward the half-drowned child on his beach with his hands out and his voice full of easy warmth.
+"What do they call you, then?" Markos said.
 
-"By the gods, look at you. Where did the sea spit you from, little one? You're blue as a fish. Come on, up, up, Markos has you."
+The boy's old name belonged to a man who no longer existed. He took a new one off the island's own tongue, short and easy to shout.
 
-Markos. The name landed like a key turning.
+"Theron," he said.
 
-The boy who had been a bored man let himself be pulled up out of the cold, and looked past the merchant's shoulder at the island rising green and gold above them, and made himself a promise in a language his mouth was only now learning to hold.
-
-New save file, he thought. Let's not get everyone killed this time.
-
-"There's a girl," he heard himself say, hoarse. "On this island. Older than me. Sharp. Is she yours?"
-
-Markos laughed, surprised. "Kassandra? Mine as much as anyone's, the little terror. Why, you know her?"
-
-"Not yet," said Theron, and let the man carry him up the beach into the beginning of everything.
+"Well, Theron." Markos got an arm under him and turned them both toward the town. "Let's get you warm."

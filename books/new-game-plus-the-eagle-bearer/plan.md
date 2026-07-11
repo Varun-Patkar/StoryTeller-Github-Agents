@@ -15,13 +15,16 @@ A modern gamer reincarnates as a Kephallonian orphan beside young Kassandra, arm
 
 ## Protagonist Rules (hard constraints)
 
-- **Never loses on information.** Theron has played every AC game; the System boosted his memory to perfect recall. He always knows what is coming.
-- **OP but beatable.** He can be tricked or physically overwhelmed, but he ALWAYS has a backup plan and ALWAYS overcomes. Losses are temporary and set up a comeback.
-- **Never written as stupid.** He uses pre-knowledge wherever it plausibly helps and hides what he cannot explain (laundering it through Herodotos, Sokrates, Hippokrates, "hunches," or the System).
-- **Physical first, science later.** Early wins lean on System boosts, cheap shop gear, and Kassandra's muscle. Over time he pivots to Isu tech and modern imagination; by Act Two he is the brain, Kassandra the scalpel.
-- **The System is a budget, not a genie.** Game-changers (Isu blood, Pieces of Eden, immortality, Isu knowledge) are absurdly expensive. Everything is earned through treasure, bounties, orichalcum, and (late) bartering recovered Isu artifacts.
+- **Never loses on information.** Theron has played every AC game; the System boosted his memory (MEM stat) to perfect recall. He always knows what is coming.
+- **Genuinely OP, not a tag-along.** Theron is powerful in his own right and grows fast. His Enhanced Talent trait compounds with age, so his attributes climb past normal human limits over the arc, and his 1% (later higher) Isu blood sharpens his reflexes and mind. He wins through preparation, tech, and System-bought edges AND through real personal capability. He can be tricked or physically overwhelmed by something stronger, but he always has a backup plan and always overcomes; losses are temporary and set up a comeback. Do not write him weak or helpless.
+- **Tech path; Kassandra is brute force.** Theron's lane is science, planning, Isu tech, gadgets, and preparation. Kassandra is the raw physical powerhouse. He is the mind and the toolmaker; she is the scalpel. Even early, lean into this division rather than making him out-muscle people.
+- **Never written as stupid.** He uses pre-knowledge wherever it plausibly helps and hides what he cannot explain (laundering it through Herodotos, Sokrates, Hippokrates, "hunches," or quiet preparation).
+- **The System is a budget, not a genie — and it has REAL NUMBERS.** Render the System as a concrete LitRPG layer (status screen, visible drachmae/obol balance, itemized prices, pings), exactly like the writing samples, never as a vague glowing pane. See the `ability-assassins-creed-system` node for canonical stats, currency, and prices. Game-changers cost astronomical, specific sums; everyday purchases have exact prices and update his running balance. He earns, barters, and engineers his wins.
 - **The System is a SECRET until ch ~68-69.** No in-world character knows Theron has a System, a shop, stats, or any "game" until he chooses to tell **Kassandra**, late (around ch 68-69, near their immortality). The concept of a LitRPG interface or modern technology does not exist in their world, so no one can even guess it. Characters may notice he "goes somewhere" (stares, tunes out) or "says strange things," and will write it off as daydreaming or eccentricity, never as a system. Theron never opens the shop, reads stats, or uses modern/gamer language out loud where it could be understood. All System beats stay in his internal narration.
 - **His feelings hide even from himself.** The romance is slow and self-concealed. Theron does not consciously recognize his own feelings for Kassandra for a long time, and once he does, he hides them well. Early chapters are found-family and partnership, not pining. Other characters (especially Kassandra) must NOT read romantic or knowing looks off him early on. She may tease him for being odd or distant, never for looking at her "a certain way."
+- **No romantic or sexual subtext with anyone except Kassandra.** Bonds with everyone else (Markos, Phoibe, Barnabas, allies) are plainly platonic. With Phoibe (a child) it is purely protective/older-sibling. NEVER use possessive or ownership framing for these bonds (no "keep her," "hers to keep," "mine"); write plain protective language instead.
+- **Do not repeat behaviours, lines, or motifs.** Say an idea ONCE. Theron states the intent to save people at most once, not every chapter. Do not reuse signature phrases or gestures as refrains (no recurring "be in the room," "reading ahead," "grain doesn't vanish," "warm and cold in his chest," "new save file"). Vary how his cleverness, foreknowledge, and care are shown each time.
+- **Chapter budget is flexible; skip boring stuff.** Act One targets ~50-70 chapters, but compress hard: cut dull travel/connective filler (Skip/Light weight), jump over anything the reader does not need. Reduce toward 50 if the material is thin. Prefer compression to padding.
 
 ## Continuity Ledger (AU divergences from canon — keep consistent everywhere)
 
@@ -126,8 +129,13 @@ Skeleton only; to be planned when we reach it.
 
 ## Running Reminders
 
-- **Read the writing samples in `.github/agents/writing-samples/` once at the start of every writing session** and match their craft: confident exposition delivered in clean blocks then moved past, dry wit under the surface, varied sentence and paragraph rhythm, system/LitRPG beats dropped in matter-of-factly.
-- **No lazy negatives.** Never define a thing by stacking what it is NOT ("not this, not her, not any of them"). State what IS. One clean positive line beats three negations.
+- **Read the writing samples in `.github/agents/writing-samples/` once at the start of every writing session** and match their craft: plain, information-forward prose where every sentence advances something. Concrete over poetic. The samples are NOT lyrical or mystical; do not write mystical, portentous, or "trying to sound deep" prose.
+- **Every line must earn its place.** If a sentence is not delivering plot, character, information, or a real image, cut it. No mood-filler, no vague atmosphere.
+- **Anchor proper nouns on first use.** When a place or name first appears (Sami, Kranioi, Ktimene Beach, etc.), give one short orienting clause (e.g., "Sami, the port town on the far side of the island"). Never drop an unexplained name and move on.
+- **Keep the timeline unmistakable.** Never write present action in phrasing that reads like a flashback or memory. If a messenger arrives now, say so plainly; do not blur it with "the words he had carried for six years" constructions.
+- **Render the System with real numbers.** Status lines, a visible drachmae/obol balance, itemized prices, pings, exactly like the samples. See the `ability-assassins-creed-system` node for canonical figures.
+- **No lazy negatives.** Never define a thing by stacking what it is NOT ("not this, not her, not any of them"). State what IS.
+- **Do not repeat lines, gestures, or motifs.** Say an idea once; vary Theron's tics; never turn a phrase into a per-chapter refrain.
 - No em dashes in prose. Keep Theron's cleverness earned and shown, never narrated as "he was smart."
 - Kassandra's speech: blunt, wry, Greek oaths ("malaka"), soldier's tenderness. Theron's: modern, dry, self-deprecating internally, warm outwardly.
 - Every saved life must cost something (planning, a trade, a risk), so the fix-it never feels free.
