@@ -17,3 +17,6 @@ Curious, verbose, delighted by mysteries.
 
 ## Notes
 Cover for Theron's meta-knowledge; Isu-lore conduit.
+
+## Chapter 10 State
+Herodotos identifies the Andros tradition, records the forge evidence, follows Glaux through the prepared upper exit during the Alexios contact, and points the group toward Athenian records and physicians.

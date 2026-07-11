@@ -17,3 +17,6 @@ Booming, pious, story-loving.
 
 ## Notes
 Enables travel across the map.
+
+## Chapter 10 State
+Barnabas executes Theron prepared offshore extraction plan at Andros and sails the group safely toward Athens after the clash.

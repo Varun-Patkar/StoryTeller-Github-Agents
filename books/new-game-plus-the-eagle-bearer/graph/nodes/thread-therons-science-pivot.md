@@ -3,7 +3,7 @@
 > id: thread-therons-science-pivot | type: thread | canonicity: original
 
 ## Overview
-Theron begins leaning on the System's physical boosts and cheap gear. As he encounters Isu artifacts, he reframes them as *technology* and pours his shop budget into Isu knowledge and blueprints. By Act Two he is the tinker/scientist of the pair while Kassandra is the physical scalpel. His edge over the Isu is undisciplined modern human imagination — they are frozen in their own ancient genius; he is not.
+Theron begins leaning on the System's physical boosts and cheap gear. As he encounters Isu artifacts, he reframes them as *technology* and pours his shop budget into Isu knowledge and blueprints. By Act Two he is the tinker/scientist of the pair while Kassandra is the physical scalpel. His edge over the Isu is undisciplined modern human imagination ΓÇö they are frozen in their own ancient genius; he is not.
 
 ## Beats
 - Item-reliant fighter (Kephallonia/Megaris).
@@ -13,3 +13,6 @@ Theron begins leaning on the System's physical boosts and cheap gear. As he enco
 
 ## Notes
 The "tech vs mysticism" theme in one character arc.
+
+## Chapter 10 Progress
+The active Andros forge supplies the first complete power route Theron can interpret. A controlled Sword-Spear-Key link reaches Alexios with a family memory, but conditioning pressure returns through the same path, defining both the technical cure route and the protection it still requires.

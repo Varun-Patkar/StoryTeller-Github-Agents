@@ -11,3 +11,6 @@ It does not create matter, grant free knowledge, solve puzzles, or replace Syste
 
 ## AU Divergence
 Provides Theron a technology-path artifact equal in narrative importance, but not identical power, to Kassandra's Spear of Leonidas.
+
+## Chapter 10 State
+At Andros the Key records four machinery fragments and two genetic-access fragments. A 1,200-drachma one-use adapter bridges an active forge service circuit, raising integrity from 46.0% to 51.6% and converting one power-routing fragment into understood knowledge. It later detects the linked Sword and Spear memory route during the controlled Alexios clash.

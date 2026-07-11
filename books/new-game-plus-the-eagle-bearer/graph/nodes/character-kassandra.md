@@ -18,10 +18,13 @@ Blunt, wry, a warrior's directness with a soldier's tenderness underneath. Greek
 Use malaka only when Kassandra is very angry and actively cursing. It is an authentic Greek insult from the game, not routine punctuation or a verbal tic.
 
 ## AU Divergence
-- **Raised beside Theron.** She and Theron are the two orphans Markos takes in; they grow up as siblings-in-arms, then partners, then lovers, over years (slow burn). Her canonical romance with Natakas and her son Elpidios are **cut entirely** ΓÇö she loves Theron.
+- **Raised beside Theron.** She and Theron are the two orphans Markos takes in; they grow up as siblings-in-arms, then partners, then lovers, over years (slow burn). Her canonical romance with Natakas and her son Elpidios are **cut entirely** ╬ô├ç├╢ she loves Theron.
 - **Her family is healed, not just avenged.** With Theron's help, Alexios is deprogrammed and restored, Nikolaos and Stentor reconcile, Phoibe lives, and the found family (Markos, Phoibe) knits her back together. Her deep wound of familial betrayal is the emotional spine of her arc.
 - **Immortal together.** She inherits the Staff and becomes immortal as in canon, but she is not alone: Theron becomes immortal too, and they face eternity and the Isu together.
 - **She is the scalpel.** In Act Two she is the physical powerhouse of the pair while Theron is the mind.
 
 ## Notes
 Second protagonist. Central to every arc; the heart of the found-family and romance threads.
+
+## Chapter 10 State
+Kassandra upgrades the Spear through inherited compatibility at Andros. She holds back during the Alexios clash because defeating him safely is not yet possible, then chooses the prepared withdrawal after a memory of Myrrine briefly reaches him.

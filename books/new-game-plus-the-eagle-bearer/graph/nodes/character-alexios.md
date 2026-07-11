@@ -15,8 +15,11 @@ Cold, wounded, oscillating between arrogance and buried confusion.
 
 ## AU Divergence
 - **He is genuinely saved.** Rather than a fragile talking-down, Theron reverse-engineers the Isu memory technology (the Pyramid, Animus-adjacent principles, and later the Staff) to actually undo the Cult's conditioning and repair the trauma-driven brainwashing (see event: Deprogramming Alexios). Alexios is restored to himself and to the family.
-- **Restored family member.** He reconciles with Myrrine, Nikolaos, Stentor, and Kassandra, and takes his place at the In-Laws Dinner. No longer a tragedy — a rescue.
+- **Restored family member.** He reconciles with Myrrine, Nikolaos, Stentor, and Kassandra, and takes his place at the In-Laws Dinner. No longer a tragedy ΓÇö a rescue.
 - His deprogramming is the proof-of-concept that launches Theron's full science pivot.
 
 ## Notes
 Flagship "save everyone" target; his cure demonstrates Isu-tech-as-technology and seeds the memory-rewriting toolkit reused later.
+
+## Chapter 10 State
+Alexios follows Kassandra to Andros and confronts her outside the forge. A family memory reaches him through the connected Sword and Spear, but Cult conditioning pressure returns through the same route. He remains Deimos and cannot yet be restored safely.

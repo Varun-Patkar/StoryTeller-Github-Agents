@@ -34,3 +34,6 @@ Dry, modern, self-deprecating wit that he mostly keeps inside his own head; outw
 
 ## Notes
 Modern-life name is deliberately left behind; he answers only to Theron. In-world he is eventually whispered of as a sophos (a wise man) and a maker of impossible devices.
+
+## Chapter 10 State
+Theron spends 1,200 drachmae on a one-use forge interface adapter, repairs the Forge Key to 51.6%, and understands a fifth fragment. During the planned Alexios clash, he returns one family memory through the linked artifacts, detects conditioning feedback, and executes the prepared eastern withdrawal.
