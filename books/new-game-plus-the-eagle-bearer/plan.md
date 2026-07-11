@@ -38,6 +38,7 @@ A modern gamer reincarnates as a Kephallonian orphan beside young Kassandra, arm
 | 6 | Kassandra romances Natakas, bears Elpidios (First Blade DLC) | **Cut entirely.** Kassandra loves Theron. Darius kept as optional tech-mentor ally; Order of Ancients kept as threat | No Natakas romance, no child; no forced-family subplot |
 | 7 | Brasidas dies at Amphipolis | Theron aims to **save Brasidas** (break the ambush) | "No meaningless deaths"; balance-ally survives |
 | 8 | Family stays fractured | **Full family reconciliation** (the In-Laws Dinner) | Emotional capstone of Act One |
+| 9 | Kassandra's childhood work on Kephallonia is largely unrecorded before Odyssey | At twelve, Kassandra begins taking paid recovery work beside Theron; their first prepared fight recovers Markos's oil at an abandoned limestone cut | Their force-and-planning partnership forms early; Theron must disclose risks he assigns himself; a fitted wall below the quarry becomes their first local ruins-research lead |
 
 - **Stakes rule:** No meaningless deaths; no core-cast deaths. An **original character may die** to keep the danger real.
 - Keep source-fandom canon true on the surface where it does not conflict with the ledger; track every divergence here.
