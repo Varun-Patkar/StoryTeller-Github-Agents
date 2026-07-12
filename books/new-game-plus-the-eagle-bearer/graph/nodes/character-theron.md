@@ -3,37 +3,33 @@
 > id: character-theron | type: character | canonicity: original
 
 ## Overview
-Theron is the protagonist: a burned-out modern salaryman who numbed his boredom with videogames and died in a mundane accident at home, mid-way through the ending of Assassin's Creed Valhalla. He woke as a nameless orphan boy on Kephallonia, circa 440s BCE, and was taken in by the merchant Markos alongside another stray, a girl named Kassandra. He has no natural Isu blood, but on arrival he was granted the Assassin's Creed System.
-
-He is a fix-it protagonist: he has played every Assassin's Creed game and remembers all of it perfectly (his memory was sharpened by the System's talent boost). He knows the shape of history, the truth of the Great Catastrophe and the Human-Isu War, and every canon tragedy before it lands. His whole life becomes a quiet campaign to make sure the people he cares about do not die the way the games said they would.
+Theron is the protagonist: a burned-out modern salaryman who died while replaying Assassin's Creed Valhalla and woke as a nameless orphan on Kephallonia. Markos raised him beside Kassandra. The Assassin's Creed System gives him perfect recall, Enhanced Talent, a concrete shop, and the technical path that complements Kassandra's physical power.
 
 ## Canon
-_Original character; no source-material counterpart._
+Original character; no source-material counterpart.
 
 ## AU Divergence
-Theron is invented for this story. His presence is the single largest divergence from Assassin's Creed Odyssey: he grows up beside Kassandra, becomes the person she loves, and steers the Cult conflict, the fate of Alexios, and the Atlantis storyline onto a kinder path than canon.
+Theron grows up beside Kassandra, becomes her equal partner and husband, changes the Cult conflict and Alexios's fate, kills Aletheia with her, and becomes immortal through System-bought and engineered means. His presence gives canon Kassandra a permanent contemporary rather than a solitary immortal life.
 
 ## Arc & Growth
-- **Early (power fantasy, ch 1-40):** Relies on the System, physical talent boosts, and cheap shop items. Wins by preparation and foreknowledge. Learns Greek fighting from Markos's contacts and, later, from Kassandra.
-- **Pivot:** Grows fascinated by Isu artifacts as *technology*, not magic. Starts spending everything on Isu knowledge in the shop and reverse-engineering Pieces of Eden.
-- **Late (slice of life, ch 41+):** The brains of an immortal pair. Kassandra is the scalpel; Theron is the mind. He beats the Isu because they are frozen in their old brilliance and he brings modern, undisciplined human imagination.
+- Chapters 1-10: preparation, foreknowledge, and engineering establish equal agency with Kassandra. After chapter 10 he is age 24, has 306 dr 2 ob, and holds a Forge Key at 51.6% integrity with 36 captured and 5 understood fragments.
+- Chapters 11-16: Athens pushes him from personal rescue plans toward sanitation, records, contingencies, and systems that protect people without his presence.
+- Chapters 17-25: he adopts ethical constraints around evidence, memory, and political intervention. Love makes him more controlling about risk until he learns that partnership cannot become command.
+- Chapters 26-33: Alexios's cure and Aspasia expose both the value and danger of concealed systems. He repairs a broken risk-disclosure promise and marries Kassandra as an equal.
+- Chapters 34-38: the Atlantis simulations force him to admit that efficient order tempts him. He reveals the System to his wife, kills Aletheia with her, and becomes physically immortal.
+- Chapter 39: children, family, and friends live complete mortal lives and die. Repeated bereavement makes him mentally ancient in the Nicolas Flamel mold: patient, inward, brooding, and devoted to structures that can survive centuries.
+- Chapter 40: his mature form is an order-leaning Eclipse founder. He builds archives, evidence standards, layered cells, and continuity safeguards, while accepting dissent and review as checks against his own worst instincts.
 
-## Rules of the character (author constraints)
-- OP but not infallible: he can be tricked or physically beaten, but he ALWAYS has a backup plan and ALWAYS recovers. He NEVER loses on information: he has played every game and his memory is perfect.
-- Never written as stupid. He uses pre-knowledge wherever it plausibly helps, and hides what he cannot explain.
-- He genuinely falls for Kassandra over years (slow burn) and comes to want eternity with her while saving humanity from the sun.
+## Mature Marriage Dynamic
+Theron opens most fully in Kassandra's presence. With her he complains, laughs dryly, admits fear, and accepts interruption when brooding becomes withdrawal. Their occasional spats concern control, undisclosed risks, and the weight of long plans; repair requires changed behavior, not a repeated apology.
+
+## Rules of the Character
+- OP but not infallible. He never loses on information, uses foreknowledge where plausible, and keeps a backup plan.
+- The System remains secret until he tells Kassandra in chapter 38.
+- His order instinct must protect human life and memory, not justify hidden rule.
 
 ## Voice & Mannerisms
-Dry, modern, self-deprecating wit that he mostly keeps inside his own head; outwardly calm and a little too composed for a boy his age. Slips into gamer/engineer metaphors when thinking. Warm and stubborn with people he has claimed as his.
-- "Okay. New save file. Let's not get everyone killed this time."
-- "It's not magic. It's just tech nobody bothered to read the manual for."
-- "I've seen how this ends. I'm rewriting it."
-- "Markos, if you sell one more thing that isn't yours, I'm putting it on your tab. You have a tab now."
-- "Kassandra. Breathe. Then we plan. Then we win."
-- "The gods didn't do this. People did. People can undo it."
-
-## Notes
-Modern-life name is deliberately left behind; he answers only to Theron. In-world he is eventually whispered of as a sophos (a wise man) and a maker of impossible devices.
+Dry, modern, self-deprecating internally; outwardly calm and increasingly old-fashioned in patience. Warmest with Kassandra. He thinks in engineering and systems language but does not speak gamer jargon where an ancient listener could understand it.
 
 ## Chapter 10 State
 Theron spends 1,200 drachmae on a one-use forge interface adapter, repairs the Forge Key to 51.6%, and understands a fifth fragment. During the planned Alexios clash, he returns one family memory through the linked artifacts, detects conditioning feedback, and executes the prepared eastern withdrawal.

@@ -1,15 +1,13 @@
 # Event: Killing Aletheia
 
-> id: event-killing-aletheia | type: event | canonicity: au
-
 ## Overview
-Aletheia, an Isu consciousness surviving in the Atlantis simulations, guides Kassandra toward becoming the Keeper in canon. In this story, Theron and Kassandra learn the truth of the Human-Isu War and the Great Catastrophe and conclude the Isu are, ultimately, enemies of humanity's free future. By chapter 39, Theron destroys Aletheia.
+Aletheia, an Isu consciousness surviving in the Atlantis simulations, tries to shape Kassandra into the Keeper and exclude Theron as an uncontrolled variable. In chapter 38, the married pair use the Forge Key, simulation access, System-funded longevity, and prepared memory defenses to trap her consciousness. Kassandra creates the decisive opening and Theron destroys Aletheia.
 
 ## Canon
-Aletheia is a benevolent-seeming guide who names Kassandra the Keeper; she is not killed in canon.
+Aletheia guides Kassandra and is not killed in canon.
 
 ## AU Divergence
-Theron kills Aletheia ΓÇö a hard line drawn against Isu control of humanity's destiny, and the climax of the power-fantasy span.
+Theron and Kassandra draw a hard line against Isu control of humanity's future and kill her together.
 
-## Notes
-Marks the end of Act One (ch 1-40). Opens the "remove the Isu" long game.
+## Consequences
+The victory ends dead-Isu tutelage but does not instantly create the Eclipse. The pair live through mortal generations before formalizing their doctrine in chapter 40.

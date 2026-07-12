@@ -1,18 +1,20 @@
-# Thread: Theron & Kassandra ΓÇö The Slow Burn
-
-> id: thread-theron-kassandra-slow-burn | type: thread | canonicity: original
+# Thread: Theron and Kassandra, The Slow Burn
 
 ## Overview
-The central relationship. Two orphans raised side by side on Kephallonia grow up, fight the world together, and fall in love slowly and naturally over years ΓÇö not instantly. Theron comes to want eternity with her; Kassandra, scarred by family betrayal, learns to trust and be loved.
+The central relationship grows from Kephallonian siblings-in-arms to equal partners, lovers, spouses, parents, and twin immortals. The slow burn resolves into a durable marriage rather than ending at mutual confession.
 
 ## Beats
-- Kephallonia: found-family siblings; deep trust, no romance yet.
-- The road: partners in danger; growing reliance and unspoken feeling.
-- Athens/Sparta: shared grief and victories deepen the bond.
-- Atlantis span: choosing eternity together; both immortal by ch 39.
+- Childhood through chapter 20: trust and reliance without romantic reading.
+- Chapter 21: Theron recognizes his feelings and conceals them.
+- Chapter 25: they acknowledge mutual intent and agree love grants neither authority over the other.
+- Chapter 28: their first couple's spat tests the childhood risk-disclosure promise and ends in a concrete operational repair.
+- Chapter 33: they marry privately before the family gathering.
+- Chapters 34-38: marriage carries the System revelation, immortality choice, and Aletheia conflict.
+- Chapter 39: parenthood, occasional spats, and mortal bereavement mature the bond.
+- Chapter 40: each spouse is the other's only permanent contemporary and private place of softness.
 
 ## Rules
-Slow, earned, natural. No forced beats. Kassandra's arc is trust and healing; Theron's is learning to let someone matter more than the mission.
+Conflict comes from methods and burdens, not contrived distrust. Repair requires changed behavior. No romantic or sexual subtext exists with anyone else.
 
-## Notes
-Replaces the canon Natakas romance entirely.
+## Canon Divergence
+Replaces the Natakas romance and Elpidios line. Theron and Kassandra choose their own children later.
