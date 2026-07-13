@@ -1,14 +1,14 @@
-# StoryTeller Agents — Copilot Instructions
+# StoryTeller — Copilot Instructions
 
 ## Project Overview
 
-Two-part project: VS Code/Copilot **agents** that write webnovel-style fiction, and a static **reader** site for browsing the published stories.
+Two-part project: a set of VS Code/Copilot **skills** that write webnovel-style fiction, and a static **reader** site for browsing the published stories.
 
-- Agents: `.github/agents/` — three-agent system (storyteller, story-setup, story-runner)
+- Skills: `.github/skills/` — `storyteller` (router), `story-setup`, `write-chapter`, `character-voice`, `humanize-prose`. Auto-invoked by description; work stays inline except for `write-chapter`'s mandatory independent AI-ness review subagent.
 - Reader: `reader/` — Astro static site that reads `books/` at build time
 - Stories: `books/<slug>/` — file-system story storage; research/state in a per-story knowledge graph
 
-See [README.md](../README.md) for architecture, agent roles, and story modes.
+See [README.md](../README.md) for architecture, skill roles, and story modes.
 
 ## Commands
 
@@ -23,7 +23,7 @@ npm run build    # Static build
 cd .github/scripts
 npm install      # installs better-sqlite3
 
-# Web research for agents prefers webiq (webiq-mcp tools).
+# Web research prefers webiq (webiq-mcp tools).
 # SearXNG is only a fallback if webiq is unavailable:
 docker run -d --name searxng -p 8080:8080 searxng/searxng
 ```
@@ -47,13 +47,14 @@ books/<slug>/
 
 Story research and evolving state live in a per-story SQLite graph, never in loose files.
 
-- **Access only via** `.github/scripts/graph.mjs` (a CLI; agents cannot run raw SQL). Run `node .github/scripts/graph.mjs schema` for the allowed types.
+- The graph is the story's **memory** (what must still be true many chapters later), not a chronicle of events. `summary.md` is the chronicle. Apply the Graph Worthiness Test; `event` nodes are reserved for major canon-divergence anchors.
+- **Access only via** `.github/scripts/graph.mjs` (a CLI; no raw SQL). Run `node .github/scripts/graph.mjs schema` for the allowed types.
 - **Nodes** hold small metadata (id, type, name, canonicity, aliases, summary, tags); full details live in `graph/nodes/<id>.md`.
 - **Node types**: character, location, faction, item, event, ability, concept, arc, thread.
 - **Edge types**: family_of, ally_of, enemy_of, knows, member_of, located_in, owns, has_ability, occurs_in, involves, causes, precedes, part_of, related_to, diverges_from.
 - **Canonicity** (`canon` | `au` | `original`) tags every node/edge so fanfics track both source-fandom truth and our alternate-universe divergences. Each node body has Canon and AU Divergence sections.
 - Deterministic ids (`<type>-<slug>`) + UNIQUE constraints make duplicates impossible; `consolidate` catches near-duplicates and `validate` checks integrity.
-- `recap --story <slug> --query "..." [--ids ...]` returns a compact per-chapter briefing (focus nodes + connections + open threads + arcs, metadata only) — the story-runner's primary grounding call.
+- `recap --story <slug> --query "..." [--ids ...]` returns a compact per-chapter briefing (focus nodes + connections + open threads + arcs, metadata only) — the `write-chapter` skill's primary grounding call.
 - Engine modules live in `.github/scripts/graph/` (db, nodes, edges, search, consolidate, migrate).
 
 ## Reader Conventions
@@ -71,28 +72,32 @@ The reader includes an interactive graph viewer at `/brain/<slug>/` ([BrainViewe
 - The viewer is self-contained (canvas force-directed graph, no external library): nodes colour-coded by type, edges by type (AU edges dashed), click a node for its markdown details + connections.
 - Reader depends on `better-sqlite3` (build-time) to read the graph snapshots.
 
-## Agent Conventions
+## Skill Conventions
 
-- Agents are defined in `.github/agents/*.agent.md` (storyteller orchestrator + story-setup + story-runner).
+- Skills live in `.github/skills/<name>/SKILL.md`, auto-invoked by their `description`. Drafting and decisions run inline to preserve context; `write-chapter` delegates only its independent AI-ness review, and the subagent never edits.
+- `write-chapter` runs a pipeline: load memory → canon lock → voice prep → scene blueprint → draft → critic → humanize → **independent AI-ness review** → **de-polish** → save → memory diff.
 - Web research prefers **webiq** (`webiq-mcp` tools); SearXNG then Playwright are fallbacks.
 - Story scaffolding is deterministic via `.github/scripts/create-story-structure.mjs`.
-- The graph is read/written by both story-setup (research) and story-runner (per-chapter state) via `graph.mjs`.
+- The graph is read/written by both `story-setup` (research) and `write-chapter` (per-chapter memory diff) via `graph.mjs`.
 
-## Writing Rules (for agent prompt editing)
+## Writing Rules (for skill/prompt editing)
 
-The agents enforce strict anti-AI-slop rules. When editing agent prompts:
-- Maintain the banned words/phrases lists
-- Preserve the scene weight system (Heavy/Medium/Light/Skip)
-- Keep character voice requirements (quotes + speech patterns) in character node bodies
-- Don't weaken tonal variation rules
+The skills enforce strict anti-AI-slop rules. When editing them:
+- Top-priority ban: the **"X, not Y" antithesis tic**. Also no em dashes.
+- Maintain the banned words/phrases lists (canonical: `humanize-prose/references/anti-slop.md`).
+- Preserve the scene weight system (Heavy/Medium/Light/Skip).
+- Keep character voice grounded in real source quotes + tracked over time (graph node Voice & Mannerisms).
+- Keep combat brief and emotion-first; don't weaken tonal variation rules.
 
 ## Key Files
 
 | File | Purpose |
 |------|---------|
-| `.github/agents/storyteller.agent.md` | Orchestrator agent prompt |
-| `.github/agents/story-setup.agent.md` | Research + planning agent prompt |
-| `.github/agents/story-runner.agent.md` | Chapter-writing agent prompt |
+| `.github/skills/storyteller/SKILL.md` | Router for all story work |
+| `.github/skills/story-setup/SKILL.md` | Research + planning + memory graph |
+| `.github/skills/write-chapter/SKILL.md` | Per-chapter writing pipeline |
+| `.github/skills/character-voice/SKILL.md` | Grounded, tracked character voice + gate |
+| `.github/skills/humanize-prose/SKILL.md` | De-perfect pass + anti-slop bible |
 | `.github/scripts/graph.mjs` | Knowledge-graph CLI (nodes/edges/search/consolidate/migrate) |
 | `.github/scripts/graph/db.mjs` | Schema + allowed node/edge/canonicity enums (source of truth) |
 | `.github/scripts/create-story-structure.mjs` | Deterministic story scaffolding |

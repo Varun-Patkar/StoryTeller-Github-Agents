@@ -1,4 +1,4 @@
-# Contributing to StoryTeller Agents
+# Contributing to StoryTeller
 
 Thanks for your interest in contributing! This project is open source under the MIT license and welcomes contributions of all kinds — stories, code, and improvements.
 
@@ -6,14 +6,14 @@ Thanks for your interest in contributing! This project is open source under the 
 
 The easiest way to contribute is by writing and submitting your own stories.
 
-### Option 1: Use the GitHub Copilot Agent (Recommended)
+### Option 1: Use the GitHub Copilot Skills (Recommended)
 
 1. **Fork** this repository and clone it locally.
 2. Open the project in **VS Code** with [GitHub Copilot](https://github.com/features/copilot) enabled.
-3. Say **"new story"** in Copilot Chat — the Storyteller agent will walk you through setup:
+3. Say **"new story"** in Copilot Chat — the `story-setup` skill will walk you through setup:
    - Pick a genre, fandom, tone, and pacing.
-   - The agent researches the fandom and builds a detailed story plan.
-4. Say **"next chapter"** to write chapters one at a time.
+   - It researches the fandom and builds a detailed story plan.
+4. Say **"next chapter"** to write chapters one at a time (the `write-chapter` skill).
 5. When you're happy with your story, open a **Pull Request** to merge it into the main repo.
 
 ### Option 2: Preview in the Reader
@@ -79,7 +79,7 @@ Each story lives in `books/<slug>/` with this structure:
 
 ## Code Contributions
 
-If you want to improve the reader, the graph scripts, or the agents:
+If you want to improve the reader, the graph scripts, or the skills:
 
 1. Fork and clone the repo.
 2. Create a feature branch: `git checkout -b feature/my-improvement`
