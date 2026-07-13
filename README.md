@@ -1,30 +1,32 @@
-# StoryTeller Agents
+# StoryTeller
 
-A set of VS Code / GitHub Copilot agents that write webnovel-style fiction chapter by chapter — fanfiction or original.
+A set of VS Code / GitHub Copilot **skills** that write webnovel-style fiction chapter by chapter — fanfiction or original. You bring the idea; the system writes the book. The skills run inline (no subagent delegation), so full context is preserved across a session.
 
-## Agents
+## Skills
 
-| Agent | Role |
+| Skill | Role |
 |-------|------|
-| **Storyteller** | Orchestrator. Routes to setup or runner based on intent. Prefers webiq for web research (SearXNG fallback). |
-| **Story Setup** | Gathers story preferences, deep-researches the fandom via wiki crawling, builds a story plan. |
-| **Story Runner** | Writes one chapter per session. Handles pacing, tone, and post-chapter bookkeeping. |
+| **storyteller** | Router. The front door for any story request; dispatches to the right skill. |
+| **story-setup** | Gathers story preferences, deep-researches the fandom via wiki crawling, grounds character voices in real dialogue, builds the memory graph and story plan. |
+| **write-chapter** | Writes one chapter per session through a full pipeline (memory → canon lock → blueprint → draft → critic → humanize → save → memory diff). |
+| **character-voice** | Builds and tracks each character's voice, grounded in verbatim source dialogue. |
+| **humanize-prose** | The de-perfect pass that strips AI tells (the "X, not Y" tic, em dashes, over-detailed fights) out of a draft. |
 
 ## How It Works
 
-1. **Say "new story"** → Storyteller routes to Story Setup.
-2. Setup asks you questions (type, fandom, genre, themes, mode, pacing).
-3. Setup crawls the fandom wiki (fandom.com) for deep research — characters, world, power systems, quotes, speech patterns.
-4. Setup generates a full story plan with arcs, chapter outlines, and interwoven sub-event threads (so multiple storylines stay live at once instead of one event per chapter).
-5. **Say "next chapter"** → Storyteller routes to Story Runner.
-6. Runner pulls a compact graph briefing (relevant nodes + open threads), writes the next chapter, then self-critiques and revises it against the outline, canon, and style rules before saving.
+1. **Say "new story"** → the `story-setup` skill runs.
+2. It asks you questions (type, fandom, genre, themes, mode, pacing) and, for fanfiction, the divergence point.
+3. It crawls the fandom wiki for deep research — characters, world, power systems, and real quotes to ground each voice.
+4. It builds a memory graph and a full plan with arcs, chapter outlines, and interwoven sub-event threads (so multiple storylines stay live at once).
+5. **Say "next chapter"** → the `write-chapter` skill runs.
+6. It loads memory from the graph, locks un-butterflied events to canon, blueprints scene weights, drafts, then runs a critic pass, a **humanize (de-perfect) pass**, and a final read before saving.
 7. You approve or request a rewrite. Repeat.
 
 ## Story Modes
 
-- **Companion Writer** (default) — You write the first draft of each chapter; the agent refines it and fills only the sections you mark, acting as a co-writer and live knowledge base. All creativity stays with you.
-- **Here for the Ride** — Continuous storytelling. The agent writes each chapter from the plan; you approve or request rewrites.
+- **Here for the Ride** (default) — The system writes each chapter from the plan; you approve or request rewrites.
 - **Interactive** — Each chapter ends on a decision point. You pick what happens next.
+- **Companion Writer** — You write the first draft of each chapter; the system refines it and fills only the sections you mark, acting as a co-writer and live knowledge base. All creativity stays with you.
 
 ## Project Structure
 
@@ -48,8 +50,9 @@ books/<story-name>/
 ## Knowledge Graph
 
 Research and evolving story state live in a per-story SQLite knowledge graph instead of loose
-markdown files. This keeps details searchable and connected while saving tokens: the agents
-load only the few nodes relevant to a chapter.
+markdown files. The graph is the story's **memory** (what must still be true many chapters later),
+not a chronicle of events — `summary.md` is the chronicle. This keeps details searchable and
+connected while saving tokens: `write-chapter` loads only the few nodes relevant to a chapter.
 
 - **Nodes** (character, location, faction, item, event, ability, concept, arc, thread) hold
   small metadata; full details live in `graph/nodes/<id>.md`.
@@ -61,7 +64,7 @@ load only the few nodes relevant to a chapter.
   duplicates impossible. Run `node .github/scripts/graph.mjs schema` to see the full type list.
 - **`recap`** assembles a compact per-chapter briefing in one call — the relevant `focus` nodes,
   their connections, one-hop neighbours, and every open `thread` and `arc` (metadata only, no
-  bodies) — so the runner grounds a chapter fast without loading the whole graph:
+  bodies) — so `write-chapter` grounds a chapter fast without loading the whole graph:
   ```
   node .github/scripts/graph.mjs recap --story <slug> --query "people, places, terms" [--ids id1,id2]
   ```
@@ -76,7 +79,7 @@ markdown details and connections. Since the reader is a static site, the build t
 
 ## Requirements
 
-- **Graph scripts** — Install once so the agents can manage the knowledge graph:
+- **Graph scripts** — Install once so the skills can manage the knowledge graph:
   ```
   cd .github/scripts && npm install
   ```
@@ -88,11 +91,11 @@ markdown details and connections. Since the reader is a static site, the build t
 
 ## Key Design Decisions
 
-- **Wiki-first research.** Fandom wikis are the primary source, not general internet searches. The setup agent crawls individual wiki pages for characters, locations, and systems in full.
-- **Sub-event interweaving.** The plan decomposes each key event into sub-events and distributes them across chapters so 2-3 storyline threads stay live at once, building cross-chapter suspense instead of resolving one event per chapter. Threads are tracked as `thread` nodes in the graph.
-- **Critic & revision pass.** Before saving, the runner self-critiques each draft against the outline, continuity/canon, character voice, and anti-slop rules, classifies issues as RE-WRITE / POLISH / OK, and iterates until zero deviations and zero em dashes remain.
-- **Compact graph briefing.** The runner grounds each chapter from a single `recap` call (relevant nodes + open threads) rather than loading every research file, keeping context tight.
-- **Scene weight system.** Before writing, the runner classifies every scene as Heavy / Medium / Light / Skip to avoid the "everything sounds the same" problem.
-- **Tonal variation.** Not every scene is dramatic. Chapters decompress after big moments, let characters be bored, and include throwaway details that make prose feel human.
-- **Character voice files.** Each character node records exact quotes and speech patterns so dialogue doesn't sound generic.
-- **Strict anti-AI-slop rules.** Banned word lists, banned sentence patterns, and structural variety requirements to keep prose from reading like default LLM output.
+- **Skills, not agents.** Each capability is a skill under `.github/skills/`, auto-invoked by its description and run inline in the conversation so context is never lost to a subagent handoff.
+- **Graph = memory, not chronicle.** The graph stores only what must still be true many chapters later (relationships, inventory, world-state, knowledge). A Graph Worthiness Test keeps it small; `event` nodes are reserved for major canon-divergence anchors. Per-chapter history lives in `summary.md`.
+- **Canon lock.** For fanfiction, events the protagonist hasn't changed flow like the source; only deliberate divergences differ, tracked as `au` nodes with `diverges_from` edges.
+- **Grounded, tracked voice.** Each character's voice is built from verbatim source dialogue and a Voice Evolution log tracks how it legitimately changes over time, so dialogue sounds like the character instead of a generic narrator.
+- **Write then de-perfect.** After drafting, the `humanize-prose` pass makes the prose less perfect on purpose — killing the "X, not Y" antithesis tic (the top-priority ban), em dashes, over-detailed fights, and risk-setting monologues, while adding human texture.
+- **Wiki-first research.** Fandom wikis are the primary source; `story-setup` crawls individual wiki pages for characters, locations, and systems in full.
+- **Sub-event interweaving.** The plan decomposes each key event into sub-events distributed across chapters so 2-3 threads stay live at once, tracked as `thread` nodes.
+- **Scene weight system.** Before writing, every scene is classified Heavy / Medium / Light / Skip to protect pacing and keep emotion, not choreography, at the center.

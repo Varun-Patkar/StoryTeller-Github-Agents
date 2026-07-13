@@ -113,9 +113,9 @@ export function neighbors(slug, id, opts = {}) {
 }
 
 /**
- * Assemble a compact "chapter briefing" for the story-runner: the few nodes relevant to
+ * Assemble a compact "chapter briefing" for the write-chapter skill: the few nodes relevant to
  * the next chapter, how they connect, and the story spine (open threads + arcs). This is
- * a token-light bundle (metadata only, no markdown bodies) so the runner can ground a
+ * a token-light bundle (metadata only, no markdown bodies) so the writer can ground a
  * chapter in one call instead of many search/get-node/neighbors round-trips. Fetch full
  * bodies with `get-node` only for the handful of nodes that actually need deep detail.
  *
