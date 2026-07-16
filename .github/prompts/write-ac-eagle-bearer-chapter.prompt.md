@@ -9,9 +9,10 @@ skill. Do everything yourself in this conversation (the skills are inline; there
 
 ## Order of operations
 
-1. **Re-anchor on the target voice.** Read both gold-standard samples in full first:
-   - [sample-01-eagle-of-alamut.md](../../.github/skills/write-chapter/references/samples/sample-01-eagle-of-alamut.md)
-   - [sample-02-eagle-of-alamut.md](../../.github/skills/write-chapter/references/samples/sample-02-eagle-of-alamut.md)
+1. **Re-anchor on the target voice.** Read the gold-standard samples in full first:
+   - [sample-01-scholars-system.md](../../.github/skills/write-chapter/references/samples/sample-01-scholars-system.md)
+   - [sample-02-scholars-system.md](../../.github/skills/write-chapter/references/samples/sample-02-scholars-system.md)
+   - [sample-03-scholars-system.md](../../.github/skills/write-chapter/references/samples/sample-03-scholars-system.md)
 2. Ground yourself in the story files:
    - [config.md](../../books/new-game-plus-the-eagle-bearer/config.md)
    - [plan.md](../../books/new-game-plus-the-eagle-bearer/plan.md)

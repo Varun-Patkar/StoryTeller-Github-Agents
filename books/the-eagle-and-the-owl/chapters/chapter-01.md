@@ -1,247 +1,158 @@
 # Chapter 1: The Last Experiment
 
-The field held steady for eleven seconds.
+The field held for eleven seconds. I know the number because eleven was a lab record, and because I spent the last two of those seconds congratulating myself, which is as fair a summary of my life as any.
 
-I remember that because eleven seconds was a lab record, and because I spent the last two of them congratulating myself.
+The rig took up most of the clean room. Its cables ran under the raised floor, all of them except the temporary sensor leads I'd run myself that week, and those crossed the last few feet under rubber covers that never sat flat no matter how many times I pressed them down. There was a coffee mug on the bench by the isolation controls. Mine. The overnight team had gone home at midnight once the automated sequence started, because I'd told them I would watch it alone, the way I told everyone I did my best work alone. At fifty-one it was still half true and still mostly a thing I said so no one would stand behind me while I worked.
 
-The rig filled most of the clean room. Most of its cables ran under the raised floor. The temporary sensor leads crossed the last few feet under rubber covers that never sat quite flat. Someone had left a coffee mug beside the isolation controls. Mine, probably. The overnight team had gone home at midnight after the automated run began.
-
-At fifty-one, I still did my best work alone. That was what I told people.
-
-The object in the containment ring had come out of a survey site in Turkey. A dull metal sliver, warm to the touch, though I had only made that mistake once. It broke every instrument we pointed at it in a slightly different way.
-
-The board knew it as a battery prototype. Three years of tests had given me pages of data and no useful answer.
+The object in the containment ring had come out of a survey site in Turkey three years earlier. A dull sliver of metal no longer than my thumb. I'd handled it bare-handed exactly once, that first week, before I understood what I had; it ran warm against my palm the way nothing that small and that dead has any business running warm, and I never touched it with skin again. Every instrument I pointed at it broke in a slightly different way. The board called it a battery prototype, because that was a word investors understood. Three years of tests had given me a cabinet full of data and no honest answer.
 
 On the eleventh second, the sliver turned gold.
 
-I reached for the cutoff. The system had already started an automatic shutdown, but every reading went bad before the field could collapse.
+I reached for the cutoff. The system had already started its own shutdown, some reflex buried down in the safety logic, but every reading went to garbage before the field could fall. My ears filled. The glass of the containment shield went from clear to white like a held breath let go all at once.
 
-Then the glass went white.
+There wasn't much time after that, and none of it was useful. I remember the taste of blood at the back of my throat. I remember reaching for the cutoff a second time anyway, as though the machine might be moved by my sudden change of heart. My sister had called that afternoon, and I'd watched the phone go on ringing on the bench and let it ring out, the way I'd been letting it ring out for a year now, and the last clear thing I thought was that I should have picked up.
 
-There was no useful amount of time after that. I remember the taste of blood. I remember trying to reach the cutoff after all, as if the machine might be impressed by my change of heart.
-
-My sister had called that afternoon.
-
-I'd watched the phone ring.
-
-The field came through the glass and everything stopped.
+Then the field came through the glass and the world stopped.
 
 ---
 
-Salt water shoved itself down my throat.
+Salt water forced its way down my throat and I came up choking on it.
 
-I kicked. My foot struck sand, slipped, found it again. I got my face above the surface long enough to cough and a second wave rolled over the back of my head.
+I kicked. My foot hit sand, slipped, found it again. I got my mouth above the surface long enough to cough out half the sea before a second wave rolled over the back of my head and shoved me down again. By the time I crawled clear of the surf I was on my hands and knees with my nose bleeding into the wet sand, spitting until there was nothing left to bring up. A small crab crossed in front of my fingers and dropped into its hole without the least interest in me.
 
-By the time I crawled clear, my nose was bleeding. I stayed on my hands and knees and spat into the sand until there was nothing left. A little crab touched my wrist and vanished into a hole.
+Then I looked at my hand, and the day stopped making any sense.
 
-My wrist was wrong.
+The wrist was thin. Brown. Small enough that I could have circled it with two fingers, if the other hand had been the right size, which it wasn't either. I sat down hard in the shallows. The rest of me matched. Short legs under a scratchy wool tunic gone black with water. Bare feet, the soles already hard. Knobbed knees, one of them wearing a week-old scab I had no memory of earning. The white scar I'd carried across a knuckle since I was thirty was gone, the skin over it smooth and unmarked, and I turned the hand over twice waiting for some seam in the trick to show itself.
 
-Thin. Brown. Small enough that I could circle it with two fingers.
+Nothing moved. I threw up seawater again, and this time it was mostly panic.
 
-I sat down hard.
+For a while I did the only thing the body would let me do, which was breathe. Four counts in, four out, the way you are taught. My lungs ignored the count and did as they pleased. The sun had already warmed the sand under my legs but I couldn't stop shaking, and every time I looked down there were the small brown hands again, resting on a child's knees.
 
-The rest matched. Short legs under a rough wool tunic. Bare feet. Knobby knees with old scabs on them. My left hand had lost the white scar across the knuckle. I turned it over twice, waiting for the trick to show itself.
+So I made myself look at the rest of it instead. A line of white cliffs stood back from the beach, scrub hanging on wherever a root could find a crack in the stone. The tide had left a dark stripe of weed and shell and driftwood along the sand. A gull dropped down near the waterline and worried at a strip of kelp. There was no road anywhere. No wire, no glass, no far-off engine noise sitting under everything the way there always is once you know to listen for it. I caught myself scanning the tideline for a bottle cap, a scrap of plastic, anything at all, and there was none, and the nothing was its own kind of answer.
 
-It didn't.
+I got halfway to my feet before the beach tilted and put me back down. My hand came down on a rock to catch myself, and blue light bloomed up over it.
 
-I threw up seawater again.
-
-For a while I concentrated on breathing. Four in, four out. My lungs refused the count and did whatever they liked. The sun had warmed the sand under my legs, but I couldn't stop shivering.
-
-A gull landed near the water and pulled at a strip of weed.
-
-I looked around for a road, a building, anything. The beach sat under a line of white cliffs. Scrub grew wherever it could get a root into the stone. The tide had left shells, weed, and driftwood in a dark stripe along the sand.
-
-I kept looking for a bottle cap.
-
-I tried to stand and made it halfway before the beach tipped sideways. My hand found a rock. Blue light appeared over it.
-
-I jerked back and fell on my rear.
-
-The light stayed where it was, a flat pane hanging in front of me.
+I flinched away and landed on my backside in the sand. The light stayed where it was, a flat pane of it hanging in the air at the level of my eyes.
 
 > **SYSTEM ONLINE.**
 >
 > **Host viable. Welcome.**
 
-I blinked. It stayed.
+I stared at it. It stared back, patient, and didn't go anywhere when I blinked.
 
 > **Isu ancestry detected: 1.0%**
 >
 > **Sixth sense: dormant.**
 
-I knew the interface. Different logo, same design. I had seen versions of it across several Assassin's Creed games, usually at two in the morning with takeout cooling beside me. My playtime across the series was embarrassing. Three full runs through Odyssey alone.
+I knew the shape of it. The logo was wrong and the frame was wrong, but the bones underneath were familiar the way a stranger's handwriting can still spell out your own name. I'd seen versions of that panel on a screen more times than I would ever have admitted out loud, in a life and a body I no longer had. The word for it arrived with a lurch, the way a face does in the half-second before you place it, and behind the word came a cold, precise understanding of exactly where a beach and a wool tunic and a panel like this one were going to leave a person.
 
-I reached for the panel. My fingers passed through, and for one second the beach changed.
+I reached out and put my fingers through the panel, and for one second the whole beach changed.
 
-The crab shone under the sand. The gull was a fleck of gold over the water. Something ran through a crack in the rocks farther up the beach, too quick for me to follow. I turned my head and lost it.
-
-The colors vanished. A headache arrived behind my right eye.
+The crab burned bright under the sand where it had hidden. The gull was a fleck of gold moving over grey water. Something small ran through a crack in the rocks farther up the shore, too fast to fix on, lit gold like the rest, and by the time I turned my head it was already gone. Then the colour drained back out of the world and left an ache sitting behind my right eye.
 
 > **Sixth sense: dormant.**
 
-I thought about Eagle Vision. Then I thought about brain damage, hallucinations, and the chance that my dying mind had built all this from whatever happened to be lying around in long-term memory.
+I made myself think the sensible words too, the ones a serious man was supposed to reach for first. Brain damage. Oxygen starvation. A dying mind stitching a story out of whatever happened to be lying closest when the lights went out, and this was what had been closest. It was a kinder theory in a lot of ways. I pinched the inside of my arm hard enough to leave a mark, and it hurt exactly as much as it should have, which proved almost nothing and annoyed me all the same.
 
-I pinched my arm.
+_Show me,_ I thought at the panel, half expecting it to do nothing.
 
-It hurt.
-
-That proved very little, which annoyed me.
-
-*Show status*, I thought.
-
-The panel widened.
+It widened.
 
 > **Theron**
 >
 > **Isu ancestry: 1.0%**
->
 > **Strength: 2**
->
 > **Agility: 3**
->
 > **Endurance: 2**
->
 > **Perception: 4**
->
 > **Intelligence: 19**
 
 Theron.
 
-The name felt familiar in the vague way a word can feel familiar after waking. I couldn't tell if it belonged to the body or if the System had picked it. I tried to remember my old first name and got Ambrose instead, stamped across a tower, a set of patents, a company email signature.
+The name settled over me and almost fit, the way a half-known word feels when you wake with it already in your mouth. I couldn't tell whether it had come with the body or whether the panel had simply handed it to me. When I reached for my own name, the old one, the first one, it wasn't there. What came up instead was Ambrose, stamped down the side of a tower and along a row of patents and at the foot of ten thousand emails, the name the world had used for me. The other one, the one my sister used, the one she would have said on the message that afternoon, was just gone. I reached for the sound of her saying it and came back with nothing.
 
-My sister had used my first name on the voicemail.
-
-I couldn't hear it anymore.
-
-I closed the panel and sat with my hands between my knees until the shaking eased.
+I closed the panel and sat with my hands between my knees until the shaking dropped to something I could keep out of sight.
 
 ---
 
-The statue settled the question.
+I found the statue when I climbed above the tide line, and it settled the last of the argument for me.
 
-I saw it when I climbed above the tide line. A bronze man stood on the far shoulder of the island, absurdly large even at that distance, one arm lifted over the sea. Zeus had been a synchronization point in the game. I remembered climbing somewhere rude on the statue for an achievement.
+A bronze giant stood on the high shoulder of the island, one arm lifted, large enough to read even at that distance. I had climbed it once, or the memory of climbing it belonged to some evening in the old life, a controller going warm in my hands and the hour past sane. Zeus. Behind him the land rose into a mountain that could only be Ainos. I said the island's name out loud, mostly to hear a human voice, even a child's thin one.
 
-The mountain beyond it had to be Ainos.
+"Kephallonia."
 
-"Kephallonia," I said.
+A goat bell answered somewhere up the cliffs, and nothing else did.
 
-Nothing answered. A goat bell clanked somewhere above the cliffs.
+I tried to pin the year and couldn't. The place came back to me in fragments, the way a thing does when you've walked it a hundred times but never once had to say the date of it aloud: Sami down to the east, Markos and his vineyard, the Cyclops and the debts he collected, a village up the north coast I knew to keep well clear of. The markers were easy. The years had lived in menus and in wiki pages I'd stopped opening a decade ago. What I did know, and the knowing sat heavy and strange in a child's chest, was that a girl would come to this island young, the same as I had. Kassandra. Whether she'd washed up yet, whether she was somewhere on Kephallonia at that very moment with sand drying in her hair, I had no way at all to tell.
 
-I tried to place the year and couldn't. The island map came back in pieces: Sami to the east, Markos's vineyard, the Cyclops, a plague village I needed to stay away from. Quest markers were easy. Dates had lived in menus and wiki pages I read years ago.
+I stood too fast again and had to fold over with my head between my knees until the black spots thinned out. When they did I was still on the beach and still eight years old, and none of it had turned out to be a fever after all.
 
-Kassandra would come here as a child. I knew that much.
-
-Had she arrived already?
-
-I stood too fast, took three steps, and had to crouch with my head between my knees. When the black spots cleared, I was still on the same beach and still eight years old.
-
-Fine.
-
-Water first. Shelter. A believable answer when somebody asked where my parents were. After that I could work out the year.
-
-If I slipped, I'd say I'd seen it in a vision. People here believed in those.
-
-The game would stay in my head.
+Fine. Water first, then a roof, then a story ready for the first adult who asked where my parents were. The year could wait on all of that. And if I ever slipped, if I ever named a thing before it happened in front of the wrong person, I would call it a vision. People here believed in visions. It was the kind of lie that only improves the longer you leave it alone. The rest of what I carried, the screens and the controller and the true name for what all of this was, could stay behind my teeth for the whole of whatever life this turned out to be. That part I decided sitting in the sand, and I never once went back on it.
 
 I followed the beach north.
 
-My feet hurt almost at once. Pebbles worked into the soft skin under my toes, and the wet tunic rubbed at my neck.
+My feet found every sharp thing on it. Pebbles worked up under my toes, the stiff tunic sawed at the back of my neck, and the sun leaned on me until the wool dried hard and started to itch against my skin. A child's body, it turned out, felt everything a good deal closer to the bone. By the time the sand gave out and a goat track started climbing inland, I was light-headed with hunger and thirst both, and I'd stopped composing clever explanations and started just setting one small foot down in front of the other.
 
-Ahead, a boy sat on a rock throwing stones into the water. Goats wandered through the scrub behind him. He was close to my new age, with a stick across his lap and a scab down one shin.
+There was a boy sitting on a rock where the track met the scrub, throwing stones at the water with a herd of goats picking through the brush behind him. He was near my new age, a stick across his knees, a scab down one shin to match the one on mine. I slowed.
 
-I slowed.
+He threw another stone. It skipped once and sank.
 
-He threw another stone. It skipped once.
+"Sami?" I said.
 
-"Sami?" I asked.
+"Down past the olive trees." He didn't look around. "Below the temple."
 
-"Follow the track past the olive trees," he said. "Sami is below the temple."
-
-He spoke Greek. I understood every word.
-
-That stopped me for a few seconds. The boy gave me a suspicious glance, decided I was dull, and went back to his stones.
-
-I wanted to ask the year. I couldn't remember how ancient Greeks counted years, which seemed like something three playthroughs ought to have covered.
+He said it in Greek, and I understood every word, and heard my own question come back out of my own mouth in the same tongue. That stopped me cold for a second. Whatever had rebuilt me from the feet up had done the language too, quietly, without asking my leave. The boy took my staring for slowness, decided I wasn't worth the effort, and went back to his stones. I wanted to ask him what year it was. I had no notion of how a boy on this coast would even count one, and three runs through this place had never taught me, so I let it lie.
 
 "Thanks," I said.
 
 He shrugged.
 
-The track was hot and steep. I followed it anyway.
+---
 
-At the top, the System line waited in the corner of my sight.
+The track ran hotter and longer than the boy had made it sound. Sami didn't show itself until I came around the last shoulder of rock and found the town spilled down the hillside toward a harbour crowded with fishing boats, a temple keeping watch from the rise above the roofs. People glanced at the barefoot child walking in alone off the coast road, decided I was someone else's trouble, and went back to their nets and their baskets.
 
-> **Isu ancestry: 1.0%**
+I stopped at a fountain in the first square and drank too fast and brought it straight back up. I waited, drank slower, and that stayed down. Somewhere close by a man was losing an argument about olives.
 
-I dismissed it and kept walking. The first bend hid the sea behind the cliffs.
+"Half of them were bruised before they ever reached my cart," he was saying. "You'd have me pay full price for fruit already turning?"
 
-Sami was farther than the boy had made it sound.
+"You dropped the jar."
 
-By the time I reached the first houses, the sun had dried my tunic stiff. The town ran downhill toward a harbor crowded with fishing boats. A temple watched from the rise above it. People stared at the barefoot child coming in alone, then went back to their baskets and nets.
+"I lowered it. With feeling. There's a difference, and a fair man would grant me the difference."
 
-I stopped beside a fountain and drank too quickly. The water came back up. I waited, drank again, and kept that down.
+I knew the voice before I found the face for it. Markos stood over a cracked clay jar with a dark stain of oil spreading into the dust around his sandals, younger than the version filed somewhere in my memory, the beard shorter, the bright cloth already thrown over one shoulder. He wore the exact look of a man who has never once believed that the next sentence out of him won't fix everything.
 
-Someone nearby was arguing about olives.
+He caught me watching and pointed a finger my way. "You. Boy. You saw the whole thing."
 
-"Half were bruised before they reached my cart," a man said. "You expect me to pay full price?"
+I had seen none of it. The seller turned to look at me too, waiting on it.
 
-"You dropped the jar," the seller replied.
+I looked at the jar instead. Old oil had darkened the clay near the base, a stain set in deep, the sort that takes days to soak that far into fired clay. "It's cracked near the bottom," I said. "It was leaking before it ever hit the ground."
 
-"I lowered it with enthusiasm. There is a difference."
+That was a guess dressed up as a judgement, but the stain made it a good one. The seller swore, hauled the jar up to squint at it, and told Markos he could take it at half and be gone. Markos paid before the man had time to reconsider a word of it.
 
-I knew the voice before I found the face.
+"A sharp eye," he said to me, pleased already, the loss halfway turned into a story he'd won. "A very useful thing in a boy. Where are your sandals?"
 
-Markos stood beside a cracked clay jar with oil darkening the dust around his sandals. He was younger than the version I remembered from the game. The beard was shorter. The bright cloth over one shoulder was already there, along with the expression of a man certain that another sentence would fix everything.
-
-He caught me staring.
-
-"You," he said. "You saw what happened."
-
-I had seen none of it.
-
-The seller looked at me. "Well?"
-
-"The jar is cracked near the base," I said. "It was leaking before it hit the ground."
-
-That was a guess. The old oil stain around the crack made it a good one.
-
-The seller lifted the jar, swore under his breath, and told Markos to take it for half. Markos paid before the man could reconsider.
-
-"A sharp eye," he said to me. "Very useful. Where are your sandals?"
-
-"I don't have any."
+"Don't have any."
 
 "Your parents?"
 
-I looked toward the harbor. "The ship sank."
+I looked toward the harbour and the boats. "The ship went down."
 
-His smile faded. He asked the ship's name.
+The smile came down a notch. He asked the ship's name, and I understood too late that I hadn't thought to invent one, and after a beat too long I said I didn't know it. He studied me for a moment with something more careful sitting behind all the patter. I waited for the next question, the one that would catch me out.
 
-I hadn't prepared one.
-
-"I don't know."
-
-Markos studied me for a moment. I waited for another question.
-
-"Can you carry that?" He pointed to the jar.
+It didn't come. He nudged the jar toward me with the side of his foot instead. "Can you carry that?"
 
 "Probably."
 
-"Good. I have a vineyard, food, and a roof that only leaks when it rains. You need all three. In return, you help with small things. Nothing dangerous. Everybody benefits."
+"Good." He said it as though we'd just agreed on something much larger than a jar. "I've a vineyard up the hill. Food, a roof that only leaks when it rains, and work that won't kill a boy your size. You look like someone in want of all three, and I'm a man in want of a pair of hands he doesn't have to pay much for. Everybody benefits."
 
-I picked up the jar. It was heavier than it looked, and oil ran over my forearm.
+I bent and got my arms around the jar. It was heavier than it had any right to be, and the oil ran cold down my forearm, and I made it about three steps before Markos sighed and lifted it off me himself.
 
-Markos took it from me.
+"We'll start you on the bread," he said.
 
-"Perhaps we begin with the bread," he said.
+He bought a loaf at the next stall, tore it in two, and gave me the larger half, which I noticed and didn't mention. I ate it walking. He talked the whole way up the hill, about the vineyard and the coming harvest and three separate ventures that all seemed to turn on money he plainly didn't have yet, and I let the words run over me and gave him nothing worth keeping in return.
 
-He bought a loaf from the next stall and tore it in half. I ate while we climbed the road out of Sami. Markos talked about the vineyard, this year's harvest, and three separate business opportunities that seemed to involve money he didn't have.
-
-I listened.
-
-At the top of the hill, he pointed toward rows of vines on the slope below.
+At the top he stopped and pointed down the far slope, where rows of vines ran green across the hillside in the last of the light.
 
 "Home," he said. "For now."
 
-The word sat badly. I followed him down anyway.
+The word landed wrong, in a way I had no intention of explaining to a stranger. I thought of a bench and a mug and a phone I'd let ring out, all of it gone to light on the far side of a broken sliver of metal, none of it anywhere I could ever reach again. Then the small body I was wearing decided, plainly and stupidly, that it was hungry once more. I picked myself up out of it and followed Markos down the hill toward the vines.

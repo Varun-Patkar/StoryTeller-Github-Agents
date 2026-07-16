@@ -4,7 +4,7 @@
 
 Two-part project: a set of VS Code/Copilot **skills** that write webnovel-style fiction, and a static **reader** site for browsing the published stories.
 
-- Skills: `.github/skills/` — `storyteller` (router), `story-setup`, `write-chapter`, `character-voice`, `humanize-prose`. Auto-invoked by description; work stays inline except for `write-chapter`'s mandatory independent AI-ness review subagent.
+- Skills: `.github/skills/` — `storyteller` (router), `story-setup`, `write-chapter`, `character-voice`, `humanize-prose`. Auto-invoked by description; work stays inline except for `write-chapter`'s mandatory fresh no-bias review subagents (logic/common-sense, whole-chapter adversarial, canon web-check, AI-ness).
 - Reader: `reader/` — Astro static site that reads `books/` at build time
 - Stories: `books/<slug>/` — file-system story storage; research/state in a per-story knowledge graph
 
@@ -74,8 +74,8 @@ The reader includes an interactive graph viewer at `/brain/<slug>/` ([BrainViewe
 
 ## Skill Conventions
 
-- Skills live in `.github/skills/<name>/SKILL.md`, auto-invoked by their `description`. Drafting and decisions run inline to preserve context; `write-chapter` delegates only its independent AI-ness review, and the subagent never edits.
-- `write-chapter` runs a pipeline: load memory → canon lock → voice prep → scene blueprint → draft → critic → humanize → **independent AI-ness review** → **de-polish** → save → memory diff.
+- Skills live in `.github/skills/<name>/SKILL.md`, auto-invoked by their `description`. Drafting and self-revision run inline to preserve context; `write-chapter` delegates its review gates to fresh no-bias subagents that read the chapter cold and never edit.
+- `write-chapter` runs a pipeline: load memory → canon lock → voice prep → scene blueprint → draft → critic → humanize → sample-alignment → **fresh no-bias subagent reviews (logic/common-sense, whole-chapter adversarial, canon web-check, AI-ness)** → **rewrite against findings** → save → memory diff.
 - Web research prefers **webiq** (`webiq-mcp` tools); SearXNG then Playwright are fallbacks.
 - Story scaffolding is deterministic via `.github/scripts/create-story-structure.mjs`.
 - The graph is read/written by both `story-setup` (research) and `write-chapter` (per-chapter memory diff) via `graph.mjs`.

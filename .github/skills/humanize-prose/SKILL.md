@@ -34,8 +34,11 @@ Run this as the final stage of `write-chapter`, or standalone on any prose the u
      turn, and never inside a single sentence as description. When in doubt, cut it.
 2. **Em dashes (—).** Zero. Use a comma, a period, an ellipsis (`...`), or a new sentence.
 3. **Uniform paragraph rhythm.** If every paragraph is 3-4 lines of similar length, break it up.
-   Real prose has one-line beats, the occasional single word on its own line, and then a longer
-   breath. Look at the writing samples for the target texture.
+   Real prose varies. But do not overcorrect into a stack of isolated one-line paragraphs: the
+   writing samples almost never leave a single short sentence alone as its own paragraph. Get your
+   rhythm mostly from *variation inside* paragraphs (short sentence, short sentence, then a longer
+   one that wanders). Reserve a standalone one-line beat for a genuine gut-punch, and use it rarely.
+   Look at the writing samples for the target texture.
 4. **Over-explained fights and risk-setting.** See "Combat & competence" below.
 5. **Micro-analysis / over-explanation.** The narrator explaining a feeling three ways, or
    walking through a character's risk calculus step by step. State it once, trust the reader, move.

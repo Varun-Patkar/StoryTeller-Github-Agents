@@ -1,13 +1,15 @@
 ---
 name: write-chapter
-description: "Write or rewrite the next chapter of an existing story in books/<slug>/, end to end. USE FOR: 'next chapter', 'continue the story', 'run a session', 'write chapter N', 'rewrite this chapter', or continuing any story that already has config.md + plan.md. Runs the full pipeline: load memory from the graph, lock to canon, blueprint scene weights, draft, gate character voice, self-critique, humanize (de-perfect), save, then update memory (summary chronicle + graph memory-diff). One session = one chapter. Keywords: next chapter, continue story, write chapter, story session, rewrite chapter."
+description: "Write or rewrite the next chapter of an existing story in books/<slug>/, end to end. USE FOR: 'next chapter', 'continue the story', 'run a session', 'write chapter N', 'rewrite this chapter', or continuing any story that already has config.md + plan.md. Runs the full pipeline: load memory from the graph, lock to canon, blueprint scene weights, draft, gate character voice, self-critique, humanize, align to the writing samples, then hand the chapter to fresh no-bias subagent reviewers (logic/common-sense, whole-chapter adversarial, canon web-check, AI-ness) and rewrite against their findings, save, then update memory (summary chronicle + graph memory-diff). One session = one chapter. Keywords: next chapter, continue story, write chapter, story session, rewrite chapter."
 ---
 
 # Write Chapter
 
 One session writes exactly **one** chapter. The job is a natural, human-sounding chapter that
 fits the plan, stays true to canon, sounds like its characters, and leaves the story's memory
-updated. This runs inline (no subagents) so context is preserved end to end.
+updated. Drafting and self-revision run inline so context is preserved. The review gates in Stage 7
+run in **fresh subagents with no memory of the drafting**, on purpose, so they read the chapter
+cold and cannot rationalize their own choices.
 
 Before drafting, skim the gold-standard samples in
 [references/samples](./references/samples/) to re-anchor the target voice. Do this every session.
@@ -111,9 +113,15 @@ epilogue may finish below the configured minimum when its planned content is com
 independent AI-ness reviewer identifies length-driven over-explanation or artificial expansion.
 Record the intentional exception in the session result.
 
-## Stage 7 — Five review passes (before saving)
+## Stage 7 — Review and rewrite (before saving)
 
-Run these in order on the draft. Iterate until clean.
+The draft is a first draft. It is assumed to be flawed. Stage 7 runs in three phases: fix what you
+can see yourself (7A), then hand the chapter to independent reviewers who read it cold (7B), then
+rewrite against everything they found (7C). Do not skip to saving after 7A; the self-review is
+biased toward the choices you just made, which is exactly why the prologue shipped with logic
+errors and one-line-paragraph sprawl.
+
+### 7A — Self-revision (inline)
 
 1. **Critic pass** — adversarially audit against:
    - *Outline fidelity*: covers the plan's beats for this chapter; no drift into later chapters, no
@@ -123,33 +131,79 @@ Run these in order on the draft. Iterate until clean.
    - *Character voice*: run the Stage-3 voice gate (the `character-voice` skill). Rewrite off-voice
      lines.
    Classify each flag: RE-WRITE (must fix), POLISH (fix in place), OK (false alarm). Fix all
-   RE-WRITE and POLISH. Repeat until zero RE-WRITE issues.
+   RE-WRITE and POLISH.
 2. **Humanize pass** — run the `humanize-prose` skill on the draft. Zero tolerance for the
    "X, not Y" antithesis tic and em dashes; add human unevenness; deflate any over-detailed fight
-   or risk-setting; make sure there's room to breathe (chill beats).
-3. **Independent AI-ness review** — delegate the finished draft to a fresh subagent that did not
-  draft or revise it. Give it the chapter plus the anti-slop criteria and ask for an adversarial
-  review only; it must not edit. The reviewer must look beyond word bans for deeper generation
-  tells: polished aphorism density, rhetorical symmetry, repeated sentence templates,
-  meta-narrator self-explanation, redundant emotional interpretation, fake specificity,
-  trailer-ready imagery, immaculate motif callbacks, and an emotional arc that closes too
-  perfectly. Require quoted passages and severity-ranked findings. Never perform this gate as
-  self-review. If subagents are unavailable, stop and tell the user the mandatory independent
-  gate could not run.
-4. **De-polish pass** — use the independent findings to make the prose less composed and more
-  lived-in. Cut explanations the action already carries, most quotable capstone lines, repeated
-  rhetorical machinery, and overly complete callbacks. Prefer mundane specifics, imperfect or
-  unfinished thoughts, irrelevant observations, small misreadings, and unresolved texture.
-  Cutting is preferred to replacement. Preserve plot, canon, character, voice, and logical
-  behavior. Human unevenness belongs in cadence, phrasing, attention, and incomplete thoughts;
-  never add irrational actions, forced quirkiness, implausible dialogue, or deliberate grammar
-  and spelling errors as proof of humanity. Do not restore material merely to recover the
-  configured word count; natural length outranks padding.
-5. **Final read** — read it once as a reader after de-polishing. If you skim anywhere, cut or fix
-  that part. Confirm every independent RE-WRITE/POLISH finding was addressed or explicitly
-  rejected with a concrete reason.
+   or risk-setting; make sure there's room to breathe.
+3. **Sample-alignment pass** — open the gold-standard samples in
+   [references/samples](./references/samples/) and read the chapter beside them. Match their
+   texture and finish, and hit the configured word count:
+   - **Kill orphan one-line paragraphs.** The samples almost never leave a single short sentence
+     alone as its own paragraph. The draft's rhythm should come from *variation inside* paragraphs,
+     not from a stack of isolated one-liners. Fold most standalone lines back into the paragraph
+     around them. Keep a lone line only when it is a genuine gut-punch beat, and rarely.
+   - **Even out quality.** No stretch should read noticeably weaker than the rest. Scenes the plan
+     weighted Heavy/Medium get the samples' depth; thin or rushed passages get filled in with
+     concrete, grounded detail, not filler.
+   - **Hit the length.** Compare the draft's word count to `config.md` pacing (Stage 6). A prologue
+     that lands at half the configured minimum is under-written; deepen the weighted scenes until
+     it reaches range. Only allow an intentional short exception per Stage 6, and record it.
 
-Only after all five passes: save the file.
+### 7B — Independent adversarial reviews (fresh subagents, no bias)
+
+Run these as **separate subagents**, each in its own context window, each reading the chapter cold.
+This is mandatory and must never be done as self-review: you drafted it, so you cannot see its
+blind spots. Each reviewer is told to **assume real problems exist and to go find them**; a review
+that returns "looks good" has failed and must be re-run with a sharper mandate. Reviewers **report
+only, they never edit**. Run them in parallel. Give each subagent the full chapter text plus only
+the context that review needs.
+
+Each subagent returns **quoted passages + a severity-ranked list** (RE-WRITE / POLISH / OK) with a
+one-line reason per finding.
+
+- **Review 1 — Logic & common sense.** Mandate: *"This chapter contains logical and common-sense
+  errors. Find every one and explain why it breaks."* Hunt for: self-undercutting statements (e.g.
+  naming a thing as known fact, then implying it was learned only once), contradictions, impossible
+  or out-of-order sequences, broken cause and effect, physical impossibilities, characters knowing
+  or perceiving things they could not, numbers/time that don't add up, objects that appear or vanish
+  without cause. Quote each and state the correct version.
+- **Review 2 — Whole-chapter adversarial.** Mandate: *"This chapter has real problems across its
+  whole span. Tell me what is wrong and why."* Holistic craft: weak or generic opening, flat or
+  skippable scenes, unearned emotional beats, sagging pace, uneven quality between passages,
+  structural problems, anything that makes it read like mediocre AI fiction. Force it to name the
+  three weakest passages verbatim.
+- **Review 3 — Canon web-check.** Give it the fandom/source from `config.md` and the relevant
+  `canon`/`au` node facts. Mandate: *"Verify every source-world claim against canon and flag
+  anything wrong."* Use web research (webiq first; SearXNG/Playwright fallback) to check names,
+  places, dates, timeline order, character facts, and events. Flag anything invented, misremembered,
+  or contradicting canon **unless** an `au` node explicitly establishes the divergence. For each
+  flag, cite the canonical fact and its source.
+- **Review 4 — AI-ness review.** The generation-tell gate. Give it the anti-slop criteria and ask
+  for an adversarial review only. It must look beyond word bans for deeper tells: polished aphorism
+  density, rhetorical symmetry, repeated sentence templates, meta-narrator self-explanation,
+  redundant emotional interpretation, fake specificity, trailer-ready imagery, immaculate motif
+  callbacks, and an emotional arc that closes too perfectly. Require quoted passages and
+  severity-ranked findings.
+
+If subagents are unavailable, stop and tell the user the mandatory independent gates could not run.
+Do not fake them as self-review.
+
+### 7C — Consolidate and rewrite
+
+1. Merge all four reports. De-duplicate. Classify every finding RE-WRITE / POLISH / OK. For any OK
+   (rejected) finding, record a concrete one-line reason.
+2. **Rewrite the chapter** to resolve every RE-WRITE and POLISH finding. This is a real rewrite of
+   the affected passages, not a patch. Fix logic errors at the source. For a canon flag, either
+   correct it to canon or convert it to an explicit, node-backed AU divergence (and log it in the
+   plan's Canon Divergence Register + a graph memory diff in Stage 9).
+3. Re-run the Humanize and Sample-alignment passes (7A.2, 7A.3) over the rewritten sections so the
+   fixes don't reintroduce tells, one-line sprawl, or fall below length.
+4. **Final read** — read the whole chapter once as a reader. If you skim anywhere, fix that part.
+   Confirm every RE-WRITE/POLISH finding was addressed or explicitly rejected with a reason, no
+   "X, not Y" antithesis, no em dashes, no orphan one-line paragraphs, and the word count is in
+   range.
+
+Only after 7C: save the file.
 
 ## Stage 8 — Mode-specific finish
 
@@ -211,7 +265,9 @@ that they can start another session to continue.
   and a line in `summary.md` over either. A fact that fits an existing node body or the chronicle
   does not get its own node. Never node-ify one-off actions, travel, scenery, or passing beats.
   Merge duplicates on sight and keep the graph dense in edges, lean in nodes.
-- Never save a chapter that still has a "X, not Y" antithesis, an em dash, or an unresolved
-  RE-WRITE flag.
+- Never save a chapter that still has a "X, not Y" antithesis, an em dash, an orphan one-line
+  paragraph, an unresolved logic/canon flag, or an unresolved RE-WRITE flag.
+- Never skip the Stage 7B independent subagent reviews. They read the chapter cold, on purpose. If
+  subagents are unavailable, stop and tell the user rather than self-reviewing.
 - Always output the scene blueprint before drafting.
 - Always update summary.md (chronicle) and the graph (memory diff) after writing.
