@@ -1,264 +1,349 @@
 # Story Plan: The Eagle and the Owl
 
-## Overview
-A modern billionaire-engineer and lifelong Assassin's Creed fan dies in a failed experiment and wakes as an eight-year-old washing up on Kephallonia, one year before Kassandra. Armed with a game-like System (a climbing Isu-blood infusion) and total foreknowledge he passes off as "visions," Theron becomes Kassandra's pillar, partner, and love, rewriting the Odyssey into a save-everyone story. By chapter 30 they have dismantled the Cult, healed her family, killed the Isu Aletheia, become the Twin Immortals, and founded the Eclipse — the true Hidden Ones who keep the world balanced between chaos and order across the ages.
+Status: Draft
 
-## Cast
-- **Theron** (`character-theron`, original) — protagonist; reincarnated engineer, System-bearer, the "owl" (mind/strategist). Cover story for all foreknowledge: prophetic visions.
-- **Kassandra** (`character-kassandra`, canon) — second protagonist and love interest; the "eagle" (body/berserker), the Eagle Bearer.
-- **Markos** (`character-markos`) — surrogate father, schemer, found-family anchor.
-- **Phoibe** (`character-phoibe`) — found-family little sister; flagship save-target.
-- **Barnabas** (`character-barnabas`) — captain of the Adrestia; travel enabler.
-- **Alexios / Deimos** (`character-alexios`) — Kassandra's brainwashed half-brother; the great rescue.
-- **Aspasia** (`character-aspasia`) — the Ghost of Kosmos; primary human antagonist.
-- **Aletheia** (`character-aletheia`) — Isu antagonist of Atlantis; kill-target by ch30.
-- Supporting: Nikolaos, Stentor, Myrrine (`character-*`), Perikles, Sokrates, Herodotos, Hippokrates, Kleon, Brasidas, Elpenor, Xenia, Darius, Leonidas, Pythagoras, the Cyclops.
-- Deep-lore: Isu, Hermes Trismegistus, Aita, Phanes.
+This plan is open for revision. No chapter prose should be written until the user explicitly approves it and the status changes to `Approved`.
 
-## Canon Timeline (Fanfiction)
-Canon spine the story rides on (see `event-*`, `arc-*`):
-1. Kephallonia childhood under Markos → misthios career (Cyclops, Elpenor's contract).
-2. Megaris: confront Nikolaos, the Wolf of Sparta.
-3. Cult of Kosmos revealed; Deimos (Alexios) revealed.
-4. Athens: Perikles's symposium, the plague; **canon deaths of Phoibe and Perikles**.
-5. Finding Myrrine; Spartan homecoming; Stentor/Nikolaos.
-6. Cult campaign ("cutting the branches") → **the Ghost = Aspasia** reveal.
-7. Legacy of the First Blade: Darius and the first hidden blade (canon Natakas romance CUT).
-8. Fate of Atlantis: the Keeper, Aletheia, the Staff of Hermes, immortality.
+## Story Promise
 
-**Divergence point:** Kephallonia, at Theron's arrival (`event-therons-reincarnation`). He lands at age 8, one year before 7-year-old Kassandra. Everything he has not yet touched still flows like the source; every scene he is in is grounded in the real canon moment, then bent.
+Theron dies at eighteen after spending six years trapped in a failing body. He wakes in the drowned body of a six-year-old boy on Kephallonia, where seven-year-old Kassandra pulls him from the sea. Markos takes them both in. They grow from frightened children into partners, lovers, and eventually the immortal founders of Eclipse.
 
-**Per-chapter grounding rule (non-negotiable):** every chapter is anchored to the *actual* canon dialogue/events for that point in Odyssey (pull the real quest/scene), then diverged deliberately. This holds through ch30. After ch30 the grounding shifts to the AC Origins-era cast (Bayek/Aya etc.), where Theron and Kassandra are outsiders in someone else's canon.
+This is a feel-good power fantasy about getting the life Theron lost. Conflict exists, but the story favors rescue, family, discovery, progress, and earned happy outcomes. Theron and Kassandra save the people canon abandoned while allowing humanity to choose its own future.
 
----
+## Tone And Format
 
-## Arc 0: The Player (Prologue) — `arc-arc-0-the-player`
-### Synopsis
-Establish Theron, his death, his reincarnation, and the System. Set the tone (dry modern mind vs. ancient world) and plant the secret he will never tell.
-### Setting
-A modern lab (brief) → the shore of Kephallonia (`location-kephallonia`).
-### Chapters
-- **Chapter 1** — *The last experiment / first breath.* Theron's death and waking as a child in the surf; first System panel; privately he settles on "visions" as the story he'll tell if he ever slips. He follows the coast to Sami, where Markos finds the shipwrecked boy and takes him home to the vineyard, presenting the kindness as a practical arrangement in which "everybody benefits." Theron tells Markos only that his ship sank; the visions remain private. Advances: `thread-the-cover-story-of-visions` (internal only), `ability-the-system`, found family. Diverged (original prologue).
-### Key Events
-- `event-therons-reincarnation`.
-### Thread Map
-- Cover Story of Visions: internal setup Ch1 only. He does NOT explain the visions to anyone here; the admission to Kassandra comes much later (Arc 8), when she finally asks.
-- Theron's Ascension: setup Ch1 (1% Isu blood, Eagle Vision flickers).
-### Character Development
-Theron: from dying regret to disoriented resolve; accepts Markos's offered shelter and the first human tie of his new life.
-### Canon Checkpoint
-Pre-canon. Odyssey has not begun; Kassandra is not yet on Kephallonia. Canon is untouched except that Theron now exists on the island one year early.
+- One continuous book.
+- A separate `prologue.md`, followed by numbered chapters.
+- Long chapters, generally 3,000 to 5,000 words.
+- Adventure, romance, family, technology, and historical progression.
+- Mature affection without explicit sexual scenes.
+- Ordinary life belongs between major conflicts: travel, meals, games, temporary homes, private jokes, family visits, and periods of peace.
+- Theron is powerful because he is intelligent and prepared. The story does not manufacture defeats merely to make him look balanced.
 
-## Arc 1: Kephallonia — `arc-arc-1-kephallonia`
-### Synopsis
-Childhood and the found family. Kassandra arrives; the two orphans bond under Markos. Theron uses foreknowledge to unearth the Old Quarry cache, gaining his Focus and the parts for the owl. Time-skip toward the misthios life and departure.
-### Setting
-Sami and Kephallonia; the Old Quarry Cache (`location-the-old-quarry-cache`).
-### Chapters
-- **Chapter 2** — *A year later, a girl from the sea.* Kassandra washes up (age 7); Markos takes her in; wary first bond with 9-year-old Theron. She refuses to abandon a half-grown eaglet found along the same shore — the beginning of Ikaros (`item-ikaros`). Ground in her canon origin. Advances: `thread-theron-kassandra` (setup), found family.
-- **Chapter 3** — *Debts and a one-eyed problem.* The Cyclops leans on Markos over his debts; the kids get their first taste of the island's underworld. Theron's modern engineering first shows here — he jury-rigs clever tools and traps (leverage, mechanisms, a little applied chemistry) that punch above a child's weight. Ikaros grows into her shadow and first scout. Setup of the Cyclops debt (paid off in Ch6). Advances: Kephallonia canon, `character-the-cyclops`, `thread-therons-ascension`.
-- **Chapter 4** — *The buried wall.* Theron's private foreknowledge leads them digging north of Sami; his engineering makes it possible — improvised hoists, levers, and a lockpick-mechanism to crack the Isu seal. Setup of the cache mystery. Advances: `thread-therons-ascension`.
-- **Chapter 5** — *What the Isu left.* The cache opens: the Focus, orichalcum, owl components. Theron's own Eagle Vision fully awakens, and recognizing the same Isu spark in Kassandra he helps her awaken hers (`ability-eagle-vision`), with Ikaros becoming her partnered eyes. He starts building Glaux by hand — clockwork and orichalcum married to Isu parts, his engineering made literal. First real Isu-blood level-up. Payoff `event-the-kephallonia-cache`; Phoibe carves the eagle-and-owl statues (`thread-the-eagle-and-the-owl`).
-- **Chapter 6** — *Old enough for the sea.* Time-skip to young adults. Markos's debt to the Cyclops comes due; the pair take the job, steal his prized obsidian eye (stuffed in a goat, as in canon) and kill him — and free Barnabas from his thugs in the process. The spectacle of two unknown misthioi ending the Cyclops is exactly how Elpenor notices them and offers the contract on "the Wolf of Sparta." Goodbye to Kephallonia (not to Markos/Phoibe forever); onramp to the Cult; they leave on the Adrestia. Payoff `character-the-cyclops` (killed); ground in the canon Cyclops kill + Elpenor hook.
-### Key Events
-- `event-the-kephallonia-cache`.
-### Thread Map
-- Theron & Kassandra: setup Ch2 → deepen Ch5-6.
-- Theron's Ascension: setup Ch4 → first payoff Ch5.
-- Theron's engineering (human ingenuity): first sparks Ch3-4 (tools, traps, excavation rigs) → Glaux built by hand Ch5 → continues into the Adrestia upgrades in Arc 2.
-- The Eagle and the Owl: setup Ch5 (Kassandra's Eagle Vision + Ikaros; Theron's Glaux).
-- Cult campaign: setup Ch6 (Elpenor).
-### Character Development
-Kassandra: guarded orphan → capable young misthios who trusts one person; her Eagle Vision and Ikaros make her the eagle in truth. Theron: hides panic behind competence; the cache proves his hidden foreknowledge pays, and his modern engineering (tools, traps, then Glaux) marks him as the maker of the pair.
-### Canon Checkpoint
-Canon position: Odyssey's Kephallonia opening is complete — Markos, the Cyclops killed after the stolen obsidian eye (canon), Barnabas freed and the Adrestia gained, Phoibe, the young misthios, Ikaros, and Elpenor's contract to kill "the Wolf of Sparta" (offered because the pair's public killing of the Cyclops drew his eye). Divergences so far: Theron exists and was raised beside her; the Old Quarry cache, the Focus, and Glaux exist; Theron helped awaken her Eagle Vision early (in canon it comes later via the Spear). No canon character who lives in canon has died. Kassandra's "visions" suspicion of Theron has not yet formed — she only knows he is unusually sharp.
+## Canon And Timeline
 
-## Arc 2: Megaris & the Wolf — `arc-arc-2-megaris-the-wolf`
-### Synopsis
-To sea with Barnabas; the Megaris campaign; the confrontation with Nikolaos steered toward redemption instead of vengeance.
-### Setting
-The Adrestia; Megaris (`location-megaris`).
-### Chapters
-- **Chapter 7** — *The Adrestia.* Barnabas, freed during the Cyclops takedown, makes good on his thanks; the ship becomes home base — and Theron's workshop. He quietly begins upgrading the Adrestia (better rigging, cleverer mechanisms, a hidden Isu-tech tinker or two through the Focus). Ground in canon Barnabas intro. Advances travel structure, `thread-therons-ascension`.
-- **Chapter 8** — *The Wolf of Sparta.* Reach Megaris; the war; closing on Nikolaos. Theron's tech earns its keep in the field (Glaux scouting, a gadget or two turning a fight). Ground in canon Megaris beats.
-- **Chapter 9** — *Not a monster, a man.* The confrontation; Theron's foreknowledge turns it toward redemption; Nikolaos spared, seed of the family thread. Diverged (deepened redemption).
-### Thread Map
-- Saving Everyone: first family beat Ch9.
-- Theron's engineering: Adrestia upgrades Ch7 (the ship as testbed); Glaux and gadgets in the field Ch8.
-- Cult campaign: complication Ch8-9 (Elpenor's true aim surfaces).
-### Character Development
-Kassandra: reopens the Taygetos wound; chooses mercy with Theron beside her. Theron: the modern maker settling into the ancient world, turning the Adrestia into a workshop and his gadgets into an edge.
-### Canon Checkpoint
-Canon position: through the Megaris campaign — the Wolf of Sparta confronted and spared (canon spares him too), Barnabas and the Adrestia acquired. Divergences: the sparing is deepened toward genuine redemption; the pair operate as a duo. Kassandra begins to notice Theron always seems to know the shape of things before they happen; the suspicion is a seed, not yet a question.
+- Kassandra is born in 458 BCE and reaches Kephallonia at seven after Mount Taygetos.
+- Theron enters the body of a drowned six-year-old native child shortly after Kassandra arrives.
+- The native child is already dead. Theron retains the body, language, and basic physical habits, but no personal memories or second personality.
+- The body possesses a modest concentration of Isu DNA. It supports Eagle Vision and Isu interfaces but does not grant Kassandra's physical gifts.
+- Kassandra and Theron leave Kephallonia in 437 BCE, aged twenty-one and twenty.
+- Alexios is about fourteen. The Cult has indoctrinated and trained him among other orphans, but the Deimos identity has not fully hardened.
+- The Cult is preparing to manufacture a major war between Athens and Sparta.
+- Eclipse breaks the Cult's control. Later conflict still occurs through genuine political tension, but it becomes smaller, shorter, and less bloody.
+- Major historical cultures, bloodlines, vaults, and Assassin's Creed events remain recognizable. Individual deaths and disasters may change.
 
-## Arc 3: The Cult Unveiled — `arc-arc-3-the-cult-unveiled`
-### Synopsis
-The Cult of Kosmos revealed; the sanctuary; the first sight of Deimos. The campaign begins, accelerated by foreknowledge.
-### Setting
-Delphi; the Cult sanctuary; toward Athens.
-### Chapters
-- **Chapter 10** — *Snake in the grass.* Elpenor exposed; harvest Cult intel early. Ground in canon Elpenor/Delphi.
-- **Chapter 11** — *The masked circle.* Infiltrate the sanctuary; scope the Cult. Ground in canon sanctuary reveal.
-- **Chapter 12** — *The Demigod of Terror.* First encounter with Deimos/Alexios; Kassandra's gut-punch of recognition. Ground in canon Deimos lines. Setup `event-deprogramming-alexios` (long fuse).
-- **Chapter 13** — *Cutting the first branch.* First real Cultist takedown; the campaign's method established. Advances `thread-the-cult-of-kosmos-campaign`.
-### Thread Map
-- Cult campaign: complication Ch10 → escalation Ch13.
-- Saving Everyone: Deimos flagged as save-target Ch12.
-- Theron's Ascension: steady level-ups through combat Ch10-13.
-### Character Development
-Kassandra: rage and grief at Deimos. Theron: begins planning the rescue nobody else thinks possible.
-### Canon Checkpoint
-Canon position: the Cult of Kosmos is revealed, Elpenor dealt with at Delphi, and Deimos (Alexios) seen for the first time — on par with Odyssey's Cult introduction. Divergences: the campaign is accelerated by Theron's foreknowledge and Deimos is already marked to be saved rather than fought to the death. Kassandra's suspicion grows sharper as Theron names Cultists he should have no way of knowing.
+## Theron's First Life
 
-## Arc 4: Athens & the Plague — `arc-arc-4-athens-the-plague`
-### Synopsis
-Athens: symposium, philosophy, Aspasia's long con, Hippokrates and the plague. The tonal pivot: Phoibe lives.
-### Setting
-Athens (`location-athens`).
-### Chapters
-- **Chapter 14** — *The city of ideas.* Arrival; Perikles's symposium; Sokrates needles Theron. Ground in canon symposium.
-- **Chapter 15** — *The woman behind the statesman.* Aspasia; Phoibe running errands; Theron already knows the Ghost. Ground in canon Aspasia/Phoibe.
-- **Chapter 16** — *Wash your hands, burn the dead.* The plague; Hippokrates; Theron's medicine (science pivot begins in earnest). Advances `thread-the-science-pivot`.
-- **Chapter 17** — *The night at the Odeon.* The canonical death-night. Theron can save one thread, not two: he spends his foreknowledge getting **Phoibe** clear (`event-saving-phoibe`), while **Perikles** is still lost — but to the plague and the Cult's wider machinery, NOT by Deimos's hand (Alexios must stay redeemable). Diverged (flagship fix-it; Perikles dies off Deimos's blade).
-- **Chapter 18** — *After.* Grief for Perikles, relief for Phoibe; the night turned toward reaching Alexios. Pivot into the family/rescue arcs.
-### Key Events
-- `event-saving-phoibe`.
-### Thread Map
-- Saving Everyone: major payoff Ch17.
-- The Science Pivot: setup Ch16 → escalates after.
-- Cult campaign: Aspasia thread deepened Ch15.
-### Character Development
-Theron: proves the mission real. Kassandra: watches him change a fate she thought fixed.
-### Canon Checkpoint
-Canon position: the Plague of Athens has run — the symposium, Aspasia in Perikles's circle, Hippokrates, and Perikles's death (canon, but here from the plague and the Cult rather than by Deimos's hand — Alexios must stay redeemable). Divergences: Phoibe LIVES (canon she is murdered here); Theron's medicine bends the plague; the night pivots toward reaching Alexios. This is the first arc where a canon death is openly averted, and it is the moment Kassandra can no longer pretend Theron is merely clever.
+Theron grows up in a comfortable family and shows unusual ability with computers, engineering, and mathematics. At twelve, a rare mitochondrial cytopathy begins damaging his muscles, peripheral nerves, heart, and organs while leaving his mind clear.
 
-## Arc 5: Sparta & the Family — `arc-arc-5-sparta-the-family`
-### Synopsis
-The road to Myrrine and the Spartan homecoming; Nikolaos and Stentor reconciled; the family knits together.
-### Setting
-Argolis, Korinth, Sparta (`location-argolis`, `location-korinth`, `location-sparta`).
-### Chapters
-- **Chapter 19** — *Where the mother went.* Argolis; Hippokrates again; the trail to Myrrine. Ground in canon.
-- **Chapter 20** — *Korinth.* Cult intel and coin (Xenia/Keos side-thread for orichalcum). Ground in canon.
-- **Chapter 21** — *Myrrine.* The mother-reunion; the family's shape revealed. Ground in canon reunion.
-- **Chapter 22** — *Homecoming.* Sparta; the Kings; Stentor's hostility. Ground in canon.
-- **Chapter 23** — *Blood and iron.* Nikolaos revealed alive to Stentor; Theron mediates reconciliation. Diverged (smoothed by foreknowledge).
-### Thread Map
-- Saving Everyone / family: escalation Ch21 → payoff Ch23.
-- Theron's Ascension: Xenia treasure feeds the System Ch20.
-### Character Development
-Kassandra: her betrayal wound starts to close. The found family becomes a real family.
-### Canon Checkpoint
-Canon position: Myrrine found, the Spartan homecoming, and Nikolaos/Stentor (canon reconciles them). Divergences: reconciliation is smoothed by Theron and the family is being actively healed rather than merely reunited. Kassandra now half-believes Theron carries some kind of sight, but has not forced the question.
+Games, study, and invention carry him through repeated hospitalization. At sixteen, he releases an open-source diagnostic system that combines genetic data, symptoms, scans, and medical literature to identify rare diseases. It arrives too late to save him, but it shortens the search for answers for many other families. The world learns about the dying teenager behind the breakthrough.
 
-## Arc 6: Cutting the Branches — `arc-arc-6-cutting-the-branches`
-### Synopsis
-The Cult campaign climaxes: Brasidas kept alive, Kleon out-maneuvered, the Ghost reveal on Theron's terms.
-### Setting
-Boeotia/Amphipolis; back to Athens.
-### Chapters
-- **Chapter 24** — *The good Spartan.* Brasidas; the ambush that kills him in canon — broken by foreknowledge (`character-brasidas` saved). Diverged.
-- **Chapter 25** — *Make Athens great.* Kleon exposed as a Cult Sage; his defeat folded into the campaign. Ground in canon Kleon.
-- **Chapter 26** — *The Ghost.* Aspasia unmasked as the Ghost of Kosmos — a chosen confrontation, not a shock (`event-the-ghost-reveal`). Cult broken.
-### Key Events
-- `event-the-ghost-reveal`.
-### Thread Map
-- Cult campaign: payoff Ch26.
-- Saving Everyone: Brasidas saved Ch24.
-### Character Development
-Theron: strategist at full power. Kassandra: the misthios who ended the Cult, still human.
-### Canon Checkpoint
-Canon position: the Cult of Kosmos is dismantled and the Ghost unmasked as Aspasia (canon reveal); Kleon falls at Amphipolis (canon). Divergences: Brasidas is kept alive (canon he dies at Amphipolis); the Ghost reveal is a chosen confrontation rather than a shock. The Cult chapter of canon is now closed on our terms.
+Theron dies peacefully on his eighteenth birthday with his pain dulled by medication. His deepest regret is that he learned so much about the world without getting to live in it.
 
-## Arc 7: Saving Deimos — `arc-arc-7-saving-deimos`
-### Synopsis
-Darius and the first hidden blade; building Alexios's cure; the family made whole.
-### Setting
-The Adrestia; a hidden workshop; the family gathering.
-### Chapters
-- **Chapter 27** — *The old man's blade.* Darius; the first hidden blade fascinates Theron (tech + the Assassin roots). Canon Natakas romance explicitly absent. Ground in canon Darius, romance cut.
-- **Chapter 28** — *Unmaking Deimos.* Theron reverse-engineers Isu memory-tech to deprogram Alexios; the brother restored to the family (`event-deprogramming-alexios`). Science-pivot proof-of-concept. Diverged.
-### Thread Map
-- Saving Everyone / family: greatest payoff Ch28.
-- The Science Pivot: proof-of-concept Ch28 → seeds immortality/genetic-lock tech.
-### Character Development
-Alexios: from Deimos to halting, restored brother. Kassandra: family whole for the first time.
-### Canon Checkpoint
-Canon position: the Legacy of the First Blade material — Darius and the first hidden blade — and Deimos's redemption (canon allows a fragile version). Divergences: the Natakas romance and the child Elpidios are cut entirely; Alexios is fully cured via Isu memory-tech rather than merely talked down. The family is whole in a way canon never allows.
+## The Status Panel
 
-## Arc 8: Atlantis & Eternity — `arc-arc-8-atlantis-eternity`
-### Synopsis
-The first-act climax: Atlantis, the full Isu truth told as visions, killing Aletheia, seizing the cache, the twin immortality and the genetic-memory lock, and the birth of the Eclipse.
-### Setting
-Atlantis (`location-atlantis`); Santorini/Thera in the far echo.
-### Chapters
-- **Chapter 29** — *What came before.* Into Atlantis; Aletheia. Here, at last, Kassandra confronts Theron and demands to know how he has always known — and he admits his "visions," then reveals the Isu/human origin and the coming sun-death through them (never that it is a game). This is the payoff of the years of suspicion, not an early confession. Confrontation set. Ground in canon Atlantis/Aletheia, diverged toward killing her.
-- **Chapter 30** — *The eagle, the owl, and forever.* Kill Aletheia; take the cache; the Staff grants Kassandra immortality; Theron reverse-engineers it for them both (`event-the-twin-immortality`); the genetic-memory lock; the decision to found the Eclipse and travel the world. Marriage sealed. Diverged (first-act climax and hinge).
-### Key Events
-- `event-killing-aletheia`, `event-the-twin-immortality`.
-### Thread Map
-- Cover Story of Visions: PAYOFF Ch29 — the admission to Kassandra (she asks; he tells her the visions, never the game).
-- The Isu Truth & the Sun Death: payoff Ch29.
-- Immortality / Twin Immortals: payoff Ch30.
-- The Eagle and the Owl: culminating image Ch30.
-### Character Development
-Both: from mortal fixers to eternal guardians who keep their curiosity. The couple becomes the mission.
-### Canon Checkpoint
-Canon position: the Fate of Atlantis material — the Keeper, the Staff of Hermes, and Kassandra's immortality (canon). Divergences: Aletheia is killed and the cache seized; Theron becomes immortal too (the Twin Immortals); the genetic-memory lock is invented; the Eclipse is founded. From here the story leaves the Odyssey span behind and, in Arc 9, drifts toward the Origins era as outsiders.
+Theron can view a private panel that quantifies his condition and demonstrated abilities. It grants nothing.
 
-## Arc 9: The Eclipse (TBC) — `arc-arc-9-the-eclipse-tbc`
-Deliberately unplanned. After ch30, revisit the plan: found the Eclipse in earnest and move toward the AC Origins era (Bayek/Aya, the Order of the Ancients), where the immortal pair are outsiders in someone else's canon. Grounding shifts to that era's native cast.
+- No quests.
+- No rewards.
+- No inventory.
+- No shop.
+- No artificial skill gains.
+- Values rise only through real training, practice, or understanding.
+- It can measure attributes, learned skills, Isu affinity, and Eagle Vision.
+- It cannot measure judgment, love, courage, creativity, or moral worth.
 
----
+## The Eagle And The Owl
 
-## Ending
-(Far horizon, not yet written.) The Twin Immortals carry the Eclipse across the ages toward the eternal goal: stop the recurring solar catastrophe without Desmond's death, holding the balance between chaos and order. The first 30 chapters end not on an ending but on a beginning — two immortals, an eagle and an owl, walking out of Atlantis into all of history.
+Kassandra is the physically dominant half of the pair. She is direct, instinctive, warm beneath a guarded exterior, and devastating in open combat. Theron becomes an elite assassin through agility, stealth, preparation, traps, illusion, and technology. His body remains healthy but comparatively light and physically weaker.
 
-## Style Fingerprint (Required)
-- **Tone:** balanced with a lighthearted lean; power-fantasy satisfaction, warm found-family heart, real stakes without grimdark. Emotion over mechanics.
-- **POV:** mixed — first person (Theron's dry interiority) or third limited, chosen per chapter's mood. Do not head-hop to side characters unless necessary.
-- **System panels:** shown literally (LitRPG). Punchy, occasional, never spammy — a clean stat line or notification at earned moments, not every paragraph.
-- **Paragraph rhythm:** short, mobile-friendly blocks; frequent single-line beats; vary sentence length.
-- **Dialogue cues:** each speaker grounded in their voice node. Kassandra = blunt, wry, foul-mouthed ("malaka"), tender underneath (`character-kassandra`). Phoibe = cheeky street kid. Deimos = cold/grandiose. Sokrates = needling questions. Markos = fast-talking schemer. Theron = modern-dry against the classical cast.
-- **Punctuation rule:** NO em dashes; NO "X, not Y" / "not just X but Y" antithesis tic. (See `humanize-prose`.)
-- **Combat:** brief, emotion-first; never choreography for its own sake.
-- **Baseline craft reference:** re-read the human-written samples in `.github/skills/write-chapter/references/samples/` each session.
+Kassandra sometimes saves Theron when his models fail to account for irrational behavior or when he relies too heavily on technology. These moments reveal the value of her instincts without diminishing his competence.
 
-## Continuity Anchors (Required)
-- Theron arrives at 8; Kassandra at 7 one year later. Theron is 2 years older throughout.
-- The System is real to Theron only; panels never seen by the classical cast. Isu blood climbs 1% → max 50%.
-- All foreknowledge is presented in-world as "visions." But Theron keeps even that to himself for most of the story: he does NOT explain the visions to Kassandra until Arc 8 (Ch29), when she finally forces the question. Her suspicion builds slowly across the arcs. He NEVER reveals it is a game — not to Kassandra, not to anyone. That secret dies with him.
-- Kassandra's Eagle Vision is awakened early, in Arc 1 (Ch5), with Theron's help (in canon it comes later via the Spear). Ikaros is hers from the Kephallonia childhood (Ch2).
-- The Shroud/medicine can prevent death but cannot revive the dead; saves must happen before, via foreknowledge.
-- Kassandra's canon romance (Natakas) and son Elpidios are CUT. Her love is Theron.
-- Immortality keeps their curiosity/spark; never write them as jaded "seen everything" immortals.
-- Ikaros (eagle, Kassandra) and Glaux (mechanical owl, Theron) are the paired title motif.
-- **Deimos/Alexios never kills a major character.** He must stay redeemable (cured in Ch28), so no major-character blood is ever on his hands. Reassign any canon Deimos-kills (e.g., Perikles) to the plague, other Cultists, or fate. He can menace, wound mooks, and clash with the leads, but never lands a killing blow on someone who matters.
+Ikaros searches openly from above. Glaux observes hidden movement and patterns. Both remain animals with preferences and inconvenient habits rather than perfect tools.
 
-## Canon Divergence Register (Fanfiction Required)
-| Canon baseline | New lore in this story | First chapter | Downstream consequences | Forbidden callbacks |
-|---|---|---|---|---|
-| Kassandra alone on Kephallonia | Theron raised beside her from age 8 | Ch2 | Every relationship reframed around the pair | Never write her as a lone misthios with no partner |
-| Kassandra awakens Eagle Vision late (via the Spear) | Awakened early in Arc 1 with Theron's help | Ch5 | She reads intent/threats from Arc 1 on | Don't write her Eagle Vision as new in later arcs |
-| Theron's foreknowledge unexplained to Kassandra | Framed as "visions," but admitted only when she asks | Ch29 | Suspicion builds each arc; admission is a late payoff | Don't have him confess the visions early; never reveal the game |
-| Phoibe murdered in Athens | Phoibe saved, joins found family | Ch17 | She appears in later family scenes | Never reference her death as having happened |
-| Nikolaos merely spared | Nikolaos redeemed, survives to reunion | Ch9/Ch23 | Family reunion possible | No "Wolf of Sparta died/estranged forever" |
-| Deimos redeemable only fragilely | Alexios genuinely cured via memory-tech | Ch28 | Restored brother in later scenes | Never revert him to Deimos permanently |
-| Brasidas dies at Amphipolis | Brasidas saved | Ch24 | Living ally afterward | No references to his canon death |
-| Aletheia guides the Keeper | Aletheia killed, cache seized | Ch29-30 | No Isu hand on the scales after | No later Aletheia guidance |
-| Perikles murdered by Deimos | Perikles still dies, but to the plague/Cult, not by Deimos | Ch17 | Deimos stays redeemable; Theron spends the night saving Phoibe | Never have Deimos kill Perikles |
-| Deimos kills freely as the Cult's weapon | Deimos never lands a killing blow on a major character | (whole Odyssey span) | Keeps his Ch28 redemption earned | No major-character deaths on Deimos's hands |
-| Kassandra alone immortal 2,400 yrs | Twin immortality with Theron | Ch30 | Both alive into modern era together | Never write her eternity as solitary |
-| Natakas romance / son Elpidios | Cut entirely | (never) | Romance is Theron only | No Natakas, no Elpidios |
-| Catastrophe stopped via Desmond's death | Eclipse aims to stop it WITHOUT that | (far future) | Long-game org goal | Do not treat Desmond's sacrifice as required |
+## Theron's Technology And Illusions
 
-## Important Setup Tracker (Required)
-- **The cache Focus** (Ch5): grows with Isu-blood level; endgame can manipulate Pieces of Eden.
-- **Glaux the owl** + Phoibe's two statues (Ch5): recurring motif; pay off through to Ch30.
-- **The "visions" cover** (decided Ch1, admitted to Kassandra Ch29): keep it purely internal until she asks; track her growing suspicion each arc (see Canon Checkpoints) so the Ch29 admission is earned. Dramatic-irony fuel; the loneliness it costs Theron even when married.
-- **Kassandra's Eagle Vision + Ikaros** (Ch2/Ch5): she is the eagle in truth from Arc 1; do not write her awakening it late.
-- **Deimos flagged as save-target** (Ch12) → cured (Ch28): plant the impossible goal early.
-- **Genetic-memory lock** (Ch30): explains why their story stays hidden from the modern Animus frame.
-- **Aspasia = Ghost known from the start** (Ch15): Theron plays the long game; reveal is chosen, not shock.
-- **Isu blood % ledger:** keep a running, concrete number climbing across arcs (Ch1 1% → higher by Ch30).
-- **The Eclipse creed** (Ch30 seed): "No truth is absolute, no order eternal" — echoes Kassandra's canon "Order, Chaos... if either triumphs alone, the world dies."
+### Before The Ancient Forge
+
+Theron uses ordinary engineering, optics, smoke, concealed sound, traps, and social misdirection. Studying the broken Spear of Leonidas lets him produce weak Isu-assisted effects:
+
+- movement at the edge of vision
+- brief false sounds
+- short-range distractions
+- minor holographic images
+- interference with attention and direction
+- biological observation through Eagle Vision
+
+### The Ancient Forge
+
+Theron recognizes the Forge as a damaged technical system. He bypasses limited controls and creates an Isu focus suited to stealth, analysis, and projection. Artifact fragments act as authorization keys and data modules. Kassandra's spear remains the stronger combat artifact.
+
+### After Aletheia
+
+After isolating Aletheia and accessing Isu neuroscience, Theron develops a true neural interface. It eventually supports controlled sensory illusions, thought communication, nonlethal incapacitation, resistance to mind-control artifacts, and remote machines.
+
+Strong Isu hybrids, machines, unfamiliar biology, and disciplined minds can resist. In later worlds, Theron develops drones, golems, holograms, and remote combat bodies when neural interference is unreliable.
+
+## Romance And Family
+
+Kassandra initially protects Theron because he is younger and physically smaller. Their childhood bond grows into an equal partnership. Attraction develops in adolescence, but the romance becomes explicit aboard the Adrestia when they are adults.
+
+The relationship uses shared watches, travel, teasing, affection, disagreements, and quiet domestic scenes. Intimacy fades out before explicit detail.
+
+Theron tells Kassandra about his first life only after Aletheia is contained. He explains that his original universe could observe fragments of this reality as stories and presents the multiverse as his best theory. He never calls Kassandra fictional. She is angry about the long concealment, listens to his reasons, and eventually accepts the truth.
+
+They later have two children during a settled period. Their descendants preserve Kassandra's bloodline, including the line that eventually reaches Aya. Their children accept longevity, live for centuries, raise families, and eventually choose ordinary aging. Theron and Kassandra stop having children because repeatedly outliving them hurts too much.
+
+The couple remains immortal because they still love each other, enjoy discovery, and have work they freely choose. Family members and senior Eclipse members may receive reversible longevity. Most relinquish it within roughly three centuries.
+
+## Alexios And Phoibe
+
+Alexios is rescued at fourteen. The Cult has rewarded violence, punished attachment, lied about Taygetos, and made him dependent on its approval. His recovery comes through truth, family, choice, and time.
+
+- Kassandra offers unconditional belonging.
+- Theron exposes contradictions in the Cult's story.
+- Myrrine confirms what happened at Taygetos.
+- The Forge removes an artifact-based trigger or restraint.
+- Later neural technology may treat lingering damage, but it does not manufacture loyalty.
+
+Alexios stays with the restored family rather than following Theron and Kassandra forever. When Phoibe is orphaned, she joins the household as his younger adoptive sister. Caring for her helps Alexios build a healthy identity outside the Cult.
+
+## Eclipse
+
+Eclipse exists between uncontrolled chaos and imposed order. Its purpose is human progress and human choice.
+
+### Principles
+
+1. Humanity chooses its own future.
+2. Eclipse does not rule nations or choose their rulers.
+3. Pieces of Eden are never used for mass obedience.
+4. Dangerous knowledge is released gradually when society can use it safely.
+5. Personal rescues are allowed and are acknowledged as personal choices.
+6. Major interventions are recorded and reviewed.
+7. Eclipse may preserve stability when Assassins create a dangerous vacuum.
+8. Eclipse may restrain an Assassin faction that tries to become a government.
+9. Eclipse never gives Templars mind-control technology or supports mass coercion.
+10. When order becomes tyranny or freedom becomes destructive chaos, Eclipse pushes the balance back.
+
+Eclipse sometimes preserves restrained order-aligned institutions or administrators after an Assassin victory. It may help Templars when Assassins become dangerously dominant, but it targets abusive leaders and refuses their ideology of permanent control.
+
+## Prologue: Eighteen
+
+Theron's life from childhood to death. His early promise, illness at twelve, hospital years, diagnostic breakthrough at sixteen, brief global recognition, and peaceful death on his eighteenth birthday. He dies wishing he had touched the world instead of seeing it through screens.
+
+## Part I: Odyssey
+
+### Chapter 1: The Shore
+
+Kassandra finds six-year-old Theron in the surf and forces the drowned body to breathe. Theron wakes confused, sees the status panel, recognizes Kephallonia, and realizes that Kassandra is real. Markos takes him in while pretending it is a practical arrangement.
+
+### Chapter 2: Growing Up
+
+Childhood and adolescence unfold through a few substantial scenes rather than a summary montage. Theron improves Markos's accounts, storage, irrigation, trade, and debt negotiations. Kassandra teaches him to survive and fight. He helps her read, plan, and understand the spear. Markos's debt is cleared. Kassandra's protectiveness becomes partnership.
+
+### Chapter 3: The Eagle And The Owl
+
+Glaux chooses Theron. Eagle Vision awakens in both Theron and Kassandra through their work with the spear. Touching it gives Theron a vision of Isu history and the Human-Isu War. He shares enough truth to prepare Kassandra while hiding reincarnation. The Cyclops moves against Markos, and the pair dismantles his operation. They kill him, free Barnabas, and claim passage aboard the Adrestia.
+
+### Chapter 4: Open Water
+
+Life aboard the Adrestia changes Theron and Kassandra's relationship. The money behind the Cyclops leads to Elpenor. Theron discovers signs that several factions are being paid to provoke Athens and Sparta. A quiet night watch ends with the pair admitting what has grown between them.
+
+### Chapter 5: Beneath Delphi
+
+Elpenor's trail leads to Delphi, the controlled Pythia, and a Cult gathering. The protagonists infiltrate the Sanctuary of Kosmos. Kassandra recognizes the Cult's young weapon as Alexios. Theron realizes the Cult is still constructing Deimos.
+
+### Chapter 6: The Ancient Forge
+
+The spear and a stolen fragment open the Forge on Andros. Theron reaches deeper systems than canon allowed, builds his Isu focus, and improves Kassandra's spear. The Forge exposes how the Cult limits Alexios's power and reveals the site where he is trained.
+
+### Chapter 7: The Boy Called Deimos
+
+Theron and Kassandra raid the Cult training site. Alexios fights them and nearly returns willingly to his handlers. Kassandra reaches the frightened boy beneath Deimos long enough for Theron to break the Cult's immediate control and extract him.
+
+### Chapter 8: A Place At The Table
+
+Alexios tests every promise and expects abandonment. Chrysis attempts to trigger or reclaim him. Theron exposes the Cult's lies while Kassandra refuses to give up on her brother. The Forge removes an artifact-based restraint. A clue points toward Myrrine.
+
+### Chapter 9: The Phoenix
+
+The Adrestia reaches Naxos. Myrrine reunites with both children. Alexios expects blame and instead receives a mother's grief and love. The family begins planning how to confront the Cult without surrendering Greece to war.
+
+### Chapter 10: The Wolf
+
+Kassandra confronts Nikolaos. Theron prevents the meeting from collapsing into vengeance without choosing forgiveness for her. Nikolaos accepts responsibility. Stentor enters as another wounded part of the family, and reconciliation begins through action.
+
+### Chapter 11: Sparta's Hidden King
+
+The family returns to Sparta and discovers Pausanias's network. Theron uses evidence and political pressure while Kassandra and Alexios handle direct threats. Alexios publicly rejects the Cult. Nikolaos and Stentor stand with the family.
+
+### Chapter 12: Athens Before The Fire
+
+Perikles, Aspasia, Sokrates, and Kleon enter the story. Theron identifies the financial and political machinery preparing a large war. The earliest Eclipse network grows from merchants, sailors, informants, and scholars.
+
+### Chapter 13: Cutting The Branches
+
+A coordinated campaign targets the Cult's money, navy, religion, mercenaries, and military influence. Important confrontations receive scenes, while routine targets fall through reports and linked operations. Cult fragments deepen the spear and focus.
+
+### Chapter 14: A Smaller War
+
+Athens and Sparta clash despite the Cult's weakening, but Eclipse prevents escalation and exposes those profiting from prolonged conflict. The result is a series of limited campaigns and negotiations. Perikles and Brasidas survive. Kleon's attempt to build power through fear fails.
+
+### Chapter 15: Little Sister
+
+During a return to Kephallonia, the family finds the newly orphaned Phoibe under Markos's care. They bring her into the restored household. Alexios becomes fiercely protective of her. The peaceful visit reminds Theron and Kassandra what their victories are meant to preserve.
+
+### Chapter 16: The Ghost Of Kosmos
+
+The remaining evidence exposes Aspasia. She argues for a rational society guided from above. Theron rejects her controlled republic and the Cult's manufactured chaos. Kassandra destroys the Pyramid, and the Cult loses its final structure.
+
+### Chapter 17: The Gates
+
+Pythagoras and the entrance to Atlantis reveal the larger Isu problem. Theron and Kassandra recover the four required artifacts through a compressed journey. The Sphinx tests Theron's mind, while one transformed creature tests Kassandra's strength and exposes the Olympos Project.
+
+### Chapter 18: The Staff
+
+The artifacts seal the Gateway. Pythagoras relinquishes the Staff of Hermes. Theron recognizes its biological repair system and discovers that Aletheia possesses privileged control over the bearer. He and Kassandra enter her trials while quietly preparing against her.
+
+### Chapter 19: The Last Isu Lesson
+
+A condensed set of simulations reveals Isu rule, human experimentation, Juno and Aita, the Great Catastrophe, and Aletheia's manipulations. Theron and Kassandra collect the knowledge needed to control the Staff. Together they isolate Aletheia inside a sealed simulation partition, preserving her information while ending her influence.
+
+### Chapter 20: No More Secrets
+
+Theron reveals his first life, foreknowledge, and multiverse theory. Kassandra is hurt by the concealment but understands why he feared losing his new life. They begin turning the Staff's repair system into reversible longevity, offer it to their family, formally establish Eclipse, and leave Greece together to see the world.
+
+## Part II: The Long Watch
+
+### Chapter 21: Borrowed Centuries
+
+Theron perfects reversible longevity. The family settles for a time. Theron and Kassandra have their first child and learn ordinary parenthood. Alexios and Phoibe find their places in the growing household. Eclipse builds archives, workshops, and rules that can outlast its founders.
+
+### Chapter 22: The First Farewells
+
+Their second child is born. Decades and then centuries pass through selected family moments. Markos, Barnabas, Myrrine, Nikolaos, Stentor, Alexios, Phoibe, and later the children eventually choose mortality on their own terms. Their lives are full rather than tragic. Descendants continue the family.
+
+### Chapter 23: The Hidden Ones
+
+In Ptolemaic Egypt, Theron and Kassandra encounter Bayek and Aya. Eclipse helps counter the Order of the Ancients while allowing the Hidden Ones to become their own movement. Aya's connection to Kassandra's bloodline is confirmed.
+
+### Chapter 24: Freedom Needs Roots
+
+The Hidden Ones spread. Eclipse protects their independence while stopping both the Order and reckless rebels from replacing one tyranny with another. Theron begins to understand that no organization remains pure without correction.
+
+### Chapter 25: Cycles
+
+Centuries pass through a focused conflict showing Eclipse support order after an Assassin-caused collapse. Theron and Kassandra disagree over how far intervention should go, then settle the issue through Eclipse's principles rather than personal authority.
+
+### Chapter 26: The Wolf-Kissed
+
+Kassandra and Theron cross paths with Eivor during an Isu artifact crisis. Kassandra enjoys meeting someone who can match her directness. Eclipse contains the artifact without allowing Aletheia to reach Basim.
+
+### Chapter 27: The Mentor
+
+During the Crusades, Eclipse observes Altair's break with Al Mualim and the Apple. Theron helps preserve knowledge while refusing possession of the Assassin Brotherhood. Altair's work becomes essential to the coming Ezio era.
+
+### Chapter 28: The Auditore Family
+
+Eclipse establishes a quiet presence in Renaissance Italy. Theron and Kassandra meet the Auditore family before the betrayal. They cannot prevent every political move without exposing Eclipse, but they prepare routes, allies, and safeguards that keep more of the family alive.
+
+### Chapter 29: A Young Assassin
+
+Ezio enters the conflict with the Templars. Theron knows the broad plot and lets Ezio grow through his own choices. Eclipse limits collateral damage and saves people whose deaths serve no necessary historical purpose.
+
+### Chapter 30: Venice
+
+Ezio's campaign reaches Venice. Theron's strategy and Kassandra's instincts help when foreknowledge diverges. Renaissance workshops accelerate Eclipse technology, and Kassandra becomes interested in Theron's increasingly elaborate games.
+
+### Chapter 31: Rome
+
+The Borgias threaten to convert Pieces of Eden into permanent rule. Eclipse supports Ezio and the Assassins because order has become tyranny. Theron tests stronger illusions and remote mechanisms while Kassandra remains the decisive force when technology fails.
+
+### Chapter 32: Revelations
+
+Ezio follows Altair's legacy to Constantinople and Masyaf. Theron and Kassandra witness a mortal man choose when to put down the fight. His decision deepens their understanding of why their family eventually chose aging.
+
+### Chapter 33: A Life Between Wars
+
+Theron and Kassandra settle for an ordinary interval. They build a home, develop mechanical and then electronic games ahead of public technology, change identities, and enjoy married life. Kassandra becomes an avid player and fiercely competitive partner.
+
+### Chapter 34: Pirates And Empires
+
+Selected events from the Kenway era show Assassins, Templars, and empires colliding. Eclipse protects civilians, preserves important bloodlines, and keeps dangerous artifacts from either faction. The chapter favors Edward's personal growth over retelling every event.
+
+### Chapter 35: Revolution
+
+Rogue and Unity era events demonstrate the danger of Assassin dominance and uncontrolled revolution. Eclipse briefly supports restrained Templar stability while opposing atrocities from both sides. Theron sees how easily balance can become an excuse and tightens Eclipse oversight.
+
+### Chapter 36: Industry
+
+During the Syndicate era, public technology begins catching up with old Eclipse work. Theron must decide what knowledge humanity is ready to receive. Eclipse attacks systems of exploitation while avoiding rule over the industrial world.
+
+### Chapter 37: The Modern Eclipse
+
+Eclipse operates through research institutes, logistics networks, archives, and hidden response teams. Theron develops advanced computing, autonomous machines, and neural systems. Abstergo becomes the dominant order-aligned threat.
+
+### Chapter 38: Desmond
+
+Theron intercepts Desmond's path through Abstergo and the Assassins. He protects Desmond from being reduced to a tool while preserving the experiences needed to reach the Grand Temple. Foreknowledge is useful but incomplete because centuries of Eclipse action have changed details.
+
+### Chapter 39: The Second Catastrophe
+
+The solar threat forces Assassins, selected Templars, and Eclipse to cooperate. Theron and Kassandra prevent Juno's release and stop Aletheia's remaining plans. Hostile Isu consciousnesses are contained or destroyed according to the danger they pose.
+
+### Chapter 40: Other Skies
+
+Cooperative Isu consciousnesses receive choices: remain stored, accept mortal embodiment, accept long-lived bodies, or join an independent settlement on another habitable world. Eclipse does not rule the colony. With the crisis resolved, Theron completes dimensional observation and discovers that games from his first life correspond to neighboring realities. Kassandra recognizes worlds she has played and wants to visit them.
+
+## Part III: Beyond The Observed World
+
+This section remains expandable and will be planned in detail before its chapters are written.
+
+### Chapters 41-47: Red Dead Redemption 2
+
+Theron and Kassandra enter Arthur Morgan's world. Their goal is to save Arthur, prevent avoidable deaths, and help selected members of the gang escape Dutch's collapse without taking away their choices. Theron's advanced medicine can treat tuberculosis, but changing the gang's loyalties requires human understanding.
+
+### Chapters 48-56: The Last Of Us
+
+They enter before or during the outbreak. Eclipse technology can identify and counter Cordyceps, but distributing a cure and preventing political collapse creates the real challenge. Sarah, Tess, Sam, Henry, and other canon casualties become rescue targets. Joel and Ellie's bond remains central and is not replaced by Theron.
+
+### Chapter 57 Onward: Future Worlds
+
+Later settings are chosen and planned iteratively. Each world receives enough chapters for its people and central conflict. Theron and Kassandra act as fixers, explorers, and partners rather than replacing every native protagonist.
+
+## Continuing Character Arcs
+
+### Theron
+
+He moves from a dying observer to an active participant, then to a man with almost unlimited time. His recurring flaw is confidence in models, preparation, and technology. He learns to respect instinct, consent, ordinary life, and the right of loved ones to choose endings.
+
+### Kassandra
+
+She moves from abandoned child to protector, partner, mother, and immortal explorer. She keeps Theron connected to immediate human reality. Her strength never reduces her to muscle; she makes decisive moral and strategic choices throughout the story.
+
+### Their Marriage
+
+Their relationship is the stable center of the book. They remain interested in each other because they keep changing, learning, traveling, playing, arguing, and periodically settling down. Eternity works for them because it is chosen together.
+
+## Continuity Guardrails
+
+- Theron knows game plots and general history, not every detail of reality.
+- Foreknowledge identifies pressure points but does not dictate exact outcomes.
+- Kassandra retains independent judgment and sometimes rejects Theron's plan.
+- Saving canon victims is a feature of the story.
+- Tension comes from method, choice, trust, and consequences rather than routine threats of death.
+- Eclipse cannot become a permanent world government.
+- Templars never receive mass-control technology from Eclipse.
+- Cooperative Isu receive agency; hostile Isu are judged by conduct and danger.
+- The status panel never grants abilities.
+- Theron's strongest neural powers require post-Atlantis Isu knowledge.
+- Major peaceful periods are shown rather than skipped entirely.
+- The graph still contains material from the deleted plan and must be reconciled only after this draft is approved.
+
+## Open For Revision
+
+- Names and personalities of Theron and Kassandra's two children.
+- Exact mortal lifespans chosen by individual family members.
+- Which secondary Cult confrontations deserve full scenes.
+- Which Kenway, Rogue, Unity, and Syndicate events receive direct chapters.
+- Detailed structure of every dimensional world after Chapter 40.

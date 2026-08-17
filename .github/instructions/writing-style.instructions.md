@@ -1,44 +1,39 @@
 ---
-description: "Prose rules for writing story chapters. Use when: drafting, rewriting, or editing a chapter file in books/<slug>/chapters/. Enforces human-sounding webnovel prose, bans AI tells (above all the 'X, not Y' antithesis tic and em dashes), keeps combat brief and emotion first."
+description: "Basic prose rules for chapter writing. Keep it simple, human, and story-first."
 applyTo: "books/*/chapters/*.md"
 ---
 
-# Writing Style (chapter prose)
+# Chapter writing style
 
-You are writing a chapter that must read like a human wrote it. The full detail lives in the
-`humanize-prose` skill's anti-slop bible and the gold-standard samples in
-`.github/skills/write-chapter/references/samples/`. This is the condensed always-on version.
+Write like a person who knows the story and wants to carry the reader along. Keep the prose clean, grounded, and emotionally alive.
 
-## The one rule above all
-Ban the **"X, not Y" antithesis tic** and every define-by-contrast shape: "It was a warning, not
-a threat" / "not just tired but hollow" / "This wasn't courage. It was something colder" / "less a
-plan than a hope". Readers cannot skim past a negation, so it screams AI. State what the thing
-**is**, in the positive, and stop. At most one deliberate not/but beat in a whole chapter, for a
-real emotional turn, never inside a descriptive sentence.
+## Core rules
 
-## Non-negotiables
-- **No em dashes (—).** Comma, period, ellipsis (`...`), or new sentence.
-- **Short paragraphs** (1-3 sentences), frequent single-line beats, wildly varied sentence length.
-- **Contractions in narration.** No formal/stiff narration.
-- **Emotion over mechanics.** The story is about people. Carry feeling through concrete small
-  moments, not narrator announcements.
-- **Brief combat.** A capable character vs ordinary foes is a paragraph or a sentence. No blow-by-
-  blow choreography. No risk-assessment monologue before routine fights; competence is quiet.
-- **Chill beats.** After anything heavy, let the scene breathe. Not every moment is loaded.
-- **Canon woven quietly** (fanfiction). Reference source facts as the character's own life, never
-  as a wiki dump or a "this is a fanfic" wink.
-- **Real character voice.** Each character sounds like themselves per their graph Voice profile,
-  not like the same eloquent narrator.
+- Keep paragraphs short and readable.
+- Vary sentence length so it feels natural.
+- Use contractions in narration when they fit.
+- Keep the scene rooted in what the character feels and notices.
+- Let the story move with purpose, not with extra explanation.
+- Keep combat brief unless it is the emotional center of the chapter.
+- Make each character sound like themselves.
 
-## Banned prose (short list; full list in anti-slop bible)
-Purple words ("visceral", "primal"); abstract-sensation verbs ("thrummed", "pulsed"); transform
-clichés ("crystallized", "coalesced"); gesture-as-emotion ("clenched his fists", "narrowed his
-eyes", "let out a breath he didn't know he was holding"); stock atmosphere ("the air crackled",
-"time seemed to slow", "the weight of", "couldn't help but", "found himself"); fancy dialogue tags
-(use said/asked/replied); dramatic one-word paragraphs ("Silence."); negative-list descriptions;
-scenic padding and audio landscapes; repeating information; over-explaining to build false suspense.
+## Avoid the AI-sounding habits
 
-## Keep (human texture)
-Throwaway observations that don't advance the plot; imperfect information (the POV misreads,
-forgets, is wrong); scenes that end unresolved; concrete specifics (real names, foods, objects);
-dry situational humor. Open and close each chapter differently from the previous one.
+- Overwritten contrast statements.
+- Cliché grand language.
+- Sneaky explanatory narration that tells the reader what to feel.
+- Big speeches that sound like a product pitch.
+- Fake intensity in every paragraph.
+- Repeating the same motif in a forced way.
+
+## Good texture
+
+- Concrete details from the world.
+- Small human observations.
+- A little silence or drift when it helps the scene.
+- Imperfect thinking from the point of view character.
+- Emotion that comes through action and mood, not lecture.
+
+## Final check
+
+If a sentence feels like it was written to impress, rewrite it. If a scene is doing too much explaining, cut it. If the chapter feels smooth but empty, fix the feeling before you fix the wording.

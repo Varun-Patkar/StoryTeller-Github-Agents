@@ -1,104 +1,105 @@
 ---
 name: story-setup
-description: "Set up a NEW story from an idea or plot starter: run the questionnaire, research the fandom/genre deeply, build the story's memory graph, and write the plan. USE FOR: 'new story', 'create a story', 'start a story', 'write me a story about…', 'set up a book', story planning, worldbuilding, fanfiction setup. Produces books/<slug>/ with config.md, plan.md, an empty summary.md, and a dense, canon-grounded knowledge graph. Keywords: new story, create story, story setup, questionnaire, worldbuilding, canon research, fanfiction setup, book plan."
+description: "Set up or replan a story: gather the basics, research the canon or genre, develop the plan with the user, and create the story structure only after approval."
 ---
 
-# Story Setup
+# Story setup
 
-Turn a plot idea into a ready-to-write story: gather intent, research the source until you could
-pass for a fan, build the story's memory graph, and write a plan. You do NOT write chapters here.
+Use this when the user wants to start a story, replace an old plan, or extend an existing plan. The goal is to work out the story with the user before any chapter is written.
 
-The user is the idea person and wants to read the story fresh. So build a solid foundation, but do
-not over-explain the whole story back to them; a short confirmation is enough.
+## Step 1 — Ask for the basics
 
-## Phase 1 — Core questions
+Ask the user for:
 
-Ask all at once via `vscode_askQuestions` (if unavailable, print them and stop):
+- story type: fanfiction or original
+- fandom if relevant
+- genre
+- tone
+- story mode
+- pacing
+- main characters
+- rough premise or hook
 
-1. **Story Type**: `Fanfiction` / `Original Fiction`
-2. **Fandom** (if Fanfiction): free text.
-3. **Genre** (multi-select + custom): Fantasy, Sci-Fi, Romance, Horror, Thriller, Mystery,
-   Adventure, Slice of Life, Comedy, Tragedy, Action, Drama.
-4. **Themes**: free text.
-5. **Story Mode**: `Here for the Ride` (default) / `Interactive` / `Companion Writer`. Only these three.
-6. **Pacing**: Short (1000-1500) / Medium (1500-3000, default) / Long (3000-5000) / Epic (5000+).
+If the idea is vague, ask for the central conflict and the emotional core.
 
-## Phase 2 — Follow-ups (tailored, optional)
+## Step 2 — Research if needed
 
-Ask a second round relevant to the choices (each allows free text): plot direction/route; lead
-characters (fanfiction); supporting characters; POV (First / Third Limited / Third Omniscient);
-tone (Lighthearted / Dark / Balanced / Gritty / Whimsical); setting tweaks; power/magic system.
-For fanfiction, also ask the **divergence point**: where does this story break from canon, and what
-is the protagonist's starting situation? Everything before/outside that point flows like the source.
+If the story is fanfiction or based on an existing world, do the research needed to keep the world and characters grounded. Do not rely on memory alone.
 
-## Phase 3 — Name
+Focus on:
 
-Suggest 3-5 names from the gathered info. Iterate until the user confirms one.
+- main canon facts
+- important characters and relationships
+- setting details
+- anything that affects the story's early chapters
 
-## Phase 4 — Research (the part that makes or breaks a fanfic)
+For original fiction, keep the research light and focused on genre expectations.
 
-Research prefers **webiq** (`mcp_web_iq_mcp_se_web` to search → `mcp_web_iq_mcp_se_browse` to
-read); fall back to SearXNG (`searxng` search + `fetch_webpage`) then Playwright. A single search
-is never enough. Full detail and the self-check are in [references/research.md](./references/research.md).
+## Step 3 — Develop the plan together
 
-Scope:
-- **Fanfiction / anything referencing an existing work:** full research (wiki crawl → characters →
-  world/systems → supplementary). Build a **canon timeline** so the plan knows what un-butterflied
-  events must look like.
-- **Original fiction in an established genre** (xianxia, LitRPG, etc.): research genre conventions only.
-- **Fully original world:** skip research; define the rules yourself.
+Planning is iterative. Do not jump from the premise to a finished plan.
 
-Two research outputs matter most:
-1. **Canon truth** for every relevant character, place, faction, item, system, and event.
-2. **Grounded voice.** For each lead (and each notable speaker), pull the character's **actual
-   dialogue/quotes** from the source using the `character-voice` skill, and store them in the
-   character node. This is how the story avoids everyone sounding like the same narrator.
+1. Restate the user's current idea briefly so they can correct it.
+2. Offer a small number of meaningful options for unclear parts of the story.
+3. Judge each option impartially. Explain its strengths, weaknesses, likely consequences, and conflicts with canon or earlier decisions.
+4. Recommend the option that best serves the user's stated goals. Do not agree automatically, flatter the idea, or hide a real problem.
+5. Ask the user to choose, combine, reject, or revise the options.
+6. Repeat until the premise, character arcs, major conflicts, tone, ending direction, and early chapter route are settled.
 
-## Phase 5 — Build the memory graph
+Keep unresolved questions visible. Do not silently decide them for the user.
 
-Scaffold the story first (Phase 6 command), then populate the graph via
-`.github/scripts/graph.mjs` (run `graph.mjs schema` for allowed types; never edit the db/markdown
-by hand). Follow the graph = memory model in `story-files.instructions.md`.
+## Step 4 — Draft and approve the plan
 
-At setup, the graph holds the **standing world**: the entities and relationships that exist before
-chapter 1. Density rules:
+Once the direction is stable, draft plan.md. Show the plan to the user in manageable sections and invite changes. Revise it until the user explicitly approves it.
 
-- **One node per distinct entity.** Every named character, place, faction, item, ability, and
-  concept gets its OWN node. Never lump ("supporting cast", "world building").
-- **Model the spine:** an `arc` node per planned arc; `thread` nodes for setups/promises to pay off.
-- **Canon events at setup:** create `event` nodes only for the load-bearing canon events the plan
-  reasons about (the timeline anchors) and for planned major divergences. Not for every incident.
-- **Canonicity** on every node/edge: `canon` (source truth), `au` (a deliberate divergence),
-  `original` (invented). Each canon character node's **Voice & Mannerisms** must be grounded in
-  real source quotes (Phase 4). Each AU node gets a `diverges_from` edge to the canon baseline.
-- **Connect everything** — no orphan nodes; expect at least as many edges as nodes.
+The first lines of an approved plan must include:
 
-Node body sections: Overview, Canon, AU Divergence, and (characters) Voice & Mannerisms.
-Add nodes with `add-node ... --body-file <temp.md>`, edges with `add-edge`. Then `consolidate`,
-merge duplicates, and `validate` until `"ok": true`.
+```markdown
+# Story Plan: <title>
 
-## Phase 6 — Scaffold + plan
-
-Create the folder deterministically (do NOT hand-create config/summary/graph):
-
-```bash
-node .github/scripts/create-story-structure.mjs "<Story Name>" --type "<Type>" --fandom "<Fandom>" \
-  --genre "<Genres>" --themes "<Themes>" --mode "<Mode>" --pacing "<Pacing>" --pov "<POV>" --tone "<Tone>"
+Status: Approved
 ```
 
-Then:
-1. Write `plan.md` using [references/plan-template.md](./references/plan-template.md). Ground every
-   arc/chapter in the graph (reference node ids). For fanfiction, fill the Canon Divergence
-   Register and mark which early chapters are canon-locked vs diverged.
-2. Fill `config.md`: Synopsis (2-3 sentences), Cover Prompt (detailed image prompt with title at
-   top / author at bottom; author from the `Author` field or `git config user.name`), Total Chapters.
-3. Confirm the graph is dense, grounded, and `validate` passes.
-4. Tell the user setup is complete and they can start a session (`write-chapter`).
+Before approval, use `Status: Draft`. A draft plan is never permission to write a chapter.
 
-## Constraints
+## Step 5 — Build the initial story files
 
-- Do NOT write chapters. Do NOT skip research for fanfiction/established genres.
-- Do NOT rely on your own memory for canon — verify via web research.
-- Do NOT write vague nodes or lump entities. Keep the graph dense and connected.
-- Stop and wait for the user after each question round if `vscode_askQuestions` is unavailable.
-- Present a short research summary and get confirmation before writing the plan.
+Create the story folder under books/<slug>/ with:
+
+- config.md
+- plan.md
+- summary.md
+- chapters/
+- graph/
+
+The story plan should include:
+
+- chapter beats
+- character arcs
+- key places or factions
+- early problems and turning points
+- what the story is trying to do emotionally
+
+## Step 6 — Keep the graph useful
+
+The graph is memory, not a chapter log. Store only things that matter long-term:
+
+- characters
+- places
+- factions
+- important items
+- relationships
+- standing world state
+
+Do not fill it with every small event from the story. Use summary.md for timeline and chapter detail.
+
+## Step 7 — Confirm and hand off
+
+After the plan is ready, give the user a short summary of:
+
+- the story's core premise
+- the main cast
+- the intended tone
+- the route for the first chapter
+
+Ask for explicit approval. Only after the user approves the plan, change its status to `Approved` and hand off to write-chapter. Do not draft prose during planning, even as a sample, unless the user separately asks for one.

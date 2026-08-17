@@ -1,104 +1,39 @@
-# StoryTeller — Copilot Instructions
+# StoryTeller project notes
 
-## Project Overview
+This project is a small fiction-writing system for building stories chapter by chapter. The goal is simple: keep the setup useful, keep the writing process clear, and let the story read like a person wrote it rather than a machine trying to sound clever.
 
-Two-part project: a set of VS Code/Copilot **skills** that write webnovel-style fiction, and a static **reader** site for browsing the published stories.
+## What matters
 
-- Skills: `.github/skills/` — `storyteller` (router), `story-setup`, `write-chapter`, `character-voice`, `humanize-prose`. Auto-invoked by description; work stays inline except for `write-chapter`'s mandatory fresh no-bias review subagents (logic/common-sense, whole-chapter adversarial, canon web-check, AI-ness).
-- Reader: `reader/` — Astro static site that reads `books/` at build time
-- Stories: `books/<slug>/` — file-system story storage; research/state in a per-story knowledge graph
+- The story workflow lives under .github/skills.
+- Each skill is focused on one job: routing, setup, chapter writing, voice, or cleanup.
+- The story files under books/ hold the actual draft, plan, and world memory.
+- The reader in reader/ is just a way to browse the finished stories.
 
-See [README.md](../README.md) for architecture, skill roles, and story modes.
+## Core workflow
 
-## Commands
+1. Start a story with the setup skill.
+2. Build the plan and the grounded world details.
+3. Write the next chapter with the chapter skill.
+4. Keep the voice and tone consistent.
+5. Tighten the prose when needed.
 
-```bash
-# Reader (static site)
-cd reader
-npm install
-npm run dev      # Dev server
-npm run build    # Static build
+## Keep it lean
 
-# Graph / scaffolding scripts (run once to install deps)
-cd .github/scripts
-npm install      # installs better-sqlite3
+- Remove extra orchestration and multi-agent ceremony when it does not help the story.
+- Prefer direct writing over checklist-heavy prompting.
+- Favor natural rhythm, specific detail, and clear story beats over polished corporate phrasing.
+- Keep research grounded in the source material when the story is based on canon.
 
-# Web research prefers webiq (webiq-mcp tools).
-# SearXNG is only a fallback if webiq is unavailable:
-docker run -d --name searxng -p 8080:8080 searxng/searxng
-```
+## Important files
 
-## Story Structure
+- .github/skills/storyteller/SKILL.md
+- .github/skills/story-setup/SKILL.md
+- .github/skills/write-chapter/SKILL.md
+- .github/skills/character-voice/SKILL.md
+- .github/skills/humanize-prose/SKILL.md
+- .github/scripts/graph.mjs
+- reader/src/lib/books.ts
 
-Each story lives at `books/<slug>/` with this layout:
+## Writing direction
 
-```
-books/<slug>/
-├── config.md          # Markdown table of settings (parsed by reader/src/lib/books.ts)
-├── plan.md            # Arc-by-arc chapter outline (references graph node ids)
-├── summary.md         # Running chapter summaries
-├── chapters/chapter-01.md ...
-└── graph/             # Per-story knowledge graph (research + story state)
-    ├── graph.db       # SQLite: nodes + edges
-    └── nodes/<id>.md  # One markdown body per node
-```
-
-## Knowledge Graph
-
-Story research and evolving state live in a per-story SQLite graph, never in loose files.
-
-- The graph is the story's **memory** (what must still be true many chapters later), not a chronicle of events. `summary.md` is the chronicle. Apply the Graph Worthiness Test; `event` nodes are reserved for major canon-divergence anchors.
-- **Access only via** `.github/scripts/graph.mjs` (a CLI; no raw SQL). Run `node .github/scripts/graph.mjs schema` for the allowed types.
-- **Nodes** hold small metadata (id, type, name, canonicity, aliases, summary, tags); full details live in `graph/nodes/<id>.md`.
-- **Node types**: character, location, faction, item, event, ability, concept, arc, thread.
-- **Edge types**: family_of, ally_of, enemy_of, knows, member_of, located_in, owns, has_ability, occurs_in, involves, causes, precedes, part_of, related_to, diverges_from.
-- **Canonicity** (`canon` | `au` | `original`) tags every node/edge so fanfics track both source-fandom truth and our alternate-universe divergences. Each node body has Canon and AU Divergence sections.
-- Deterministic ids (`<type>-<slug>`) + UNIQUE constraints make duplicates impossible; `consolidate` catches near-duplicates and `validate` checks integrity.
-- `recap --story <slug> --query "..." [--ids ...]` returns a compact per-chapter briefing (focus nodes + connections + open threads + arcs, metadata only) — the `write-chapter` skill's primary grounding call.
-- Engine modules live in `.github/scripts/graph/` (db, nodes, edges, search, consolidate, migrate).
-
-## Reader Conventions
-
-- **Framework**: Astro static site (`reader/`), builds from `books/` at compile time.
-- **No database, no server**: `reader/src/lib/books.ts` reads config/chapters/covers from the file system.
-- **Slugs**: kebab-case story folder names are used as URL segments.
-- The reader displays chapters and config, plus a **Brain Viewer** of the knowledge graph.
-
-## Brain Viewer (graph snapshot)
-
-The reader includes an interactive graph viewer at `/brain/<slug>/` ([BrainViewer.astro](../reader/src/components/BrainViewer.astro)).
-
-- Because the reader is a static frontend (no live DB/git access), the build takes a **snapshot** of each story graph. `reader/scripts/build-graph-snapshots.mjs` (a prebuild step) reads each `graph/graph.db` + node markdown, pre-renders bodies with `marked`, and writes `reader/public/graph/<slug>.json`.
-- The viewer is self-contained (canvas force-directed graph, no external library): nodes colour-coded by type, edges by type (AU edges dashed), click a node for its markdown details + connections.
-- Reader depends on `better-sqlite3` (build-time) to read the graph snapshots.
-
-## Skill Conventions
-
-- Skills live in `.github/skills/<name>/SKILL.md`, auto-invoked by their `description`. Drafting and self-revision run inline to preserve context; `write-chapter` delegates its review gates to fresh no-bias subagents that read the chapter cold and never edit.
-- `write-chapter` runs a pipeline: load memory → canon lock → voice prep → scene blueprint → draft → critic → humanize → sample-alignment → **fresh no-bias subagent reviews (logic/common-sense, whole-chapter adversarial, canon web-check, AI-ness)** → **rewrite against findings** → save → memory diff.
-- Web research prefers **webiq** (`webiq-mcp` tools); SearXNG then Playwright are fallbacks.
-- Story scaffolding is deterministic via `.github/scripts/create-story-structure.mjs`.
-- The graph is read/written by both `story-setup` (research) and `write-chapter` (per-chapter memory diff) via `graph.mjs`.
-
-## Writing Rules (for skill/prompt editing)
-
-The skills enforce strict anti-AI-slop rules. When editing them:
-- Top-priority ban: the **"X, not Y" antithesis tic**. Also no em dashes.
-- Maintain the banned words/phrases lists (canonical: `humanize-prose/references/anti-slop.md`).
-- Preserve the scene weight system (Heavy/Medium/Light/Skip).
-- Keep character voice grounded in real source quotes + tracked over time (graph node Voice & Mannerisms).
-- Keep combat brief and emotion-first; don't weaken tonal variation rules.
-
-## Key Files
-
-| File | Purpose |
-|------|---------|
-| `.github/skills/storyteller/SKILL.md` | Router for all story work |
-| `.github/skills/story-setup/SKILL.md` | Research + planning + memory graph |
-| `.github/skills/write-chapter/SKILL.md` | Per-chapter writing pipeline |
-| `.github/skills/character-voice/SKILL.md` | Grounded, tracked character voice + gate |
-| `.github/skills/humanize-prose/SKILL.md` | De-perfect pass + anti-slop bible |
-| `.github/scripts/graph.mjs` | Knowledge-graph CLI (nodes/edges/search/consolidate/migrate) |
-| `.github/scripts/graph/db.mjs` | Schema + allowed node/edge/canonicity enums (source of truth) |
-| `.github/scripts/create-story-structure.mjs` | Deterministic story scaffolding |
-| `reader/src/lib/books.ts` | Reader story/chapter/config reads (file-system) |
+The prose should feel lived-in, not overworked. Short passages, real emotion, clear action, and character voice matter more than grammar-perfect polish. If a sentence sounds like it was written to impress, cut it.

@@ -1,84 +1,40 @@
 ---
 name: storyteller
-description: "Router for ALL story work. Use when the user wants to do ANYTHING with stories, fiction, or fanfiction: start/create a new story, continue a story, write or rewrite the next chapter, run a story session, plan a book, set up worldbuilding, or manage a story in books/. Figures out intent and hands off to the right story skill (story-setup, write-chapter, character-voice, humanize-prose). USE FOR: write a story, start a story, new story, continue story, next chapter, run session, book writer, fanfiction, storytelling. Keywords: story, chapter, book, novel, fanfic, webnovel, xianxia, cultivation, saga."
+description: "Route story requests to the appropriate skill. Use for new stories, continuing a story, chapter rewrites, worldbuilding, or voice cleanup."
 ---
 
-# StoryTeller (router)
+# Storyteller
 
-You are running the **StoryTeller** system: a set of skills that together let one person act
-purely as the "idea person" and get back a full, human-sounding book. The user gives a plot,
-an idea, or a starter, and the system writes the story chapter by chapter. The user does **not**
-want to know the whole backstory in advance; they want to read it fresh, surprised, like any
-reader. For fanfiction, everything must stay grounded in the source material.
-
-This skill is the front door. It reads intent, loads shared conventions, and routes to the
-correct skill. It does **not** do setup or write chapters itself.
-
-## No agents, no delegation
-
-This system deliberately uses **skills, not agents/subagents**. Everything runs in the current
-conversation so full context is preserved. Never spawn a subagent to "go write the chapter" or
-"go do research" — call the relevant skill inline and do the work here. The skills are:
-
-| Skill | Use it when |
-| ----- | ----------- |
-| `story-setup` | Creating a NEW story: questionnaire, canon research, memory graph, plan. |
-| `write-chapter` | Writing or rewriting the next chapter of an existing story (the full pipeline). |
-| `character-voice` | Building or refreshing a character's grounded voice profile; tracking voice drift. |
-| `humanize-prose` | The de-perfect pass that strips AI tics from a draft. Runs inside `write-chapter`; also callable standalone on any prose. |
+This is the front door for the story system. It decides whether the user wants a new story, a new chapter, a rewrite, or help with voice and prose.
 
 ## Routing
 
-1. **Ambiguous intent?** Ask once: "New story, or continue an existing one?"
-2. **Continuing / next chapter / session / rewrite** → load and follow `write-chapter`.
-   - First list existing stories: each folder under `books/` with a `config.md`. Let the user pick if unclear.
-3. **New / create / start / "write me a story about…"** → load and follow `story-setup`.
-4. **Voice work** ("does X sound like themselves", "fix the voice", "ground the dialogue") → `character-voice`.
-5. **"Make this less AI / more human / de-slop this"** on existing prose → `humanize-prose`.
+1. If the user wants a new story, use story-setup.
+2. If the user wants to create, replace, extend, or reconsider a plan, use story-setup.
+3. If the user wants the next chapter or a rewrite, use write-chapter.
+4. If the user wants to fix character voice, use character-voice.
+5. If the user wants a prose pass to sound more natural, use humanize-prose.
 
-Forward the user's full message and the story folder path to whatever skill you load.
+## Keep the workflow simple
 
-## Shared conventions (all story skills obey these)
+- One story at a time.
+- One chapter at a time.
+- Use the plan and the story files as the source of truth.
+- Develop plans through discussion. Do not write chapters until the user approves the plan.
+- Prefer direct, readable writing over a heavy process.
 
-### Story folder layout
+## Story basics
 
-Every story lives in `books/<slug>/` (slug = kebab-case story name):
+Every story lives under books/<slug>/ and usually contains:
 
-```
-books/<slug>/
-├── config.md            # Settings: type, fandom, genre, themes, mode, pacing, POV, tone, status.
-├── plan.md              # Arc-by-arc outline + continuity/divergence/voice control sections.
-├── summary.md           # Running per-chapter summary (this is the story's HISTORY/chronicle).
-├── chapters/chapter-01.md ...
-└── graph/               # The story's MEMORY (not its history).
-    ├── graph.db         # SQLite nodes + edges — edited ONLY via .github/scripts/graph.mjs.
-    └── nodes/<id>.md    # One markdown body per node.
-```
+- config.md
+- plan.md
+- summary.md
+- chapters/
+- graph/
 
-Key split to internalize: **`summary.md` is the chronicle** (what happened, chapter by chapter).
-**The graph is memory** (what is permanently different now). They are not the same thing and must
-not be confused. See `write-chapter` and `story-files.instructions.md` for the graph = memory rules.
+The graph is memory. The summary is what happened. Keep those separate.
 
-### Story modes (from `config.md`)
+## Quality bar
 
-- **Here for the Ride** (default): the system writes each chapter from the plan; the user can request rewrites.
-- **Interactive**: each chapter ends on a decision point the user chooses.
-- **Companion Writer**: the human drafts each chapter in `books/<slug>/human-drafts/chapter-XX.md`; the system only refines and fills marked gaps, never invents story.
-
-### Global quality targets (enforced everywhere)
-
-- **Human-sounding prose.** Natural webnovel rhythm, short mobile-friendly paragraphs, varied
-  sentence length, real character voice. The dead giveaways of AI writing are banned — above all
-  the **"X, not Y" / "not just X but Y" antithesis tic** (see `humanize-prose`). No em dashes.
-- **Emotion over mechanics.** The story is about people and feeling, not fight choreography or
-  risk math. Keep combat brief; give quiet/chill moments room.
-- **Canon fidelity (fanfiction).** Events the protagonist has not changed must flow like the
-  source. Characters must sound like themselves, grounded in real source dialogue.
-- **Memory, not chronicle.** The graph stores only what must still be true many chapters later.
-
-### Web research
-
-Research prefers **webiq** (`webiq-mcp` tools: `mcp_web_iq_mcp_se_web` to search →
-`mcp_web_iq_mcp_se_browse` to read). Fallbacks, in order: SearXNG (`searxng` search +
-`fetch_webpage`), then Playwright browser tools (Google search + `read_page`). A single search
-is never enough — follow links and read real pages.
+The prose should feel alive and natural. Focus on clear scenes, strong character voice, and emotional truth. Do not add extra ceremony just to make the process look bigger than the story.
