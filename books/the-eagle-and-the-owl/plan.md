@@ -1,8 +1,8 @@
 # Story Plan: The Eagle and the Owl
 
-Status: Draft
+Status: Approved
 
-This plan is open for revision. No chapter prose should be written until the user explicitly approves it and the status changes to `Approved`.
+The user approved this plan after iterative review. Later dimensional arcs may expand when their turn comes, but the prologue and the main route are ready for chapter writing.
 
 ## Story Promise
 
@@ -301,13 +301,31 @@ This section remains expandable and will be planned in detail before its chapter
 
 ### Chapters 41-47: Red Dead Redemption 2
 
-Theron and Kassandra enter Arthur Morgan's world. Their goal is to save Arthur, prevent avoidable deaths, and help selected members of the gang escape Dutch's collapse without taking away their choices. Theron's advanced medicine can treat tuberculosis, but changing the gang's loyalties requires human understanding.
+Theron and Kassandra enter in 1899 and quietly attach themselves to Arthur Morgan's side of the Van der Linde gang. They let Arthur confront Dutch's decline, his own guilt, and the man he wants to become. Theron can cure the tuberculosis, but he waits until Arthur has committed himself to saving John rather than letting an easy rescue erase Arthur's moral journey.
+
+Arthur still gets Abigail out of Pinkerton custody and fights beside John through Beaver Hollow. Theron and Kassandra watch over John, Abigail, and Jack from the edges, closing escape routes the Pinkertons would otherwise control. Once John is safely away and Arthur has made his choice, they prevent Micah from killing him and treat the tuberculosis.
+
+Arthur helps the surviving gang members separate from Dutch. Years later, he joins Theron and Kassandra in protecting Beecher's Hope. When Edgar Ross moves against John, Eclipse exposes and removes the operation before John can be forced to hunt his old family. John, Abigail, and Jack keep their ranch and receive the ordinary future Arthur bought for them.
 
 ### Chapters 48-56: The Last Of Us
 
-They enter before or during the outbreak. Eclipse technology can identify and counter Cordyceps, but distributing a cure and preventing political collapse creates the real challenge. Sarah, Tess, Sam, Henry, and other canon casualties become rescue targets. Joel and Ellie's bond remains central and is not replaced by Theron.
+Theron and Kassandra arrive before Outbreak Day with enough warning to protect caches, laboratories, and future settlements, but they do not stop the first collapse. Sarah dies in Joel's arms. Her death remains the wound that shapes him and makes his eventual love for Ellie possible.
 
-### Chapter 57 Onward: Future Worlds
+Twenty years later, Joel and Tess still take Ellie out of Boston. Theron and Kassandra protect the route without replacing Joel's choices or Ellie's importance. Tess, Bill, Frank, Henry, Sam, and other people may be saved once their survival no longer erases the bond at the center of the journey. Joel still chooses Ellie at the hospital, but Theron prevents the false choice by preserving the fungal samples and stopping the Fireflies from killing her.
+
+Ellie's immunity and Eclipse's accumulated medical knowledge produce a treatment that works on exposed people and a method for clearing Cordyceps from land and structures. The larger victory takes years. Jackson becomes the model for a restored society built from local communities rather than another hidden empire. Joel lives long enough to repair his relationship with Ellie. Abby learns the truth without beginning a second cycle of revenge.
+
+### Chapters 57-64: Metro
+
+Theron and Kassandra enter Moscow's Metro before Artyom reaches the end of his first journey. They discover that the Dark Ones are attempting contact and prevent the missile strike from becoming a genocide. Artyom must still face his fear and choose communication for himself.
+
+During Last Light, they help Artyom protect the young Dark One and expose the factions trying to control D6. The Dark Ones answer Artyom's mercy and help save the Rangers. Theron and Kassandra avoid taking command of the Metro. They leave Artyom, Anna, Miller, and the Spartan Order with evidence that life exists beyond Moscow.
+
+The Aurora journey still happens. Artyom's refusal to accept Moscow's lie brings the crew into the open world, where they face the Volga cult, Yamantau, the Caspian slavers, the Taiga, and Novosibirsk. Eclipse support saves crew members without turning the journey into a guided tour.
+
+In Novosibirsk, Artyom retrieves the medicine for Anna and Miller gives him his last dose of Green Stuff. The sacrifice remains Miller's free choice. Theron and Kassandra intervene after that choice, using radiation treatment and replacement doses to save both men. Anna recovers, Kirill joins the Aurora family, and Miller lives to see Lake Baikal. Artyom leads the effort to bring willing Metro residents to the surface and build a true community.
+
+### Chapter 65 Onward: Future Worlds
 
 Later settings are chosen and planned iteratively. Each world receives enough chapters for its people and central conflict. Theron and Kassandra act as fixers, explorers, and partners rather than replacing every native protagonist.
 
@@ -338,12 +356,12 @@ Their relationship is the stable center of the book. They remain interested in e
 - The status panel never grants abilities.
 - Theron's strongest neural powers require post-Atlantis Isu knowledge.
 - Major peaceful periods are shown rather than skipped entirely.
-- The graph still contains material from the deleted plan and must be reconciled only after this draft is approved.
+- The graph material from the old plan must be reconciled as each approved arc becomes active.
 
-## Open For Revision
+## Future Expansion Notes
 
 - Names and personalities of Theron and Kassandra's two children.
 - Exact mortal lifespans chosen by individual family members.
 - Which secondary Cult confrontations deserve full scenes.
 - Which Kenway, Rogue, Unity, and Syndicate events receive direct chapters.
-- Detailed structure of every dimensional world after Chapter 40.
+- Detailed structure of worlds after Metro will be decided before those chapters are written.

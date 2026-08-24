@@ -3,13 +3,15 @@
 > id: event-therons-reincarnation | type: event | canonicity: original
 
 ## Overview
-The inciting event. Theron, a modern billionaire-engineer, dies in a lab experiment gone wrong and wakes in the body of an 8-year-old boy washing up on the shore of Kephallonia, the System panel already open.
+Theron dies peacefully from a progressive mitochondrial disease on his eighteenth birthday. His soul enters the already-dead body of a drowned six-year-old native boy on Kephallonia. Seven-year-old Kassandra pulls the body from the surf and gets him breathing again.
 
 ## Canon
-Invented (isekai/reincarnation framing).
+Original reincarnation event. The native child would have died in the untouched timeline.
 
 ## AU Divergence
-Sets the divergence: a modern AC superfan with foreknowledge and a System is inserted one year before Kassandra arrives.
+The body retains language and basic physical habits but no autobiographical memories or surviving second personality. It carries modest Isu ancestry. Theron's private status panel is present when he wakes and only quantifies his real condition and learned abilities.
+
+This begins the central divergence years before the canonical Odyssey. Theron grows up with Kassandra under Markos's care, and they leave Kephallonia when she is twenty-one and he is twenty.
 
 ## Notes
-Prologue; establishes the System, the "visions" cover story, and the secret he'll never tell.
+The separate prologue covers Theron's first life. His reincarnation remains secret until after Aletheia's containment near the end of the Odyssey arc.
