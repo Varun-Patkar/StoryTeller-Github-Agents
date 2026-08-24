@@ -80,6 +80,17 @@ The story plan should include:
 - early problems and turning points
 - what the story is trying to do emotionally
 
+Shape each major arc around a clear causal progression:
+
+1. Give the protagonist an immediate, concrete goal and let them pursue it intelligently.
+2. Put unexpected obstacles in the way. Each response should move them closer while forcing growth.
+3. Near the climax, use a catastrophic setback that destroys or invalidates most of their progress.
+4. Let a dramatic solution earn success, but make that success cost something meaningful.
+5. End with the protagonist changed: returning to ordinary life with a new self, or poised for a new journey.
+
+Treat this as story shape, not a rigid beat sheet. The turns must follow from the character's choices,
+and the cost cannot be decorative or instantly undone.
+
 ## Step 6 — Keep the graph useful
 
 The graph is memory, not a chapter log. Store only things that matter long-term:

@@ -40,6 +40,8 @@ Write into chapters/chapter-XX.md in a clear chapter format. Keep narration live
 Check as you draft:
 
 - Does the chapter follow the plan?
+- Does the protagonist pursue the current arc goal intelligently, and does the outcome causally
+  advance its obstacle, growth, setback, costly solution, or changed horizon?
 - Does each character sound like themselves?
 - Is the emotional beat clear?
 - Does the scene stay focused?

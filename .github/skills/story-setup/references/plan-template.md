@@ -32,6 +32,12 @@ Key locations and world context.
 - **Thread B (<name>)**: setup Ch2 -> payoff Ch4
 ### Character Development
 Who grows/changes in this arc and how (mirror major voice shifts into the graph Voice Evolution).
+### Arc Shape
+- **Immediate goal**: What the protagonist wants and the clever first steps they take.
+- **Escalation**: Unexpected obstacles; how overcoming each one brings progress and growth.
+- **Catastrophic setback**: What destroys or invalidates most of that progress and makes success seem lost.
+- **Costly solution**: The dramatic choice or action that succeeds, and the meaningful price it demands.
+- **Changed horizon**: How the protagonist returns changed or becomes poised for a new journey.
 
 ## Arc 2: <Arc Name>
 ...
