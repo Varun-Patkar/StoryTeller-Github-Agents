@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import BranchSelector from '../components/BranchSelector.astro';
 
 interface Props {
   title: string;
@@ -33,6 +34,7 @@ const { title, description = 'Read stories from the StoryTeller library' } = Ast
     </script>
   </head>
   <body class="min-h-screen bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
+    <BranchSelector />
     <slot />
   </body>
 </html>
