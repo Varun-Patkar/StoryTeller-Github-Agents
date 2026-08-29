@@ -7,8 +7,7 @@ interface Props {
 
 const { book } = Astro.props;
 const base = import.meta.env.BASE_URL;
-const genres = book.config.genre.split(',').map(g => g.trim()).filter(Boolean);
-const totalChapters = parseInt(book.config.totalChapters) || 0;
+const genres = book.config.genre;
 ---
 
 <a
@@ -39,7 +38,7 @@ const totalChapters = parseInt(book.config.totalChapters) || 0;
       <span
         class:list={[
           'absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full backdrop-blur-sm',
-          book.config.status === 'Complete'
+          book.config.status.toLowerCase() === 'complete'
             ? 'bg-emerald-500/90 text-white'
             : 'bg-amber-500/90 text-white',
         ]}
@@ -78,7 +77,7 @@ const totalChapters = parseInt(book.config.totalChapters) || 0;
     )}
 
     <p class="text-xs text-neutral-400 dark:text-neutral-500 mt-auto pt-2">
-      {book.chapterCount}{totalChapters > 0 ? ` / ${totalChapters}` : ''} chapter{book.chapterCount !== 1 ? 's' : ''}
+      {book.chapterCount} chapter{book.chapterCount !== 1 ? 's' : ''}
     </p>
   </div>
 </a>

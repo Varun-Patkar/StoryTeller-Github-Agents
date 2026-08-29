@@ -1,62 +1,60 @@
 import { readdirSync, readFileSync, existsSync } from 'fs';
 import { join, resolve } from 'path';
+import matter from 'gray-matter';
 
 const BOOKS_DIR = resolve(process.cwd(), '..', 'books');
 
 export interface BookConfig {
-  type: string;
   fandom: string;
-  genre: string;
-  themes: string;
-  mode: string;
-  pacing: string;
+  genre: string[];
+  themes: string[];
   pov: string;
-  tone: string;
   title: string;
   author: string;
   synopsis: string;
-  coverPrompt: string;
-  coverImage: string;
   status: string;
-  totalChapters: string;
 }
 
-const KEY_MAP: Record<string, keyof BookConfig> = {
-  type: 'type',
-  fandom: 'fandom',
-  genre: 'genre',
-  themes: 'themes',
-  mode: 'mode',
-  pacing: 'pacing',
-  pov: 'pov',
-  tone: 'tone',
-  title: 'title',
-  author: 'author',
-  synopsis: 'synopsis',
-  'cover prompt': 'coverPrompt',
-  'cover image': 'coverImage',
-  status: 'status',
-  'total chapters': 'totalChapters',
-};
+function stringValue(value: unknown): string {
+  return value == null ? '' : String(value).trim();
+}
 
-function parseConfig(markdown: string): BookConfig {
-  const config: BookConfig = {
-    type: '', fandom: '', genre: '', themes: '', mode: '', pacing: '',
-    pov: '', tone: '', title: '', author: '', synopsis: '', coverPrompt: '',
-    coverImage: '', status: '', totalChapters: '',
+function stringList(value: unknown): string[] {
+  if (Array.isArray(value)) return value.map(stringValue).filter(Boolean);
+  return stringValue(value).split(',').map(item => item.trim()).filter(Boolean);
+}
+
+function markdownSection(markdown: string, heading: string): string {
+  const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = markdown.match(new RegExp(`^##\\s+${escaped}\\s*$([\\s\\S]*?)(?=^##\\s+|$(?![\\s\\S]))`, 'im'));
+  return match?.[1]?.trim() ?? '';
+}
+
+export function parseStoryMarkdown(markdown: string): BookConfig {
+  const parsed = matter(markdown.replace(/^\uFEFF/, ''));
+  return {
+    title: stringValue(parsed.data.title),
+    author: stringValue(parsed.data.author),
+    synopsis: markdownSection(parsed.content, 'Synopsis'),
+    fandom: stringValue(parsed.data.fandom),
+    genre: stringList(parsed.data.genre),
+    themes: stringList(parsed.data.themes),
+    pov: stringValue(parsed.data.pov),
+    status: stringValue(parsed.data.status),
   };
+}
 
-  for (const line of markdown.split('\n')) {
-    const match = line.match(/^\|\s*(.+?)\s*\|\s*(.+?)\s*\|$/);
-    if (!match) continue;
-    const key = match[1].toLowerCase().trim();
-    const value = match[2].trim();
-    if (key === 'setting' || key === 'value' || key.startsWith('-')) continue;
-    const configKey = KEY_MAP[key];
-    if (configKey) config[configKey] = value;
-  }
+export function parseChapterMarkdown(markdown: string): { title: string; prose: string } {
+  const parsed = matter(markdown.replace(/^\uFEFF/, ''));
+  const heading = parsed.content.match(/^#\s*(.+)$/m)?.[1]?.trim() ?? '';
+  const title = stringValue(parsed.data.title)
+    || heading.replace(/^Chapter\s+\d+\s*:\s*/i, '').trim();
+  const chapterText = parsed.content.match(/^##\s+Chapter Text\s*$/im);
+  let prose = chapterText
+    ? parsed.content.slice((chapterText.index ?? 0) + chapterText[0].length)
+    : parsed.content.replace(/^#\s*[^\n]*\r?\n+/, '');
 
-  return config;
+  return { title, prose: prose.trim() };
 }
 
 export interface Book {
@@ -81,11 +79,16 @@ export function getBooks(): Book[] {
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
 
-    const configPath = join(BOOKS_DIR, entry.name, 'config.md');
-    if (!existsSync(configPath)) continue;
+    const storyPath = join(BOOKS_DIR, entry.name, 'story.md');
+    if (!existsSync(storyPath)) continue;
 
-    const configMd = readFileSync(configPath, 'utf-8');
-    const config = parseConfig(configMd);
+    let config: BookConfig;
+    try {
+      config = parseStoryMarkdown(readFileSync(storyPath, 'utf-8'));
+    } catch (error) {
+      console.warn(`Skipping book "${entry.name}": ${error instanceof Error ? error.message : error}`);
+      continue;
+    }
 
     let hasCover = false;
     let coverExt = '';
@@ -114,11 +117,16 @@ export function getBook(slug: string): Book | null {
   const safeSlug = slug.replace(/[^a-z0-9-]/g, '');
   if (safeSlug !== slug) return null;
 
-  const configPath = join(BOOKS_DIR, safeSlug, 'config.md');
-  if (!existsSync(configPath)) return null;
+  const storyPath = join(BOOKS_DIR, safeSlug, 'story.md');
+  if (!existsSync(storyPath)) return null;
 
-  const configMd = readFileSync(configPath, 'utf-8');
-  const config = parseConfig(configMd);
+  let config: BookConfig;
+  try {
+    config = parseStoryMarkdown(readFileSync(storyPath, 'utf-8'));
+  } catch (error) {
+    console.warn(`Skipping book "${safeSlug}": ${error instanceof Error ? error.message : error}`);
+    return null;
+  }
 
   let hasCover = false;
   let coverExt = '';
@@ -153,10 +161,8 @@ export function getChapters(slug: string): ChapterMeta[] {
     if (!match) continue;
 
     const number = parseInt(match[1], 10);
-    const content = readFileSync(join(chaptersDir, file), 'utf-8').replace(/^\uFEFF/, '');
-    const firstLine = content.split('\n')[0]?.trim() || '';
-    const titleMatch = firstLine.match(/#\s*Chapter\s*\d+:\s*(.+)$/);
-    const title = titleMatch?.[1]?.trim() || `Chapter ${number}`;
+    const content = readFileSync(join(chaptersDir, file), 'utf-8');
+    const title = parseChapterMarkdown(content).title || `Chapter ${number}`;
 
     chapters.push({ number, title });
   }
@@ -169,7 +175,7 @@ export function getChapterContent(slug: string, num: number): string | null {
   const padded = String(num).padStart(2, '0');
   const filePath = join(BOOKS_DIR, safeSlug, 'chapters', `chapter-${padded}.md`);
   if (!existsSync(filePath)) return null;
-  return readFileSync(filePath, 'utf-8');
+  return parseChapterMarkdown(readFileSync(filePath, 'utf-8')).prose;
 }
 
 // --- Optional prologue / epilogue support -------------------------------------------------
@@ -199,11 +205,9 @@ export interface Section {
 function readExtra(slug: string, kind: 'prologue' | 'epilogue'): { heading: string } | null {
   const filePath = join(BOOKS_DIR, slug, 'chapters', `${kind}.md`);
   if (!existsSync(filePath)) return null;
-  const content = readFileSync(filePath, 'utf-8').replace(/^\uFEFF/, '');
-  const firstLine = content.split('\n')[0]?.trim() || '';
-  const m = firstLine.match(/^#\s*(.+)$/);
   const fallback = kind === 'prologue' ? 'Prologue' : 'Epilogue';
-  return { heading: m ? m[1].trim() : fallback };
+  const title = parseChapterMarkdown(readFileSync(filePath, 'utf-8')).title;
+  return { heading: title || fallback };
 }
 
 /**
@@ -241,7 +245,7 @@ export function getSectionContent(slug: string, key: string): string | null {
   if (key === 'prologue' || key === 'epilogue') {
     const filePath = join(BOOKS_DIR, safeSlug, 'chapters', `${key}.md`);
     if (!existsSync(filePath)) return null;
-    return readFileSync(filePath, 'utf-8');
+    return parseChapterMarkdown(readFileSync(filePath, 'utf-8')).prose;
   }
   const n = parseInt(key, 10);
   if (Number.isNaN(n)) return null;

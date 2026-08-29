@@ -1,4 +1,4 @@
-import { readdirSync, copyFileSync, mkdirSync, existsSync } from 'fs';
+import { readdirSync, copyFileSync, mkdirSync, existsSync, rmSync } from 'fs';
 import { join, resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -11,6 +11,7 @@ if (!existsSync(booksDir)) {
   process.exit(0);
 }
 
+rmSync(publicCoversDir, { recursive: true, force: true });
 mkdirSync(publicCoversDir, { recursive: true });
 
 const entries = readdirSync(booksDir, { withFileTypes: true });

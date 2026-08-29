@@ -2,14 +2,10 @@
   "files.watcherExclude": {
     "**/reader/node_modules/**": true,
     "**/reader/dist/**": true,
-    "**/reader/.astro/**": true,
-    "**/.github/scripts/node_modules/**": true,
-    "**/books/**/graph/graph.db": true
+    "**/reader/.astro/**": true
   },
   "search.exclude": {
     "**/reader/node_modules/**": true,
-    "**/reader/dist/**": true,
-    "**/.github/scripts/node_modules/**": true,
-    "**/books/**/graph/graph.db": true
+    "**/reader/dist/**": true
   }
 }

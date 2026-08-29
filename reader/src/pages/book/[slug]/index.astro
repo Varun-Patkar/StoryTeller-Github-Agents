@@ -2,7 +2,6 @@
 import Base from '../../../layouts/Base.astro';
 import ThemeToggle from '../../../components/ThemeToggle.astro';
 import { getBooks, getBook, getChapters, getSections } from '../../../lib/books';
-import { hasGraph } from '../../../lib/graph';
 
 export function getStaticPaths() {
   const books = getBooks();
@@ -20,10 +19,8 @@ const chapters = getChapters(slug!);
 const sections = getSections(slug!);
 const hasExtras = sections.some(s => s.kind !== 'chapter');
 const base = import.meta.env.BASE_URL;
-const showBrain = hasGraph(slug!);
-const genres = book.config.genre.split(',').map(g => g.trim()).filter(Boolean);
-const themes = book.config.themes.split(',').map(t => t.trim()).filter(Boolean);
-const totalChapters = parseInt(book.config.totalChapters) || 0;
+const genres = book.config.genre;
+const themes = book.config.themes;
 ---
 
 <Base title={book.config.title || book.slug} description={book.config.synopsis}>
@@ -104,11 +101,11 @@ const totalChapters = parseInt(book.config.totalChapters) || 0;
 
         <!-- Stats -->
         <div class="flex items-center gap-4 mt-2 text-sm text-neutral-500 dark:text-neutral-400 justify-center sm:justify-start">
-          <span>{chapters.length}{totalChapters > 0 ? ` / ${totalChapters}` : ''} chapters</span>
+          <span>{chapters.length} chapters</span>
           {book.config.status && (
             <span class:list={[
               'font-medium',
-              book.config.status === 'Complete' ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400',
+              book.config.status.toLowerCase() === 'complete' ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400',
             ]}>
               {book.config.status}
             </span>
@@ -131,25 +128,6 @@ const totalChapters = parseInt(book.config.totalChapters) || 0;
           </div>
         )}
 
-        {showBrain && (
-          <div class={chapters.length > 0 ? 'mt-2' : 'mt-4'}>
-            <a
-              href={`${base}brain/${book.slug}/`}
-              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-neutral-300 dark:border-neutral-700 text-sm font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-            >
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"></circle>
-                <circle cx="5" cy="6" r="2"></circle>
-                <circle cx="19" cy="7" r="2"></circle>
-                <circle cx="18" cy="17" r="2"></circle>
-                <line x1="7" y1="7" x2="10" y2="10"></line>
-                <line x1="14" y1="11" x2="17" y2="8"></line>
-                <line x1="14" y1="13" x2="17" y2="16"></line>
-              </svg>
-              Brain View
-            </a>
-          </div>
-        )}
       </div>
     </div>
 

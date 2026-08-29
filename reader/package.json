@@ -4,14 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "node scripts/copy-covers.mjs && node scripts/build-graph-snapshots.mjs",
-    "dev": "node scripts/copy-covers.mjs && node scripts/build-graph-snapshots.mjs && astro dev",
+    "prebuild": "node scripts/copy-covers.mjs",
+    "dev": "node scripts/copy-covers.mjs && astro dev",
     "build": "astro build",
+    "test": "node --test test/*.test.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
     "astro": "^5.0.0",
-    "better-sqlite3": "^11.10.0",
+    "gray-matter": "^4.0.3",
     "marked": "^15.0.0"
   },
   "devDependencies": {

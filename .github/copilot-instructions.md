@@ -1,39 +1,19 @@
-# StoryTeller project notes
+# Story workspace
 
-This project is a small fiction-writing system for building stories chapter by chapter. The goal is simple: keep the setup useful, keep the writing process clear, and let the story read like a person wrote it rather than a machine trying to sound clever.
+This repository uses the vendored Story Skills workflows for planning, drafting, and continuity, with Better Writing as the prose revision companion. Keep those upstream skill files recognizable and update them from their recorded sources rather than folding local rules into them.
 
-## What matters
+## Story location
 
-- The story workflow lives under .github/skills.
-- Each skill is focused on one job: routing, setup, chapter writing, voice, or cleanup.
-- The story files under books/ hold the actual draft, plan, and world memory.
-- The reader in reader/ is just a way to browse the finished stories.
+- Every story project lives at `books/<kebab-case-slug>/`.
+- Initialize through the `story-init` skill. When using the bundled CLI directly, run `node .github/skills/story-maintenance/scripts/story.js init "<title>" --dir books/<kebab-case-slug>` from the repository root.
+- Use the upstream schema: `story.md`, registries, worldbuilding, plot, scenes, continuity, glossary, and `chapters/`.
+- Draft chapters as `chapters/chapter-NN.md`. The reader publishes the text under `## Chapter Text` and hides frontmatter and outlines.
+- An optional `cover.jpg`, `cover.jpeg`, `cover.png`, or `cover.webp` belongs in the story root.
+- Optional `author` and `fandom` fields may be added to `story.md` frontmatter for the reader. Core Story Skills fields remain authoritative.
 
-## Core workflow
+## Workflow
 
-1. Start a story with the setup skill.
-2. Build the plan and the grounded world details.
-3. Write the next chapter with the chapter skill.
-4. Keep the voice and tone consistent.
-5. Tighten the prose when needed.
-
-## Keep it lean
-
-- Remove extra orchestration and multi-agent ceremony when it does not help the story.
-- Prefer direct writing over checklist-heavy prompting.
-- Favor natural rhythm, specific detail, and clear story beats over polished corporate phrasing.
-- Keep research grounded in the source material when the story is based on canon.
-
-## Important files
-
-- .github/skills/storyteller/SKILL.md
-- .github/skills/story-setup/SKILL.md
-- .github/skills/write-chapter/SKILL.md
-- .github/skills/character-voice/SKILL.md
-- .github/skills/humanize-prose/SKILL.md
-- .github/scripts/graph.mjs
-- reader/src/lib/books.ts
-
-## Writing direction
-
-The prose should feel lived-in, not overworked. Short passages, real emotion, clear action, and character voice matter more than grammar-perfect polish. If a sentence sounds like it was written to impress, cut it.
+- Use the matching vendored skill under `.github/skills/` for story work.
+- Use `better-writing` when revising prose that is generic, formulaic, over-polished, or AI-sounding. Preserve intentional voice and story facts.
+- After story changes, run the bundled CLI checks appropriate to the edit: `validate`, `reindex`, `wordcount --write`, `links`, and `continuity`.
+- To verify publication, run `npm test` and `npm run build` from `reader/`.

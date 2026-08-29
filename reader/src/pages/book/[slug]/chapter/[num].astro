@@ -34,9 +34,7 @@ if (!content || !current) {
   return Astro.redirect(`${base}book/${slug}/`);
 }
 
-// Strip the leading markdown heading; we render the title separately.
-const contentWithoutTitle = content.replace(/^\uFEFF/, '').replace(/^#[^\n]*\r?\n+/, '');
-const html = marked.parse(contentWithoutTitle) as string;
+const html = marked.parse(content) as string;
 
 const prev = index > 0 ? sections[index - 1] : null;
 const next = index < sections.length - 1 ? sections[index + 1] : null;
