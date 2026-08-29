@@ -5,7 +5,7 @@ genre: Fanfiction
 sub-genre: Isekai progression fantasy
 fandom: Multi-fandom video game crossover
 setting-era: Variable; changes with each game world
-status: planning
+status: drafting
 themes:
   - Power
   - Justice
