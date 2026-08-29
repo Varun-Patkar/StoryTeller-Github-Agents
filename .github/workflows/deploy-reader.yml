@@ -2,10 +2,6 @@ name: Deploy Reader to GitHub Pages
 
 on:
   push:
-    branches: [main]
-    paths:
-      - 'books/**'
-      - 'reader/**'
   workflow_dispatch:
 
 permissions:
@@ -21,28 +17,60 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: snapshots/main
+
+      - name: Check out evaluation
+        uses: actions/checkout@v4
+        with:
+          ref: evaluation/story-skills
+          path: snapshots/evaluation
 
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: reader/package-lock.json
+          cache-dependency-path: |
+            snapshots/main/reader/package-lock.json
+            snapshots/evaluation/reader/package-lock.json
 
-      - name: Install dependencies
-        working-directory: reader
-        run: npm ci
-
-      - name: Build
-        working-directory: reader
+      - name: Build main
+        working-directory: snapshots/main/reader
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io
           BASE_PATH: /${{ github.event.repository.name }}
-        run: npm run build
+          PUBLIC_ROOT_BASE: /${{ github.event.repository.name }}/
+          PUBLIC_BRANCH_NAME: main
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build evaluation
+        working-directory: snapshots/evaluation/reader
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io
+          BASE_PATH: /${{ github.event.repository.name }}/branches/evaluation-story-skills
+          PUBLIC_ROOT_BASE: /${{ github.event.repository.name }}/
+          PUBLIC_BRANCH_NAME: evaluation/story-skills
+        run: |
+          npm ci
+          npm run build
+
+      - name: Assemble branch site
+        shell: bash
+        run: |
+          test -s snapshots/main/reader/dist/index.html
+          test -s snapshots/evaluation/reader/dist/index.html
+          mkdir -p site/branches/evaluation-story-skills
+          cp -a snapshots/main/reader/dist/. site/
+          cp -a snapshots/evaluation/reader/dist/. site/branches/evaluation-story-skills/
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: reader/dist
+          path: site
 
   deploy:
     needs: build
