@@ -15,5 +15,7 @@ This repository uses the vendored Story Skills workflows for planning, drafting,
 
 - Use the matching vendored skill under `.github/skills/` for story work.
 - Use `better-writing` when revising prose that is generic, formulaic, over-polished, or AI-sounding. Preserve intentional voice and story facts.
+- Treat the user as a reader who supplies broad creative direction, not as an outline approver. Ask only for major premise, character, world, or arc decisions that cannot be inferred safely. Make scene-level choices, chapter outlines, pacing decisions, dialogue details, and other implementation decisions autonomously.
+- Do not reveal detailed chapter outlines or upcoming story events before drafting unless the user explicitly asks. Draft the chapter, let the user read it, and revise afterward from their feedback.
 - After story changes, run the bundled CLI checks appropriate to the edit: `validate`, `reindex`, `wordcount --write`, `links`, and `continuity`.
 - To verify publication, run `npm test` and `npm run build` from `reader/`.
