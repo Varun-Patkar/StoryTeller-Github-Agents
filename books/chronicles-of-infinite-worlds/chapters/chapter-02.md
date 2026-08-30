@@ -11,8 +11,9 @@ characters:
 arcs-advanced:
   - the-last-of-us-a-future-reclaimed
 status: draft
-word-count: 3797
+word-count: 3833
 ---
+
 
 
 # Clear the Road
@@ -51,11 +52,13 @@ Alaric nodded.
 
 The boy vanished back into the pipe.
 
-"Come on out!" the man on the road called. "We only want the bag."
+"Come on out!" the man on the road called. "We already have your bag. We won't hurt you."
 
-His friend laughed from the trees.
+His friend snorted. "Yeah. We only want to talk."
 
-They already had the bag. Alaric had heard them say so.
+"Shut up," the first man said.
+
+The mockery made their lie obvious. They had stolen the boy's bag, and now they wanted to kill the witness.
 
 He picked up a loose piece of concrete and threw it toward the far side of the road.
 
@@ -250,6 +253,8 @@ The boy swallowed. He did not look sorry.
 "I'm Alaric. Were you alone?"
 
 Ben shook his head. "My aunt's hiding in a house. They shot her yesterday. We tried to get around their camp, but they saw us."
+
+"They took our food and medicine," he added. "It was all in the bag."
 
 "How bad is she hurt?"
 

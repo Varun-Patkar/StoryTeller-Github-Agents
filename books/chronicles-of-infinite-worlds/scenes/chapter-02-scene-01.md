@@ -20,4 +20,4 @@ Force Alaric to face real violence, show that his planning starts with protectin
 
 ## Continuity Notes
 
-Ben and his wounded aunt leave west along a maintenance trail. Ben gives Alaric a metal whistle. Alaric falls to 89/100 HP before recovering to 92 through rest and Gamer's Body.
+The bandits stole Ben and his aunt's bag containing their food and medicine, then hunted Ben to remove a witness. Ben and his wounded aunt leave west along a maintenance trail. Ben gives Alaric a metal whistle. Alaric falls to 89/100 HP before recovering to 92 through rest and Gamer's Body.
