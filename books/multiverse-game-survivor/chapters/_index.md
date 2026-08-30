@@ -9,6 +9,6 @@ story: multiverse-game-survivor
 
 | # | Title | POV | Status | Word Count | File |
 |---|-------|-----|--------|------------|------|
-| 1 | One More Life | alaric-stark | draft | 2554 | [chapter-01](chapter-01.md) |
+| 1 | One More Life | alaric-stark | draft | 2092 | [chapter-01](chapter-01.md) |
 
-## Total Word Count: 2554
+## Total Word Count: 2092

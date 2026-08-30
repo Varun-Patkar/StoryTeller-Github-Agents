@@ -9,4 +9,4 @@ story: multiverse-game-survivor
 
 | Question | Status | Introduced | File |
 |----------|--------|------------|------|
-| What is the origin of the Second Chance System? | open | chapter-01 | [origin-of-the-second-chance-system](origin-of-the-second-chance-system.md) |
+| *No questions yet* | | | |

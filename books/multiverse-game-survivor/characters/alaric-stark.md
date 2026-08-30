@@ -51,13 +51,13 @@ Alaric has no permanent location at the beginning of the story. The system suppl
 
 ## Voice & Speech Patterns
 
-Alaric speaks warmly and directly, favoring concise explanations over displays of intelligence. His humor is dry and usually arrives when circumstances are at their worst. When manipulating events, he offers enough truth to sound candid while concealing how much he knows.
+Alaric speaks like an intelligent teenager, not a professor or professional comedian. He uses normal words, short explanations, and occasional simple jokes. Around people he loves, he can be awkward, affectionate, annoyed, or honest. His intelligence appears through useful ideas and good decisions rather than elaborate dialogue.
 
-> "Good news: I have a plan. Bad news: it was a much better plan before everyone started improvising."
+> "I have a plan. It isn't perfect, but it's better than waiting here."
 
-> "You don't owe me anything. Just stay alive long enough to complain about me tomorrow."
+> "You don't owe me anything. Just stay alive, okay?"
 
-> "Knowing what should happen isn't the same as knowing what people will choose. I'm learning that distinction the expensive way."
+> "The game told me what happened before I got here. It can't tell me what you'll choose now."
 
 ## Character Arc
 

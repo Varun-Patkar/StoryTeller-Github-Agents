@@ -13,7 +13,7 @@ state-changes:
   - target: alaric-stark
     change: "Awakens in a healthy fifteen-year-old body outside Boston with a former FEDRA student identity."
   - target: alaric-stark
-    change: "Receives the optional quest Clear the Road with a forty-eight-hour deadline."
+    change: "Receives Clear the Road with a forty-eight-hour deadline and exact rewards: Firearms Aptitude, 1 Endurance Point, and a listed 9mm firearm cache."
 ---
 
 ## Purpose
@@ -22,4 +22,4 @@ Deliver the physical joy of Alaric's second life, establish his starting capabil
 
 ## Continuity Notes
 
-Alaric begins mildly dehydrated and underfed. His only physical supplies are two water bottles, three ration bars, a folding knife, spare shirt, first-aid kit, and identity papers. His system inventory is available. Nearby bandits are searching for a child.
+Alaric begins mildly dehydrated and hungry. His starter supplies are two water bottles, three ration bars, a folding knife, spare shirt, first-aid kit, and identity papers. He drinks half a bottle, eats one ration bar, and stores one full water bottle and two ration bars in his inventory. Nearby bandits are searching for a child.

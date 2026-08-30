@@ -36,11 +36,11 @@ Elena grew up in the same wealthy but emotionally distant household as Alaric. T
 
 ## Voice & Speech Patterns
 
-Elena speaks carefully until emotion breaks through, then becomes blunt. She asks direct questions adults avoid.
+Elena speaks like a quiet thirteen-year-old who becomes blunt when upset. She does not give polished speeches. She says what she feels in simple words, even when the words come out awkwardly.
 
-> "They said seeing you would make it harder. They never asked which part was supposed to be easy."
+> "Mum said I shouldn't come. I came anyway."
 
-> "You don't have to make me feel better. You're allowed to be scared too."
+> "You can tell me if you're scared. I won't tell anyone."
 
 ## Character Arc
 

@@ -16,12 +16,14 @@ The Second Chance System resurrects Alaric Stark and sends him through game worl
 
 The status display favors readable qualitative ranks over dense numerical values.
 
-- **Attributes:** Physique, Agility, Endurance, Perception, Intellect, and Will. Attribute points create incremental progress within a rank before producing a visible rank increase.
+- **Attributes:** Physique, Agility, Endurance, Perception, Intellect, and Will. Each attribute has a named rank and a point counter. Ten points raise an attribute by one rank, so every reward shows exact progress.
 - **Skills:** Practical competencies ranked from Novice through Competent, Expert, and Master. A rewarded skill grants aptitude and a foundation, not effortless mastery.
 - **Traits:** Passive adaptations or unusual qualities, such as resistance to disease. Traits may improve when repeatedly tested.
 - **Items:** Physical rewards and acquired equipment can be stored in an unlimited personal inventory.
 
 Power must be earned. Rewards give Alaric potential, knowledge, or a modest improvement, but he must train and apply them under pressure. His advantage should be satisfying without making the current world's threats irrelevant.
+
+Quest notifications must list exact rewards. Named caches include every item and quantity before Alaric accepts or completes the quest. The system does not hide reward values behind terms such as "progress" or "improvement."
 
 ## Quest Structure
 

@@ -16,8 +16,8 @@ state-changes:
 
 ## Purpose
 
-Introduce the Second Chance System, its broad terms, its supportive manner, and the mystery of its origin.
+Introduce the Second Chance System, its rules, and its supportive manner. Alaric accepts its offer without suspicion because it gives him exactly what he wanted after death.
 
 ## Continuity Notes
 
-The system says Alaric may judge it through its actions. It cannot currently show him Elena's future. The word currently leaves open a later ability.
+The system explains that Alaric can earn skills, exact attribute points, traits, and items. Ten attribute points raise an attribute by one rank. Optional quest failure has no added penalty, and Alaric may remain in a world after completing its main mission.

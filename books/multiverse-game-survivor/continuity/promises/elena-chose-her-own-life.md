@@ -12,7 +12,7 @@ characters:
 
 ## Setup
 
-Before dying, Alaric asks Elena to stop waiting for permission and choose her own life. The system later says it cannot currently show him what happened to her.
+Before dying, Alaric asks Elena to make her own choices instead of letting their parents decide everything for her.
 
 ## Payoff
 

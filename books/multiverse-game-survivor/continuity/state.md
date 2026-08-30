@@ -13,7 +13,7 @@ object-state:
     location: boston-outskirts
 knowledge-state:
   - character: alaric-stark
-    knows: "He is in the Boston region twenty years after the Cordyceps outbreak and has forty-eight hours to break a nearby bandit camp's control of the eastern service route."
+    knows: "He is near Boston about a year before Joel and Ellie's journey. Clear the Road has a forty-eight-hour deadline and rewards Firearms Aptitude, 1 Endurance Point, and an exact 9mm firearm cache. Nearby bandits are hunting a child."
 ---
 
 # Continuity State
@@ -38,4 +38,4 @@ Track facts that must carry forward between chapters.
 
 | Character | Knows | Learned In |
 |-----------|-------|------------|
-| Alaric Stark | The system's broad rules, his local identity, and the Clear the Road quest | chapter-01 |
+| Alaric Stark | The system's rules, his local identity, the first world's timeline, and the exact terms of Clear the Road | chapter-01 |

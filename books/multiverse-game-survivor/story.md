@@ -21,7 +21,9 @@ After dying at sixteen from a rare blood disease, brilliant lifelong gamer Alari
 
 ## Tone & Style
 
-Fast-paced survival adventure with a strategic, problem-solving focus. Keep victories earned and threats credible: Alaric may hold a narrow advantage over his current enemies, but he should never become so powerful that a world's dangers feel trivial. Balance the power fantasy with the emotional cost of entering doomed timelines, growing attached to their people, and eventually leaving them behind.
+Fast-paced survival webnovel with a strategic, problem-solving focus. Use plain vocabulary, natural dialogue, direct emotions, and clear action. Do not make the narration sound literary, academic, cryptic, or eager to impress. Humor should be simple and fit the speaker instead of turning every exchange into clever banter. Explain important information clearly rather than relying on vague implications.
+
+This is an earned power fantasy. Keep threats credible while Alaric grows, but allow him to enjoy his health, abilities, rewards, victories, and the safe communities he builds. Do not add suspicion or tension when relief, excitement, friendship, or satisfaction would be the natural response. Heavy themes should come from what happens and the choices people make, not from ornate prose.
 
 ## Notes
 
