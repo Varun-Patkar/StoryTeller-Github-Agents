@@ -1,6 +1,6 @@
 ---
 type: scene-registry
-story: multiverse-game-survivor
+story: chronicles-of-infinite-worlds
 ---
 
 # Scenes

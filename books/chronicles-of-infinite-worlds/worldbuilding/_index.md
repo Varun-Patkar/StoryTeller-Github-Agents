@@ -1,6 +1,6 @@
 ---
 type: world-registry
-story: multiverse-game-survivor
+story: chronicles-of-infinite-worlds
 ---
 
 # Worldbuilding

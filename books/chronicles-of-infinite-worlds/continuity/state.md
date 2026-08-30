@@ -1,6 +1,6 @@
 ---
 type: continuity-state
-story: multiverse-game-survivor
+story: chronicles-of-infinite-worlds
 current-chapter: 1
 character-state:
   - character: alaric-stark

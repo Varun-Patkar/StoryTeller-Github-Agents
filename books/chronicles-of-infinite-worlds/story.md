@@ -1,5 +1,5 @@
 ---
-title: Multiverse Game Survivor
+title: Chronicles of Infinite Worlds
 schema-version: 2
 genre: Fanfiction
 sub-genre: Isekai progression fantasy
@@ -13,11 +13,21 @@ pov: third-person-limited
 tense: past
 ---
 
-# Multiverse Game Survivor
+# Chronicles of Infinite Worlds
 
 ## Synopsis
 
-After dying at sixteen from a rare blood disease, brilliant lifelong gamer Alaric awakens with a system that sends him through the worlds of the games he loved. In each world, he receives a new body and identity and must prevent the tragedies awaiting its protagonists and other key figures before he is free to move on. His optional, penalty-free quests grant transferable skills and rewards, but his power grows gradually, keeping him only a narrow step ahead of each world's threats.
+Alaric Stark had money, a brilliant mind, and every game he could ask for. What he did not have was a future.
+
+He died at sixteen after spending most of his life trapped in a failing body. Then a blue screen appeared in the darkness.
+
+**[Second Chance System activated.]**
+
+Alaric will travel through the game worlds he once loved. Their dangers are real now, but so are the people he watched suffer. Every world gives him a new identity, a main mission, and the chance to prevent tragedies that once seemed unavoidable. Optional quests offer skills, attribute points, traits, weapons, and other rewards he can carry into the next world.
+
+He will not become unstoppable overnight. Every ability must be earned, trained, and tested against enemies strong enough to kill him. Worse, each life he saves pushes events further away from the story he remembers.
+
+Alaric wanted one more chance to live. Now he plans to make sure he is not the only one who gets it.
 
 ## Tone & Style
 

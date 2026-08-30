@@ -1,6 +1,6 @@
 ---
 type: plot-registry
-story: multiverse-game-survivor
+story: chronicles-of-infinite-worlds
 structure: three-act
 ---
 

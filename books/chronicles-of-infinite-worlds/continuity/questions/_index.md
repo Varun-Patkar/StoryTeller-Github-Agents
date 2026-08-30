@@ -1,6 +1,6 @@
 ---
 type: question-registry
-story: multiverse-game-survivor
+story: chronicles-of-infinite-worlds
 ---
 
 # Continuity Questions

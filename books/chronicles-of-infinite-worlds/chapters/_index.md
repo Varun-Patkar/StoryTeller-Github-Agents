@@ -1,6 +1,6 @@
 ---
 type: chapter-registry
-story: multiverse-game-survivor
+story: chronicles-of-infinite-worlds
 ---
 
 # Chapters

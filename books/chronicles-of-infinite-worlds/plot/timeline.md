@@ -1,6 +1,6 @@
 ---
 type: timeline
-story: multiverse-game-survivor
+story: chronicles-of-infinite-worlds
 ---
 
 # Story Timeline

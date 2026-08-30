@@ -1,6 +1,6 @@
 ---
 type: character-registry
-story: multiverse-game-survivor
+story: chronicles-of-infinite-worlds
 ---
 
 # Characters

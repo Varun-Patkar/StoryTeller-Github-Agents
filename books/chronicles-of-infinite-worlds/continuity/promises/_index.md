@@ -1,6 +1,6 @@
 ---
 type: promise-registry
-story: multiverse-game-survivor
+story: chronicles-of-infinite-worlds
 ---
 
 # Promises And Payoffs
