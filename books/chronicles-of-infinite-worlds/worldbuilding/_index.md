@@ -15,6 +15,7 @@ story: chronicles-of-infinite-worlds
 |------|------|--------|------|
 | Boston Outskirts | Ruins | Massachusetts quarantine region | [boston-outskirts](locations/boston-outskirts.md) |
 | Original-World Private Hospital | Building | Alaric's original world | [original-world-private-hospital](locations/original-world-private-hospital.md) |
+| Riverside Smuggler Safehouse | Building | Boston outskirts | [riverside-smuggler-safehouse](locations/riverside-smuggler-safehouse.md) |
 | System Void | Other | Between worlds | [system-void](locations/system-void.md) |
 
 ## Systems

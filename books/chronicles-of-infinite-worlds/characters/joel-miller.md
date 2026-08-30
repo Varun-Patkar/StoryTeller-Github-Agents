@@ -9,6 +9,7 @@ relationships:
     type: partner
 locations:
   - boston-outskirts
+  - riverside-smuggler-safehouse
 tags:
   - smuggler
   - survivor
@@ -61,3 +62,4 @@ Joel speaks in short, blunt sentences. He asks direct questions, dislikes long e
 | Outbreak night | Sarah dies in his arms | Shapes his fear of caring for another child |
 | Twenty years later | Works with Tess as a Boston smuggler | Establishes his life before meeting Alaric |
 | Chapter 2 | Finds Alaric after the bandit camp falls | Begins their uneasy connection |
+| Chapter 3 | Fights beside Alaric and permits a three-day trial | Begins testing whether Alaric can join their work |

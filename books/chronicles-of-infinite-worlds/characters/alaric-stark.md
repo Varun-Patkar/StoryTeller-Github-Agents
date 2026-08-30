@@ -11,6 +11,7 @@ locations:
   - original-world-private-hospital
   - system-void
   - boston-outskirts
+  - riverside-smuggler-safehouse
 tags:
   - world-traveler
   - strategist
@@ -73,3 +74,4 @@ Alaric speaks like an intelligent teenager, not a professor or professional come
 | Before age 16 | Develops a rare blood disease | Illness limits his life and shapes his hatred of helplessness |
 | Age 16 | Dies after wishing for another chance to experience the games he loved | Ends his original life and activates the system |
 | Story opening | Awakens in a restored body with the system | Begins his role as a world-traveling fixer |
+| Chapter 3 | Earns a three-day trial with Joel and Tess | Gains his first temporary home in the new world |

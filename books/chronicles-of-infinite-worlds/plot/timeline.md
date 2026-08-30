@@ -10,6 +10,7 @@ story: chronicles-of-infinite-worlds
 | Age 16, original world | Alaric dies from his illness and awakens through the Second Chance System | the-last-of-us-a-future-reclaimed | chapter-01 |
 | One year before Ellie's journey | Fifteen-year-old Alaric meets Joel and Tess while fighting bandits | the-last-of-us-a-future-reclaimed | chapter-02 |
 | Same day | Alaric rescues a child, clears the bandit camp, earns his first rewards, and leaves with Joel and Tess | the-last-of-us-a-future-reclaimed | chapter-02 |
+| Following morning | Alaric helps Joel and Tess defeat an ambush, completes Road Hunter I, and earns a three-day place in their safehouse | the-last-of-us-a-future-reclaimed | chapter-03 |
 | Following year | Alaric becomes Joel and Tess's planner and gunsmith | the-last-of-us-a-future-reclaimed | chapter-05 |
 | Start of canonical journey | The crew accepts the job involving Ellie | the-last-of-us-a-future-reclaimed | chapter-06 |
 | Journey west | Alaric saves Tess, then Sam and Henry | the-last-of-us-a-future-reclaimed | chapter-08 |

@@ -56,7 +56,7 @@ Alaric does not leave when the main objective completes. He stays through years 
 |---|------------|-----|---------|--------|-------|
 | 1 | Alaric dies and awakens in a post-outbreak world | act-1 | chapter-01 | written | Introduce the system and restored body |
 | 2 | A bandit-chain quest leads Alaric into Joel and Tess's path | act-1 | chapter-02 | written | He is fifteen at arrival |
-| 3 | Joel and Tess bring Alaric toward Boston | act-1 | chapter-03 | planned | Competence wins him a temporary place |
+| 3 | Joel and Tess bring Alaric toward Boston | act-1 | chapter-03 | written | Competence wins him a temporary place |
 | 4 | Alaric proves himself as planner and gunsmith | act-1 | chapter-04 | planned | Begin found-family attachment |
 | 5 | A year passes; Alaric becomes part of the crew | act-1 | chapter-05 | planned | Alaric is now sixteen |
 | 6 | The crew accepts the job involving Ellie | act-1 | chapter-06 | planned | Main objective fully reveals itself |

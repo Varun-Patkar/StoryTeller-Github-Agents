@@ -9,6 +9,7 @@ relationships:
     type: partner
 locations:
   - boston-outskirts
+  - riverside-smuggler-safehouse
 tags:
   - smuggler
   - survivor
@@ -60,3 +61,4 @@ Tess speaks directly and confidently. Her humor is simple, usually aimed at Joel
 |------|-------|-----------|
 | Before Chapter 2 | Becomes Joel's smuggling partner | Establishes their trust and working rhythm |
 | Chapter 2 | Offers Alaric one night of protection | Begins bringing him into their crew |
+| Chapter 3 | Uses Alaric as cover during an ambush and brings him to the safehouse | Decides he may be useful enough to keep around |
