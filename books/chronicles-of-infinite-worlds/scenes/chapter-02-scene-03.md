@@ -22,4 +22,4 @@ Bring Alaric into contact with Joel and Tess, show their natural partnership, an
 
 ## Continuity Notes
 
-Joel remains suspicious. Tess decides that Alaric is young and potentially useful. Neither knows about the system or Alaric's inventory. They are finishing a delivery and traveling toward Boston.
+Joel remains suspicious. Tess decides that Alaric could become a discreet shooter for jobs where she draws out a target and Joel would be too loud. Alaric introduces himself after Tess calls him a stray; Tess then introduces herself and Joel. Neither knows about the system or Alaric's inventory. They are finishing a delivery and traveling toward Boston.

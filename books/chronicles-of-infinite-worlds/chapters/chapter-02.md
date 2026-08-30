@@ -11,8 +11,10 @@ characters:
 arcs-advanced:
   - the-last-of-us-a-future-reclaimed
 status: draft
-word-count: 3833
+word-count: 4063
 ---
+
+
 
 
 
@@ -160,9 +162,13 @@ Alaric checked the revolver. Five chambers. One spent round. Four left.
 
 His hands were shaking.
 
-He hated that. He also understood it. A minute ago, he had been excited about his first quest. Now a man was dead because Alaric had pushed his head into concrete.
+Alaric hated that weakness and promised himself he would handle it better next time.
 
-He could deal with that later.
+Then the other man called the body Dale, and the name bothered him. It turned the dead bandit into someone who had friends and a life before this road.
+
+Alaric looked toward the pipe. Ben had a name too. Dale had still hunted him like an animal and planned to kill him.
+
+That ended the conflict in Alaric's mind. Dale had earned his death.
 
 The second bandit fired again.
 
@@ -196,9 +202,21 @@ No answer.
 
 Alaric moved closer and kicked the fallen pistol away.
 
-The bandit grabbed for his ankle.
+"Put both hands on your head," Alaric said. "Do it, and I won't shoot again."
 
-Alaric stepped back and fired again.
+The bandit slowly raised his hands.
+
+Alaric lowered the revolver a little.
+
+The man's right hand dropped to his jacket. A tiny pistol appeared from inside it.
+
+He fired.
+
+The bullet cut across Alaric's ribs and knocked him sideways.
+
+**HP: 80/100**
+
+Alaric fired back.
 
 The man went still.
 
@@ -206,17 +224,15 @@ For several seconds, the only sound was the water running through the ditch.
 
 Alaric lowered the revolver.
 
-He felt sick.
+His side burned, and blood was already soaking into his shirt. He had offered mercy, and the man had used it to shoot him.
 
-The two men had hunted a child and tried to kill him. Alaric knew why he had fired. Knowing did not make the bodies look less real.
-
-He turned away and breathed through his mouth.
+Alaric would remember that lesson when he reached the camp.
 
 "System, status."
 
-**HP: 89/100**  
-**Stamina: 61/100**  
-**Condition: Bruised back, swollen cheek, elevated stress**
+**HP: 80/100**  
+**Stamina: 55/100**  
+**Condition: Bruised back, swollen cheek, shallow gunshot wound across the ribs**
 
 The pain was manageable. His hands were already becoming steadier.
 
@@ -226,7 +242,7 @@ Gamer's Body was helping, but it did not erase what had happened.
 
 **Yes. Items you can lift and physically possess may be placed in the inventory.**
 
-Alaric collected both guns. The first was an old revolver with two rounds left. The second was a worn 9mm pistol with seven rounds in the magazine. He also found a knife, a half-empty canteen, and six loose revolver rounds.
+Alaric cleaned and bandaged the graze with his first-aid supplies. Then he collected both guns. The first was an old revolver with two rounds left. The second was a worn 9mm pistol with seven rounds in the magazine. He also found a knife, a half-empty canteen, six loose revolver rounds, and an old FEDRA gas mask hanging from the second man's pack. The mask had an intact filter and no visible damage around the seal.
 
 He stored everything except the pistol.
 
@@ -298,6 +314,8 @@ Ben sat beside her and leaned against her good arm. He tried to act calm, but hi
 
 "Every day. Six or seven of them. More come and go."
 
+Her face hardened. "They take children and women when they can. Men usually get shot. Don't believe anything they say if they surrender."
+
 Alaric opened his map. It was only a blank gray field around his current position, but the places he had seen appeared as rough shapes.
 
 "Show me where the camp is."
@@ -360,9 +378,11 @@ His first quest had become personal.
 
 The grocery store was full of spores.
 
-Alaric saw them floating in the sunlight through a broken window. He covered his mouth and nose with a damp strip of cloth, but that was not enough protection. He stayed outside and searched the delivery entrance instead.
+Alaric saw them floating in the sunlight through a broken window. Holding his breath or covering his mouth with cloth would do nothing against spores. He put on the gas mask, tightened every strap, and checked the seal before entering through the broken window.
 
-The metal door was chained shut. Something struck it from inside.
+The filter made each breath louder, but no air leaked around the edges. He crossed the dark store and found the chained delivery door.
+
+Something struck the metal door from the other side.
 
 Click. Click. Click.
 
@@ -388,16 +408,16 @@ Alaric waited until dark.
 
 His stomach hurt from hunger, so he ate another ration bar. His stamina rose slowly as he rested.
 
-**HP: 92/100**  
+**HP: 84/100**  
 **Stamina: 76/100**
 
-His regeneration had restored three HP in several hours. Useful, but not enough to depend on during a fight.
+His regeneration had restored four HP in several hours. Useful, but not enough to depend on during a fight.
 
 The lookout climbed down from the roof to eat.
 
 Alaric moved to the grocery store.
 
-He tied Ben's whistle to the chained door, took cover behind a delivery van, and fired one shot through the lock.
+He took cover behind a delivery van and fired one shot through the lock.
 
 The chain fell.
 
@@ -407,11 +427,11 @@ The clicker burst through the door.
 
 Alaric ran.
 
-It followed the sound, striking shelves and walls as it charged through the dark store. Alaric blew the whistle again near the first pile of cans, then threw it toward the service station.
+It followed the sound, striking shelves and walls as it charged through the dark store. Alaric blew the whistle again near the first pile of cans, then ran toward the next position.
 
-The whistle landed on the road with a metallic clatter.
+He threw two empty cans toward the service station. They bounced across the road with a series of loud clangs while he kept the whistle in his hand.
 
-The clicker turned after it.
+The clicker turned toward the noise.
 
 "What was that?" someone shouted from the station.
 
@@ -455,51 +475,33 @@ He moved behind a wrecked pickup, circled left, and reached the back of the gara
 
 The man inside was trying to load a shotgun with shaking hands.
 
-Alaric shot him once in the shoulder.
+Alaric remembered the hidden pistol and fired twice into the man's chest.
 
-The man dropped the shotgun and fell behind a workbench.
-
-"Stay down," Alaric said.
-
-The bandit reached for the weapon.
-
-Alaric shot him again.
+The man dropped the shotgun and fell behind a workbench. He did not move again.
 
 The sound inside the garage hurt his ears. He took the shotgun, checked the chamber, and stored it.
 
-Four bandits remained. Perhaps three, depending on what the clicker had done.
+Three bandits remained.
 
 A flashlight appeared at the rear door.
 
 Alaric ducked behind the workbench. A bullet tore through a wooden cabinet above him.
 
-**HP: 91/100**
+**HP: 83/100**
 
-A splinter had cut his forehead. One point. He could live with that.
+A splinter had cut his forehead. One point of damage.
 
-The woman entered with a pistol held in both hands. She looked afraid, but she kept moving.
+The woman entered with a pistol held in both hands.
 
 Alaric threw a wrench across the garage.
 
 She turned toward the sound.
 
-He stepped out and aimed at her.
-
-"Drop it."
-
-She stared at him.
-
-"You're a child."
-
-"So was the boy your people hunted today. Drop the gun."
-
-Her finger tightened on the trigger.
-
-Alaric fired first.
+He stepped out and fired twice into her chest before she could turn back.
 
 She fell beside the doorway.
 
-He felt no pride. He also did not freeze this time.
+Alaric moved on without waiting. The first fight had taught him what mercy meant to this gang.
 
 The remaining bandits tried to escape in a truck. Alaric heard the engine struggle outside. He ran to the hand cart and cut the rope holding it.
 
@@ -543,21 +545,15 @@ The camp still controlled the road while one member remained willing to return t
 
 The man looked away.
 
-Alaric understood.
+That was enough of an answer.
 
-He had expected the system to tell him when someone deserved to die. It did not. The choice belonged to him.
+Alaric thought about letting him crawl away. Then he imagined the man returning with the two bandits who had gone north, or finding a larger gang and leading them to Ben and his aunt.
 
-He lowered the pistol slightly.
+He would not leave that loose end behind.
 
-"Crawl away from the camp."
+Alaric shot him once in the head.
 
-The man looked up in surprise.
-
-"If I see you reach for either weapon, I shoot."
-
-The bandit dragged himself across the road. His broken leg left a dark trail behind him.
-
-Alaric collected the guns and watched until the man disappeared into the trees.
+Then he collected the discarded weapons.
 
 The quest did not complete.
 
@@ -600,7 +596,7 @@ The system gave him safe handling and maintenance knowledge. It also made it eas
 
 **Endurance: Developing, 0/10 → Developing, 1/10**
 
-**Current HP:** 91/100  
+**Current HP:** 83/100  
 **Current Stamina:** 44/100
 
 The firearm cache appeared in his inventory exactly as promised.
@@ -614,7 +610,7 @@ A second window opened.
 **CHAIN QUEST UNLOCKED: ROAD HUNTER I**
 
 **Objective:** Kill 10 hostile bandits.  
-**Progress:** 5/10  
+**Progress:** 6/10  
 **Deadline:** None  
 **Failure Penalty:** None
 
@@ -624,7 +620,7 @@ A second window opened.
 - Skill Book: Basic Close Combat (raises Close Combat from Untrained to Novice after use)
 - 100 rounds of 9mm ammunition
 
-Five. The two bandits killed by the clicker did not count, and neither did the injured man he had released.
+Six. The two bandits killed by the clicker did not count.
 
 Alaric could accept that.
 
@@ -666,7 +662,7 @@ Tess gave him a flat look. "Try again."
 
 "It's only me."
 
-"Seven bodies between here and the ditch, one man crawling into the woods, and a kid standing in the middle of it with a clean pistol," she said. "Want to explain that?"
+"Eight dead bandits, one dead clicker, and a kid standing in the middle of it with a clean pistol," she said. "Want to explain that?"
 
 Alaric glanced at his new weapon. The system had not added dirt or scratches.
 
@@ -762,6 +758,14 @@ Joel sighed.
 
 "Then he might be useful."
 
+"Useful how?"
+
+"We need someone who can be quiet," Tess said. "You make enough noise for three people. I can play the injured traveler and draw a target out. If the kid can shoot half as well as this camp suggests, he can cover me without warning the whole street."
+
+"You're already planning jobs with him?"
+
+Tess shrugged. "I'm considering it."
+
 Joel looked at Alaric. "You planning to rob us?"
 
 "No."
@@ -789,6 +793,20 @@ Tess nodded toward the road. "We're finishing a delivery. You can walk with us u
 "I get mean when you collect strays," Joel said.
 
 Tess started walking. "Come on, stray."
+
+She took a few steps, then looked back. "What is your name, anyway?"
+
+"Alaric. Alaric Stark."
+
+"Tess," she said, pointing to herself. Then she nodded toward her partner. "That's Joel."
+
+"I can introduce myself," Joel said.
+
+Tess smiled. "You had plenty of time."
+
+Alaric smiled too. "Nice to meet you."
+
+Joel grunted. "We'll see."
 
 Alaric followed her.
 

@@ -11,7 +11,7 @@ arcs-advanced:
 status: complete
 state-changes:
   - target: alaric-stark
-    change: "Kills two bandits while rescuing Ben, takes minor injuries, and gains his first stolen firearms."
+    change: "Kills two bandits while rescuing Ben. His first attempt at mercy earns him a shallow gunshot wound, teaching him not to trust this gang's surrender."
 ---
 
 ## Purpose
@@ -20,4 +20,4 @@ Force Alaric to face real violence, show that his planning starts with protectin
 
 ## Continuity Notes
 
-The bandits stole Ben and his aunt's bag containing their food and medicine, then hunted Ben to remove a witness. Ben and his wounded aunt leave west along a maintenance trail. Ben gives Alaric a metal whistle. Alaric falls to 89/100 HP before recovering to 92 through rest and Gamer's Body.
+The bandits stole Ben and his aunt's bag containing their food and medicine, then hunted Ben to remove a witness. Hearing the name Dale briefly humanizes Alaric's first kill, but he decides Dale earned death by hunting a child. The second bandit shoots Alaric with a hidden pistol after Alaric offers mercy. Alaric falls to 80/100 HP, bandages a shallow graze across his ribs, and takes an intact FEDRA gas mask. Ben and his wounded aunt leave west along a maintenance trail. Ben gives Alaric a metal whistle.
