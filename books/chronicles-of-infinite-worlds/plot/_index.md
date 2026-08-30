@@ -14,7 +14,7 @@ structure: three-act
 
 | Name | Type | Status | File |
 |------|------|--------|------|
-| The Last of Us: A Future Reclaimed | main | planned | [the-last-of-us-a-future-reclaimed](arcs/the-last-of-us-a-future-reclaimed.md) |
+| The Last of Us: A Future Reclaimed | main | in-progress | [the-last-of-us-a-future-reclaimed](arcs/the-last-of-us-a-future-reclaimed.md) |
 
 ## Theme Tracking
 

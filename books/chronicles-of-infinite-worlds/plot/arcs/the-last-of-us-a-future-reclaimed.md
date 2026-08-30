@@ -1,7 +1,7 @@
 ---
 name: "The Last of Us: A Future Reclaimed"
 type: main
-status: planned
+status: in-progress
 characters:
   - alaric-stark
 themes:
@@ -54,8 +54,8 @@ Alaric does not leave when the main objective completes. He stays through years 
 
 | # | Plot Point | Act | Chapter | Status | Notes |
 |---|------------|-----|---------|--------|-------|
-| 1 | Alaric dies and awakens in a post-outbreak world | act-1 | chapter-01 | planned | Introduce the system and restored body |
-| 2 | A bandit-chain quest leads Alaric into Joel and Tess's path | act-1 | chapter-02 | planned | He is fifteen at arrival |
+| 1 | Alaric dies and awakens in a post-outbreak world | act-1 | chapter-01 | written | Introduce the system and restored body |
+| 2 | A bandit-chain quest leads Alaric into Joel and Tess's path | act-1 | chapter-02 | written | He is fifteen at arrival |
 | 3 | Joel and Tess bring Alaric toward Boston | act-1 | chapter-03 | planned | Competence wins him a temporary place |
 | 4 | Alaric proves himself as planner and gunsmith | act-1 | chapter-04 | planned | Begin found-family attachment |
 | 5 | A year passes; Alaric becomes part of the crew | act-1 | chapter-05 | planned | Alaric is now sixteen |

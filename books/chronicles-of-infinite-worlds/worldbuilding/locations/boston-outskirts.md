@@ -6,6 +6,8 @@ population: sparse
 controlled-by: ""
 notable-characters:
   - alaric-stark
+  - joel-miller
+  - tess-servopoulos
 tags:
   - cordyceps
   - ruins
