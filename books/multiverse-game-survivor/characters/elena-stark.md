@@ -23,7 +23,7 @@ Elena is a slight thirteen-year-old with dark hair she cuts herself whenever it 
 
 ## Personality & Traits
 
-Quiet around her parents and stubborn everywhere else, Elena has learned to hide affection behind practical gestures. She is less interested in games than Alaric but listens closely when he talks about them. Guilt makes her hesitant; love makes her disobedient.
+Quiet around her parents and stubborn everywhere else, Elena is mischievous, expressive, and deeply caring. She pouts when corrected, looks pleased when one of her tricks works, and uses innocent looks to escape trouble. She likes teasing Alaric and pushing rules just far enough to annoy him. She is less interested in games than Alaric but listens closely when he talks about them. Guilt makes her hesitant; love makes her brave enough to disobey their parents and cross the city alone to see him.
 
 ## Backstory
 

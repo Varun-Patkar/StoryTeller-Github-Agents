@@ -13,8 +13,9 @@ mentions: []
 arcs-advanced:
   - the-last-of-us-a-future-reclaimed
 status: draft
-word-count: 2092
+word-count: 2188
 ---
+
 
 
 # One More Life
@@ -58,6 +59,8 @@ Alaric looked at the backpack on her shoulders and understood. "You came alone?"
 
 "I know how old I am."
 
+Elena pouted and pulled both backpack straps tight against her shoulders. It was the same face she had used as a little girl whenever he caught her stealing snacks from his room.
+
 He wanted to tell her how dangerous that was. He also knew she might leave if he sounded angry, and he did not want that.
 
 "Come sit down," he said.
@@ -80,9 +83,11 @@ Elena was the first person who had come just because she wanted to see him.
 
 "I started crying."
 
+She looked a little proud of herself.
+
 Alaric smiled. "That was smart."
 
-"I wasn't pretending."
+Her proud look faded. "I wasn't pretending the whole time."
 
 His smile disappeared. "Oh."
 
@@ -156,11 +161,11 @@ She hesitated, then chose an old case from the bottom shelf. It was one they had
 
 "That one?" he asked.
 
-"You said any one."
+Elena hugged it to her chest. "You said any one. No taking it back."
 
 "It's a good choice."
 
-She put it in her backpack.
+"I know." She gave him a quick grin and put it in her backpack before he could change his mind.
 
 "Elena?"
 
@@ -176,9 +181,11 @@ She put it in her backpack.
 
 "I'm your brother. I'm allowed to be a hypocrite."
 
-She rolled her eyes. It was such a normal reaction that Alaric wished he could stop time and stay there.
+She stuck her tongue out at him. It was childish, and completely normal. Alaric wished he could stop time and stay there.
 
 A nurse entered a few minutes later. She looked shocked when she saw Elena, but she did not call security. Instead, she phoned Elena's friend and arranged for the girl's mother to drive her home.
+
+Elena tried her most innocent smile on the nurse. It did not save her from a long lecture, but it did make Alaric laugh.
 
 Elena leaned over the bed before she left.
 
