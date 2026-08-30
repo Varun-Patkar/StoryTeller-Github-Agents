@@ -10,6 +10,6 @@ story: chronicles-of-infinite-worlds
 | # | Title | POV | Status | Word Count | File |
 |---|-------|-----|--------|------------|------|
 | 1 | One More Life | alaric-stark | final | 2388 | [chapter-01](chapter-01.md) |
-| 2 | Clear the Road | alaric-stark | draft | 4063 | [chapter-02](chapter-02.md) |
+| 2 | Clear the Road | alaric-stark | final | 4063 | [chapter-02](chapter-02.md) |
 
 ## Total Word Count: 6451

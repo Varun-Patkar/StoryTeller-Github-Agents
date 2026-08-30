@@ -10,8 +10,12 @@ characters:
   - tess-servopoulos
 arcs-advanced:
   - the-last-of-us-a-future-reclaimed
-status: draft
+status: final
 word-count: 4063
+webnovel-book-id: "36796588108979605"
+webnovel-chapter-id: "98798831772166723"
+webnovel-status: published
+webnovel-published-at: "2026-08-30 21:33 GMT+8"
 ---
 
 
