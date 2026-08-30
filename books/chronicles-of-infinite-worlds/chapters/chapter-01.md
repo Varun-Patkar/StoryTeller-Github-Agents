@@ -12,8 +12,12 @@ characters:
 mentions: []
 arcs-advanced:
   - the-last-of-us-a-future-reclaimed
-status: draft
+status: final
 word-count: 2388
+webnovel-book-id: "36796588108979605"
+webnovel-chapter-id: "98790678716278789"
+webnovel-status: published
+webnovel-published-at: "2026-08-30 13:08 GMT+8"
 ---
 
 
