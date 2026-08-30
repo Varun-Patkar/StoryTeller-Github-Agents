@@ -22,4 +22,4 @@ Deliver the physical joy of Alaric's second life, establish his starting capabil
 
 ## Continuity Notes
 
-Alaric begins mildly dehydrated and hungry. His starter supplies are two water bottles, three ration bars, a folding knife, spare shirt, first-aid kit, and identity papers. He drinks half a bottle, eats one ration bar, and stores one full water bottle and two ration bars in his inventory. Nearby bandits are searching for a child.
+Alaric begins at 100/100 HP and 82/100 stamina, mildly dehydrated and hungry. Gamer's Body is Developing; it includes adaptive regeneration and reduces injury penalties, but serious wounds can still impair him. His starter supplies are two water bottles, three ration bars, a folding knife, spare shirt, first-aid kit, and identity papers. He drinks half a bottle, eats one ration bar, and stores one full water bottle and two ration bars in his inventory. Nearby bandits are searching for a child.

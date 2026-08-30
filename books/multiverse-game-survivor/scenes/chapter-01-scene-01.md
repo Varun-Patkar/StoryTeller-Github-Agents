@@ -23,4 +23,4 @@ Establish Alaric's emotional wound, relationship with Elena, final wish, and dea
 
 ## Continuity Notes
 
-Elena takes one worn game from Alaric's shelf. Alaric's parents remain absent. Alaric tells Elena to make her own choices instead of letting their parents decide everything for her.
+Elena takes one worn game from Alaric's shelf. Alaric's parents remain absent. Alaric tells Elena to make her own choices instead of letting their parents decide everything for her. A medication from Alaric's final treatment caused the white patch above his right temple.

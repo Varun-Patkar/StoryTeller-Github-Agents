@@ -14,10 +14,12 @@ The Second Chance System resurrects Alaric Stark and sends him through game worl
 
 ## Status & Progression
 
-The status display favors readable qualitative ranks over dense numerical values.
+The status display uses qualitative ranks for attributes and skills, with numeric HP, stamina, and rank progress so the reader can always judge Alaric's condition and level.
 
-- **Attributes:** Physique, Agility, Endurance, Perception, Intellect, and Will. Each attribute has a named rank and a point counter. Ten points raise an attribute by one rank, so every reward shows exact progress.
-- **Skills:** Practical competencies ranked from Novice through Competent, Expert, and Master. A rewarded skill grants aptitude and a foundation, not effortless mastery.
+- **HP:** Measures physical damage. HP is shown as a current and maximum value. Reaching 0 HP causes death.
+- **Stamina:** Measures available physical energy for running, fighting, climbing, and other strenuous activity. Rest, water, and food restore it.
+- **Attributes:** Physique, Agility, Endurance, Perception, Intellect, and Will. The full ladder is Frail, Developing, Competent, Advanced, Exceptional, Peak Human, and Superhuman. Each rank has a point counter from 0/10 to 9/10. Ten points raise the attribute by one rank.
+- **Skills:** Practical competencies use the full ladder Untrained, Novice, Competent, Expert, Master, and Grandmaster. A rewarded skill grants aptitude and a foundation, not effortless mastery.
 - **Traits:** Passive adaptations or unusual qualities, such as resistance to disease. Traits may improve when repeatedly tested.
 - **Items:** Physical rewards and acquired equipment can be stored in an unlimited personal inventory.
 
@@ -44,9 +46,13 @@ The system selects an arrival point after any tragedy required to create the peo
 
 The inventory has no fixed capacity, and time stops for stored objects. Food, medicine, ammunition, and other perishables remain in the condition in which they entered. Living beings cannot be stored. Alaric must physically possess an object before moving it into the inventory, and retrieving equipment still requires deliberate action.
 
-## Recovery
+## Gamer's Body
 
-Alaric regenerates faster than an ordinary person, but the rate scales with Endurance. Early recovery is only modestly accelerated; serious wounds still demand treatment, rest, and time, and remain capable of killing him. Regeneration becomes a visible benefit of earned growth rather than an immediate escape from danger.
+Gamer's Body is Alaric's core physical trait. It displays HP and stamina, stabilizes his body, reduces the loss of coordination caused by pain and injury, and includes adaptive regeneration.
+
+At the Developing rank, pain is easier to handle and minor wounds interfere less with his actions, but serious injuries can still slow him, weaken him, or stop him from using an injured limb. HP recovers slowly based on Endurance, rest, food, and medical care. Bullets, blood loss, infection, and damaged organs remain dangerous.
+
+As Gamer's Body advances, injury penalties shrink. At its mature level, Alaric can move and fight at his normal ability while he has at least 1 HP, like a game character who performs as well at low health as at full health. This does not erase damage or pain, and reaching 0 HP still causes death.
 
 ## Rules & Limitations
 

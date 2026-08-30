@@ -13,8 +13,9 @@ mentions: []
 arcs-advanced:
   - the-last-of-us-a-future-reclaimed
 status: draft
-word-count: 2188
+word-count: 2388
 ---
+
 
 
 
@@ -65,7 +66,15 @@ He wanted to tell her how dangerous that was. He also knew she might leave if he
 
 "Come sit down," he said.
 
-Elena pulled the visitor's chair closer and sat beside him. She kept looking at the tubes connected to his arm and the monitor beside the bed.
+Elena pulled the visitor's chair closer and sat beside him. She kept looking at the tubes connected to his arm and the monitor beside the bed. Then she noticed the white patch above his right temple.
+
+"What happened to your hair?"
+
+"One of the new medicines did it. The doctor said it damaged the pigment."
+
+Elena leaned closer to inspect it. "It looks cool."
+
+"At least one treatment gave me something useful."
 
 His parents paid for the best room in the hospital. It had a large television, a private bathroom, a good view of the city, and enough space for a family to spend the night.
 
@@ -338,7 +347,9 @@ A status screen opened.
 **World:** The Last of Us  
 **World Age:** 15  
 **Identity:** Former student, Boston FEDRA Preparatory Annex  
-**Condition:** Healthy, mildly dehydrated, hungry
+**Condition:** Healthy, mildly dehydrated, hungry  
+**HP:** 100/100  
+**Stamina:** 82/100
 
 **ATTRIBUTES**
 
@@ -349,6 +360,9 @@ Perception: Competent, 0/10
 Intellect: Exceptional, 0/10  
 Will: Competent, 0/10
 
+**Attribute Ranks:** Frail → Developing → Competent → Advanced → Exceptional → Peak Human → Superhuman  
+**Rank Progress:** 10 points advance an attribute by one rank.
+
 **SKILLS**
 
 Academic Knowledge: Expert  
@@ -357,11 +371,27 @@ Firearms: Novice
 Fieldcraft: Novice  
 Close Combat: Untrained
 
+**Skill Ranks:** Untrained → Novice → Competent → Expert → Master → Grandmaster
+
 **TRAITS**
 
-Second Life  
-Adaptive Regeneration: Developing  
-System Inventory
+Gamer's Body: Developing
+
+**SYSTEM FUNCTIONS**
+
+Inventory: Available
+
+Alaric focused on Gamer's Body, and another window opened.
+
+**GAMER'S BODY: DEVELOPING**
+
+- Displays HP and stamina.
+- Stabilizes the body and reduces the loss of coordination caused by pain and injury.
+- Includes adaptive regeneration. HP recovers slowly according to Endurance, available food, rest, and medical treatment.
+- Current limitation: serious injuries can still reduce movement and combat ability.
+- Growth potential: at higher ranks, Alaric can act at full ability while any HP remains. Reaching 0 HP causes death.
+
+Stamina measured the energy he could use for running, fighting, and other hard activity. It recovered through rest, water, and food. HP measured actual damage to his body. The trait could help him keep moving and heal, but it did not make wounds harmless.
 
 Alaric stared at the world name.
 

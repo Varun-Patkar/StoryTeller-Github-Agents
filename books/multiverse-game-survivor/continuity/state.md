@@ -5,7 +5,7 @@ current-chapter: 1
 character-state:
   - character: alaric-stark
     location: boston-outskirts
-    physical-state: "Healthy; mildly dehydrated and underfed"
+    physical-state: "100/100 HP; 82/100 stamina; healthy, mildly dehydrated, and hungry; Gamer's Body at Developing"
     emotional-state: "Exhilarated by restored health; alert to immediate danger"
 object-state:
   - artifact: alarics-starter-backpack
@@ -26,7 +26,7 @@ Track facts that must carry forward between chapters.
 
 | Character | Location | Physical State | Emotional State | Knowledge |
 |-----------|----------|----------------|-----------------|-----------|
-| Alaric Stark | Boston outskirts | Healthy; mildly dehydrated and underfed | Exhilarated by restored health; alert to danger | System basics, local identity, destination, and current quest |
+| Alaric Stark | Boston outskirts | 100/100 HP; 82/100 stamina; healthy, mildly dehydrated, and hungry; Gamer's Body at Developing | Exhilarated by restored health; alert to danger | System basics, rank ladders, local identity, destination, and current quest |
 
 ## Object State
 
@@ -38,4 +38,4 @@ Track facts that must carry forward between chapters.
 
 | Character | Knows | Learned In |
 |-----------|-------|------------|
-| Alaric Stark | The system's rules, his local identity, the first world's timeline, and the exact terms of Clear the Road | chapter-01 |
+| Alaric Stark | The system's rules, attribute and skill ladders, Gamer's Body functions, his local identity, the first world's timeline, and the exact terms of Clear the Road | chapter-01 |

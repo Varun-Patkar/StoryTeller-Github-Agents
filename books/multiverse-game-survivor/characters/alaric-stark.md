@@ -23,7 +23,7 @@ arc: from-indispensable-fixer-to-found-family
 
 ## Appearance
 
-Alaric's original body was frail after years of illness. The system restores him to health and adapts his build, clothing, and apparent background to each world, but every body remains recognizably his. A white forelock persists through every incarnation. He carries himself with relaxed confidence and an approachable warmth that often causes strangers to underestimate how closely he is observing them.
+Alaric's original body was frail after years of illness. One of his final medications damaged the pigment above his right temple, leaving a white forelock. The system restores him to health and adapts his build, clothing, and apparent background to each world, but every body remains recognizably his, including the white forelock. He carries himself with relaxed confidence and an approachable warmth that often causes strangers to underestimate how closely he is observing them.
 
 ## Personality & Traits
 
