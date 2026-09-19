@@ -13,6 +13,8 @@ Revise existing Story Skills projects without losing continuity. Use this skill 
 
 A story project must already exist. Verify by checking for `story.md` in the project root, then run or inspect `story report .` when CLI access is available.
 
+When `.github/story-prose-checklist.md` exists, use it as the mandatory line-level review gate. When the story root contains `prose-guide.md`, read it and treat its story-specific corrections as binding.
+
 ## Revision Workflow
 
 1. Clarify the pass type unless the user already specified it:
@@ -29,6 +31,8 @@ A story project must already exist. Verify by checking for `story.md` in the pro
    - Matching scene files in `scenes/`
    - `continuity/state.md`, open questions, and promises/payoffs
    - `plot/timeline.md` and active arc files for continuity-sensitive edits
+   - `.github/story-prose-checklist.md` when present
+   - `{story-root}/prose-guide.md` when present
 3. Create a concise revision plan:
    - What will change
    - What must stay fixed for continuity
@@ -52,6 +56,8 @@ story validate .
 story continuity .
 story doctor .
 ```
+
+7. Reread the entire revised chapter against the prose quality gate and story-specific guide. Check each dialogue-response pair, antecedent, physical transition, age and education constraint, knowledge boundary, and planning-only exposition. Repair findings before delivery and rerun affected checks.
 
 `story continuity` deterministically checks death ordering (`died-in` vs later appearances), promise/question chapter ordering, unfired setups, POV/cast consistency, and `continuity/state.md` references. For intentional flashbacks, memories, or recordings of dead characters, list them under chapter or scene `mentions` instead of `characters`.
 

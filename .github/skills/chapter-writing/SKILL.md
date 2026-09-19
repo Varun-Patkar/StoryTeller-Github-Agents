@@ -23,6 +23,12 @@ Before drafting or revising chapter prose, check whether the `better-writing` sk
 - If `better-writing` is available, use it for prose quality, voice calibration, anti-generic writing checks, and the final pre-flight pass before saving the chapter.
 - If `better-writing` is not available, recommend installing [forjd/better-writing](https://github.com/forjd/better-writing) with `npx skills add forjd/better-writing` or `bunx skills add forjd/better-writing`, then continue with this skill's built-in writing guidelines if the user does not install it.
 
+## Local Prose Quality Gate
+
+When `.github/story-prose-checklist.md` exists, read and apply it before outlining and again after the full chapter is drafted. When the story root contains `prose-guide.md`, read it before drafting and treat it as binding story-specific guidance.
+
+The post-draft pass must review the entire chapter, not only recently edited lines. Check every dialogue prompt and response, age and education fit, physical action sequence, character knowledge boundary, exposition timing, and sentence-level antecedent against those files before running maintenance.
+
 ## Outline-First Workflow
 
 ### 1. Gather Context
@@ -36,6 +42,8 @@ Read these files to understand the current story state:
 - `scenes/_index.md` - scene state already recorded
 - `continuity/state.md` - character, object, and knowledge state
 - `continuity/questions/_index.md` and `continuity/promises/_index.md` - unresolved mysteries and setup/payoff commitments
+- `.github/story-prose-checklist.md` when present
+- `{story-root}/prose-guide.md` when present
 
 If this isn't the first chapter, also read:
 - The previous chapter file - for continuity (ending state, cliffhangers, emotional tone)
@@ -101,6 +109,8 @@ story links .
 story validate .
 story next .
 ```
+
+9. **Run the prose quality gate:** reread the complete chapter against `.github/story-prose-checklist.md` and the story's `prose-guide.md`, repair findings, then rerun affected maintenance checks.
 
 Present a summary of all updates made.
 
