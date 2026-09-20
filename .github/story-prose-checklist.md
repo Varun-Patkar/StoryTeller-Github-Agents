@@ -45,6 +45,8 @@ Read the entire chapter, not only the last edited passage.
 - Keep modern practical details sensible: devices are shut down, routines work, and objects are used plausibly.
 - Distinguish broad fan knowledge from perfect recall. Major plots, characters, lore, powers, and endings may remain clear while dialogue, dates, minor routes, and incidental names fade.
 - Never reveal a protagonist's future knowledge unless the story bible explicitly permits that disclosure.
+- When canon leaves a mechanism uncertain, preserve the uncertainty. Do not invent a technical system, curriculum, language, ritual sequence, or cosmology merely to make the explanation feel complete.
+- Explain only what the current scene needs. Keep deeper lore as implication, observation, or an open question until canon or plot provides an answer.
 
 ### Tone And Exposition
 

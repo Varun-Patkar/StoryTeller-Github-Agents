@@ -11,8 +11,12 @@ characters:
 arcs-advanced:
   - the-first-awakening
 status: draft
-word-count: 1384
+word-count: 1311
 ---
+
+
+
+
 
 
 
@@ -33,8 +37,8 @@ word-count: 1384
 5. Coen accepts the refusal without exposing his urgency. Anca gives him three conditions and tells him to ask again when he can meet them.
 
 **Arc beats advanced:** Coen earns literacy, learns practical herbalism, and receives a possible route into formal witchcraft.
-**Foreshadowing planted:** Witchcraft requires foundational conduit scars, consumes blood, and attracts deadly religious attention.
-**Foreshadowing paid off:** Anca's concealed scars from Chapter 2 are identified as a witchcraft conduit.
+**Foreshadowing planted:** Witchcraft requires permanent scars and blood, draws on an unknown source, and attracts deadly religious attention.
+**Foreshadowing paid off:** Anca's concealed scars from Chapter 2 are identified as witchcraft marks.
 
 ---
 
@@ -113,8 +117,6 @@ Esme watched from beside the stove. She looked tired, but she was on her feet, k
 Coen finished tying his boots. "Anca kept me."
 
 "Anca would have let you leave if you told her Alin was waiting."
-
-Coen had no answer for that.
 
 Esme dusted flour from her hands and gave him a small cloth bundle. Inside were two rolls with onions baked into the top.
 
@@ -230,15 +232,11 @@ Coen looked at her covered arm. "Will you teach me when I'm older?"
 
 Anca sighed and leaned back.
 
-"First, keep learning your letters and Latin. They will not teach you witchcraft, but they will teach you how to study without rushing. The hexes use older glyphs. Much of that knowledge came from the Uriashi, and you do not know their signs yet."
-
-"Will you teach me?"
-
-"When you can read a full page without turning a saint into a fish. Then we begin the glyphs."
+"First, keep learning. Witchcraft punishes people who hurry."
 
 Coen nodded.
 
-"Second, learn which herbs stop bleeding and which ones only hide the pain. You will know them by sight, smell, and touch. No labels."
+"Second, learn how to stop bleeding and how to know when a wound is beyond you."
 
 "All right."
 

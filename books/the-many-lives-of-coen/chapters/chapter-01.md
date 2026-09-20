@@ -32,6 +32,10 @@ word-count: 1707
 
 
 
+
+
+
+
 ## Outline
 
 1. A well-off modern man dies quietly in his sleep after an ordinary evening surrounded by the stories and games he loved.

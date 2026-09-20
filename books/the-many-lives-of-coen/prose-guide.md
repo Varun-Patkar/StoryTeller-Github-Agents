@@ -20,7 +20,7 @@ This file records binding prose and characterization decisions for *The Many Liv
 - Mirto and Lunka are very young during the river incident. They do not understand it and will not retain a meaningful memory of canon Alin.
 - Use neutral localized English. `Mama` is appropriate; British regional terms such as `Mam` are not. Familiar localized taunts such as `Chicken` are allowed when they sound natural in English.
 - Anca is not a hard schoolmistress. During reading lessons she wants Coen to infer meaning from grammar, sentence structure, and known roots. She gives clues, accepts reasonable guesses, and corrects without humiliation.
-- Anca hated the strict teacher and institutional discipline at St. Tyna's abbey. She may sometimes imitate that clipped severity by habit or under stress, but the resemblance is ironic and should prompt her to soften, rephrase, or guide with a question.
+- Anca discovered hidden books on witchcraft at St. Tyna's abbey and studied them alone. She confided in her friend Leonica, who revealed the secret and caused Anca's expulsion. Do not invent formal witchcraft lessons or a teacher at the abbey.
 
 ## Coen's Knowledge And Secrecy
 
@@ -40,6 +40,8 @@ This file records binding prose and characterization decisions for *The Many Liv
 - Vale Sangora witchcraft begins with one foundational scar pattern that acts as the conduit. Individual hexes are then learned and prepared through it; do not carve a separate foundational rune for every hex.
 - Casting draws blood or health. The conduit scars are dangerous evidence and must be hidden with long sleeves, wraps, bracers, or gloves.
 - Latin is ordinary scholarship, not the language of hexes. Magical glyphs are tied to older Uriashi traditions and sacred stones. Do not call them Latin or invent a named universal magical language without canon evidence.
+- Keep witchcraft mysterious. State only what the current scene needs. Do not turn glyphs, manuals, Anachora, or spell preparation into a detailed technical curriculum unless canon and plot require it.
+- Witchcraft is strongly associated with Anachora, and the sleeping entity there may be the source of the power and the origin of the vrakhiri. Treat this as ominous implication, not settled exposition.
 
 ## Practical Plausibility
 

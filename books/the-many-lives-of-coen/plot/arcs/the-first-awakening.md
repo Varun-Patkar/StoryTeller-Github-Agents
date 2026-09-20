@@ -24,7 +24,7 @@ With his family intact and Esme still active, Coen spends the remaining years le
 
 | Chapter | Required movement |
 |---------|-------------------|
-| 4 | Compress several years of literacy, glyph, herb, and physical training. Coen receives the foundational conduit scars, conceals them, and successfully uses his first prepared hex. |
+| 4 | Compress several years of preparation. Coen receives witchcraft scars, conceals them, and successfully uses Mercurial Fervour under Anca's supervision. |
 | 5 | End childhood. Coen enters mine work beside Pieter, begins accumulating silver exposure, and reaches the first signs of plague and Brencis's arrival. |
 | 6 | Coen acts on his broad canon knowledge without revealing it, tries to move or prepare the family, and fails to prevent Lunka's plague crisis and Brencis's intervention. |
 | 7 | Move through the occupation toward the 1347 Blood Mass and mine rebellion. Coen's preparations improve outcomes but cannot remove the central trap. |

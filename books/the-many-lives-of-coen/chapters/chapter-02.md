@@ -29,6 +29,10 @@ word-count: 1324
 
 
 
+
+
+
+
 ## Outline
 
 1. The morning after the river, Coen gives his family a simple account that hides the warning and his restored memories.

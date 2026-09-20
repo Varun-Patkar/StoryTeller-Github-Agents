@@ -17,3 +17,6 @@ story: the-many-lives-of-coen
 | chapter-03 | 2 | Ask Again | coen-vale-sangora | complete | [chapter-03-scene-02](chapter-03-scene-02.md) |
 | chapter-04 | 1 | Three Conditions | coen-vale-sangora | complete | [chapter-04-scene-01](chapter-04-scene-01.md) |
 | chapter-04 | 2 | Thirty Paces | coen-vale-sangora | complete | [chapter-04-scene-02](chapter-04-scene-02.md) |
+| chapter-05 | 1 | Old Enough | coen-vale-sangora | complete | [chapter-05-scene-01](chapter-05-scene-01.md) |
+| chapter-05 | 2 | The Dust That Stays | coen-vale-sangora | complete | [chapter-05-scene-02](chapter-05-scene-02.md) |
+| chapter-05 | 3 | A Name from the Castle | coen-vale-sangora | complete | [chapter-05-scene-03](chapter-05-scene-03.md) |

@@ -60,7 +60,8 @@ As a village child, Coen uses short, plain phrases and argues through repetition
 |------|-------|-----------|
 | Childhood | Saves Alin from the frozen river | First memory awakening and first changed tragedy |
 | Childhood, following day | Begins reading lessons with Anca | First deliberate preparation for witchcraft |
-| Following spring | Learns what Anca's conduit scars do and receives conditions for training | Must build literacy, learn magical glyphs and blood-stopping herbs, and prove secrecy |
-| Three years later | Receives the foundational conduit and casts Mercurial Fervour | First usable witchcraft; begins concealing his scarred forearm |
-| Before 1347 | Trains in witchcraft with Anca and prepares for Brencis | Builds strength while the family remains intact |
+| Following spring | Learns that Anca's scars are tied to witchcraft and receives conditions for training | Must show patience, learn wound care, and prove secrecy |
+| Three years later | Receives witchcraft marks and casts Mercurial Fervour | First usable witchcraft; begins concealing his scarred forearm |
+| Next harvest | Enters the silver mine beside Pieter | Childhood ends; silver exposure and mine labor begin |
+| Before 1347 | Trains in witchcraft with Anca while plague and Brencis's name reach Laslea | Builds strength while the family remains intact |
 | 1347, mine crisis | Brencis turns him | Becomes a Dawnwalker and establishes the collective |
